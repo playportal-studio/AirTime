@@ -1,7 +1,7 @@
 ![](./readmeAssets/studio.png)
-# <b> AirTime App</b></br>
+# <b> [playPORTAL](https://www.playportal.io) + [Kontakt.io](https://developer.kontakt.io/hardware/packets/telemetry/) Bluetooth Beacon Connected Play App</b></br>
 
-*This the log kept while building the AirTime app in a < 8 hour period.* 
+*This the log kept while building the app in a 8+ hour period.* 
 
 
 ## Getting Started (playPORTAL setup)
@@ -18,7 +18,7 @@
 	* After confirmation, log in to the [playPORTAL Studio](https://studio.playportal.io)
 	* In the left navigation bar click on the <b>Apps</b> tab.
 	* In the <b>Apps</b> panel, click on the "+ Add App" button.
-	* Add an icon, <b>AirTime</b> & description for your app.
+	* Add an icon, <b>name</b> & description for your app.
 	* For "Environment" leave "Sandbox" selected.
 	* Click "Add App"
   </br>
@@ -60,10 +60,10 @@
     * In XCode Project Root
         * Pod Init
         * Edit PodFile
-        * Add Kontact podfile
+        * Add Kontakt podfile
         * Pod install
 ```
-  target 'AirTime' do
+  target 'playPORTAL Bluetooth Beacon Connected Play App' do
   platform :ios, '8.0'
   use_frameworks!
   pod 'KontaktSDK', '~> 1.3'
