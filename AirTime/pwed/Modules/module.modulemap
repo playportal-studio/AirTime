@@ -1,0 +1,6 @@
+framework module PlayPortal {
+  umbrella header "PlayPortal.h"
+
+  export *
+  module * { export * }
+}
