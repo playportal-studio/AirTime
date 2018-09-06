@@ -4,7 +4,7 @@
 
 # <b> [playPORTAL](https://www.playportal.io) + [Kontakt.io](https://developer.kontakt.io/hardware/packets/telemetry/) Bluetooth Beacon Connected Play App</b></br>
 <hr/>
-This is the log kept while building the app in a 8+ hour period.
+<i>This is the log kept while building the app in a 8+ hour period.</i>
 </center>
 
 ## Getting Started (playPORTAL setup)
