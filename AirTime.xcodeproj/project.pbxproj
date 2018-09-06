@@ -12,9 +12,11 @@
 		508C6659214163170059C591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508C6657214163170059C591 /* Main.storyboard */; };
 		508C665B214163170059C591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 508C665A214163170059C591 /* Assets.xcassets */; };
 		508C665E214163170059C591 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508C665C214163170059C591 /* LaunchScreen.storyboard */; };
+		B1ABAC42951FBEB9C1EE5D88 /* Pods_AirTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF08A0D51E4C9CC71EB30F0E /* Pods_AirTime.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09F9268079EBB5A8A97F7691 /* Pods-AirTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirTime/Pods-AirTime.release.xcconfig"; sourceTree = "<group>"; };
 		508C6650214163160059C591 /* AirTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		508C6653214163160059C591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		508C6655214163160059C591 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		508C665A214163170059C591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		508C665D214163170059C591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		508C665F214163170059C591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99E275488833D921A6C0833A /* Pods-AirTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirTime/Pods-AirTime.debug.xcconfig"; sourceTree = "<group>"; };
+		AF08A0D51E4C9CC71EB30F0E /* Pods_AirTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1ABAC42951FBEB9C1EE5D88 /* Pods_AirTime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				508C6652214163160059C591 /* AirTime */,
 				508C6651214163160059C591 /* Products */,
+				BF542F64A43E465C9CCB1030 /* Pods */,
+				6FAB69AC6A51B7525EF3370F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = AirTime;
 			sourceTree = "<group>";
 		};
+		6FAB69AC6A51B7525EF3370F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF08A0D51E4C9CC71EB30F0E /* Pods_AirTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF542F64A43E465C9CCB1030 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99E275488833D921A6C0833A /* Pods-AirTime.debug.xcconfig */,
+				09F9268079EBB5A8A97F7691 /* Pods-AirTime.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 508C6662214163170059C591 /* Build configuration list for PBXNativeTarget "AirTime" */;
 			buildPhases = (
+				2A064A0BDFD1506EB1D061EB /* [CP] Check Pods Manifest.lock */,
 				508C664C214163160059C591 /* Sources */,
 				508C664D214163160059C591 /* Frameworks */,
 				508C664E214163160059C591 /* Resources */,
@@ -129,6 +154,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A064A0BDFD1506EB1D061EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirTime-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		508C664C214163160059C591 /* Sources */ = {
@@ -278,6 +324,7 @@
 		};
 		508C6663214163170059C591 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99E275488833D921A6C0833A /* Pods-AirTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +343,7 @@
 		};
 		508C6664214163170059C591 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09F9268079EBB5A8A97F7691 /* Pods-AirTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
