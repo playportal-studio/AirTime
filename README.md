@@ -33,40 +33,45 @@
 
 
 
-### Setup GitHub Repo
-* Create master branch
-* Clone master branch to your local machine
-* enable gitflow
-* Add develop branch to github HeroDetailComponent
-* Add feature branch "feature/Step1"
+* ### <b>Step 4:</b> Setup GitHub Repo
+    * Create master branch
+    * Clone master branch to your local machine
+    * enable gitflow
+    * Add develop branch to github HeroDetailComponent
+    * Add feature branch "feature/Step1"
 
-### Fetch repo to all machines
+* ### <b>Step 5:</b> Fetch repo to all machines
 ```
+ git clone https://github.com/playportal-studio/AirTime.git
+ cd AirTime
  git checkout feature/Step1 branch
 ```
-### Launch Xcode and open xcodeproj
-* Make sure xcode simulator runs
-* Make sure iOS device runs
+* ### <b>Step 6:</b> Launch XCode and open xcodeproj
+    * Make sure xcode simulator runs
+    * Make sure iOS device runs
 
-### cocoapods
-* If cocoapods not intalled on your machine go [here](https://cocoapods.org/)
+* ### <b>cocoapods</b>
+    * If cocoapods not intalled on your machine go [here](https://cocoapods.org/)
+    * After installing cocoapods make sure to close your XCode project.
 
-### XCode
+* ### <b>Step 7: Re-Launch XCode</b>
 
-In XCode Project Root
-1. Pod Init
-2. Edit PodFile
-3. Add Kontact podfile
+    * In XCode Project Root
+        * Pod Init
+        * Edit PodFile
+        * Add Kontact podfile
+        * Pod install
 ```
-target 'AirTime' do
+  target 'AirTime' do
   platform :ios, '8.0'
   use_frameworks!
   pod 'KontaktSDK', '~> 1.3'
 ```
-4. Pod install
-5. Close Xcode
-4. Re Open the xcode workspace file
-5. Run Xcode
+
+
+* ### <b>Step 8 : Close Xcode</b>
+    * Re Open the xcode workspace file
+    * Run Xcode
 
 
 
