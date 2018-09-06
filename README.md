@@ -1,6 +1,7 @@
 ![](./readmeAssets/studio.png)
 # <b> AirTime App</b></br>
-##### This the log kept while building the AirTime app in a < 8 hour period.
+
+*This the log kept while building the AirTime app in a < 8 hour period.* 
 
 
 ## Getting Started (playPORTAL setup)
