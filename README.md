@@ -58,28 +58,6 @@
     * Make sure xcode simulator runs
     * Make sure iOS device runs
 
-* ### <b>cocoapods</b>
-    * If cocoapods not intalled on your machine go [here](https://cocoapods.org/)
-    * After installing cocoapods make sure to close your XCode project.
-
-* ### <b>Step 7: Re-Launch XCode</b>
-
-    * In XCode Project Root
-        * Pod Init
-        * Edit PodFile
-        * Add Kontakt podfile
-        * Pod install
-```
-  target 'playPORTAL Bluetooth Beacon Connected Play App' do
-  platform :ios, '8.0'
-  use_frameworks!
-  pod 'KontaktSDK', '~> 1.3'
-```
-
-
-* ### <b>Step 8 : Close Xcode</b>
-    * Re Open the xcode workspace file
-    * Run Xcode
 
 
 
