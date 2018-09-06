@@ -3,223 +3,208 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		508C6654214163160059C591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C6653214163160059C591 /* AppDelegate.swift */; };
-		508C6656214163160059C591 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C6655214163160059C591 /* ViewController.swift */; };
-		508C6659214163170059C591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508C6657214163170059C591 /* Main.storyboard */; };
-		508C665B214163170059C591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 508C665A214163170059C591 /* Assets.xcassets */; };
-		508C665E214163170059C591 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508C665C214163170059C591 /* LaunchScreen.storyboard */; };
-		B1ABAC42951FBEB9C1EE5D88 /* Pods_AirTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF08A0D51E4C9CC71EB30F0E /* Pods_AirTime.framework */; };
+		508C667A2141B7EF0059C591 /* KontaktSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508C66792141B7EF0059C591 /* KontaktSDK.framework */; };
+		508C667B2141B7F80059C591 /* KontaktSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508C66792141B7EF0059C591 /* KontaktSDK.framework */; };
+		508C667C2141B7F80059C591 /* KontaktSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 508C66792141B7EF0059C591 /* KontaktSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322BB971DFEA7C400C847AF /* AppDelegate.swift */; };
+		A322BB9F1DFEA7C400C847AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A322BB9E1DFEA7C400C847AF /* Assets.xcassets */; };
+		A322BBA21DFEA7C400C847AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */; };
+		A35DA1E31E37884600929021 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35DA1E21E37884600929021 /* Main.storyboard */; };
+		A39B0CEC1E3794E900E3D3AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B0CEB1E3794E900E3D3AC /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		508C667D2141B7F80059C591 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				508C667C2141B7F80059C591 /* KontaktSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		09F9268079EBB5A8A97F7691 /* Pods-AirTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirTime/Pods-AirTime.release.xcconfig"; sourceTree = "<group>"; };
-		508C6650214163160059C591 /* AirTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		508C6653214163160059C591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		508C6655214163160059C591 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		508C6658214163170059C591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		508C665A214163170059C591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		508C665D214163170059C591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		508C665F214163170059C591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99E275488833D921A6C0833A /* Pods-AirTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirTime/Pods-AirTime.debug.xcconfig"; sourceTree = "<group>"; };
-		AF08A0D51E4C9CC71EB30F0E /* Pods_AirTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D6557761E657DA400A21FCE /* KontaktSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KontaktSDK.framework; path = ../../KontaktSDK/iOS/KontaktSDK.framework; sourceTree = "<group>"; };
+		0D6557AF1E65C97E00A21FCE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		508C66792141B7EF0059C591 /* KontaktSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KontaktSDK.framework; sourceTree = "<group>"; };
+		A322BB941DFEA7C400C847AF /* AirTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A322BB971DFEA7C400C847AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A322BB9E1DFEA7C400C847AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A322BBA11DFEA7C400C847AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A322BBA31DFEA7C400C847AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A35DA1E21E37884600929021 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A39B0CEB1E3794E900E3D3AC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		508C664D214163160059C591 /* Frameworks */ = {
+		A322BB911DFEA7C400C847AF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1ABAC42951FBEB9C1EE5D88 /* Pods_AirTime.framework in Frameworks */,
+				508C667B2141B7F80059C591 /* KontaktSDK.framework in Frameworks */,
+				508C667A2141B7EF0059C591 /* KontaktSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		508C6647214163160059C591 = {
+		1FC20239CADD742496626DDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				508C6652214163160059C591 /* AirTime */,
-				508C6651214163160059C591 /* Products */,
-				BF542F64A43E465C9CCB1030 /* Pods */,
-				6FAB69AC6A51B7525EF3370F /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		508C6651214163160059C591 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				508C6650214163160059C591 /* AirTime.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		508C6652214163160059C591 /* AirTime */ = {
-			isa = PBXGroup;
-			children = (
-				508C6653214163160059C591 /* AppDelegate.swift */,
-				508C6655214163160059C591 /* ViewController.swift */,
-				508C6657214163170059C591 /* Main.storyboard */,
-				508C665A214163170059C591 /* Assets.xcassets */,
-				508C665C214163170059C591 /* LaunchScreen.storyboard */,
-				508C665F214163170059C591 /* Info.plist */,
-			);
-			path = AirTime;
-			sourceTree = "<group>";
-		};
-		6FAB69AC6A51B7525EF3370F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AF08A0D51E4C9CC71EB30F0E /* Pods_AirTime.framework */,
+				0D6557761E657DA400A21FCE /* KontaktSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BF542F64A43E465C9CCB1030 /* Pods */ = {
+		A322BB8B1DFEA7C400C847AF = {
 			isa = PBXGroup;
 			children = (
-				99E275488833D921A6C0833A /* Pods-AirTime.debug.xcconfig */,
-				09F9268079EBB5A8A97F7691 /* Pods-AirTime.release.xcconfig */,
+				A322BB961DFEA7C400C847AF /* AirTime */,
+				1FC20239CADD742496626DDD /* Frameworks */,
+				A322BB951DFEA7C400C847AF /* Products */,
 			);
-			name = Pods;
+			sourceTree = "<group>";
+		};
+		A322BB951DFEA7C400C847AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A322BB941DFEA7C400C847AF /* AirTime.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A322BB961DFEA7C400C847AF /* AirTime */ = {
+			isa = PBXGroup;
+			children = (
+				508C66792141B7EF0059C591 /* KontaktSDK.framework */,
+				A39B0CEB1E3794E900E3D3AC /* ViewController.swift */,
+				A35DA1E21E37884600929021 /* Main.storyboard */,
+				A322BB971DFEA7C400C847AF /* AppDelegate.swift */,
+				A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */,
+				A322BB9E1DFEA7C400C847AF /* Assets.xcassets */,
+				A322BBA31DFEA7C400C847AF /* Info.plist */,
+				0D6557AF1E65C97E00A21FCE /* BridgingHeader.h */,
+			);
+			path = AirTime;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		508C664F214163160059C591 /* AirTime */ = {
+		A322BB931DFEA7C400C847AF /* AirTime */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 508C6662214163170059C591 /* Build configuration list for PBXNativeTarget "AirTime" */;
+			buildConfigurationList = A322BBA61DFEA7C400C847AF /* Build configuration list for PBXNativeTarget "AirTime" */;
 			buildPhases = (
-				2A064A0BDFD1506EB1D061EB /* [CP] Check Pods Manifest.lock */,
-				508C664C214163160059C591 /* Sources */,
-				508C664D214163160059C591 /* Frameworks */,
-				508C664E214163160059C591 /* Resources */,
-				4CD03BF351CCC9A65ADB6CBD /* [CP] Embed Pods Frameworks */,
+				A322BB901DFEA7C400C847AF /* Sources */,
+				A322BB911DFEA7C400C847AF /* Frameworks */,
+				A322BB921DFEA7C400C847AF /* Resources */,
+				508C667D2141B7F80059C591 /* Embed Frameworks */,
+				508C667E2141B8140059C591 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = AirTime;
-			productName = AirTime;
-			productReference = 508C6650214163160059C591 /* AirTime.app */;
+			productName = "Developer Samples";
+			productReference = A322BB941DFEA7C400C847AF /* AirTime.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		508C6648214163160059C591 /* Project object */ = {
+		A322BB8C1DFEA7C400C847AF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "Dynepic, Inc.";
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = kontakt.io;
 				TargetAttributes = {
-					508C664F214163160059C591 = {
-						CreatedOnToolsVersion = 9.4.1;
+					A322BB931DFEA7C400C847AF = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = NAX528DUM6;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
-			buildConfigurationList = 508C664B214163160059C591 /* Build configuration list for PBXProject "AirTime" */;
-			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			buildConfigurationList = A322BB8F1DFEA7C400C847AF /* Build configuration list for PBXProject "AirTime" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 508C6647214163160059C591;
-			productRefGroup = 508C6651214163160059C591 /* Products */;
+			mainGroup = A322BB8B1DFEA7C400C847AF;
+			productRefGroup = A322BB951DFEA7C400C847AF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				508C664F214163160059C591 /* AirTime */,
+				A322BB931DFEA7C400C847AF /* AirTime */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		508C664E214163160059C591 /* Resources */ = {
+		A322BB921DFEA7C400C847AF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				508C665E214163170059C591 /* LaunchScreen.storyboard in Resources */,
-				508C665B214163170059C591 /* Assets.xcassets in Resources */,
-				508C6659214163170059C591 /* Main.storyboard in Resources */,
+				A322BBA21DFEA7C400C847AF /* LaunchScreen.storyboard in Resources */,
+				A35DA1E31E37884600929021 /* Main.storyboard in Resources */,
+				A322BB9F1DFEA7C400C847AF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A064A0BDFD1506EB1D061EB /* [CP] Check Pods Manifest.lock */ = {
+		508C667E2141B8140059C591 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AirTime-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4CD03BF351CCC9A65ADB6CBD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AirTime/Pods-AirTime-frameworks.sh",
-				"${PODS_ROOT}/KontaktSDK/Cocoapods/iOS/KontaktSDK.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KontaktSDK.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirTime/Pods-AirTime-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/KontaktSDK.framework/strip-frameworks.sh\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		508C664C214163160059C591 /* Sources */ = {
+		A322BB901DFEA7C400C847AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				508C6656214163160059C591 /* ViewController.swift in Sources */,
-				508C6654214163160059C591 /* AppDelegate.swift in Sources */,
+				A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */,
+				A39B0CEC1E3794E900E3D3AC /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		508C6657214163170059C591 /* Main.storyboard */ = {
+		A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				508C6658214163170059C591 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		508C665C214163170059C591 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				508C665D214163170059C591 /* Base */,
+				A322BBA11DFEA7C400C847AF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -227,22 +212,19 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		508C6660214163170059C591 /* Debug */ = {
+		A322BBA41DFEA7C400C847AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -250,21 +232,21 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../KontaktSDK/iOS/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -278,31 +260,30 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Developer Samples/BridgingHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		508C6661214163170059C591 /* Release */ = {
+		A322BBA51DFEA7C400C847AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -310,21 +291,21 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../KontaktSDK/iOS/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -332,75 +313,78 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OBJC_BRIDGING_HEADER = "Developer Samples/BridgingHeader.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		508C6663214163170059C591 /* Debug */ = {
+		A322BBA71DFEA7C400C847AF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99E275488833D921A6C0833A /* Pods-AirTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NAX528DUM6;
-				INFOPLIST_FILE = AirTime/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/../../KontaktSDK/iOS/**",
+					"$(PROJECT_DIR)/kontakt-ios-sdk/KontaktSDK/iOS",
+					"$(PROJECT_DIR)/AirTime",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime;
+				INFOPLIST_FILE = "$(SRCROOT)/AirTime/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OBJC_BRIDGING_HEADER = AirTime/BridgingHeader.h;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		508C6664214163170059C591 /* Release */ = {
+		A322BBA81DFEA7C400C847AF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09F9268079EBB5A8A97F7691 /* Pods-AirTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NAX528DUM6;
-				INFOPLIST_FILE = AirTime/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/../../KontaktSDK/iOS/**",
+					"$(PROJECT_DIR)/kontakt-ios-sdk/KontaktSDK/iOS",
+					"$(PROJECT_DIR)/AirTime",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime;
+				INFOPLIST_FILE = "$(SRCROOT)/AirTime/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OBJC_BRIDGING_HEADER = AirTime/BridgingHeader.h;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		508C664B214163160059C591 /* Build configuration list for PBXProject "AirTime" */ = {
+		A322BB8F1DFEA7C400C847AF /* Build configuration list for PBXProject "AirTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				508C6660214163170059C591 /* Debug */,
-				508C6661214163170059C591 /* Release */,
+				A322BBA41DFEA7C400C847AF /* Debug */,
+				A322BBA51DFEA7C400C847AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		508C6662214163170059C591 /* Build configuration list for PBXNativeTarget "AirTime" */ = {
+		A322BBA61DFEA7C400C847AF /* Build configuration list for PBXNativeTarget "AirTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				508C6663214163170059C591 /* Debug */,
-				508C6664214163170059C591 /* Release */,
+				A322BBA71DFEA7C400C847AF /* Debug */,
+				A322BBA81DFEA7C400C847AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 508C6648214163160059C591 /* Project object */;
+	rootObject = A322BB8C1DFEA7C400C847AF /* Project object */;
 }

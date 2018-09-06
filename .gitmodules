@@ -1,0 +1,4 @@
+
+[submodule "kontakt-ios-sdk"]
+	path = kontakt-ios-sdk
+	url = https://github.com/kontaktio/kontakt-ios-sdk.git
