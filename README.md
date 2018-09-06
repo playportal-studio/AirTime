@@ -28,12 +28,12 @@
 	* Tap "Generate Client ID"
 	* The values generated will be used later.
   </br>
-*
 
 
 
 
-### Setup github Repo
+
+### Setup GitHub Repo
 * Create master branch
 * Clone master branch to your local machine
 * enable gitflow
@@ -41,27 +41,34 @@
 * Add feature branch "feature/Step1"
 
 ### Fetch repo to all machines
-* git checkout feature/Step1 branch
-
+```
+ git checkout feature/Step1 branch
+```
 ### Launch Xcode and open xcodeproj
-* make sure xcode simulator runs
-* make sure iOS device runs
+* Make sure xcode simulator runs
+* Make sure iOS device runs
 
 ### cocoapods
-* If cocoapods not intalled on your machine go here https://cocoapods.org/
+* If cocoapods not intalled on your machine go [here](https://cocoapods.org/)
 
+### XCode
 
-
-
-
-
-```aidl
+In XCode Project Root
+1. Pod Init
+2. Edit PodFile
+3. Add Kontact podfile
+```
 target 'AirTime' do
   platform :ios, '8.0'
   use_frameworks!
   pod 'KontaktSDK', '~> 1.3'
-end
-
 ```
+4. Pod install
+5. Close Xcode
+4. Re Open the xcode workspace file
+5. Run Xcode
 
-```
+
+
+
+
