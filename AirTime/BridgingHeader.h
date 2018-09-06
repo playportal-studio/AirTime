@@ -10,4 +10,7 @@
 
 #import <KontaktSDK/KontaktSDK.h>
 
+#import <PlayPortal/PlayPortal.h>
+
+
 #endif
