@@ -10,14 +10,16 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var profilePicGradient: UIView!
+    @IBOutlet weak var profilePicGradient: GradientBkgndView!
     @IBOutlet weak var profilePicBlack: UIView!
     @IBOutlet weak var profilePicImageView: UIImageView!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var upperScoreView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         profilePicGradient.layer.cornerRadius = profilePicGradient.frame.height / 2.0
+        profilePicGradient.clipsToBounds = true
         profilePicBlack.layer.cornerRadius = profilePicBlack.frame.height / 2.0
         profilePicImageView.layer.cornerRadius = profilePicImageView.frame.height / 2.0
         label.text = "@someUser | First Last"
@@ -26,18 +28,6 @@ class HomeViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
