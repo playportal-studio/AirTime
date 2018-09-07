@@ -9,14 +9,17 @@
 import UIKit
 
 class SettingsTableTableViewController: UITableViewController {
-
+    
+    @IBOutlet weak var cell1: UITableViewCell!
+    
+    @IBOutlet weak var cell1Header: UITableViewCell!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    //App Bar
-  
-    self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        cell1.textLabel!.text = "Privacy Policy"
+        self.tableView.tableFooterView = UIView()
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,17 +27,38 @@ class SettingsTableTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Privacy"
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("section: \(indexPath.section)")
+        print("row: \(indexPath.row)")
+        
+        
+        
+        switch (indexPath.section, indexPath.row) {
+        case (0,0):
+            print("Privacy Policy")
+         
+            self.tableView.deselectRow(at: IndexPath(row: 0, section: 0), animated: true)
+        default:
+            print("Default")
+        }
+            
+    }
+    
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
+//
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return 0
+//    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
