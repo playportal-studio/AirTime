@@ -12,6 +12,10 @@
 		508C66862142F06B0059C591 /* GradientBkgndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C66852142F06B0059C591 /* GradientBkgndView.swift */; };
 		508C66882142FBF60059C591 /* SettingsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C66872142FBF60059C591 /* SettingsTableTableViewController.swift */; };
 		508C668A2142FF760059C591 /* ostrich-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 508C66892142FF760059C591 /* ostrich-regular.ttf */; };
+		508C66952143051F0059C591 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 508C668C2143051C0059C591 /* WorkSans-Regular.ttf */; };
+		508C66982143051F0059C591 /* WorkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 508C668F2143051E0059C591 /* WorkSans-Medium.ttf */; };
+		508C669E214305500059C591 /* OstrichSans-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 508C669D2143054F0059C591 /* OstrichSans-Heavy.otf */; };
+		508C66A321430E750059C591 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 508C66A221430E750059C591 /* Oswald-Medium.ttf */; };
 		6E5439A92142C4E30052B060 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5439A82142C4E30052B060 /* Colors.swift */; };
 		A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322BB971DFEA7C400C847AF /* AppDelegate.swift */; };
 		A322BB9F1DFEA7C400C847AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A322BB9E1DFEA7C400C847AF /* Assets.xcassets */; };
@@ -41,6 +45,10 @@
 		508C66852142F06B0059C591 /* GradientBkgndView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBkgndView.swift; sourceTree = "<group>"; };
 		508C66872142FBF60059C591 /* SettingsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableTableViewController.swift; sourceTree = "<group>"; };
 		508C66892142FF760059C591 /* ostrich-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ostrich-regular.ttf"; sourceTree = "<group>"; };
+		508C668C2143051C0059C591 /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.ttf"; sourceTree = "<group>"; };
+		508C668F2143051E0059C591 /* WorkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Medium.ttf"; sourceTree = "<group>"; };
+		508C669D2143054F0059C591 /* OstrichSans-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OstrichSans-Heavy.otf"; sourceTree = "<group>"; };
+		508C66A221430E750059C591 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
 		6E5439A82142C4E30052B060 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A322BB941DFEA7C400C847AF /* AirTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A322BB971DFEA7C400C847AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,10 +81,21 @@
 		508C66812142C36D0059C591 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				508C66A221430E750059C591 /* Oswald-Medium.ttf */,
+				508C669D2143054F0059C591 /* OstrichSans-Heavy.otf */,
+				508C668F2143051E0059C591 /* WorkSans-Medium.ttf */,
+				508C668C2143051C0059C591 /* WorkSans-Regular.ttf */,
 				508C66892142FF760059C591 /* ostrich-regular.ttf */,
 				508C66822142C37E0059C591 /* still time.ttf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		508C669F21430C2F0059C591 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A322BB8B1DFEA7C400C847AF = {
@@ -100,6 +119,7 @@
 		A322BB961DFEA7C400C847AF /* AirTime */ = {
 			isa = PBXGroup;
 			children = (
+				508C669F21430C2F0059C591 /* Extensions */,
 				508C66852142F06B0059C591 /* GradientBkgndView.swift */,
 				6E5439A82142C4E30052B060 /* Colors.swift */,
 				A39B0CEB1E3794E900E3D3AC /* ViewController.swift */,
@@ -183,9 +203,13 @@
 			files = (
 				508C668A2142FF760059C591 /* ostrich-regular.ttf in Resources */,
 				A322BBA21DFEA7C400C847AF /* LaunchScreen.storyboard in Resources */,
+				508C669E214305500059C591 /* OstrichSans-Heavy.otf in Resources */,
+				508C66982143051F0059C591 /* WorkSans-Medium.ttf in Resources */,
 				508C66832142C37E0059C591 /* still time.ttf in Resources */,
 				A35DA1E31E37884600929021 /* Main.storyboard in Resources */,
+				508C66A321430E750059C591 /* Oswald-Medium.ttf in Resources */,
 				A322BB9F1DFEA7C400C847AF /* Assets.xcassets in Resources */,
+				508C66952143051F0059C591 /* WorkSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

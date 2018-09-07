@@ -11,6 +11,14 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oswald-Medium.ttf">
+            <string>Oswald-Medium</string>
+        </array>
+        <array key="WorkSans-Medium.ttf">
+            <string>WorkSans-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="JDe-pV-9Bd">
@@ -88,12 +96,12 @@
                                     <constraint firstAttribute="width" secondItem="GI6-Xj-XOw" secondAttribute="height" multiplier="1:1" id="wYh-10-cTS"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFU-hL-Jpm">
-                                <rect key="frame" x="164.5" y="254" width="46.5" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@user1234 | John Smith" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFU-hL-Jpm">
+                                <rect key="frame" x="87" y="254" width="202" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="23" id="7Id-LA-5VX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -109,32 +117,31 @@
                                             <constraint firstAttribute="height" constant="100" id="jy5-00-U2j"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQI-R4-ehB">
-                                        <rect key="frame" x="101.5" y="84" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="125" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQI-R4-ehB">
+                                        <rect key="frame" x="88" y="47" width="69.5" height="74.5"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Medium" family="Oswald" pointSize="50"/>
                                         <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL HOPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3m-z8-JMP">
+                                        <rect key="frame" x="91.5" y="116.5" width="62" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Medium" family="Oswald" pointSize="13"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Trapezoid" translatesAutoresizingMaskIntoConstraints="NO" id="oGF-go-I5Z" userLabel="LowerScore">
                                         <rect key="frame" x="112" y="177" width="201" height="100"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7C-Gi-dKE">
-                                        <rect key="frame" x="191" y="217" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.87" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7C-Gi-dKE">
+                                        <rect key="frame" x="167" y="181" width="76" height="74.5"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Medium" family="Oswald" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOTAL HOPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDC-OL-f0j">
-                                        <rect key="frame" x="170" y="246" width="85.5" height="16"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="13"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LONGEST AIRTIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDC-OL-f0j">
+                                        <rect key="frame" x="160.5" y="249.5" width="89" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Medium" family="Oswald" pointSize="13"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL HOPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3m-z8-JMP">
-                                        <rect key="frame" x="80" y="124" width="85.5" height="16"/>
-                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="13"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -143,19 +150,21 @@
                                     <constraint firstAttribute="bottom" secondItem="mBx-lu-OlG" secondAttribute="bottom" id="1cp-Oc-qeo"/>
                                     <constraint firstAttribute="trailing" secondItem="mBx-lu-OlG" secondAttribute="trailing" id="6vK-mX-m62"/>
                                     <constraint firstItem="xQI-R4-ehB" firstAttribute="centerX" secondItem="CaZ-VE-97C" secondAttribute="centerX" constant="-8" id="7uj-jt-Ck8"/>
-                                    <constraint firstItem="w7C-Gi-dKE" firstAttribute="centerY" secondItem="oGF-go-I5Z" secondAttribute="centerY" id="9M3-Nx-UUy"/>
+                                    <constraint firstItem="w7C-Gi-dKE" firstAttribute="centerY" secondItem="oGF-go-I5Z" secondAttribute="centerY" constant="-8" id="9M3-Nx-UUy"/>
                                     <constraint firstItem="mBx-lu-OlG" firstAttribute="leading" secondItem="OXC-78-4cm" secondAttribute="leading" constant="8" id="Kqb-QY-IHr"/>
                                     <constraint firstItem="oGF-go-I5Z" firstAttribute="height" secondItem="CaZ-VE-97C" secondAttribute="height" id="M88-xV-xce"/>
                                     <constraint firstItem="p3m-z8-JMP" firstAttribute="centerX" secondItem="xQI-R4-ehB" secondAttribute="centerX" id="MPW-9Y-JhM"/>
                                     <constraint firstAttribute="trailing" secondItem="oGF-go-I5Z" secondAttribute="trailing" constant="30" id="OfJ-OT-0Kz"/>
                                     <constraint firstItem="CaZ-VE-97C" firstAttribute="leading" secondItem="OXC-78-4cm" secondAttribute="leading" constant="30" id="QCd-Ce-YyN"/>
-                                    <constraint firstItem="p3m-z8-JMP" firstAttribute="bottom" secondItem="CaZ-VE-97C" secondAttribute="bottom" constant="-4" id="T35-D9-gcK"/>
+                                    <constraint firstItem="p3m-z8-JMP" firstAttribute="bottom" secondItem="CaZ-VE-97C" secondAttribute="bottom" constant="-8" id="T35-D9-gcK"/>
+                                    <constraint firstItem="lDC-OL-f0j" firstAttribute="centerX" secondItem="w7C-Gi-dKE" secondAttribute="centerX" id="YUM-jl-uBp"/>
                                     <constraint firstItem="CaZ-VE-97C" firstAttribute="width" secondItem="mBx-lu-OlG" secondAttribute="width" multiplier="0.6" id="c0r-Ax-BVc"/>
-                                    <constraint firstItem="xQI-R4-ehB" firstAttribute="centerY" secondItem="CaZ-VE-97C" secondAttribute="centerY" id="h7t-Ur-YNI"/>
+                                    <constraint firstItem="xQI-R4-ehB" firstAttribute="centerY" secondItem="CaZ-VE-97C" secondAttribute="centerY" constant="-10" id="h7t-Ur-YNI"/>
                                     <constraint firstItem="CaZ-VE-97C" firstAttribute="top" secondItem="OXC-78-4cm" secondAttribute="top" constant="44" id="jo2-Mc-JOR"/>
                                     <constraint firstItem="oGF-go-I5Z" firstAttribute="top" secondItem="CaZ-VE-97C" secondAttribute="bottom" constant="33" id="mgb-iK-I5r"/>
-                                    <constraint firstItem="w7C-Gi-dKE" firstAttribute="centerX" secondItem="oGF-go-I5Z" secondAttribute="centerX" id="oD2-jx-E6J"/>
+                                    <constraint firstItem="w7C-Gi-dKE" firstAttribute="centerX" secondItem="oGF-go-I5Z" secondAttribute="centerX" constant="-8" id="oD2-jx-E6J"/>
                                     <constraint firstItem="mBx-lu-OlG" firstAttribute="top" secondItem="OXC-78-4cm" secondAttribute="top" id="oR8-ez-kZP"/>
+                                    <constraint firstItem="lDC-OL-f0j" firstAttribute="bottom" secondItem="oGF-go-I5Z" secondAttribute="bottom" constant="-8" id="roM-PK-JCa"/>
                                     <constraint firstItem="oGF-go-I5Z" firstAttribute="width" secondItem="CaZ-VE-97C" secondAttribute="width" id="wCE-cE-MRX"/>
                                 </constraints>
                             </view>
@@ -223,10 +232,10 @@
                             <outlet property="delegate" destination="JnB-pH-Ff7" id="R1g-9R-4be"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="kLT-mW-xb1"/>
                     <connections>
                         <outlet property="cell1" destination="JsA-g3-xfw" id="LDl-tX-ghA"/>
                     </connections>
-                    <navigationItem key="navigationItem" title="Settings" id="kLT-mW-xb1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLP-QB-dgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

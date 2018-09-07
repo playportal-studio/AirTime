@@ -28,6 +28,10 @@
 	<string>Monitor Beacons</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>WorkSans-Medium.ttf</string>
+		<string>Oswald-Medium.ttf</string>
+		<string>WorkSans-Regular.ttf</string>
+		<string>OstrichSans-Heavy.otf</string>
 		<string>ostrich-regular.ttf</string>
 		<string>still time.ttf</string>
 	</array>

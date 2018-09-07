@@ -23,13 +23,13 @@ class HomeViewController: UIViewController {
         profilePicGradient.clipsToBounds = true
         profilePicBlack.layer.cornerRadius = profilePicBlack.frame.height / 2.0
         profilePicImageView.layer.cornerRadius = profilePicImageView.frame.height / 2.0
-        label.font = UIFont(name: "Ostrich Sans", size: 25.0)!
+        label.font = UIFont(name: "WorkSans-Medium", size: 17)!
         label.text = "@someUser | First Last"
         
-        upperScoreLabel.font = UIFont(name: "Ostrich Sans", size: 60.0)!
+        upperScoreLabel.font = UIFont(name: "Oswald-Medium", size: 50.0)!
         upperScoreLabel.text = "156"
         
-        lowerScoreLabel.font = UIFont(name: "Ostrich Sans", size: 60.0)!
+        lowerScoreLabel.font = UIFont(name: "Oswald-Medium", size: 50.0)!
         lowerScoreLabel.text = "2.12"
         
         
