@@ -67,7 +67,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GI6-Xj-XOw" customClass="GradientBkgndView" customModule="AirTime" customModuleProvider="target">
-                                <rect key="frame" x="117" y="94" width="140" height="140"/>
+                                <rect key="frame" x="117.5" y="94" width="140" height="140"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ND3-fp-FAJ">
                                         <rect key="frame" x="10.5" y="10.5" width="119" height="119"/>
