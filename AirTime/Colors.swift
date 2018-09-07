@@ -6,8 +6,7 @@
 //  Copyright © 2018 kontakt.io. All rights reserved.
 //
 
-import Foundation
-
+import UIKit
 
 extension UIColor {
     struct airtimeColors {

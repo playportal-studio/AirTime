@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -57,28 +58,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pxE-LR-DJu">
-                                <rect key="frame" x="137" y="108" width="100" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GI6-Xj-XOw">
+                                <rect key="frame" x="117" y="94" width="140" height="140"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ND3-fp-FAJ">
+                                        <rect key="frame" x="10.5" y="10.5" width="119" height="119"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pKd-kh-hAB">
+                                                <rect key="frame" x="3" y="3" width="114" height="114"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="pKd-kh-hAB" secondAttribute="height" multiplier="1:1" id="Oln-Vy-tsU"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ND3-fp-FAJ" secondAttribute="height" multiplier="1:1" id="aMa-y9-K6m"/>
+                                            <constraint firstItem="pKd-kh-hAB" firstAttribute="height" secondItem="ND3-fp-FAJ" secondAttribute="height" multiplier="0.96" id="eRL-hX-xhJ"/>
+                                            <constraint firstItem="pKd-kh-hAB" firstAttribute="centerY" secondItem="ND3-fp-FAJ" secondAttribute="centerY" id="sfm-s9-RcW"/>
+                                            <constraint firstItem="pKd-kh-hAB" firstAttribute="centerX" secondItem="ND3-fp-FAJ" secondAttribute="centerX" id="y0a-nj-gKB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="OGX-py-cQm"/>
-                                    <constraint firstAttribute="width" secondItem="pxE-LR-DJu" secondAttribute="height" multiplier="1:1" id="cYr-os-C5Z"/>
+                                    <constraint firstAttribute="height" constant="140" id="7Be-kD-f7D"/>
+                                    <constraint firstItem="ND3-fp-FAJ" firstAttribute="width" secondItem="GI6-Xj-XOw" secondAttribute="width" multiplier="0.85" id="fnb-mk-Leh"/>
+                                    <constraint firstItem="ND3-fp-FAJ" firstAttribute="centerX" secondItem="GI6-Xj-XOw" secondAttribute="centerX" id="jbp-mw-Y4i"/>
+                                    <constraint firstItem="ND3-fp-FAJ" firstAttribute="centerY" secondItem="GI6-Xj-XOw" secondAttribute="centerY" id="sEn-yC-aAa"/>
+                                    <constraint firstAttribute="width" secondItem="GI6-Xj-XOw" secondAttribute="height" multiplier="1:1" id="wYh-10-cTS"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="pxE-LR-DJu" firstAttribute="top" secondItem="dYA-ap-qPi" secondAttribute="bottom" constant="44" id="6G7-V6-TlI"/>
-                            <constraint firstItem="pxE-LR-DJu" firstAttribute="centerX" secondItem="eVL-yH-seG" secondAttribute="centerX" id="U9c-DR-trP"/>
+                            <constraint firstItem="GI6-Xj-XOw" firstAttribute="centerX" secondItem="eVL-yH-seG" secondAttribute="centerX" id="JFz-1U-VXc"/>
+                            <constraint firstItem="GI6-Xj-XOw" firstAttribute="top" secondItem="dYA-ap-qPi" secondAttribute="bottom" constant="30" id="ulr-AL-rbu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Air Time" id="Z5S-UZ-j8G"/>
                     <connections>
-                        <outlet property="profileImageView" destination="pxE-LR-DJu" id="ex9-eV-Cq2"/>
+                        <outlet property="profilePicBlack" destination="ND3-fp-FAJ" id="dpV-0e-S9Q"/>
+                        <outlet property="profilePicGradient" destination="GI6-Xj-XOw" id="MFS-3E-94l"/>
+                        <outlet property="profilePicImageView" destination="pKd-kh-hAB" id="3Jo-n7-EDg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dch-2T-Llh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2902" y="-516"/>
+            <point key="canvasLocation" x="2901.5999999999999" y="-516.79160419790105"/>
         </scene>
     </scenes>
 </document>
