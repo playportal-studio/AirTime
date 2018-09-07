@@ -28,6 +28,7 @@
 	<string>Monitor Beacons</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>ostrich-regular.ttf</string>
 		<string>still time.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
