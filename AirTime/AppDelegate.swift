@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ]
         UINavigationBar.appearance().titleTextAttributes = textAttributes
         UINavigationBar.appearance().barTintColor = UIColor.airtimeColors.lightGrey
+        UINavigationBar.appearance().tintColor = UIColor.white
         
         return true
     }

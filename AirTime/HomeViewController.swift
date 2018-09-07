@@ -22,6 +22,18 @@ class HomeViewController: UIViewController {
         profilePicImageView.layer.cornerRadius = profilePicImageView.frame.height / 2.0
         label.text = "@someUser | First Last"
         // Do any additional setup after loading the view.
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image:#imageLiteral(resourceName: "logo_small"), style: .plain, target: self, action: Selector("leftButton"))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "settings"), style: .plain, target: self, action: Selector("rightButton"))
+    }
+    
+    func rightButton() {
+    
+     self.performSegue(withIdentifier:"showSettings", sender: self)
+    }
+    
+    func leftButton() {
+        print("PRESSED: left")
     }
 
     override func didReceiveMemoryWarning() {
