@@ -10,6 +10,7 @@
 		508C667A2141B7EF0059C591 /* KontaktSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508C66792141B7EF0059C591 /* KontaktSDK.framework */; };
 		508C667B2141B7F80059C591 /* KontaktSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508C66792141B7EF0059C591 /* KontaktSDK.framework */; };
 		508C667C2141B7F80059C591 /* KontaktSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 508C66792141B7EF0059C591 /* KontaktSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E5439A92142C4E30052B060 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5439A82142C4E30052B060 /* Colors.swift */; };
 		A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322BB971DFEA7C400C847AF /* AppDelegate.swift */; };
 		A322BB9F1DFEA7C400C847AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A322BB9E1DFEA7C400C847AF /* Assets.xcassets */; };
 		A322BBA21DFEA7C400C847AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */; };
@@ -35,6 +36,7 @@
 		0D6557761E657DA400A21FCE /* KontaktSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KontaktSDK.framework; path = ../../KontaktSDK/iOS/KontaktSDK.framework; sourceTree = "<group>"; };
 		0D6557AF1E65C97E00A21FCE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		508C66792141B7EF0059C591 /* KontaktSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KontaktSDK.framework; sourceTree = "<group>"; };
+		6E5439A82142C4E30052B060 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A322BB941DFEA7C400C847AF /* AirTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A322BB971DFEA7C400C847AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A322BB9E1DFEA7C400C847AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		A322BB961DFEA7C400C847AF /* AirTime */ = {
 			isa = PBXGroup;
 			children = (
+				6E5439A82142C4E30052B060 /* Colors.swift */,
 				508C66792141B7EF0059C591 /* KontaktSDK.framework */,
 				A39B0CEB1E3794E900E3D3AC /* ViewController.swift */,
 				A35DA1E21E37884600929021 /* Main.storyboard */,
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */,
+				6E5439A92142C4E30052B060 /* Colors.swift in Sources */,
 				A39B0CEC1E3794E900E3D3AC /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
