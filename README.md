@@ -1,9 +1,17 @@
-![](./readmeAssets/studio.png)
-# <b> AirTime App</b></br>
-##### This the log kept while building the AirTime app in a < 8 hour period.
+<div align="center">
+<img src="https://gyazo.com/26a1dc0b6fa056fad0e1831b8640d2dc.png = 50x50" width="200">
 
+
+# <b> [playPORTAL](https://www.playportal.io) + [Kontakt.io](https://developer.kontakt.io/hardware/packets/telemetry/) Bluetooth Beacon Connected Play App</b></br>
+<hr/>
+<i>This is the log kept while building the app in a 8+ hour period.</i>
+</div>
 
 ## Getting Started (playPORTAL setup)
+
+* ### Collecting Data Information
+
+    * Checkout [this](https://www.st.com/resource/en/datasheet/lis2dh.pdf) link for information about how you should collect data.
 
 * ### <b>Step 1:</b> Create playPORTAL Studio Account
 
@@ -17,7 +25,7 @@
 	* After confirmation, log in to the [playPORTAL Studio](https://studio.playportal.io)
 	* In the left navigation bar click on the <b>Apps</b> tab.
 	* In the <b>Apps</b> panel, click on the "+ Add App" button.
-	* Add an icon, <b>AirTime</b> & description for your app.
+	* Add an icon, <b>name</b> & description for your app.
 	* For "Environment" leave "Sandbox" selected.
 	* Click "Add App"
   </br>
@@ -33,40 +41,23 @@
 
 
 
-### Setup GitHub Repo
-* Create master branch
-* Clone master branch to your local machine
-* enable gitflow
-* Add develop branch to github HeroDetailComponent
-* Add feature branch "feature/Step1"
+* ### <b>Step 4:</b> Setup GitHub Repo
+    * Create master branch
+    * Clone master branch to your local machine
+    * enable gitflow
+    * Add develop branch to github HeroDetailComponent
+    * Add feature branch "feature/Step1"
 
-### Fetch repo to all machines
+* ### <b>Step 5:</b> Fetch repo to all machines
 ```
+ git clone https://github.com/playportal-studio/AirTime.git
+ cd AirTime
  git checkout feature/Step1 branch
 ```
-### Launch Xcode and open xcodeproj
-* Make sure xcode simulator runs
-* Make sure iOS device runs
+* ### <b>Step 6:</b> Launch XCode and open xcodeproj
+    * Make sure xcode simulator runs
+    * Make sure iOS device runs
 
-### cocoapods
-* If cocoapods not intalled on your machine go [here](https://cocoapods.org/)
-
-### XCode
-
-In XCode Project Root
-1. Pod Init
-2. Edit PodFile
-3. Add Kontact podfile
-```
-target 'AirTime' do
-  platform :ios, '8.0'
-  use_frameworks!
-  pod 'KontaktSDK', '~> 1.3'
-```
-4. Pod install
-5. Close Xcode
-4. Re Open the xcode workspace file
-5. Run Xcode
 
 
 
