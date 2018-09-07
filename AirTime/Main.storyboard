@@ -89,9 +89,8 @@
                                     <constraint firstAttribute="width" secondItem="GI6-Xj-XOw" secondAttribute="height" multiplier="1:1" id="wYh-10-cTS"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFU-hL-Jpm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFU-hL-Jpm">
                                 <rect key="frame" x="16" y="242" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -99,12 +98,15 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="bFU-hL-Jpm" firstAttribute="centerX" secondItem="eVL-yH-seG" secondAttribute="centerX" id="78Z-v4-S9J"/>
                             <constraint firstItem="GI6-Xj-XOw" firstAttribute="centerX" secondItem="eVL-yH-seG" secondAttribute="centerX" id="JFz-1U-VXc"/>
+                            <constraint firstItem="bFU-hL-Jpm" firstAttribute="top" secondItem="GI6-Xj-XOw" secondAttribute="bottom" constant="20" id="JKy-qX-dsF"/>
                             <constraint firstItem="GI6-Xj-XOw" firstAttribute="top" secondItem="dYA-ap-qPi" secondAttribute="bottom" constant="30" id="ulr-AL-rbu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Air Time" id="Z5S-UZ-j8G"/>
                     <connections>
+                        <outlet property="label" destination="bFU-hL-Jpm" id="gFg-Of-wE2"/>
                         <outlet property="profilePicBlack" destination="ND3-fp-FAJ" id="dpV-0e-S9Q"/>
                         <outlet property="profilePicGradient" destination="GI6-Xj-XOw" id="MFS-3E-94l"/>
                         <outlet property="profilePicImageView" destination="pKd-kh-hAB" id="3Jo-n7-EDg"/>

@@ -13,13 +13,14 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var profilePicGradient: UIView!
     @IBOutlet weak var profilePicBlack: UIView!
     @IBOutlet weak var profilePicImageView: UIImageView!
+    @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         profilePicGradient.layer.cornerRadius = profilePicGradient.frame.height / 2.0
         profilePicBlack.layer.cornerRadius = profilePicBlack.frame.height / 2.0
-        profilePicImageView.layer.cornerRadius =
-            profilePicImageView.frame.height / 2.0
+        profilePicImageView.layer.cornerRadius = profilePicImageView.frame.height / 2.0
+        label.text = "@someUser | First Last"
         // Do any additional setup after loading the view.
     }
 
