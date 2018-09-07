@@ -8,6 +8,4 @@
 #ifndef BridgingHeader
 #define BridgingHeader
 
-#import <KontaktSDK/KontaktSDK.h>
-
 #endif
