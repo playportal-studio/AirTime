@@ -91,13 +91,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		508C669F21430C2F0059C591 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		A322BB8B1DFEA7C400C847AF = {
 			isa = PBXGroup;
 			children = (
@@ -119,18 +112,17 @@
 		A322BB961DFEA7C400C847AF /* AirTime */ = {
 			isa = PBXGroup;
 			children = (
-				508C669F21430C2F0059C591 /* Extensions */,
 				508C66852142F06B0059C591 /* GradientBkgndView.swift */,
 				6E5439A82142C4E30052B060 /* Colors.swift */,
 				A39B0CEB1E3794E900E3D3AC /* ViewController.swift */,
 				508C667F2142C1AA0059C591 /* HomeViewController.swift */,
+				508C66872142FBF60059C591 /* SettingsTableTableViewController.swift */,
 				A35DA1E21E37884600929021 /* Main.storyboard */,
 				A322BB971DFEA7C400C847AF /* AppDelegate.swift */,
 				A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */,
 				A322BB9E1DFEA7C400C847AF /* Assets.xcassets */,
 				A322BBA31DFEA7C400C847AF /* Info.plist */,
 				0D6557AF1E65C97E00A21FCE /* BridgingHeader.h */,
-				508C66872142FBF60059C591 /* SettingsTableTableViewController.swift */,
 			);
 			path = AirTime;
 			sourceTree = "<group>";
