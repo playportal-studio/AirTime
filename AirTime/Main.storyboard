@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="f7J-MQ-vn1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XUJ-xh-UfK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="JDe-pV-9Bd">
             <objects>
-                <viewController id="f7J-MQ-vn1" customClass="ViewController" customModule="Developer_Samples" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f7J-MQ-vn1" customClass="ViewController" customModule="AirTime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NfS-JC-eIV"/>
                         <viewControllerLayoutGuide type="bottom" id="2fv-ed-sB0"/>
@@ -26,6 +27,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Q9-UJ-Jdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1220" y="-510"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CIQ-JB-EBO">
+            <objects>
+                <navigationController id="XUJ-xh-UfK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pvs-f4-gQT">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pnC-ZS-5FL" kind="relationship" relationship="rootViewController" id="dGV-LC-cak"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JNA-iQ-hUR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2113" y="-519"/>
+        </scene>
+        <!--Air Time-->
+        <scene sceneID="Vv1-vN-gcr">
+            <objects>
+                <viewController id="pnC-ZS-5FL" customClass="HomeViewController" customModule="AirTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dYA-ap-qPi"/>
+                        <viewControllerLayoutGuide type="bottom" id="pLW-NR-98W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eVL-yH-seG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pxE-LR-DJu">
+                                <rect key="frame" x="137" y="108" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="OGX-py-cQm"/>
+                                    <constraint firstAttribute="width" secondItem="pxE-LR-DJu" secondAttribute="height" multiplier="1:1" id="cYr-os-C5Z"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pxE-LR-DJu" firstAttribute="top" secondItem="dYA-ap-qPi" secondAttribute="bottom" constant="44" id="6G7-V6-TlI"/>
+                            <constraint firstItem="pxE-LR-DJu" firstAttribute="centerX" secondItem="eVL-yH-seG" secondAttribute="centerX" id="U9c-DR-trP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Air Time" id="Z5S-UZ-j8G"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="pxE-LR-DJu" id="ex9-eV-Cq2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dch-2T-Llh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2902" y="-516"/>
         </scene>
     </scenes>
 </document>
