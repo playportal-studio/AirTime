@@ -155,7 +155,7 @@
             </objects>
             <point key="canvasLocation" x="2901.5999999999999" y="-516.79160419790105"/>
         </scene>
-        <!--Settings Table Table View Controller-->
+        <!--Settings-->
         <scene sceneID="kue-yJ-mEQ">
             <objects>
                 <tableViewController id="JnB-pH-Ff7" customClass="SettingsTableTableViewController" customModule="AirTime" customModuleProvider="target" sceneMemberID="viewController">
@@ -182,6 +182,7 @@
                             <outlet property="delegate" destination="JnB-pH-Ff7" id="R1g-9R-4be"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="kLT-mW-xb1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLP-QB-dgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
