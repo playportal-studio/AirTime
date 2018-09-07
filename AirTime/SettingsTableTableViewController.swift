@@ -16,7 +16,9 @@ class SettingsTableTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    //App Bar
         
+    self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
        cell1.textLabel!.text = "Whpaseoifhasdolf"
     }
 
