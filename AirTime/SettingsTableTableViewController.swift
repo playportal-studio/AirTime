@@ -14,10 +14,7 @@ class SettingsTableTableViewController: UITableViewController {
         super.viewDidLoad()
 
     //App Bar
-        
-    self.navigationController?.title = "Settings"
-        
-        
+  
     self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
     }
