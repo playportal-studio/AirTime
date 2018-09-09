@@ -15,6 +15,7 @@
 		4669F1E72141BBB100769F88 /* PlayPortal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1E52141BBB100769F88 /* PlayPortal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4669F1E92141BC6000769F88 /* KontaktSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1E82141BC6000769F88 /* KontaktSDK.framework */; };
 		4669F1EA2141BC6000769F88 /* KontaktSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1E82141BC6000769F88 /* KontaktSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4669F1EC2141CA5B00769F88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669F1EB2141CA5B00769F88 /* LoginViewController.swift */; };
 		508C667B2141B7F80059C591 /* KontaktSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508C66792141B7EF0059C591 /* KontaktSDK.framework */; };
 		A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322BB971DFEA7C400C847AF /* AppDelegate.swift */; };
 		A322BB9F1DFEA7C400C847AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A322BB9E1DFEA7C400C847AF /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		4669F1E32141BB5E00769F88 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4669F1E52141BBB100769F88 /* PlayPortal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PlayPortal.framework; path = "../playPORTAL/HelloWorldObjCSDK 2/PlayPortal/PlayPortal.framework"; sourceTree = "<group>"; };
 		4669F1E82141BC6000769F88 /* KontaktSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KontaktSDK.framework; sourceTree = "<group>"; };
+		4669F1EB2141CA5B00769F88 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		508C66792141B7EF0059C591 /* KontaktSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KontaktSDK.framework; sourceTree = "<group>"; };
 		A322BB941DFEA7C400C847AF /* AirTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A322BB971DFEA7C400C847AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				A322BB9E1DFEA7C400C847AF /* Assets.xcassets */,
 				A322BBA31DFEA7C400C847AF /* Info.plist */,
 				0D6557AF1E65C97E00A21FCE /* BridgingHeader.h */,
+				4669F1EB2141CA5B00769F88 /* LoginViewController.swift */,
 			);
 			path = AirTime;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4669F1EC2141CA5B00769F88 /* LoginViewController.swift in Sources */,
 				A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */,
 				A39B0CEC1E3794E900E3D3AC /* ViewController.swift in Sources */,
 			);
