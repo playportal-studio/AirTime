@@ -3,17 +3,36 @@
 //  AirTime
 //
 //  Created by Gary J. Baldwin on 9/6/18.
-//  Copyright © 2018 kontakt.io. All rights reserved.
+//  Copyright © 2018 Dynepic, Inc. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController{
 
+    func userListener(user:PPUserObject, error:NSError?) {
+        if (error != nil) {
+            print("error: \(error!)")
+        } else {
+            print("username: \(user.handle)")
+            let sb:UIStoryboard = UIStoryboard.init(name:"Main", bundle:nil);
+            let vc:UIViewController = sb.instantiateViewController(withIdentifier:"userViewController");
+            vc.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal;
+            self.present(vc, animated:true, completion:nil)
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        PPManager.sharedInstance().PPusersvc.addUserListener((userListener));
+        
+        //PPLoginButton handles all auth flow
+        let loginButton:PPLoginButton = PPLoginButton.init()
+        loginButton.center = self.view.center
+        self.view.addSubview(loginButton)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +40,23 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+/*
+    func didTouchAnonymous() -> (IBAction) {
+        let now: NSDate = NSDate.init();
+        let age12:NSDate = self.logicalOneYearAgo(now)
+        PPManager.sharedInstance().PPusersvc.loginAnonymously(age12);
+    }
+    
+    func logicalOneYearAgo(from: NSDate) -> NSDate {
+        let gregorian:NSCalendar = NSCalendar.initWithCalendarIdentifier(NSCalendarIdentifierGregorian);
+        let offsetComponents:NSDateComponents = NSDateComponents.init();
+        offsetComponents.setYear(-1);
+        return gregorian.dateByAddingComponents(offsetComponents, toDate(from options:0));
+*/
+    
+    
+    
+    }
     /*
     // MARK: - Navigation
 
@@ -32,4 +67,4 @@ class LoginViewController: UIViewController {
     }
     */
 
-}
+

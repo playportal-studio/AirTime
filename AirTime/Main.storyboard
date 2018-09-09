@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="JDe-pV-9Bd">
             <objects>
-                <viewController id="f7J-MQ-vn1" customClass="ViewController" customModule="Developer_Samples" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f7J-MQ-vn1" customClass="LoginViewController" customModule="AirTime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NfS-JC-eIV"/>
                         <viewControllerLayoutGuide type="bottom" id="2fv-ed-sB0"/>
@@ -20,12 +20,39 @@
                     <view key="view" contentMode="scaleToFill" id="aDQ-IR-6hM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AirTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uou-ev-mc3">
+                                <rect key="frame" x="150" y="94" width="75" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Q9-UJ-Jdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1220" y="-510"/>
+            <point key="canvasLocation" x="1220" y="-510.49475262368821"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EkJ-RZ-sFC">
+            <objects>
+                <viewController id="y7N-FP-6Ff" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kS2-FQ-nZs"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cws-hf-owl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gPf-Bb-emd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Yw-IM-4Uf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1890" y="-333"/>
         </scene>
     </scenes>
 </document>
