@@ -45,17 +45,11 @@ class SettingsTableTableViewController: UITableViewController {
     }
     
 
-    
-    let playPortalURL : [NSURL] = [NSURL(string: "playportal://")!]
-    
-    
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let playPortalURL = URL(string: "playportal://")!
         
         switch (indexPath.section, indexPath.row) {
         case (0,0) :
+            self.performSegue(withIdentifier: "privacyPolicy", sender: self)
             self.tableView.deselectRow(at: IndexPath(row: 0, section: 0), animated: true)
             print("Privacy Policy")
         case (1,0) :
