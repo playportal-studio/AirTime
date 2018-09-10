@@ -8,26 +8,28 @@
 
 import UIKit
 
-class LoginViewController: UIViewController{
+  @objc class LoginViewController: UIViewController{
 
-    func userListener(user:PPUserObject, error:NSError?) {
-        if (error != nil) {
-            print("error: \(error!)")
-        } else {
-            print("username: \(user.handle)")
-            let sb:UIStoryboard = UIStoryboard.init(name:"Main", bundle:nil);
-            let vc:UIViewController = sb.instantiateViewController(withIdentifier:"userViewController");
-            vc.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal;
-            self.present(vc, animated:true, completion:nil)
-        }
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        PPManager.sharedInstance().PPusersvc.addUserListener((userListener));
+//        PPManager.sharedInstance().PPusersvc.addUserListener((userListener: user, error) -> () {
+/*
+        PPManager.sharedInstance().PPusersvc.addUserListener { user, error
+//            self.submitTokenToBackend {token, error in
+            if (error != nil) {
+                print("error: \(error!)")
+            } else {
+                print("username: \(user.handle)")
+                let sb:UIStoryboard = UIStoryboard.init(name:"Main", bundle:nil);
+                let vc:UIViewController = sb.instantiateViewController(withIdentifier:"userViewController");
+                vc.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal;
+                self.present(vc, animated:true, completion:nil)
+            }
+        });
+*/
         
         //PPLoginButton handles all auth flow
         let loginButton:PPLoginButton = PPLoginButton.init()
