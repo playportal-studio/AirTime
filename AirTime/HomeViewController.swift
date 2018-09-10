@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import WatchConnectivity
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, WCSessionDelegate {
     
     @IBOutlet weak var profilePicGradient: GradientBkgndView!
     @IBOutlet weak var profilePicBlack: UIView!
@@ -16,6 +17,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var upperScoreLabel: UILabel!
     @IBOutlet weak var lowerScoreLabel: UILabel!
+    
+    var session: WCSession?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,12 @@ class HomeViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image:#imageLiteral(resourceName: "logo_small"), style: .plain, target: self, action: #selector(HomeViewController.leftButton))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "settings"), style: .plain, target: self, action: #selector(HomeViewController.rightButton))
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        if (WCSession.isSupported()) {
+            self.session = WCSession.default()
+            self.session?.delegate = self
+            self.session?.activate()
+        }
     }
     
     func rightButton() {
@@ -42,6 +51,22 @@ class HomeViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        print("PRINT!")
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        print("diddeactivate")
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        print("didbecomeinactive")
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("WHATEVS")
     }
 
 }
