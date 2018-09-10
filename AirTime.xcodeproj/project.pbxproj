@@ -16,6 +16,7 @@
 		508C66982143051F0059C591 /* WorkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 508C668F2143051E0059C591 /* WorkSans-Medium.ttf */; };
 		508C669E214305500059C591 /* OstrichSans-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 508C669D2143054F0059C591 /* OstrichSans-Heavy.otf */; };
 		508C66A321430E750059C591 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 508C66A221430E750059C591 /* Oswald-Medium.ttf */; };
+		6E1B37C62146AFA000F01300 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B37C52146AFA000F01300 /* Utils.swift */; };
 		6E5439A92142C4E30052B060 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5439A82142C4E30052B060 /* Colors.swift */; };
 		A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322BB971DFEA7C400C847AF /* AppDelegate.swift */; };
 		A322BB9F1DFEA7C400C847AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A322BB9E1DFEA7C400C847AF /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		508C668F2143051E0059C591 /* WorkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Medium.ttf"; sourceTree = "<group>"; };
 		508C669D2143054F0059C591 /* OstrichSans-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OstrichSans-Heavy.otf"; sourceTree = "<group>"; };
 		508C66A221430E750059C591 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
+		6E1B37C52146AFA000F01300 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		6E5439A82142C4E30052B060 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A322BB941DFEA7C400C847AF /* AirTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A322BB971DFEA7C400C847AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				6E5439A82142C4E30052B060 /* Colors.swift */,
 				A39B0CEB1E3794E900E3D3AC /* ViewController.swift */,
 				508C667F2142C1AA0059C591 /* HomeViewController.swift */,
+				6E1B37C52146AFA000F01300 /* Utils.swift */,
 				508C66872142FBF60059C591 /* SettingsTableTableViewController.swift */,
 				A35DA1E21E37884600929021 /* Main.storyboard */,
 				A322BB971DFEA7C400C847AF /* AppDelegate.swift */,
@@ -218,6 +221,7 @@
 				508C66882142FBF60059C591 /* SettingsTableTableViewController.swift in Sources */,
 				A39B0CEC1E3794E900E3D3AC /* ViewController.swift in Sources */,
 				508C66802142C1AA0059C591 /* HomeViewController.swift in Sources */,
+				6E1B37C62146AFA000F01300 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

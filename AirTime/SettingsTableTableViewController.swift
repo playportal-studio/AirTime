@@ -12,12 +12,18 @@ class SettingsTableTableViewController: UITableViewController {
     
     @IBOutlet weak var cell1: UITableViewCell!
     
+    @IBOutlet weak var cell2: UITableViewCell!
+    
     @IBOutlet weak var cell1Header: UITableViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
         cell1.textLabel!.text = "Privacy Policy"
+        
+        cell2.textLabel!.text = "Manage playPORTAL Account"
+        
         self.tableView.tableFooterView = UIView()
        
     }
@@ -28,25 +34,46 @@ class SettingsTableTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Privacy"
+        switch section {
+        case 0:
+            return "Privacy"
+        case 1:
+            return "Account"
+        default :
+            return "No Header"
+        }
     }
     
+
+    
+    let playPortalURL : [NSURL] = [NSURL(string: "playportal://")!]
+    
+    
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("section: \(indexPath.section)")
-        print("row: \(indexPath.row)")
         
-        
+        let playPortalURL = URL(string: "playportal://")!
         
         switch (indexPath.section, indexPath.row) {
-        case (0,0):
-            print("Privacy Policy")
-         
+        case (0,0) :
             self.tableView.deselectRow(at: IndexPath(row: 0, section: 0), animated: true)
+            print("Privacy Policy")
+        case (1,0) :
+            self.tableView.deselectRow(at: IndexPath(row: 0, section: 1), animated: true)
+            print("Manage Account")
+            Utils.openOrDownloadPlayPortal()
         default:
             print("Default")
+     
         }
-            
     }
+    
+        
+        
+        
+    
+    
+    
     
     // MARK: - Table view data source
 

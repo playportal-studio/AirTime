@@ -37,7 +37,7 @@ class HomeViewController: UIViewController {
     }
     
     func leftButton() {
-        print("PRESSED: left")
+       Utils.openOrDownloadPlayPortal()
     }
 
     override func didReceiveMemoryWarning() {
