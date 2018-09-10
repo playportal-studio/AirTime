@@ -23,6 +23,16 @@
 		508C66982143051F0059C591 /* WorkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 508C668F2143051E0059C591 /* WorkSans-Medium.ttf */; };
 		508C669E214305500059C591 /* OstrichSans-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 508C669D2143054F0059C591 /* OstrichSans-Heavy.otf */; };
 		508C66A321430E750059C591 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 508C66A221430E750059C591 /* Oswald-Medium.ttf */; };
+		50FE60A52146D70800481700 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50FE60A32146D70800481700 /* Interface.storyboard */; };
+		50FE60A72146D70900481700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50FE60A62146D70900481700 /* Assets.xcassets */; };
+		50FE60AE2146D70900481700 /* AirTime WatchKit App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 50FE60AD2146D70900481700 /* AirTime WatchKit App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		50FE60B52146D70900481700 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE60B42146D70900481700 /* ExtensionDelegate.swift */; };
+		50FE60B72146D70A00481700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50FE60B62146D70A00481700 /* Assets.xcassets */; };
+		50FE60BB2146D70A00481700 /* AirTime WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 50FE60A12146D70800481700 /* AirTime WatchKit App.app */; };
+		50FE60C72146D78B00481700 /* ChallengeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE60C42146D78B00481700 /* ChallengeInterfaceController.swift */; };
+		50FE60C82146D78B00481700 /* JumpCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE60C52146D78B00481700 /* JumpCounter.swift */; };
+		50FE60C92146D78B00481700 /* InitialInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE60C62146D78B00481700 /* InitialInterfaceController.swift */; };
+		50FE60CC2146D8BD00481700 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FE60CB2146D8BD00481700 /* HealthKit.framework */; };
 		6E1B37C62146AFA000F01300 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B37C52146AFA000F01300 /* Utils.swift */; };
 		6E5439A92142C4E30052B060 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5439A82142C4E30052B060 /* Colors.swift */; };
 		A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322BB971DFEA7C400C847AF /* AppDelegate.swift */; };
@@ -30,6 +40,23 @@
 		A322BBA21DFEA7C400C847AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */; };
 		A35DA1E31E37884600929021 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35DA1E21E37884600929021 /* Main.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50FE60AF2146D70900481700 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A322BB8C1DFEA7C400C847AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50FE60AC2146D70900481700;
+			remoteInfo = "AirTime WatchKit App Extension";
+		};
+		50FE60B92146D70A00481700 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A322BB8C1DFEA7C400C847AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50FE60A02146D70800481700;
+			remoteInfo = "AirTime WatchKit App";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		508C667D2141B7F80059C591 /* Embed Frameworks */ = {
@@ -41,6 +68,28 @@
 				4669F1F22146BEA300769F88 /* PlayPortal.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50FE60BF2146D70A00481700 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				50FE60AE2146D70900481700 /* AirTime WatchKit App Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50FE60C32146D70A00481700 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				50FE60BB2146D70A00481700 /* AirTime WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -63,6 +112,19 @@
 		508C668F2143051E0059C591 /* WorkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Medium.ttf"; sourceTree = "<group>"; };
 		508C669D2143054F0059C591 /* OstrichSans-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OstrichSans-Heavy.otf"; sourceTree = "<group>"; };
 		508C66A221430E750059C591 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
+		50FE60A12146D70800481700 /* AirTime WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AirTime WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50FE60A42146D70800481700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		50FE60A62146D70900481700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		50FE60A82146D70900481700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50FE60AD2146D70900481700 /* AirTime WatchKit App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AirTime WatchKit App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50FE60B42146D70900481700 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		50FE60B62146D70A00481700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		50FE60B82146D70A00481700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50FE60C42146D78B00481700 /* ChallengeInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeInterfaceController.swift; sourceTree = "<group>"; };
+		50FE60C52146D78B00481700 /* JumpCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpCounter.swift; sourceTree = "<group>"; };
+		50FE60C62146D78B00481700 /* InitialInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialInterfaceController.swift; sourceTree = "<group>"; };
+		50FE60CA2146D8BD00481700 /* AirTime WatchKit App Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AirTime WatchKit App Extension.entitlements"; sourceTree = "<group>"; };
+		50FE60CB2146D8BD00481700 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		6E1B37C52146AFA000F01300 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		6E5439A82142C4E30052B060 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A322BB941DFEA7C400C847AF /* AirTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +136,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		50FE60AA2146D70900481700 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50FE60CC2146D8BD00481700 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A322BB911DFEA7C400C847AF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,6 +162,7 @@
 		1FC20239CADD742496626DDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50FE60CB2146D8BD00481700 /* HealthKit.framework */,
 				4669F1FB2146C06F00769F88 /* MobileCoreServices.framework */,
 				4669F1F92146BFFC00769F88 /* SafariServices.framework */,
 				4669F1F72146BFF300769F88 /* WebKit.framework */,
@@ -114,12 +185,38 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		50FE60A22146D70800481700 /* AirTime WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				50FE60A32146D70800481700 /* Interface.storyboard */,
+				50FE60A62146D70900481700 /* Assets.xcassets */,
+				50FE60A82146D70900481700 /* Info.plist */,
+			);
+			path = "AirTime WatchKit App";
+			sourceTree = "<group>";
+		};
+		50FE60B12146D70900481700 /* AirTime WatchKit App Extension */ = {
+			isa = PBXGroup;
+			children = (
+				50FE60CA2146D8BD00481700 /* AirTime WatchKit App Extension.entitlements */,
+				50FE60C42146D78B00481700 /* ChallengeInterfaceController.swift */,
+				50FE60C62146D78B00481700 /* InitialInterfaceController.swift */,
+				50FE60C52146D78B00481700 /* JumpCounter.swift */,
+				50FE60B42146D70900481700 /* ExtensionDelegate.swift */,
+				50FE60B62146D70A00481700 /* Assets.xcassets */,
+				50FE60B82146D70A00481700 /* Info.plist */,
+			);
+			path = "AirTime WatchKit App Extension";
+			sourceTree = "<group>";
+		};
 		A322BB8B1DFEA7C400C847AF = {
 			isa = PBXGroup;
 			children = (
 				4669F1F02146BEA300769F88 /* PlayPortal.framework */,
 				508C66812142C36D0059C591 /* Resources */,
 				A322BB961DFEA7C400C847AF /* AirTime */,
+				50FE60A22146D70800481700 /* AirTime WatchKit App */,
+				50FE60B12146D70900481700 /* AirTime WatchKit App Extension */,
 				1FC20239CADD742496626DDD /* Frameworks */,
 				A322BB951DFEA7C400C847AF /* Products */,
 			);
@@ -129,6 +226,8 @@
 			isa = PBXGroup;
 			children = (
 				A322BB941DFEA7C400C847AF /* AirTime.app */,
+				50FE60A12146D70800481700 /* AirTime WatchKit App.app */,
+				50FE60AD2146D70900481700 /* AirTime WatchKit App Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,6 +254,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		50FE60A02146D70800481700 /* AirTime WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50FE60C02146D70A00481700 /* Build configuration list for PBXNativeTarget "AirTime WatchKit App" */;
+			buildPhases = (
+				50FE609F2146D70800481700 /* Resources */,
+				50FE60BF2146D70A00481700 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50FE60B02146D70900481700 /* PBXTargetDependency */,
+			);
+			name = "AirTime WatchKit App";
+			productName = "AirTime WatchKit App";
+			productReference = 50FE60A12146D70800481700 /* AirTime WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		50FE60AC2146D70900481700 /* AirTime WatchKit App Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50FE60BC2146D70A00481700 /* Build configuration list for PBXNativeTarget "AirTime WatchKit App Extension" */;
+			buildPhases = (
+				50FE60A92146D70900481700 /* Sources */,
+				50FE60AA2146D70900481700 /* Frameworks */,
+				50FE60AB2146D70900481700 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AirTime WatchKit App Extension";
+			productName = "AirTime WatchKit App Extension";
+			productReference = 50FE60AD2146D70900481700 /* AirTime WatchKit App Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		A322BB931DFEA7C400C847AF /* AirTime */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A322BBA61DFEA7C400C847AF /* Build configuration list for PBXNativeTarget "AirTime" */;
@@ -163,10 +296,12 @@
 				A322BB911DFEA7C400C847AF /* Frameworks */,
 				A322BB921DFEA7C400C847AF /* Resources */,
 				508C667D2141B7F80059C591 /* Embed Frameworks */,
+				50FE60C32146D70A00481700 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				50FE60BA2146D70A00481700 /* PBXTargetDependency */,
 			);
 			name = AirTime;
 			productName = "Developer Samples";
@@ -179,10 +314,28 @@
 		A322BB8C1DFEA7C400C847AF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = kontakt.io;
 				TargetAttributes = {
+					50FE60A02146D70800481700 = {
+						CreatedOnToolsVersion = 9.4.1;
+						DevelopmentTeam = NAX528DUM6;
+						ProvisioningStyle = Automatic;
+					};
+					50FE60AC2146D70900481700 = {
+						CreatedOnToolsVersion = 9.4.1;
+						DevelopmentTeam = NAX528DUM6;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes.watchos.extension = {
+								enabled = 1;
+							};
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
+					};
 					A322BB931DFEA7C400C847AF = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = NAX528DUM6;
@@ -209,11 +362,30 @@
 			projectRoot = "";
 			targets = (
 				A322BB931DFEA7C400C847AF /* AirTime */,
+				50FE60A02146D70800481700 /* AirTime WatchKit App */,
+				50FE60AC2146D70900481700 /* AirTime WatchKit App Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		50FE609F2146D70800481700 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50FE60A72146D70900481700 /* Assets.xcassets in Resources */,
+				50FE60A52146D70800481700 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50FE60AB2146D70900481700 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50FE60B72146D70A00481700 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A322BB921DFEA7C400C847AF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,6 +405,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		50FE60A92146D70900481700 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50FE60C92146D78B00481700 /* InitialInterfaceController.swift in Sources */,
+				50FE60C82146D78B00481700 /* JumpCounter.swift in Sources */,
+				50FE60B52146D70900481700 /* ExtensionDelegate.swift in Sources */,
+				50FE60C72146D78B00481700 /* ChallengeInterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A322BB901DFEA7C400C847AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,7 +432,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		50FE60B02146D70900481700 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50FE60AC2146D70900481700 /* AirTime WatchKit App Extension */;
+			targetProxy = 50FE60AF2146D70900481700 /* PBXContainerItemProxy */;
+		};
+		50FE60BA2146D70A00481700 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50FE60A02146D70800481700 /* AirTime WatchKit App */;
+			targetProxy = 50FE60B92146D70A00481700 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		50FE60A32146D70800481700 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50FE60A42146D70800481700 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -261,6 +465,119 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		50FE60BD2146D70A00481700 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "AirTime WatchKit App Extension/AirTime WatchKit App Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NAX528DUM6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "AirTime WatchKit App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime2.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		50FE60BE2146D70A00481700 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "AirTime WatchKit App Extension/AirTime WatchKit App Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NAX528DUM6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "AirTime WatchKit App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime2.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		50FE60C12146D70A00481700 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NAX528DUM6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = AirTime_WatchKit_App_Extension;
+				INFOPLIST_FILE = "AirTime WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime2.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		50FE60C22146D70A00481700 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NAX528DUM6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = AirTime_WatchKit_App_Extension;
+				INFOPLIST_FILE = "AirTime WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime2.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
 		A322BBA41DFEA7C400C847AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -314,7 +631,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "Developer Samples/BridgingHeader.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,7 +682,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "Developer Samples/BridgingHeader.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -376,13 +693,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NAX528DUM6;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/AirTime";
 				INFOPLIST_FILE = "$(SRCROOT)/AirTime/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = AirTime/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;
 			};
@@ -392,13 +713,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NAX528DUM6;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/AirTime";
 				INFOPLIST_FILE = "$(SRCROOT)/AirTime/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = AirTime/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;
 			};
@@ -407,6 +731,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		50FE60BC2146D70A00481700 /* Build configuration list for PBXNativeTarget "AirTime WatchKit App Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50FE60BD2146D70A00481700 /* Debug */,
+				50FE60BE2146D70A00481700 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50FE60C02146D70A00481700 /* Build configuration list for PBXNativeTarget "AirTime WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50FE60C12146D70A00481700 /* Debug */,
+				50FE60C22146D70A00481700 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A322BB8F1DFEA7C400C847AF /* Build configuration list for PBXProject "AirTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
