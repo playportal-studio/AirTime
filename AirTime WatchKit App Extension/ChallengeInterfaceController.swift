@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 import HealthKit
 import CoreMotion
-
+import WatchConnectivity
 
 class ChallengeInterfaceController: WKInterfaceController {
 
@@ -36,7 +36,16 @@ class ChallengeInterfaceController: WKInterfaceController {
         get { return sampleRate / 5 }
     }
     var jumpCounter: JumpCounter?
-    var numJumps = 0
+    var jumpsArray : [Date] = []
+    
+    var watchSession: WCSession? {
+        didSet {
+            if let session = watchSession {
+                session.delegate = self
+                session.activate()
+            }
+        }
+    }
     
     //  MARK: Initialization
    
@@ -49,6 +58,11 @@ class ChallengeInterfaceController: WKInterfaceController {
     
     // MARK: WKInterfaceController
     
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+        self.watchSession = WCSession.default
+    }
+    
     override func willActivate() {
         super.willActivate()
         active = true
@@ -60,8 +74,8 @@ class ChallengeInterfaceController: WKInterfaceController {
     }
 
     func start() {
-        numJumps = 0
-        jumpLabel.setTitle("\(numJumps)")
+        jumpsArray = []
+        jumpLabel.setTitle("\(jumpsArray.count)")
         
         // If we have already started the workout, then do nothing.
         if (session != nil) {
@@ -102,6 +116,7 @@ class ChallengeInterfaceController: WKInterfaceController {
     }
     
     @IBAction func stop() {
+        
         if (session == nil) {
             return
         }
@@ -119,21 +134,86 @@ class ChallengeInterfaceController: WKInterfaceController {
         
         jumpLabel.setTitle("\(0)")
         
+        let longestJumpTime = calculateLongestJump()
+        print("LONGEST: \(longestJumpTime)")
+        
         //send numJump to phone
+        do {
+            try watchSession!.updateApplicationContext(
+                [
+                    "totalJumps" : jumpsArray.count,
+                    "longestJump": longestJumpTime
+                ]
+            )
+        } catch {
+            print("ERROR")
+        }
         
         WKInterfaceController.reloadRootControllers(withNames: ["InitialInterfaceController"], contexts: [])
     }
     
     //  MARK: Methods
     
-    func jumpFound(jumps: Int) {
-        numJumps = jumps
-        jumpLabel.setTitle("\(numJumps)")
+    func jumpFound(time: Date) {
+        
+        jumpsArray.append(time)
+        jumpLabel.setTitle("\(jumpsArray.count)")
     }
     
     @IBAction func incrementJumpLabel() {
-        numJumps = numJumps + 1
-        jumpLabel.setTitle("\(numJumps)")
+        jumpsArray.append(Date())
+        jumpLabel.setTitle("\(jumpsArray.count)")
     }
     
+    func calculateLongestJump() -> Double {
+        var longestJumpTime : Double = 0.0
+        var index = 0
+        while index < jumpsArray.count - 1 {
+            let firstJumpTime: Date = jumpsArray[index]
+            let secondJumpTime: Date = jumpsArray[index+1]
+            let jumpDuration = secondJumpTime.timeIntervalSince(firstJumpTime)
+            if (jumpDuration > longestJumpTime) {
+                longestJumpTime = jumpDuration
+            }
+            index += 1
+        }
+        return longestJumpTime
+    }
+    
+}
+
+extension ChallengeInterfaceController: WCSessionDelegate {
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("Session activation did complete")
+    }
+}
+
+extension TimeInterval {
+    public var milliseconds: Int {
+        return Int((truncatingRemainder(dividingBy: 1)) * 1000)
+    }
+    
+    public var seconds: Int {
+        return Int(self) % 60
+    }
+    
+    private var minutes: Int {
+        return (Int(self) / 60 ) % 60
+    }
+    
+    private var hours: Int {
+        return Int(self) / 3600
+    }
+    
+    var stringTime: String {
+        if hours != 0 {
+            return "\(hours)h \(minutes)m \(seconds)s"
+        } else if minutes != 0 {
+            return "\(minutes)m \(seconds)s"
+        } else if milliseconds != 0 {
+            return "\(seconds)s \(milliseconds)ms"
+        } else {
+            return "\(seconds)s"
+        }
+    }
 }

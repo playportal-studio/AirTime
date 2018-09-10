@@ -54,7 +54,12 @@ class HomeViewController: UIViewController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        print("PRINT!")
+        let total = applicationContext["totalJumps"] as! Int
+        let longest = Double(round(100*(applicationContext["longestJump"] as! Double))/100)
+        DispatchQueue.main.async {
+            self.upperScoreLabel.text = String(describing: total)
+            self.lowerScoreLabel.text = String(describing: longest)
+        }
     }
     
     func sessionDidDeactivate(_ session: WCSession) {

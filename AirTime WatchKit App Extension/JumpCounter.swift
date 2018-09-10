@@ -12,7 +12,7 @@ func sumSquares(arr: [Double]) -> Double {
     return sqrt(arr.reduce(0.0) { $0 + pow($1, 2) })
 }
 
-typealias JumpFoundCallback = (_ jump: Int) -> Void
+typealias JumpFoundCallback = (_ time: Date) -> Void
 
 class JumpCounter {
     
@@ -93,7 +93,7 @@ class JumpCounter {
             //  Jump found
             if normalized <= lowerBound {
                 jumps += 1
-                jumpFound(jumps)
+                jumpFound(Date())
                 
                 currentPeak = nil
             } else {
