@@ -161,8 +161,10 @@ class ChallengeInterfaceController: WKInterfaceController {
     }
     
     @IBAction func incrementJumpLabel() {
+        #if DEBUG
         jumpsArray.append(Date())
         jumpLabel.setTitle("\(jumpsArray.count)")
+        #endif
     }
     
     func calculateLongestJump() -> Double {
