@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4669F1F12146BEA300769F88 /* PlayPortal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F02146BEA300769F88 /* PlayPortal.framework */; };
+		4669F1F22146BEA300769F88 /* PlayPortal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F02146BEA300769F88 /* PlayPortal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4669F1F42146BFB000769F88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669F1F32146BFB000769F88 /* LoginViewController.swift */; };
+		4669F1F62146BFE700769F88 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F52146BFE700769F88 /* Security.framework */; };
+		4669F1F82146BFF300769F88 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F72146BFF300769F88 /* WebKit.framework */; };
+		4669F1FA2146BFFC00769F88 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F92146BFFC00769F88 /* SafariServices.framework */; };
+		4669F1FC2146C07000769F88 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1FB2146C06F00769F88 /* MobileCoreServices.framework */; };
 		508C66802142C1AA0059C591 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C667F2142C1AA0059C591 /* HomeViewController.swift */; };
 		508C66832142C37E0059C591 /* still time.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 508C66822142C37E0059C591 /* still time.ttf */; };
 		508C66862142F06B0059C591 /* GradientBkgndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C66852142F06B0059C591 /* GradientBkgndView.swift */; };
@@ -22,7 +29,6 @@
 		A322BB9F1DFEA7C400C847AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A322BB9E1DFEA7C400C847AF /* Assets.xcassets */; };
 		A322BBA21DFEA7C400C847AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */; };
 		A35DA1E31E37884600929021 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35DA1E21E37884600929021 /* Main.storyboard */; };
-		A39B0CEC1E3794E900E3D3AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39B0CEB1E3794E900E3D3AC /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +38,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				4669F1F22146BEA300769F88 /* PlayPortal.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,6 +48,12 @@
 /* Begin PBXFileReference section */
 		0D6557761E657DA400A21FCE /* KontaktSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KontaktSDK.framework; path = ../../KontaktSDK/iOS/KontaktSDK.framework; sourceTree = "<group>"; };
 		0D6557AF1E65C97E00A21FCE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		4669F1F02146BEA300769F88 /* PlayPortal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PlayPortal.framework; path = AirTime/PlayPortal.framework; sourceTree = "<group>"; };
+		4669F1F32146BFB000769F88 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4669F1F52146BFE700769F88 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4669F1F72146BFF300769F88 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		4669F1F92146BFFC00769F88 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		4669F1FB2146C06F00769F88 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		508C667F2142C1AA0059C591 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		508C66822142C37E0059C591 /* still time.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "still time.ttf"; sourceTree = "<group>"; };
 		508C66852142F06B0059C591 /* GradientBkgndView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBkgndView.swift; sourceTree = "<group>"; };
@@ -58,7 +71,6 @@
 		A322BBA11DFEA7C400C847AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A322BBA31DFEA7C400C847AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A35DA1E21E37884600929021 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		A39B0CEB1E3794E900E3D3AC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4669F1FC2146C07000769F88 /* MobileCoreServices.framework in Frameworks */,
+				4669F1FA2146BFFC00769F88 /* SafariServices.framework in Frameworks */,
+				4669F1F82146BFF300769F88 /* WebKit.framework in Frameworks */,
+				4669F1F62146BFE700769F88 /* Security.framework in Frameworks */,
+				4669F1F12146BEA300769F88 /* PlayPortal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +92,10 @@
 		1FC20239CADD742496626DDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4669F1FB2146C06F00769F88 /* MobileCoreServices.framework */,
+				4669F1F92146BFFC00769F88 /* SafariServices.framework */,
+				4669F1F72146BFF300769F88 /* WebKit.framework */,
+				4669F1F52146BFE700769F88 /* Security.framework */,
 				0D6557761E657DA400A21FCE /* KontaktSDK.framework */,
 			);
 			name = Frameworks;
@@ -96,6 +117,7 @@
 		A322BB8B1DFEA7C400C847AF = {
 			isa = PBXGroup;
 			children = (
+				4669F1F02146BEA300769F88 /* PlayPortal.framework */,
 				508C66812142C36D0059C591 /* Resources */,
 				A322BB961DFEA7C400C847AF /* AirTime */,
 				1FC20239CADD742496626DDD /* Frameworks */,
@@ -114,9 +136,9 @@
 		A322BB961DFEA7C400C847AF /* AirTime */ = {
 			isa = PBXGroup;
 			children = (
+				4669F1F32146BFB000769F88 /* LoginViewController.swift */,
 				508C66852142F06B0059C591 /* GradientBkgndView.swift */,
 				6E5439A82142C4E30052B060 /* Colors.swift */,
-				A39B0CEB1E3794E900E3D3AC /* ViewController.swift */,
 				508C667F2142C1AA0059C591 /* HomeViewController.swift */,
 				6E1B37C52146AFA000F01300 /* Utils.swift */,
 				508C66872142FBF60059C591 /* SettingsTableTableViewController.swift */,
@@ -219,7 +241,7 @@
 				508C66862142F06B0059C591 /* GradientBkgndView.swift in Sources */,
 				6E5439A92142C4E30052B060 /* Colors.swift in Sources */,
 				508C66882142FBF60059C591 /* SettingsTableTableViewController.swift in Sources */,
-				A39B0CEC1E3794E900E3D3AC /* ViewController.swift in Sources */,
+				4669F1F42146BFB000769F88 /* LoginViewController.swift in Sources */,
 				508C66802142C1AA0059C591 /* HomeViewController.swift in Sources */,
 				6E1B37C62146AFA000F01300 /* Utils.swift in Sources */,
 			);
@@ -359,7 +381,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/AirTime/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = AirTime/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;
@@ -375,7 +397,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/AirTime/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = AirTime/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;
