@@ -8,8 +8,6 @@
 #ifndef BridgingHeader
 #define BridgingHeader
 
-#import <KontaktSDK/KontaktSDK.h>
-
 #import <PlayPortal/PlayPortal.h>
 
 
