@@ -1,17 +1,22 @@
 //
-//  ApplyDeviceConfigViewController.swift
-//  Developer Samples
+//  ViewController.swift
+//  AirTime
 //
-//  Created by Szymon Bobowiec on 24.01.2017.
-//  Copyright © 2017 kontakt.io. All rights reserved.
+//  Created by Jett Black on 9/4/18.
+//  Copyright © 2018 Jett Black. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
 }
+
