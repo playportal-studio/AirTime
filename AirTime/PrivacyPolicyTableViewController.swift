@@ -24,13 +24,17 @@ class PrivacyPolicyViewController : UITableViewController {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
-        notcell1.textLabel!.text = "placeHolder"
+        notcell1.textLabel!.text = "None"
         
-        notcell2.textLabel!.text = "placeHolder"
+        notcell2.textLabel!.text = "N/A"
         
-        notcell3.textLabel!.text = "placeHolder"
+        notcell3.textLabel!.text = "N/A"
         
-        notcell4.textLabel!.text = "placeHolder"
+        notcell4.textLabel!.text = """
+        Dynepic, Inc;
+        PO Box 297;
+        Folly Beach, SC 29439
+        """
         
         self.tableView.tableFooterView = UIView()
         
