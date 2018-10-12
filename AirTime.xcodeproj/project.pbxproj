@@ -7,13 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4669F1F12146BEA300769F88 /* PlayPortal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F02146BEA300769F88 /* PlayPortal.framework */; };
-		4669F1F22146BEA300769F88 /* PlayPortal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F02146BEA300769F88 /* PlayPortal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C80AE5B88ACF80C7B328628 /* libPods-AirTime WatchKit App Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AFD5E51D7FFD01E8072F19 /* libPods-AirTime WatchKit App Extension.a */; };
+		1B42BE0FAC4E3E9EDC0F186A /* libPods-AirTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAFF547673389EFA79D3625 /* libPods-AirTime.a */; };
 		4669F1F42146BFB000769F88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669F1F32146BFB000769F88 /* LoginViewController.swift */; };
 		4669F1F62146BFE700769F88 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F52146BFE700769F88 /* Security.framework */; };
 		4669F1F82146BFF300769F88 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F72146BFF300769F88 /* WebKit.framework */; };
 		4669F1FA2146BFFC00769F88 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F92146BFFC00769F88 /* SafariServices.framework */; };
 		4669F1FC2146C07000769F88 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1FB2146C06F00769F88 /* MobileCoreServices.framework */; };
+		46AE4EFC216BE9C6007F8478 /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E56216BE9C5007F8478 /* iTunesArtwork@1x.png */; };
+		46AE4EFD216BE9C6007F8478 /* Icon-App-57x57@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E58216BE9C5007F8478 /* Icon-App-57x57@1x.png */; };
+		46AE4EFE216BE9C6007F8478 /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E59216BE9C5007F8478 /* Icon-App-76x76@2x.png */; };
+		46AE4EFF216BE9C6007F8478 /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E5A216BE9C5007F8478 /* Icon-App-29x29@1x.png */; };
+		46AE4F00216BE9C6007F8478 /* Icon-App-60x60@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E5B216BE9C5007F8478 /* Icon-App-60x60@1x.png */; };
+		46AE4F01216BE9C6007F8478 /* Icon-Small-50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E5C216BE9C5007F8478 /* Icon-Small-50x50@2x.png */; };
+		46AE4F02216BE9C6007F8478 /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E5D216BE9C5007F8478 /* Icon-App-40x40@1x.png */; };
+		46AE4F03216BE9C6007F8478 /* Icon-App-76x76@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E5E216BE9C5007F8478 /* Icon-App-76x76@3x.png */; };
+		46AE4F04216BE9C6007F8478 /* Icon-App-72x72@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E5F216BE9C5007F8478 /* Icon-App-72x72@1x.png */; };
+		46AE4F05216BE9C6007F8478 /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E60216BE9C5007F8478 /* Icon-App-20x20@1x.png */; };
+		46AE4F06216BE9C6007F8478 /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E61216BE9C5007F8478 /* Icon-App-83.5x83.5@2x.png */; };
+		46AE4F07216BE9C6007F8478 /* Icon-App-20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E62216BE9C5007F8478 /* Icon-App-20x20@3x.png */; };
+		46AE4F08216BE9C6007F8478 /* ItunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E63216BE9C5007F8478 /* ItunesArtwork@2x.png */; };
+		46AE4F09216BE9C6007F8478 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E64216BE9C5007F8478 /* Contents.json */; };
+		46AE4F0A216BE9C6007F8478 /* Icon-App-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E65216BE9C5007F8478 /* Icon-App-20x20@2x.png */; };
+		46AE4F0B216BE9C6007F8478 /* Icon-App-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E66216BE9C5007F8478 /* Icon-App-29x29@3x.png */; };
+		46AE4F0C216BE9C6007F8478 /* Icon-App-40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E67216BE9C5007F8478 /* Icon-App-40x40@2x.png */; };
+		46AE4F0D216BE9C6007F8478 /* Icon-App-72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E68216BE9C5007F8478 /* Icon-App-72x72@2x.png */; };
+		46AE4F0E216BE9C6007F8478 /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E69216BE9C5007F8478 /* Icon-App-60x60@3x.png */; };
+		46AE4F0F216BE9C6007F8478 /* Icon-Small-50x50@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E6A216BE9C5007F8478 /* Icon-Small-50x50@1x.png */; };
+		46AE4F10216BE9C6007F8478 /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E6B216BE9C5007F8478 /* Icon-App-60x60@2x.png */; };
+		46AE4F11216BE9C6007F8478 /* Icon-App-57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E6C216BE9C5007F8478 /* Icon-App-57x57@2x.png */; };
+		46AE4F12216BE9C6007F8478 /* Icon-App-76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E6D216BE9C5007F8478 /* Icon-App-76x76@1x.png */; };
+		46AE4F13216BE9C6007F8478 /* Icon-App-40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E6E216BE9C5007F8478 /* Icon-App-40x40@3x.png */; };
+		46AE4F14216BE9C6007F8478 /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E6F216BE9C5007F8478 /* Icon-App-29x29@2x.png */; };
+		46AE4F15216BE9C6007F8478 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E70216BE9C5007F8478 /* README.md */; };
+		46AE4F16216BE9C6007F8478 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E71216BE9C5007F8478 /* iTunesArtwork@2x.png */; };
+		46AE4F17216BE9C6007F8478 /* iTunesArtwork@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E72216BE9C5007F8478 /* iTunesArtwork@3x.png */; };
+		46AE4F1F216BE9C6007F8478 /* icon-messages-app-iPhone-60x45@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E82216BE9C5007F8478 /* icon-messages-app-iPhone-60x45@1x.png */; };
+		46AE4F20216BE9C6007F8478 /* icon-messages-app-iPadAir-67x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E83216BE9C5007F8478 /* icon-messages-app-iPadAir-67x50@2x.png */; };
+		46AE4F21216BE9C6007F8478 /* icon-messages-app-store-1024x768.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E84216BE9C5007F8478 /* icon-messages-app-store-1024x768.png */; };
+		46AE4F22216BE9C6007F8478 /* icon-messages-transcript-32x24@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E85216BE9C5007F8478 /* icon-messages-transcript-32x24@3x.png */; };
+		46AE4F23216BE9C6007F8478 /* icon-messages-app-27x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E86216BE9C5007F8478 /* icon-messages-app-27x20@1x.png */; };
+		46AE4F24216BE9C6007F8478 /* icon-messages-transcript-32x24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E87216BE9C5007F8478 /* icon-messages-transcript-32x24@2x.png */; };
+		46AE4F25216BE9C6007F8478 /* icon-messages-app-27x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E88216BE9C5007F8478 /* icon-messages-app-27x20@2x.png */; };
+		46AE4F26216BE9C6007F8478 /* icon-messages-transcript-32x24@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E89216BE9C5007F8478 /* icon-messages-transcript-32x24@1x.png */; };
+		46AE4F27216BE9C6007F8478 /* icon-messages-app-27x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E8A216BE9C5007F8478 /* icon-messages-app-27x20@3x.png */; };
+		46AE4F28216BE9C6007F8478 /* icon-messages-app-iPadAir-74x55@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E8B216BE9C5007F8478 /* icon-messages-app-iPadAir-74x55@2x.png */; };
+		46AE4F29216BE9C6007F8478 /* icon-messages-app-iPhone-60x45@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E8C216BE9C5007F8478 /* icon-messages-app-iPhone-60x45@3x.png */; };
+		46AE4F2A216BE9C6007F8478 /* icon-messages-app-iPhone-60x45@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E8D216BE9C5007F8478 /* icon-messages-app-iPhone-60x45@2x.png */; };
+		46AE4F2B216BE9C6007F8478 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E90216BE9C5007F8478 /* Icon-40@2x.png */; };
+		46AE4F2C216BE9C6007F8478 /* Icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E91216BE9C5007F8478 /* Icon-29@2x.png */; };
+		46AE4F2D216BE9C6007F8478 /* Icon-44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E92216BE9C5007F8478 /* Icon-44@2x.png */; };
+		46AE4F2E216BE9C6007F8478 /* Icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E93216BE9C5007F8478 /* Icon-29@3x.png */; };
+		46AE4F2F216BE9C6007F8478 /* Icon-27.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E94216BE9C5007F8478 /* Icon-27.5@2x.png */; };
+		46AE4F30216BE9C6007F8478 /* Icon-86@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E95216BE9C5007F8478 /* Icon-86@2x.png */; };
+		46AE4F31216BE9C6007F8478 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E96216BE9C5007F8478 /* Contents.json */; };
+		46AE4F32216BE9C6007F8478 /* Icon-98@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E97216BE9C5007F8478 /* Icon-98@2x.png */; };
+		46AE4F33216BE9C6007F8478 /* Icon-24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E98216BE9C5007F8478 /* Icon-24@2x.png */; };
+		46AE4F3A216BE9C6007F8478 /* PPLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA1216BE9C5007F8478 /* PPLoginButton.swift */; };
+		46AE4F3B216BE9C6007F8478 /* PPWebApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA2216BE9C5007F8478 /* PPWebApi.swift */; };
+		46AE4F3C216BE9C6007F8478 /* PPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA3216BE9C5007F8478 /* PPManager.swift */; };
+		46AE4F3D216BE9C6007F8478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4EA4216BE9C5007F8478 /* Assets.xcassets */; };
+		46AE4F3E216BE9C6007F8478 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA5216BE9C5007F8478 /* KeychainWrapper.swift */; };
+		46AE4F3F216BE9C6007F8478 /* PPUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA6216BE9C5007F8478 /* PPUserService.swift */; };
+		46AE4F40216BE9C6007F8478 /* PPDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA7216BE9C5007F8478 /* PPDataService.swift */; };
+		46AE4F41216BE9C6007F8478 /* RemoteNotificationsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA8216BE9C5007F8478 /* RemoteNotificationsHandler.swift */; };
+		46AE4F42216BE9C6007F8478 /* PPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA9216BE9C5007F8478 /* PPUtils.swift */; };
+		46AE4F43216BE9C6007F8478 /* .gitmodules in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4EAA216BE9C5007F8478 /* .gitmodules */; };
+		46AE4F44216BE9C6007F8478 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4EAB216BE9C5007F8478 /* README.md */; };
+		46AE4F45216BE9C6007F8478 /* ColoredGlyph.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4EAD216BE9C5007F8478 /* ColoredGlyph.png */; };
+		46AE4F46216BE9C6007F8478 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4EAE216BE9C5007F8478 /* .gitignore */; };
 		5077E1252146F8AE00B0E0FA /* TimeInterval+Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5077E1242146F8AE00B0E0FA /* TimeInterval+Time.swift */; };
 		508C66802142C1AA0059C591 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508C667F2142C1AA0059C591 /* HomeViewController.swift */; };
 		508C66832142C37E0059C591 /* still time.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 508C66822142C37E0059C591 /* still time.ttf */; };
@@ -37,6 +99,7 @@
 		6E1B37C62146AFA000F01300 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B37C52146AFA000F01300 /* Utils.swift */; };
 		6E1B37C82146B77200F01300 /* PrivacyPolicyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B37C72146B77200F01300 /* PrivacyPolicyTableViewController.swift */; };
 		6E5439A92142C4E30052B060 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5439A82142C4E30052B060 /* Colors.swift */; };
+		8345D8FB2D0574F883F5E12A /* libPods-AirTime WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 481CB751E696C48A140D26E0 /* libPods-AirTime WatchKit App.a */; };
 		A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322BB971DFEA7C400C847AF /* AppDelegate.swift */; };
 		A322BB9F1DFEA7C400C847AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A322BB9E1DFEA7C400C847AF /* Assets.xcassets */; };
 		A322BBA21DFEA7C400C847AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */; };
@@ -67,7 +130,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4669F1F22146BEA300769F88 /* PlayPortal.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,12 +161,79 @@
 /* Begin PBXFileReference section */
 		0D6557761E657DA400A21FCE /* KontaktSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KontaktSDK.framework; path = ../../KontaktSDK/iOS/KontaktSDK.framework; sourceTree = "<group>"; };
 		0D6557AF1E65C97E00A21FCE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
-		4669F1F02146BEA300769F88 /* PlayPortal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PlayPortal.framework; path = AirTime/PlayPortal.framework; sourceTree = "<group>"; };
+		24AFD5E51D7FFD01E8072F19 /* libPods-AirTime WatchKit App Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTime WatchKit App Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A8AC7C841FC30F8C8A1D072 /* Pods-AirTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.release.xcconfig"; path = "Target Support Files/Pods-AirTime/Pods-AirTime.release.xcconfig"; sourceTree = "<group>"; };
+		32D5E5387B47A583F4BB2883 /* Pods-AirTime WatchKit App Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime WatchKit App Extension.debug.xcconfig"; path = "Target Support Files/Pods-AirTime WatchKit App Extension/Pods-AirTime WatchKit App Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		4669F1F32146BFB000769F88 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4669F1F52146BFE700769F88 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4669F1F72146BFF300769F88 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		4669F1F92146BFFC00769F88 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		4669F1FB2146C06F00769F88 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		46AE4E56216BE9C5007F8478 /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
+		46AE4E58216BE9C5007F8478 /* Icon-App-57x57@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-57x57@1x.png"; sourceTree = "<group>"; };
+		46AE4E59216BE9C5007F8478 /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
+		46AE4E5A216BE9C5007F8478 /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
+		46AE4E5B216BE9C5007F8478 /* Icon-App-60x60@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@1x.png"; sourceTree = "<group>"; };
+		46AE4E5C216BE9C5007F8478 /* Icon-Small-50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50x50@2x.png"; sourceTree = "<group>"; };
+		46AE4E5D216BE9C5007F8478 /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
+		46AE4E5E216BE9C5007F8478 /* Icon-App-76x76@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@3x.png"; sourceTree = "<group>"; };
+		46AE4E5F216BE9C5007F8478 /* Icon-App-72x72@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-72x72@1x.png"; sourceTree = "<group>"; };
+		46AE4E60216BE9C5007F8478 /* Icon-App-20x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@1x.png"; sourceTree = "<group>"; };
+		46AE4E61216BE9C5007F8478 /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
+		46AE4E62216BE9C5007F8478 /* Icon-App-20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@3x.png"; sourceTree = "<group>"; };
+		46AE4E63216BE9C5007F8478 /* ItunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ItunesArtwork@2x.png"; sourceTree = "<group>"; };
+		46AE4E64216BE9C5007F8478 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		46AE4E65216BE9C5007F8478 /* Icon-App-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@2x.png"; sourceTree = "<group>"; };
+		46AE4E66216BE9C5007F8478 /* Icon-App-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@3x.png"; sourceTree = "<group>"; };
+		46AE4E67216BE9C5007F8478 /* Icon-App-40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@2x.png"; sourceTree = "<group>"; };
+		46AE4E68216BE9C5007F8478 /* Icon-App-72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-72x72@2x.png"; sourceTree = "<group>"; };
+		46AE4E69216BE9C5007F8478 /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
+		46AE4E6A216BE9C5007F8478 /* Icon-Small-50x50@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50x50@1x.png"; sourceTree = "<group>"; };
+		46AE4E6B216BE9C5007F8478 /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
+		46AE4E6C216BE9C5007F8478 /* Icon-App-57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-57x57@2x.png"; sourceTree = "<group>"; };
+		46AE4E6D216BE9C5007F8478 /* Icon-App-76x76@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@1x.png"; sourceTree = "<group>"; };
+		46AE4E6E216BE9C5007F8478 /* Icon-App-40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@3x.png"; sourceTree = "<group>"; };
+		46AE4E6F216BE9C5007F8478 /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
+		46AE4E70216BE9C5007F8478 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		46AE4E71216BE9C5007F8478 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		46AE4E72216BE9C5007F8478 /* iTunesArtwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@3x.png"; sourceTree = "<group>"; };
+		46AE4E82216BE9C5007F8478 /* icon-messages-app-iPhone-60x45@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-messages-app-iPhone-60x45@1x.png"; sourceTree = "<group>"; };
+		46AE4E83216BE9C5007F8478 /* icon-messages-app-iPadAir-67x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-messages-app-iPadAir-67x50@2x.png"; sourceTree = "<group>"; };
+		46AE4E84216BE9C5007F8478 /* icon-messages-app-store-1024x768.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-messages-app-store-1024x768.png"; sourceTree = "<group>"; };
+		46AE4E85216BE9C5007F8478 /* icon-messages-transcript-32x24@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-messages-transcript-32x24@3x.png"; sourceTree = "<group>"; };
+		46AE4E86216BE9C5007F8478 /* icon-messages-app-27x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-messages-app-27x20@1x.png"; sourceTree = "<group>"; };
+		46AE4E87216BE9C5007F8478 /* icon-messages-transcript-32x24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-messages-transcript-32x24@2x.png"; sourceTree = "<group>"; };
+		46AE4E88216BE9C5007F8478 /* icon-messages-app-27x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-messages-app-27x20@2x.png"; sourceTree = "<group>"; };
+		46AE4E89216BE9C5007F8478 /* icon-messages-transcript-32x24@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-messages-transcript-32x24@1x.png"; sourceTree = "<group>"; };
+		46AE4E8A216BE9C5007F8478 /* icon-messages-app-27x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-messages-app-27x20@3x.png"; sourceTree = "<group>"; };
+		46AE4E8B216BE9C5007F8478 /* icon-messages-app-iPadAir-74x55@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-messages-app-iPadAir-74x55@2x.png"; sourceTree = "<group>"; };
+		46AE4E8C216BE9C5007F8478 /* icon-messages-app-iPhone-60x45@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-messages-app-iPhone-60x45@3x.png"; sourceTree = "<group>"; };
+		46AE4E8D216BE9C5007F8478 /* icon-messages-app-iPhone-60x45@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-messages-app-iPhone-60x45@2x.png"; sourceTree = "<group>"; };
+		46AE4E90216BE9C5007F8478 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		46AE4E91216BE9C5007F8478 /* Icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29@2x.png"; sourceTree = "<group>"; };
+		46AE4E92216BE9C5007F8478 /* Icon-44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-44@2x.png"; sourceTree = "<group>"; };
+		46AE4E93216BE9C5007F8478 /* Icon-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29@3x.png"; sourceTree = "<group>"; };
+		46AE4E94216BE9C5007F8478 /* Icon-27.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-27.5@2x.png"; sourceTree = "<group>"; };
+		46AE4E95216BE9C5007F8478 /* Icon-86@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-86@2x.png"; sourceTree = "<group>"; };
+		46AE4E96216BE9C5007F8478 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		46AE4E97216BE9C5007F8478 /* Icon-98@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-98@2x.png"; sourceTree = "<group>"; };
+		46AE4E98216BE9C5007F8478 /* Icon-24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-24@2x.png"; sourceTree = "<group>"; };
+		46AE4EA1216BE9C5007F8478 /* PPLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPLoginButton.swift; sourceTree = "<group>"; };
+		46AE4EA2216BE9C5007F8478 /* PPWebApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPWebApi.swift; sourceTree = "<group>"; };
+		46AE4EA3216BE9C5007F8478 /* PPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPManager.swift; sourceTree = "<group>"; };
+		46AE4EA4216BE9C5007F8478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46AE4EA5216BE9C5007F8478 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		46AE4EA6216BE9C5007F8478 /* PPUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPUserService.swift; sourceTree = "<group>"; };
+		46AE4EA7216BE9C5007F8478 /* PPDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPDataService.swift; sourceTree = "<group>"; };
+		46AE4EA8216BE9C5007F8478 /* RemoteNotificationsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteNotificationsHandler.swift; sourceTree = "<group>"; };
+		46AE4EA9216BE9C5007F8478 /* PPUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPUtils.swift; sourceTree = "<group>"; };
+		46AE4EAA216BE9C5007F8478 /* .gitmodules */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
+		46AE4EAB216BE9C5007F8478 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		46AE4EAD216BE9C5007F8478 /* ColoredGlyph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColoredGlyph.png; sourceTree = "<group>"; };
+		46AE4EAE216BE9C5007F8478 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		46AE4F68216BEDC4007F8478 /* AirTime.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AirTime.xcodeproj; sourceTree = "<group>"; };
+		481CB751E696C48A140D26E0 /* libPods-AirTime WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTime WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D3603830198999E172CFC34 /* Pods-AirTime WatchKit App Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime WatchKit App Extension.release.xcconfig"; path = "Target Support Files/Pods-AirTime WatchKit App Extension/Pods-AirTime WatchKit App Extension.release.xcconfig"; sourceTree = "<group>"; };
 		5077E1242146F8AE00B0E0FA /* TimeInterval+Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Time.swift"; sourceTree = "<group>"; };
 		508C667F2142C1AA0059C591 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		508C66822142C37E0059C591 /* still time.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "still time.ttf"; sourceTree = "<group>"; };
@@ -131,20 +260,33 @@
 		6E1B37C52146AFA000F01300 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		6E1B37C72146B77200F01300 /* PrivacyPolicyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyTableViewController.swift; sourceTree = "<group>"; };
 		6E5439A82142C4E30052B060 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		960DCCBA4B6F7646748B7BC1 /* Pods-AirTime WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-AirTime WatchKit App/Pods-AirTime WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		A119555CFE8250B5A419ABA8 /* Pods-AirTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.debug.xcconfig"; path = "Target Support Files/Pods-AirTime/Pods-AirTime.debug.xcconfig"; sourceTree = "<group>"; };
 		A322BB941DFEA7C400C847AF /* AirTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A322BB971DFEA7C400C847AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A322BB9E1DFEA7C400C847AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A322BBA11DFEA7C400C847AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A322BBA31DFEA7C400C847AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A35DA1E21E37884600929021 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B5F3886D9E68CA3B1ABCA99B /* Pods-AirTime WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-AirTime WatchKit App/Pods-AirTime WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		EAAFF547673389EFA79D3625 /* libPods-AirTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0DAC082163337CE2EDA36D7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8345D8FB2D0574F883F5E12A /* libPods-AirTime WatchKit App.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		50FE60AA2146D70900481700 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				50FE60CC2146D8BD00481700 /* HealthKit.framework in Frameworks */,
+				0C80AE5B88ACF80C7B328628 /* libPods-AirTime WatchKit App Extension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +298,7 @@
 				4669F1FA2146BFFC00769F88 /* SafariServices.framework in Frameworks */,
 				4669F1F82146BFF300769F88 /* WebKit.framework in Frameworks */,
 				4669F1F62146BFE700769F88 /* Security.framework in Frameworks */,
-				4669F1F12146BEA300769F88 /* PlayPortal.framework in Frameworks */,
+				1B42BE0FAC4E3E9EDC0F186A /* libPods-AirTime.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,8 +314,138 @@
 				4669F1F72146BFF300769F88 /* WebKit.framework */,
 				4669F1F52146BFE700769F88 /* Security.framework */,
 				0D6557761E657DA400A21FCE /* KontaktSDK.framework */,
+				EAAFF547673389EFA79D3625 /* libPods-AirTime.a */,
+				481CB751E696C48A140D26E0 /* libPods-AirTime WatchKit App.a */,
+				24AFD5E51D7FFD01E8072F19 /* libPods-AirTime WatchKit App Extension.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46AE4E54216BE9C5007F8478 /* AirTime Splash@1x */ = {
+			isa = PBXGroup;
+			children = (
+				46AE4E55216BE9C5007F8478 /* ios */,
+				46AE4E81216BE9C5007F8478 /* imessenger */,
+				46AE4E8E216BE9C5007F8478 /* watchkit */,
+			);
+			path = "AirTime Splash@1x";
+			sourceTree = "<group>";
+		};
+		46AE4E55216BE9C5007F8478 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				46AE4E56216BE9C5007F8478 /* iTunesArtwork@1x.png */,
+				46AE4E57216BE9C5007F8478 /* AppIcon.appiconset */,
+				46AE4E70216BE9C5007F8478 /* README.md */,
+				46AE4E71216BE9C5007F8478 /* iTunesArtwork@2x.png */,
+				46AE4E72216BE9C5007F8478 /* iTunesArtwork@3x.png */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		46AE4E57216BE9C5007F8478 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				46AE4E58216BE9C5007F8478 /* Icon-App-57x57@1x.png */,
+				46AE4E59216BE9C5007F8478 /* Icon-App-76x76@2x.png */,
+				46AE4E5A216BE9C5007F8478 /* Icon-App-29x29@1x.png */,
+				46AE4E5B216BE9C5007F8478 /* Icon-App-60x60@1x.png */,
+				46AE4E5C216BE9C5007F8478 /* Icon-Small-50x50@2x.png */,
+				46AE4E5D216BE9C5007F8478 /* Icon-App-40x40@1x.png */,
+				46AE4E5E216BE9C5007F8478 /* Icon-App-76x76@3x.png */,
+				46AE4E5F216BE9C5007F8478 /* Icon-App-72x72@1x.png */,
+				46AE4E60216BE9C5007F8478 /* Icon-App-20x20@1x.png */,
+				46AE4E61216BE9C5007F8478 /* Icon-App-83.5x83.5@2x.png */,
+				46AE4E62216BE9C5007F8478 /* Icon-App-20x20@3x.png */,
+				46AE4E63216BE9C5007F8478 /* ItunesArtwork@2x.png */,
+				46AE4E64216BE9C5007F8478 /* Contents.json */,
+				46AE4E65216BE9C5007F8478 /* Icon-App-20x20@2x.png */,
+				46AE4E66216BE9C5007F8478 /* Icon-App-29x29@3x.png */,
+				46AE4E67216BE9C5007F8478 /* Icon-App-40x40@2x.png */,
+				46AE4E68216BE9C5007F8478 /* Icon-App-72x72@2x.png */,
+				46AE4E69216BE9C5007F8478 /* Icon-App-60x60@3x.png */,
+				46AE4E6A216BE9C5007F8478 /* Icon-Small-50x50@1x.png */,
+				46AE4E6B216BE9C5007F8478 /* Icon-App-60x60@2x.png */,
+				46AE4E6C216BE9C5007F8478 /* Icon-App-57x57@2x.png */,
+				46AE4E6D216BE9C5007F8478 /* Icon-App-76x76@1x.png */,
+				46AE4E6E216BE9C5007F8478 /* Icon-App-40x40@3x.png */,
+				46AE4E6F216BE9C5007F8478 /* Icon-App-29x29@2x.png */,
+			);
+			path = AppIcon.appiconset;
+			sourceTree = "<group>";
+		};
+		46AE4E81216BE9C5007F8478 /* imessenger */ = {
+			isa = PBXGroup;
+			children = (
+				46AE4E82216BE9C5007F8478 /* icon-messages-app-iPhone-60x45@1x.png */,
+				46AE4E83216BE9C5007F8478 /* icon-messages-app-iPadAir-67x50@2x.png */,
+				46AE4E84216BE9C5007F8478 /* icon-messages-app-store-1024x768.png */,
+				46AE4E85216BE9C5007F8478 /* icon-messages-transcript-32x24@3x.png */,
+				46AE4E86216BE9C5007F8478 /* icon-messages-app-27x20@1x.png */,
+				46AE4E87216BE9C5007F8478 /* icon-messages-transcript-32x24@2x.png */,
+				46AE4E88216BE9C5007F8478 /* icon-messages-app-27x20@2x.png */,
+				46AE4E89216BE9C5007F8478 /* icon-messages-transcript-32x24@1x.png */,
+				46AE4E8A216BE9C5007F8478 /* icon-messages-app-27x20@3x.png */,
+				46AE4E8B216BE9C5007F8478 /* icon-messages-app-iPadAir-74x55@2x.png */,
+				46AE4E8C216BE9C5007F8478 /* icon-messages-app-iPhone-60x45@3x.png */,
+				46AE4E8D216BE9C5007F8478 /* icon-messages-app-iPhone-60x45@2x.png */,
+			);
+			path = imessenger;
+			sourceTree = "<group>";
+		};
+		46AE4E8E216BE9C5007F8478 /* watchkit */ = {
+			isa = PBXGroup;
+			children = (
+				46AE4E8F216BE9C5007F8478 /* AppIcon.appiconset */,
+			);
+			path = watchkit;
+			sourceTree = "<group>";
+		};
+		46AE4E8F216BE9C5007F8478 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				46AE4E90216BE9C5007F8478 /* Icon-40@2x.png */,
+				46AE4E91216BE9C5007F8478 /* Icon-29@2x.png */,
+				46AE4E92216BE9C5007F8478 /* Icon-44@2x.png */,
+				46AE4E93216BE9C5007F8478 /* Icon-29@3x.png */,
+				46AE4E94216BE9C5007F8478 /* Icon-27.5@2x.png */,
+				46AE4E95216BE9C5007F8478 /* Icon-86@2x.png */,
+				46AE4E96216BE9C5007F8478 /* Contents.json */,
+				46AE4E97216BE9C5007F8478 /* Icon-98@2x.png */,
+				46AE4E98216BE9C5007F8478 /* Icon-24@2x.png */,
+			);
+			path = AppIcon.appiconset;
+			sourceTree = "<group>";
+		};
+		46AE4EA0216BE9C5007F8478 /* PlayPortal */ = {
+			isa = PBXGroup;
+			children = (
+				46AE4EA1216BE9C5007F8478 /* PPLoginButton.swift */,
+				46AE4EA2216BE9C5007F8478 /* PPWebApi.swift */,
+				46AE4EA3216BE9C5007F8478 /* PPManager.swift */,
+				46AE4EA4216BE9C5007F8478 /* Assets.xcassets */,
+				46AE4EA5216BE9C5007F8478 /* KeychainWrapper.swift */,
+				46AE4EA6216BE9C5007F8478 /* PPUserService.swift */,
+				46AE4EA7216BE9C5007F8478 /* PPDataService.swift */,
+				46AE4EA8216BE9C5007F8478 /* RemoteNotificationsHandler.swift */,
+				46AE4EA9216BE9C5007F8478 /* PPUtils.swift */,
+			);
+			path = PlayPortal;
+			sourceTree = "<group>";
+		};
+		46AE4EAC216BE9C5007F8478 /* markdownImages */ = {
+			isa = PBXGroup;
+			children = (
+				46AE4EAD216BE9C5007F8478 /* ColoredGlyph.png */,
+			);
+			path = markdownImages;
+			sourceTree = "<group>";
+		};
+		46AE4F69216BEDC4007F8478 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		508C66812142C36D0059C591 /* Resources */ = {
@@ -213,16 +485,34 @@
 			path = "AirTime WatchKit App Extension";
 			sourceTree = "<group>";
 		};
+		7177BFBC4DEEB05880F49E20 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A119555CFE8250B5A419ABA8 /* Pods-AirTime.debug.xcconfig */,
+				2A8AC7C841FC30F8C8A1D072 /* Pods-AirTime.release.xcconfig */,
+				960DCCBA4B6F7646748B7BC1 /* Pods-AirTime WatchKit App.debug.xcconfig */,
+				B5F3886D9E68CA3B1ABCA99B /* Pods-AirTime WatchKit App.release.xcconfig */,
+				32D5E5387B47A583F4BB2883 /* Pods-AirTime WatchKit App Extension.debug.xcconfig */,
+				4D3603830198999E172CFC34 /* Pods-AirTime WatchKit App Extension.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A322BB8B1DFEA7C400C847AF = {
 			isa = PBXGroup;
 			children = (
-				4669F1F02146BEA300769F88 /* PlayPortal.framework */,
+				46AE4F68216BEDC4007F8478 /* AirTime.xcodeproj */,
+				46AE4EAB216BE9C5007F8478 /* README.md */,
+				46AE4EAE216BE9C5007F8478 /* .gitignore */,
+				46AE4EAA216BE9C5007F8478 /* .gitmodules */,
+				46AE4EA0216BE9C5007F8478 /* PlayPortal */,
 				508C66812142C36D0059C591 /* Resources */,
 				A322BB961DFEA7C400C847AF /* AirTime */,
 				50FE60A22146D70800481700 /* AirTime WatchKit App */,
 				50FE60B12146D70900481700 /* AirTime WatchKit App Extension */,
 				1FC20239CADD742496626DDD /* Frameworks */,
 				A322BB951DFEA7C400C847AF /* Products */,
+				7177BFBC4DEEB05880F49E20 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -239,6 +529,8 @@
 		A322BB961DFEA7C400C847AF /* AirTime */ = {
 			isa = PBXGroup;
 			children = (
+				46AE4EAC216BE9C5007F8478 /* markdownImages */,
+				46AE4E54216BE9C5007F8478 /* AirTime Splash@1x */,
 				4669F1F32146BFB000769F88 /* LoginViewController.swift */,
 				508C66852142F06B0059C591 /* GradientBkgndView.swift */,
 				6E5439A82142C4E30052B060 /* Colors.swift */,
@@ -264,8 +556,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50FE60C02146D70A00481700 /* Build configuration list for PBXNativeTarget "AirTime WatchKit App" */;
 			buildPhases = (
+				75270ABCB436B2975C10F335 /* [CP] Check Pods Manifest.lock */,
 				50FE609F2146D70800481700 /* Resources */,
 				50FE60BF2146D70A00481700 /* Embed App Extensions */,
+				0DAC082163337CE2EDA36D7F /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,6 +575,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50FE60BC2146D70A00481700 /* Build configuration list for PBXNativeTarget "AirTime WatchKit App Extension" */;
 			buildPhases = (
+				72EBAC62D68092907ED130F1 /* [CP] Check Pods Manifest.lock */,
 				50FE60A92146D70900481700 /* Sources */,
 				50FE60AA2146D70900481700 /* Frameworks */,
 				50FE60AB2146D70900481700 /* Resources */,
@@ -298,6 +593,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A322BBA61DFEA7C400C847AF /* Build configuration list for PBXNativeTarget "AirTime" */;
 			buildPhases = (
+				5DD627F5304D1EC7DAC60B9C /* [CP] Check Pods Manifest.lock */,
 				A322BB901DFEA7C400C847AF /* Sources */,
 				A322BB911DFEA7C400C847AF /* Frameworks */,
 				A322BB921DFEA7C400C847AF /* Resources */,
@@ -365,6 +661,12 @@
 			mainGroup = A322BB8B1DFEA7C400C847AF;
 			productRefGroup = A322BB951DFEA7C400C847AF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 46AE4F69216BEDC4007F8478 /* Products */;
+					ProjectRef = 46AE4F68216BEDC4007F8478 /* AirTime.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A322BB931DFEA7C400C847AF /* AirTime */,
@@ -397,18 +699,129 @@
 			buildActionMask = 2147483647;
 			files = (
 				508C668A2142FF760059C591 /* ostrich-regular.ttf in Resources */,
+				46AE4F0F216BE9C6007F8478 /* Icon-Small-50x50@1x.png in Resources */,
+				46AE4F04216BE9C6007F8478 /* Icon-App-72x72@1x.png in Resources */,
+				46AE4F13216BE9C6007F8478 /* Icon-App-40x40@3x.png in Resources */,
+				46AE4F0A216BE9C6007F8478 /* Icon-App-20x20@2x.png in Resources */,
+				46AE4F45216BE9C6007F8478 /* ColoredGlyph.png in Resources */,
+				46AE4F21216BE9C6007F8478 /* icon-messages-app-store-1024x768.png in Resources */,
+				46AE4F2D216BE9C6007F8478 /* Icon-44@2x.png in Resources */,
+				46AE4F07216BE9C6007F8478 /* Icon-App-20x20@3x.png in Resources */,
+				46AE4F2C216BE9C6007F8478 /* Icon-29@2x.png in Resources */,
+				46AE4F2F216BE9C6007F8478 /* Icon-27.5@2x.png in Resources */,
 				A322BBA21DFEA7C400C847AF /* LaunchScreen.storyboard in Resources */,
+				46AE4F10216BE9C6007F8478 /* Icon-App-60x60@2x.png in Resources */,
+				46AE4F12216BE9C6007F8478 /* Icon-App-76x76@1x.png in Resources */,
+				46AE4EFD216BE9C6007F8478 /* Icon-App-57x57@1x.png in Resources */,
+				46AE4F32216BE9C6007F8478 /* Icon-98@2x.png in Resources */,
 				508C669E214305500059C591 /* OstrichSans-Heavy.otf in Resources */,
+				46AE4F05216BE9C6007F8478 /* Icon-App-20x20@1x.png in Resources */,
+				46AE4F31216BE9C6007F8478 /* Contents.json in Resources */,
+				46AE4EFF216BE9C6007F8478 /* Icon-App-29x29@1x.png in Resources */,
+				46AE4F02216BE9C6007F8478 /* Icon-App-40x40@1x.png in Resources */,
 				508C66982143051F0059C591 /* WorkSans-Medium.ttf in Resources */,
+				46AE4F0E216BE9C6007F8478 /* Icon-App-60x60@3x.png in Resources */,
 				508C66832142C37E0059C591 /* still time.ttf in Resources */,
+				46AE4F15216BE9C6007F8478 /* README.md in Resources */,
+				46AE4F22216BE9C6007F8478 /* icon-messages-transcript-32x24@3x.png in Resources */,
+				46AE4F08216BE9C6007F8478 /* ItunesArtwork@2x.png in Resources */,
+				46AE4F2A216BE9C6007F8478 /* icon-messages-app-iPhone-60x45@2x.png in Resources */,
 				A35DA1E31E37884600929021 /* Main.storyboard in Resources */,
+				46AE4F33216BE9C6007F8478 /* Icon-24@2x.png in Resources */,
+				46AE4EFC216BE9C6007F8478 /* iTunesArtwork@1x.png in Resources */,
+				46AE4F00216BE9C6007F8478 /* Icon-App-60x60@1x.png in Resources */,
+				46AE4EFE216BE9C6007F8478 /* Icon-App-76x76@2x.png in Resources */,
+				46AE4F06216BE9C6007F8478 /* Icon-App-83.5x83.5@2x.png in Resources */,
+				46AE4F1F216BE9C6007F8478 /* icon-messages-app-iPhone-60x45@1x.png in Resources */,
+				46AE4F28216BE9C6007F8478 /* icon-messages-app-iPadAir-74x55@2x.png in Resources */,
+				46AE4F09216BE9C6007F8478 /* Contents.json in Resources */,
+				46AE4F14216BE9C6007F8478 /* Icon-App-29x29@2x.png in Resources */,
+				46AE4F26216BE9C6007F8478 /* icon-messages-transcript-32x24@1x.png in Resources */,
+				46AE4F0D216BE9C6007F8478 /* Icon-App-72x72@2x.png in Resources */,
+				46AE4F43216BE9C6007F8478 /* .gitmodules in Resources */,
+				46AE4F01216BE9C6007F8478 /* Icon-Small-50x50@2x.png in Resources */,
+				46AE4F0B216BE9C6007F8478 /* Icon-App-29x29@3x.png in Resources */,
 				508C66A321430E750059C591 /* Oswald-Medium.ttf in Resources */,
 				A322BB9F1DFEA7C400C847AF /* Assets.xcassets in Resources */,
+				46AE4F16216BE9C6007F8478 /* iTunesArtwork@2x.png in Resources */,
+				46AE4F17216BE9C6007F8478 /* iTunesArtwork@3x.png in Resources */,
+				46AE4F25216BE9C6007F8478 /* icon-messages-app-27x20@2x.png in Resources */,
+				46AE4F03216BE9C6007F8478 /* Icon-App-76x76@3x.png in Resources */,
+				46AE4F20216BE9C6007F8478 /* icon-messages-app-iPadAir-67x50@2x.png in Resources */,
+				46AE4F30216BE9C6007F8478 /* Icon-86@2x.png in Resources */,
+				46AE4F0C216BE9C6007F8478 /* Icon-App-40x40@2x.png in Resources */,
+				46AE4F24216BE9C6007F8478 /* icon-messages-transcript-32x24@2x.png in Resources */,
+				46AE4F29216BE9C6007F8478 /* icon-messages-app-iPhone-60x45@3x.png in Resources */,
+				46AE4F2E216BE9C6007F8478 /* Icon-29@3x.png in Resources */,
+				46AE4F11216BE9C6007F8478 /* Icon-App-57x57@2x.png in Resources */,
 				508C66952143051F0059C591 /* WorkSans-Regular.ttf in Resources */,
+				46AE4F44216BE9C6007F8478 /* README.md in Resources */,
+				46AE4F46216BE9C6007F8478 /* .gitignore in Resources */,
+				46AE4F27216BE9C6007F8478 /* icon-messages-app-27x20@3x.png in Resources */,
+				46AE4F2B216BE9C6007F8478 /* Icon-40@2x.png in Resources */,
+				46AE4F3D216BE9C6007F8478 /* Assets.xcassets in Resources */,
+				46AE4F23216BE9C6007F8478 /* icon-messages-app-27x20@1x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DD627F5304D1EC7DAC60B9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirTime-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72EBAC62D68092907ED130F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirTime WatchKit App Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75270ABCB436B2975C10F335 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirTime WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		50FE60A92146D70900481700 /* Sources */ = {
@@ -428,12 +841,20 @@
 			files = (
 				A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */,
 				508C66862142F06B0059C591 /* GradientBkgndView.swift in Sources */,
+				46AE4F3F216BE9C6007F8478 /* PPUserService.swift in Sources */,
 				6E5439A92142C4E30052B060 /* Colors.swift in Sources */,
+				46AE4F3B216BE9C6007F8478 /* PPWebApi.swift in Sources */,
+				46AE4F3A216BE9C6007F8478 /* PPLoginButton.swift in Sources */,
+				46AE4F40216BE9C6007F8478 /* PPDataService.swift in Sources */,
+				46AE4F3C216BE9C6007F8478 /* PPManager.swift in Sources */,
 				508C66882142FBF60059C591 /* SettingsTableTableViewController.swift in Sources */,
+				46AE4F42216BE9C6007F8478 /* PPUtils.swift in Sources */,
 				4669F1F42146BFB000769F88 /* LoginViewController.swift in Sources */,
 				508C66802142C1AA0059C591 /* HomeViewController.swift in Sources */,
 				6E1B37C82146B77200F01300 /* PrivacyPolicyTableViewController.swift in Sources */,
 				5077E1252146F8AE00B0E0FA /* TimeInterval+Time.swift in Sources */,
+				46AE4F3E216BE9C6007F8478 /* KeychainWrapper.swift in Sources */,
+				46AE4F41216BE9C6007F8478 /* RemoteNotificationsHandler.swift in Sources */,
 				6E1B37C62146AFA000F01300 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +896,7 @@
 /* Begin XCBuildConfiguration section */
 		50FE60BD2146D70A00481700 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32D5E5387B47A583F4BB2883 /* Pods-AirTime WatchKit App Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -490,7 +912,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "AirTime WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime2.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -503,6 +925,7 @@
 		};
 		50FE60BE2146D70A00481700 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D3603830198999E172CFC34 /* Pods-AirTime WatchKit App Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -518,7 +941,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "AirTime WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime2.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -531,6 +954,7 @@
 		};
 		50FE60C12146D70A00481700 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 960DCCBA4B6F7646748B7BC1 /* Pods-AirTime WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -546,7 +970,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = AirTime_WatchKit_App_Extension;
 				INFOPLIST_FILE = "AirTime WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime2.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -560,6 +984,7 @@
 		};
 		50FE60C22146D70A00481700 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5F3886D9E68CA3B1ABCA99B /* Pods-AirTime WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -575,7 +1000,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = AirTime_WatchKit_App_Extension;
 				INFOPLIST_FILE = "AirTime WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime2.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -699,6 +1124,7 @@
 		};
 		A322BBA71DFEA7C400C847AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A119555CFE8250B5A419ABA8 /* Pods-AirTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -708,7 +1134,11 @@
 				INFOPLIST_FILE = "$(SRCROOT)/AirTime/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AirTime/pwed",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -719,6 +1149,7 @@
 		};
 		A322BBA81DFEA7C400C847AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A8AC7C841FC30F8C8A1D072 /* Pods-AirTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -728,7 +1159,11 @@
 				INFOPLIST_FILE = "$(SRCROOT)/AirTime/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AirTime/pwed",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = AirTime/BridgingHeader.h;

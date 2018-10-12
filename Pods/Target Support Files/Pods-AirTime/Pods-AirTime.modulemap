@@ -1,0 +1,6 @@
+module Pods_AirTime {
+  umbrella header "Pods-AirTime-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,7 +8,6 @@
 
 import UIKit
 import UserNotifications
-import PlayPortal
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,10 +21,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        PPManager.sharedInstance().configure(cid, secret:cse, andRedirectURI:redirectURI);
+        
+        let hvc: HomeViewController = HomeViewController()
+        
+        PPManager.sharedInstance.addUserListener(handler:hvc.userListener(_:_:))
+        PPManager.sharedInstance.configure(env:env, clientId:cid, secret:cse, andRedirectURI:redirectURI)
         
         return true
     }
     
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        PPManager.sharedInstance.handleOpenURL(url:url)
+        return true
+    }
 }
 

@@ -20,10 +20,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Login View Controller-->
+        <!--LoginViewController-->
         <scene sceneID="JDe-pV-9Bd">
             <objects>
-                <viewController id="f7J-MQ-vn1" customClass="LoginViewController" customModule="AirTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f7J-MQ-vn1" customClass="LoginViewController" customModule="AirTime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NfS-JC-eIV"/>
                         <viewControllerLayoutGuide type="bottom" id="2fv-ed-sB0"/>
@@ -192,7 +192,7 @@
         <!--Air Time-->
         <scene sceneID="qSn-6d-UE9">
             <objects>
-                <viewController id="UDd-EL-KGr" customClass="HomeViewController" customModule="AirTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Air Time Scene" id="UDd-EL-KGr" customClass="HomeViewController" customModule="AirTime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s3k-lA-6km"/>
                         <viewControllerLayoutGuide type="bottom" id="AqH-T7-KNR"/>

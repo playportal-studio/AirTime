@@ -8,7 +8,7 @@
 #ifndef BridgingHeader
 #define BridgingHeader
 
-#import <PlayPortal/PlayPortal.h>
+//#import <PlayPortal/PlayPortal.h>
 
 
 #endif

@@ -20,6 +20,35 @@ class HomeViewController: UIViewController, WCSessionDelegate {
     
     var session: WCSession?
     
+    
+    
+    func userListener(_ user:PPUserObject?, _ authd:Bool) -> Void {
+        print("userListener invoked");
+        
+        let sb:UIStoryboard = UIStoryboard.init(name:"Main", bundle:nil)
+        guard let rvc:UIViewController = UIApplication.shared.keyWindow?.rootViewController else {
+            return
+        }
+        
+        if(!authd) {
+            let vc:LoginViewController = sb.instantiateViewController(withIdentifier:"LoginViewController") as! LoginViewController
+            vc.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal;
+            if let cvc = getCurrentViewController(rvc) {
+                print("userListener NOT authd current VC: \(cvc )" );
+                cvc.present(vc, animated:true, completion:nil)
+            }
+        } else {
+            let hvc:HomeViewController = sb.instantiateViewController(withIdentifier: "Air Time Scene") as! HomeViewController
+            //            hvc.user = user
+            hvc.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal;
+            if let cvc = getCurrentViewController(rvc) {
+                print("userListener authd current VC: \(cvc )" );
+                cvc.present(hvc, animated:true, completion:nil)
+            }
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         profilePicGradient.layer.cornerRadius = profilePicGradient.frame.height / 2.0
