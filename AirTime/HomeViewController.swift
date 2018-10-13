@@ -20,10 +20,10 @@ class HomeViewController: UIViewController, WCSessionDelegate {
     
     var session: WCSession?
     
-    
+    var user:PPUserObject?
     
     func userListener(_ user:PPUserObject?, _ authd:Bool) -> Void {
-        print("userListener invoked");
+        print("userListener invoked authd: \( authd )  user: \(String(describing:  user ))" )
         
         let sb:UIStoryboard = UIStoryboard.init(name:"Main", bundle:nil)
         guard let rvc:UIViewController = UIApplication.shared.keyWindow?.rootViewController else {
@@ -39,7 +39,9 @@ class HomeViewController: UIViewController, WCSessionDelegate {
             }
         } else {
             let hvc:HomeViewController = sb.instantiateViewController(withIdentifier: "Air Time Scene") as! HomeViewController
-            //            hvc.user = user
+            if let u = user {
+                hvc.user = u
+            }
             hvc.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal;
             if let cvc = getCurrentViewController(rvc) {
                 print("userListener authd current VC: \(cvc )" );
@@ -66,6 +68,12 @@ class HomeViewController: UIViewController, WCSessionDelegate {
             self.session = WCSession.default()
             self.session?.delegate = self
             self.session?.activate()
+        }
+        let h = self.user?.get(key: "handle")
+        let fu = self.user?.get(key:"firstName")
+        let lu = self.user?.get(key:"lastName")
+        if h != nil && fu != nil && lu != nil {
+            self.label.text = h! + " | " + fu! + " " + lu!
         }
     }
     
