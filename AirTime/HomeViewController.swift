@@ -74,6 +74,17 @@ class HomeViewController: UIViewController, WCSessionDelegate {
         let lu = self.user?.get(key:"lastName")
         if h != nil && fu != nil && lu != nil {
             self.label.text = h! + " | " + fu! + " " + lu!
+            
+            PPManager.sharedInstance.PPusersvc.getProfilePic { succeeded, response, img in
+                if succeeded {
+                    if let i = img {
+                        self.profilePicImageView.image = i
+                    }
+                }
+            }
+            //                PPManager.sharedInstance.PPusersvc.getCoverPic { succeeded, response, img in
+            //                    self.coverPhotoImageView.image = img
+            //                }
         }
     }
     
