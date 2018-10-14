@@ -85,9 +85,6 @@ class HomeViewController: UIViewController, WCSessionDelegate {
                     }
                 }
             }
-            //                PPManager.sharedInstance.PPusersvc.getCoverPic { succeeded, response, img in
-            //                    self.coverPhotoImageView.image = img
-            //                }
         }
     }
     
@@ -104,12 +101,27 @@ class HomeViewController: UIViewController, WCSessionDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    func storeToServer(jumpCount:Int, longestJump: Double, completion: @escaping PPDataCompletion) {
+        let s:String = PPManager.sharedInstance.PPusersvc.user.get(key: "handle")!
+        let jc:NSNumber = jumpCount as NSNumber
+        let lj: NSNumber = longestJump as NSNumber
+        let tnow = PPManager.sharedInstance.stringFromDate(date: Date())
+        let innerd = ["user": s, "jump count": jc, "longest jump":lj, "epoch": tnow] as [String: Any]
+    PPManager.sharedInstance.PPdatasvc.writeBucket( bucketName:PPManager.sharedInstance.PPusersvc.getMyAppGlobalDataStorageName(), key:s, value:innerd) { succeeded, response, responseObject in
+                if(!succeeded) { print("write JSON error:") }
+            }
+        }
+    
+    
+
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
         let total = applicationContext["totalJumps"] as! Int
         let longest = Double(round(100*(applicationContext["longestJump"] as! Double))/100)
         DispatchQueue.main.async {
             self.upperScoreLabel.text = String(describing: total)
             self.lowerScoreLabel.text = String(describing: longest)
+            self.storeToServer(jumpCount: total, longestJump: longest) {  succeeded, response, responseObject in
+            }
         }
     }
     
