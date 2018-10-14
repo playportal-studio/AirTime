@@ -57,6 +57,7 @@ class HomeViewController: UIViewController, WCSessionDelegate {
         profilePicGradient.clipsToBounds = true
         profilePicBlack.layer.cornerRadius = profilePicBlack.frame.height / 2.0
         profilePicImageView.layer.cornerRadius = profilePicImageView.frame.height / 2.0
+
         
         // Do any additional setup after loading the view.
         
@@ -79,6 +80,8 @@ class HomeViewController: UIViewController, WCSessionDelegate {
                 if succeeded {
                     if let i = img {
                         self.profilePicImageView.image = i
+                        self.profilePicImageView.layer.masksToBounds = true
+
                     }
                 }
             }
