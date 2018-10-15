@@ -8,6 +8,31 @@
 
 import UIKit
 import WatchConnectivity
+/*
+class RawJumpData : Codable {
+    var jumpEvents:[ String: Any]!
+    
+    init(json: Any) { }
+}
+*/
+
+
+class Stats : Codable {
+    var totalJumps: Int!
+    var totalJumpAttempts: Int!
+    var maxSingleJumpCount:Int!
+    var maxSingleHangTime:Double!
+    
+    init(json: Any) {
+        print("in Stats: json= \( json )" )
+        if let json2 = json as? [String: Any] {
+            totalJumps = json2["totalJumps"] as! Int
+            totalJumpAttempts = json2["totalJumpAttempts"] as! Int
+            maxSingleJumpCount = json2["maxSingleJumpCount"] as! Int
+            maxSingleHangTime = json2["maxSingleHangTime"] as! Double
+        }
+    }
+}
 
 class HomeViewController: UIViewController, WCSessionDelegate {
     
@@ -22,6 +47,16 @@ class HomeViewController: UIViewController, WCSessionDelegate {
     
     var user:PPUserObject?
     
+
+//    var myRawJumpData:RawJumpData!
+
+    var myStats:Stats = Stats(
+        json: [ "totalJumps": 0 as Int,
+                "totalJumpAttempts" : 0 as Int,
+                "maxSingleJumpCount":  0 as Int,
+            "maxSingleHangTime": 0.1 ] )
+    
+
     func userListener(_ user:PPUserObject?, _ authd:Bool) -> Void {
         print("userListener invoked authd: \( authd )  user: \(String(describing:  user ))" )
         
@@ -101,26 +136,50 @@ class HomeViewController: UIViewController, WCSessionDelegate {
         super.didReceiveMemoryWarning()
     }
     
-    func storeToServer(jumpCount:Int, longestJump: Double, completion: @escaping PPDataCompletion) {
+    
+    func storeMyStatsToServer(completion: @escaping PPDataCompletion) {
+        let s:String = PPManager.sharedInstance.PPusersvc.user.get(key: "handle")!
+        let tnow = PPManager.sharedInstance.stringFromDate(date: Date())
+        let innerd = ["user": s,
+                      "Total jump count": myStats.totalJumps as Int,
+                      "Max single jump count":myStats.maxSingleJumpCount as Int,
+                      "Total jump attempts": myStats.totalJumpAttempts as Int,
+                      "Max hang time": myStats.maxSingleHangTime,
+                      "epoch": tnow] as [String: Any]
+            PPManager.sharedInstance.PPdatasvc.writeBucket( bucketName:PPManager.sharedInstance.PPusersvc.getMyAppGlobalDataStorageName(), key:s, value:innerd) { succeeded, response, responseObject in
+                if(!succeeded) { print("write JSON error:") }
+            }
+        }
+    
+    func storeRawDataToServer(jumpCount:Int, longestJump: Double, completion: @escaping PPDataCompletion) {
         let s:String = PPManager.sharedInstance.PPusersvc.user.get(key: "handle")!
         let jc:NSNumber = jumpCount as NSNumber
         let lj: NSNumber = longestJump as NSNumber
         let tnow = PPManager.sharedInstance.stringFromDate(date: Date())
         let innerd = ["user": s, "jump count": jc, "longest jump":lj, "epoch": tnow] as [String: Any]
-    PPManager.sharedInstance.PPdatasvc.writeBucket( bucketName:PPManager.sharedInstance.PPusersvc.getMyAppGlobalDataStorageName(), key:s, value:innerd) { succeeded, response, responseObject in
-                if(!succeeded) { print("write JSON error:") }
-            }
+//       self.myRawJumpData.append(json: innerd)
+        PPManager.sharedInstance.PPdatasvc.writeBucket( bucketName:PPManager.sharedInstance.PPusersvc.getMyAppGlobalDataStorageName(), key:s, value:innerd) { succeeded, response, responseObject in
+            if(!succeeded) { print("write JSON error:") }
         }
-    
-    
+    }
 
+    func updateStats(jumpCount:Int, longestJump: Double, completion: @escaping PPDataCompletion) {
+        myStats.totalJumps = myStats.totalJumps + jumpCount
+        myStats.totalJumpAttempts =  myStats.totalJumpAttempts + 1
+        if jumpCount > myStats.maxSingleJumpCount { myStats.maxSingleJumpCount = jumpCount }
+        if longestJump > myStats.maxSingleHangTime { myStats.maxSingleHangTime = longestJump }
+        return storeMyStatsToServer() { succeeded, response, responseObject in
+        }
+    }
+        
+        
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
         let total = applicationContext["totalJumps"] as! Int
         let longest = Double(round(100*(applicationContext["longestJump"] as! Double))/100)
         DispatchQueue.main.async {
             self.upperScoreLabel.text = String(describing: total)
             self.lowerScoreLabel.text = String(describing: longest)
-            self.storeToServer(jumpCount: total, longestJump: longest) {  succeeded, response, responseObject in
+            self.updateStats(jumpCount:total, longestJump: longest) {  succeeded, response, responseObject in
             }
         }
     }
