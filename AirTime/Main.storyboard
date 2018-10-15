@@ -201,18 +201,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iE0-su-vO5" customClass="GradientBkgndView" customModule="AirTime" customModuleProvider="target">
-                                <rect key="frame" x="117.5" y="50" width="140" height="140"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iE0-su-vO5" customClass="GradientBkgndView" customModule="AirTime" customModuleProvider="target">
+                                <rect key="frame" x="117.5" y="90" width="140" height="140"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2h-vz-32p">
-                                        <rect key="frame" x="10.5" y="10.5" width="119" height="119"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M2h-vz-32p">
+                                        <rect key="frame" x="10.5" y="22.5" width="119" height="119"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="M2h-vz-32p" secondAttribute="height" multiplier="1:1" id="S9l-YN-srD"/>
                                         </constraints>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unknown" translatesAutoresizingMaskIntoConstraints="NO" id="N0q-wj-JBs">
-                                        <rect key="frame" x="13" y="13" width="114" height="114"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Unknown" translatesAutoresizingMaskIntoConstraints="NO" id="N0q-wj-JBs">
+                                        <rect key="frame" x="13" y="26" width="114" height="114"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="N0q-wj-JBs" secondAttribute="height" multiplier="1:1" id="Y2f-y3-QgM"/>
@@ -231,8 +231,8 @@
                                     <constraint firstItem="N0q-wj-JBs" firstAttribute="height" secondItem="iE0-su-vO5" secondAttribute="height" multiplier="0.96" constant="-20.400000000000006" id="eHP-tB-oaz"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@user1234 | John Smith" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cge-vB-m1D">
-                                <rect key="frame" x="87" y="210" width="202" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="@user1234 | John Smith" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cge-vB-m1D">
+                                <rect key="frame" x="88" y="241" width="202" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="23" id="T9v-zx-ww9"/>
                                 </constraints>
@@ -240,43 +240,43 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ioq-pH-2Ne">
-                                <rect key="frame" x="16" y="241" width="343" height="406"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ioq-pH-2Ne">
+                                <rect key="frame" x="16" y="241" width="343" height="390"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashLogo" translatesAutoresizingMaskIntoConstraints="NO" id="YKw-N6-hbL">
-                                        <rect key="frame" x="8" y="0.0" width="335" height="406"/>
+                                    <imageView userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="SplashLogo" translatesAutoresizingMaskIntoConstraints="NO" id="YKw-N6-hbL">
+                                        <rect key="frame" x="101" y="68" width="335" height="382"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Trapezoid" translatesAutoresizingMaskIntoConstraints="NO" id="oop-01-moY" userLabel="UpperScore">
-                                        <rect key="frame" x="30" y="44" width="201" height="100"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Trapezoid" translatesAutoresizingMaskIntoConstraints="NO" id="oop-01-moY" userLabel="UpperScore">
+                                        <rect key="frame" x="17" y="110" width="201" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="s3q-2l-j2P"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="125" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rb-7y-huP">
-                                        <rect key="frame" x="88" y="47" width="69.5" height="74.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="125" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rb-7y-huP">
+                                        <rect key="frame" x="82" y="113" width="69.5" height="74.5"/>
                                         <fontDescription key="fontDescription" name="Oswald-Medium" family="Oswald" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL HOPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrA-3R-rcK">
-                                        <rect key="frame" x="91.5" y="116.5" width="62" height="19.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TOTAL HOPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrA-3R-rcK">
+                                        <rect key="frame" x="89" y="176" width="62" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Oswald-Medium" family="Oswald" pointSize="13"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Trapezoid" translatesAutoresizingMaskIntoConstraints="NO" id="Jsa-fp-pVO" userLabel="LowerScore">
-                                        <rect key="frame" x="112" y="177" width="201" height="100"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Trapezoid" translatesAutoresizingMaskIntoConstraints="NO" id="Jsa-fp-pVO" userLabel="LowerScore">
+                                        <rect key="frame" x="105" y="233" width="201" height="100"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.87" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92h-KW-LIa">
-                                        <rect key="frame" x="167" y="181" width="76" height="74.5"/>
-                                        <fontDescription key="fontDescription" name="Oswald-Medium" family="Oswald" pointSize="50"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LONGEST AIRTIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g82-CH-H8p">
-                                        <rect key="frame" x="160.5" y="249.5" width="89" height="19.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="LONGEST AIRTIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g82-CH-H8p">
+                                        <rect key="frame" x="162" y="302" width="89" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Oswald-Medium" family="Oswald" pointSize="13"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1.87" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92h-KW-LIa">
+                                        <rect key="frame" x="167" y="239" width="76" height="74.5"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Medium" family="Oswald" pointSize="50"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -303,6 +303,20 @@
                                     <constraint firstItem="DrA-3R-rcK" firstAttribute="bottom" secondItem="oop-01-moY" secondAttribute="bottom" constant="-8" id="yuI-7s-tlj"/>
                                 </constraints>
                             </view>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="gMe-1F-QBx">
+                                <rect key="frame" x="0.0" y="9" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="AirTime" id="alA-NY-x4S">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="logo_small" id="mvT-49-bpW"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Settings" image="settings" id="BFx-eq-Odb"/>
+                                        <connections>
+                                            <outlet property="leftBarButtonItem" destination="mvT-49-bpW" id="uzb-eo-nkv"/>
+                                            <outlet property="rightBarButtonItem" destination="BFx-eq-Odb" id="NvH-Io-MER"/>
+                                        </connections>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -313,7 +327,7 @@
                             <constraint firstItem="Ioq-pH-2Ne" firstAttribute="leading" secondItem="Jcn-m1-GbQ" secondAttribute="leadingMargin" id="Zpk-DQ-n4N"/>
                             <constraint firstItem="Ioq-pH-2Ne" firstAttribute="top" secondItem="Cge-vB-m1D" secondAttribute="bottom" constant="8" id="bnd-E7-W7e"/>
                             <constraint firstItem="iE0-su-vO5" firstAttribute="centerX" secondItem="Jcn-m1-GbQ" secondAttribute="centerX" id="jtz-NS-E4Y"/>
-                            <constraint firstItem="iE0-su-vO5" firstAttribute="top" secondItem="s3k-lA-6km" secondAttribute="bottom" constant="30" id="kvI-hv-Ymt"/>
+                            <constraint firstItem="iE0-su-vO5" firstAttribute="top" secondItem="s3k-lA-6km" secondAttribute="bottom" constant="50" id="kvI-hv-Ymt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Air Time" id="q37-i4-4k8"/>
@@ -329,12 +343,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRc-1d-IOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1999" y="-510"/>
+            <point key="canvasLocation" x="1997.5999999999999" y="-510.49475262368821"/>
         </scene>
     </scenes>
     <resources>
         <image name="SplashLogo" width="1536" height="1536"/>
         <image name="Trapezoid" width="250" height="111"/>
         <image name="Unknown" width="100" height="100"/>
+        <image name="logo_small" width="31" height="32"/>
+        <image name="settings" width="30" height="30"/>
     </resources>
 </document>
