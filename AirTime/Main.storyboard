@@ -138,7 +138,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Back" id="4Fp-aP-eNQ">
+                                    <navigationItem title="Settings" largeTitleDisplayMode="always" id="4Fp-aP-eNQ">
                                         <barButtonItem key="backBarButtonItem" title="Back" id="pie-4t-Kjl"/>
                                     </navigationItem>
                                 </items>
@@ -315,6 +315,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oL-A1-C8L">
+                                        <rect key="frame" x="104" y="381" width="142" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Leaderboard" image="logo_small">
+                                            <color key="titleColor" red="0.92207739637305697" green="0.79389781632118706" blue="0.34267349085967652" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
