@@ -95,11 +95,12 @@ class HomeViewController: UIViewController, WCSessionDelegate {
 
         
         // Do any additional setup after loading the view.
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image:#imageLiteral(resourceName: "logo_small"), style: .plain, target: self, action: #selector(HomeViewController.leftButton))
+        /*
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image:#imageLiteral(resourceName: "logo_small"), style: .plain, target: self, action: #selector(HomeViewController.leftButton))
+        self.navigationItem.setLeftBarButton( UIBarButtonItem(image:#imageLiteral(resourceName: "logo_small"), style: .plain, target: self, action: #selector(HomeViewController.leftButton)), animated: true)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "settings"), style: .plain, target: self, action: #selector(HomeViewController.rightButton))
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
+  */
         if (WCSession.isSupported()) {
             self.session = WCSession.default()
             self.session?.delegate = self
@@ -122,6 +123,7 @@ class HomeViewController: UIViewController, WCSessionDelegate {
             }
         }
     }
+    
     
     func rightButton() {
     
