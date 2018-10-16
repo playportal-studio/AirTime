@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Developer Samples
 //
-//  Created by Szymon Bobowiec on 12.12.2016.
-//  Copyright © 2016 kontakt.io. All rights reserved.
+//  Created by Gary Baldwin on Oct 1, 2018.
+//  Copyright © 2018 Dynepic, Inc. All rights reserved.
 //
 
 import UIKit
