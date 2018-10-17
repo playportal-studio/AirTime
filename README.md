@@ -54,12 +54,12 @@
  cd AirTime
  git checkout feature/Step1 branch
 ```
-* ### <b>Step 6:</b> Launch Terminal
+* ### <b>Step 6:</b> Launch Terminal and install install Cocopods version 1.6 [Here](https://cocoapods.org/)
 	* Open up a terminal, and move into your project folder and do a pod install.
 ```
-	 cd Desktop
-	 cd AirTime 
-	 pod install
+cd Desktop
+cd AirTime 
+pod install
 ```
     
   
