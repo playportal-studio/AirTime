@@ -9,10 +9,6 @@
 
 ## Getting Started (playPORTAL setup)
 
-* ### Collecting Data Information
-
-    * Checkout [this](https://www.st.com/resource/en/datasheet/lis2dh.pdf) link for information about how you should collect data.
-
 * ### <b>Step 1:</b> Create playPORTAL Studio Account
 
 	* Navigate to [playPORTAL Studio](https://studio.playportal.io)
@@ -58,8 +54,6 @@
 	* ### <b> Step 6.1: </b>After Cocopods is installed 
 	* Open up a terminal, and move into your project folder and do a pod install.
 ```
-cd Desktop
-cd AirTime 
 pod install
 ```
     
