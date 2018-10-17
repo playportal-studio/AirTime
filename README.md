@@ -54,10 +54,18 @@
  cd AirTime
  git checkout feature/Step1 branch
 ```
-* ### <b>Step 6:</b> Launch XCode and open xcodeproj
+* ### <b>Step 6:</b> Launch Terminal
+	* Open up a terminal, and move into your project folder and do a pod install.
+```
+	 cd Desktop
+	 cd AirTime 
+	 pod install
+```
+    
+  
+* ### <b>Step 7:</b> Launch the Xcode Workspace file.
     * Make sure xcode simulator runs
     * Make sure iOS device runs
-
 
 
 
