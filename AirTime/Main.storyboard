@@ -115,49 +115,6 @@
             </objects>
             <point key="canvasLocation" x="2832.8000000000002" y="-510.49475262368821"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="NAJ-kY-uQu">
-            <objects>
-                <viewController id="c0v-eh-Q1H" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oJa-er-hDQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="85X-d5-Ja4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="D4w-uK-mTk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TxF-UH-LQt">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="9m0-om-pVh" kind="embed" id="kua-L4-mVI"/>
-                                </connections>
-                            </containerView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QcI-5G-BEx">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Settings" largeTitleDisplayMode="always" id="4Fp-aP-eNQ">
-                                        <barButtonItem key="backBarButtonItem" title="Back" id="pie-4t-Kjl"/>
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="lwj-Ia-wnx">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hkf-s2-M7I" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2831.1999999999998" y="315.29235382308849"/>
-        </scene>
         <!--Privacy Policy View Controller-->
         <scene sceneID="c7E-am-87d">
             <objects>
@@ -360,11 +317,7 @@
                                 <items>
                                     <navigationItem title="AirTime" id="alA-NY-x4S">
                                         <barButtonItem key="leftBarButtonItem" title="playPORTAL" image="logo_small" id="mvT-49-bpW"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Settings" image="settings" id="BFx-eq-Odb">
-                                            <connections>
-                                                <segue destination="c0v-eh-Q1H" kind="show" id="otE-yA-WAg"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Settings" image="settings" id="BFx-eq-Odb"/>
                                         <connections>
                                             <outlet property="leftBarButtonItem" destination="mvT-49-bpW" id="5Bg-e5-YfW"/>
                                             <outlet property="rightBarButtonItem" destination="BFx-eq-Odb" id="NvH-Io-MER"/>
@@ -398,44 +351,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRc-1d-IOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1997.5999999999999" y="-510.49475262368821"/>
-        </scene>
-        <!--Settings Table View Controller-->
-        <scene sceneID="QSd-oq-m80">
-            <objects>
-                <viewController id="9m0-om-pVh" customClass="SettingsTableViewController" customModule="AirTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="2" sectionFooterHeight="28" id="N00-xb-Fws">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingscell" textLabel="Jjz-GB-WGe" style="IBUITableViewCellStyleDefault" id="lQ4-cS-GJV" userLabel="settingsCell">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lQ4-cS-GJV" id="aVH-a9-sxa">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jjz-GB-WGe">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="9m0-om-pVh" id="8Xz-Qh-MN1"/>
-                            <outlet property="delegate" destination="9m0-om-pVh" id="B4E-wA-LfD"/>
-                        </connections>
-                    </tableView>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tY8-LH-dgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3676" y="316"/>
         </scene>
     </scenes>
     <resources>
