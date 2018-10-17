@@ -81,7 +81,7 @@ class PPLeaderboardService {
     // }
     
     func updateLeaderboard(score: NSNumber, categories: [String], completion: @escaping PPDataCompletion) {
-        print("updateLeaderboard: \(page) for categories: \( categories )" )
+        print("updateLeaderboard: \(score) for categories: \( categories )" )
         
         PPManager.sharedInstance.PPwebapi.updateLeaderboard(score: score, categories: categories) { succeeded, response, responseObject in
             if(succeeded) {
