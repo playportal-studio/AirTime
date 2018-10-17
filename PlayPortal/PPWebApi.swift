@@ -431,4 +431,58 @@ class PPWebApi {
         print("Empty Bucket is not implemented!")
         completion(true, nil, nil)
     }
+    
+    
+    // -----------------------------------------------------------------------------
+    // Leaderboard API
+    // -----------------------------------------------------------------------------
+    func getLeaderboard(page: Int, limit: Int, categories: String, completion: @escaping PPDataCompletion) { succeeded, response, responseObject in
+        
+        let urlString = baseUrl + "/leaderboard/v1" + "?page=" + page + "&limit=" +  limit + "&categories=" +  categories
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer " + self.at,
+            "Accept": "application/json"
+        ]
+        
+        sessionManager.request(urlString, headers: headers).validate(statusCode: 200..<300).responseJSON { response  in
+            switch response.result {
+            case .success:
+                print("Validation Successful")
+                if let json = response.result.value {
+                    completion(true, response, json)
+                } else {
+                    completion(false, nil, nil)
+                }
+            case .failure(let error):
+                print(error)
+                completion(false, nil, nil)
+            }
+        }
+    }
+    
+    func updateLeaderboard(score: NSNumber, categories: [String], completion: @escaping PPDataCompletion) {
+        let urlString = baseUrl +  "/leaderboard/v1"
+        let url = URL(string: urlString)
+        var urlRequest = URLRequest(url: url!)
+        urlRequest.httpMethod = "POST"
+        let parameters = ["score": score, "categories": categories] as [String : Any]
+        do {
+            urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
+        } catch {
+        }
+        
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("Bearer " + self.at, forHTTPHeaderField: "Authorization")
+        
+        sessionManager.request(urlRequest).validate(statusCode: 200..<300).responseJSON { response  in
+            switch response.result {
+            case .success:
+                completion(true, response, response.value)
+            case .failure(let error):
+                print("writeBucket error: \( error )" )
+                completion(false, nil, nil)
+            }
+        }
+    }
+
 } // end class
