@@ -92,15 +92,7 @@ class HomeViewController: UIViewController, WCSessionDelegate {
         profilePicGradient.clipsToBounds = true
         profilePicBlack.layer.cornerRadius = profilePicBlack.frame.height / 2.0
         profilePicImageView.layer.cornerRadius = profilePicImageView.frame.height / 2.0
-
         
-        // Do any additional setup after loading the view.
-        /*
-//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image:#imageLiteral(resourceName: "logo_small"), style: .plain, target: self, action: #selector(HomeViewController.leftButton))
-        self.navigationItem.setLeftBarButton( UIBarButtonItem(image:#imageLiteral(resourceName: "logo_small"), style: .plain, target: self, action: #selector(HomeViewController.leftButton)), animated: true)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "settings"), style: .plain, target: self, action: #selector(HomeViewController.rightButton))
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-  */
         if (WCSession.isSupported()) {
             self.session = WCSession.default()
             self.session?.delegate = self
@@ -124,20 +116,23 @@ class HomeViewController: UIViewController, WCSessionDelegate {
         }
     }
     
-    
-    func rightButton() {
-    
-     self.performSegue(withIdentifier:"showSettings", sender: self)
+    @IBAction func playPORTALTapped(_ sender: UIBarButtonItem) {
+        Utils.openOrDownloadPlayPortal()
     }
     
-    func leftButton() {
-       Utils.openOrDownloadPlayPortal()
+    @IBAction func settingsTapped(_ sender: UIBarButtonItem) {
+        print("settings tapped")
+        guard let settings = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Settings") as? SettingsTableTableViewController else {
+            print()
+            return
+        }
+        if navigationController != nil {
+            print()
+        } else {
+            print()
+        }
+        navigationController?.present(settings, animated: true, completion: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     
     func storeMyStatsToServer(completion: @escaping PPDataCompletion) {
         let s:String = PPManager.sharedInstance.PPusersvc.user.get(key: "handle")!
@@ -195,7 +190,7 @@ class HomeViewController: UIViewController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print("WHATEVS")
+        print("activationDidCompleteWith")
     }
 
 }
