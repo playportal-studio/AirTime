@@ -52,7 +52,7 @@
 ```
 * ### <b>Step 6:</b> Launch Terminal and install install Cocopods version 1.6 [Here](https://cocoapods.org/)
 	* ### <b> Step 6.1: </b>After Cocopods is installed 
-	* Open up a terminal, and move into your project folder and do a pod install.
+	 * Open up a terminal, and move into your project folder and do a pod install.
 ```
 pod install
 ```
