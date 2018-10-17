@@ -437,8 +437,12 @@ class PPWebApi {
     // Leaderboard API
     // -----------------------------------------------------------------------------
     func getLeaderboard(page: Int, limit: Int, categories: String, completion: @escaping PPDataCompletion) { 
+        let b = baseUrl + "/leaderboard/v1"
+        let p = "?page=" + String(page)
+        let l = "&limit=" + String(limit)
+        let c = "&categories=" +  categories
+        let urlString = b + p + l + c
         
-        let urlString = baseUrl + "/leaderboard/v1" + "?page=" + page + "&limit=" +  limit + "&categories=" +  categories
         let headers: HTTPHeaders = [
             "Authorization": "Bearer " + self.at,
             "Accept": "application/json"
