@@ -55,7 +55,7 @@
  git checkout feature/Step1 branch
 ```
 * ### <b>Step 6:</b> Launch Terminal and install install Cocopods version 1.6 [Here](https://cocoapods.org/)
-	## After Cocopods is installed 
+	## <b> Step 6.1: </b>After Cocopods is installed 
 	* Open up a terminal, and move into your project folder and do a pod install.
 ```
 cd Desktop
