@@ -3,7 +3,7 @@
 //  AirTime
 //
 //  Created by Jett Black on 9/7/18.
-//  Copyright © 2018 kontakt.io. All rights reserved.
+//  Copyright © 2018 Dynepic, Inc. All rights reserved.
 //
 
 import UIKit
@@ -11,19 +11,17 @@ import UIKit
 class SettingsTableTableViewController: UITableViewController {
     
     @IBOutlet weak var cell1: UITableViewCell!
-    
     @IBOutlet weak var cell2: UITableViewCell!
-    
     @IBOutlet weak var cell1Header: UITableViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+/*
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        
-        cell1.textLabel!.text = "Privacy Policy"
-        
-        cell2.textLabel!.text = "Manage playPORTAL Account"
-        
+         cell1.textLabel!.text = "Privacy Policy"
+         cell2.textLabel!.text = "Manage playPORTAL Account"
+*/
         self.tableView.tableFooterView = UIView()
        
     }

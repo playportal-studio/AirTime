@@ -9,6 +9,13 @@
 import Foundation
 import UIKit
 
+/*
+ var PlayPortalSettingsSections = ["Privacy", "Account"]
+ var PlayPortalTableRowHeaders = ["Privacy": ["Contact Us","Terms of Service", "Privacy Policy", "Short Form Privacy Policy" ], "Account" : ["Manage playPORTAL Account", "Log Out"]]
+ var PlayPortalPrivacyTableRowContents =  ["(800) 123-4567","https://www.dynepic.com/pages/playportal-platform-terms-of-service", "https://www.dynepic.com/pages/privacy-policy", "very short info goes here" ]
+ var PlayPortalAccountTableRowHeaders = [
+ 
+ */
 class SettingsTableViewController: UITableViewController {
 
     @IBOutlet weak var cell1Settings: UITableViewCell!
@@ -30,22 +37,19 @@ class SettingsTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        print("numberOfSections: \(PPManager.sharedInstance.PlayPortalSettingsTable.count )" )
+        return PPManager.sharedInstance.PlayPortalSettingsTable.count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "Privacy"
-        case 1:
-            return "Account"
-        default :
-            return "No Header"
-        }
+//        print("titleForHeaderInSection: \( section ) is: \(PPManager.sharedInstance.PlayPortalSettingsTable[section] )" )
+//        return PPManager.sharedInstance.PlayPortalSettingsTable[section]
+        return ""
     }
     
     override func tableView(_ tableView:UITableView, numberOfRowsInSection section: NSInteger) -> NSInteger {
-        return 1
+//        return PPManager.sharedInstance.PlayPortalSettingsTable.count
+return 1
     }
     
 

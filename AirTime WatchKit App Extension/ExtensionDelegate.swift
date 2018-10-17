@@ -3,7 +3,7 @@
 //  AirTime WatchKit App Extension
 //
 //  Created by Jett Black on 9/10/18.
-//  Copyright © 2018 kontakt.io. All rights reserved.
+//  Copyright © 2018 Dynepic, Inc. All rights reserved.
 //
 
 import WatchKit

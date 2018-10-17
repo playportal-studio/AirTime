@@ -2,7 +2,7 @@
 <img src="https://gyazo.com/26a1dc0b6fa056fad0e1831b8640d2dc.png = 50x50" width="200">
 
 
-# <b> [playPORTAL](https://www.playportal.io) + [Kontakt.io](https://developer.kontakt.io/hardware/packets/telemetry/) Bluetooth Beacon Connected Play App</b></br>
+# <b> [playPORTAL](https://www.playportal.io) 
 <hr/>
 <i>This is the log kept while building the app in a 8+ hour period.</i>
 </div>

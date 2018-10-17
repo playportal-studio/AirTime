@@ -162,7 +162,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0D6557761E657DA400A21FCE /* KontaktSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KontaktSDK.framework; path = ../../KontaktSDK/iOS/KontaktSDK.framework; sourceTree = "<group>"; };
 		0D6557AF1E65C97E00A21FCE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		24AFD5E51D7FFD01E8072F19 /* libPods-AirTime WatchKit App Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTime WatchKit App Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8AC7C841FC30F8C8A1D072 /* Pods-AirTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.release.xcconfig"; path = "Target Support Files/Pods-AirTime/Pods-AirTime.release.xcconfig"; sourceTree = "<group>"; };
@@ -319,7 +318,6 @@
 				4669F1F92146BFFC00769F88 /* SafariServices.framework */,
 				4669F1F72146BFF300769F88 /* WebKit.framework */,
 				4669F1F52146BFE700769F88 /* Security.framework */,
-				0D6557761E657DA400A21FCE /* KontaktSDK.framework */,
 				EAAFF547673389EFA79D3625 /* libPods-AirTime.a */,
 				481CB751E696C48A140D26E0 /* libPods-AirTime WatchKit App.a */,
 				24AFD5E51D7FFD01E8072F19 /* libPods-AirTime WatchKit App Extension.a */,
@@ -1056,7 +1054,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../KontaktSDK/iOS/**";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1115,7 +1113,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../KontaktSDK/iOS/**";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

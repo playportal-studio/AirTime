@@ -40,6 +40,8 @@ class PPManager {
     //    var keychain: KeychainWrapper = KeychainWrapper()
     let keychain = KeychainSwift()
     
+    var PlayPortalSettingsTable = ["Privacy": ["Contact Us" : "(800) 123-4567","Terms of Service" : "https://www.dynepic.com/pages/playportal-platform-terms-of-service" , "Privacy Policy" : "https://www.dynepic.com/pages/privacy-policy", "Short Form Privacy Policy" : "very short info goes here"], "Account" : ["Manage playPORTAL Account" : "", "Log Out" : ""]]
+    
     public init() {
         env = "SANDBOX"
         apiUrlBase = "https://sandbox.playportal.io"

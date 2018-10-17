@@ -2,7 +2,7 @@
 //  BridgingHeader.h
 //  Developer Samples
 //
-//  Copyright © 2017 kontakt.io. All rights reserved.
+//  Copyright © 2017 Dynepic, Inc. All rights reserved.
 //
 
 #ifndef BridgingHeader
