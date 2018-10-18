@@ -21,8 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        //  Configure with your credentials, environment and redirect uri
-        PPManager.sharedInstance.configure(env: env, clientId: cid, secret: cse, andRedirectURI: redirectURI)
+        let userDefaults = UserDefaults.standard
+        if userDefaults.bool(forKey: "hasRunBefore") == false {
+            // Remove Keychain items here
+            PPManager.sharedInstance.newInstall()
+            
+            // Update the flag indicator
+            userDefaults.set(true, forKey: "hasRunBefore")
+            userDefaults.synchronize() // Forces the app to update UserDefaults
+        }
         
         
         PPManager.sharedInstance.addUserListener { user, authenticated in
