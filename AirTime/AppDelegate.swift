@@ -21,6 +21,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        let userDefaults = UserDefaults.standard
+        if userDefaults.bool(forKey: "hasRunBefore") == false {
+            // Remove Keychain items here
+            PPManager.sharedInstance.newInstall()
+            
+            // Update the flag indicator
+            userDefaults.set(true, forKey: "hasRunBefore")
+            userDefaults.synchronize() // Forces the app to update UserDefaults
+        }
+        
         
         let hvc: HomeViewController = HomeViewController()
         

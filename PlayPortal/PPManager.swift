@@ -30,6 +30,7 @@ class PPManager {
     private var cid:String = ""
     private var cse:String
     private var redir:String
+    private var isNewBoot = false
     
     var userListener:(_ user: PPUserObject?, _ isAuthd: Bool) -> Void
     
@@ -52,7 +53,6 @@ class PPManager {
         PPusersvc = PPUserService(keychain:keychain)
         PPdatasvc = PPDataService()
         
-        
         if keychain.get("apns_device_token") != nil { } else {apnsDeviceToken = ""}
         if keychain.get("refresh_token") != nil { } else {refreshToken = ""}
         if keychain.get("access_token") != nil { } else {accessToken = ""}
@@ -68,7 +68,7 @@ class PPManager {
         return instance
     }()
     
-    
+    func newInstall() -> Void { PPManager.sharedInstance.isNewBoot = true }
     func getApiUrlBase() -> String { return PPManager.sharedInstance.apiUrlBase }
     func getClientId() -> String { return PPManager.sharedInstance.cid }
     func getRedirectURI() -> String { return PPManager.sharedInstance.redir }
@@ -104,6 +104,14 @@ class PPManager {
             //            keychain = KeychainWrapper()
             //            keychain = KeychainSwift()
             PPusersvc = PPUserService(keychain:keychain)
+            
+            if(isNewBoot) {
+                print("new boot is true")
+                keychain.set("", forKey: "refresh_token")
+                keychain.set("", forKey: "access_token")
+                isNewBoot = false
+            }
+            
             PPdatasvc = PPDataService()
             
             if let a = keychain.get("apns_device_token") {
