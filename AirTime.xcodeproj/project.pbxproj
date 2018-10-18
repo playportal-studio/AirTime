@@ -634,6 +634,9 @@
 							com.apple.BackgroundModes.watchos.extension = {
 								enabled = 1;
 							};
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
 							com.apple.HealthKit.watchos = {
 								enabled = 1;
 							};

@@ -56,36 +56,6 @@ class HomeViewController: UIViewController, WCSessionDelegate {
                 "maxSingleJumpCount":  0 as Int,
             "maxSingleHangTime": 0.1 ] )
     
-
-    func userListener(_ user:PPUserObject?, _ authd:Bool) -> Void {
-        print("userListener invoked authd: \( authd )  user: \(String(describing:  user ))" )
-        
-        let sb:UIStoryboard = UIStoryboard.init(name:"Main", bundle:nil)
-        guard let rvc:UIViewController = UIApplication.shared.keyWindow?.rootViewController else {
-            return
-        }
-        
-        if(!authd) {
-            let vc:LoginViewController = sb.instantiateViewController(withIdentifier:"LoginViewController") as! LoginViewController
-            vc.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal;
-            if let cvc = getCurrentViewController(rvc) {
-                print("userListener NOT authd current VC: \(cvc )" );
-                cvc.present(vc, animated:true, completion:nil)
-            }
-        } else {
-            let hvc:HomeViewController = sb.instantiateViewController(withIdentifier: "Air Time Scene") as! HomeViewController
-            if let u = user {
-                hvc.user = u
-            }
-            hvc.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal;
-            if let cvc = getCurrentViewController(rvc) {
-                print("userListener authd current VC: \(cvc )" );
-                cvc.present(hvc, animated:true, completion:nil)
-            }
-        }
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         profilePicGradient.layer.cornerRadius = profilePicGradient.frame.height / 2.0
@@ -121,17 +91,11 @@ class HomeViewController: UIViewController, WCSessionDelegate {
     }
     
     @IBAction func settingsTapped(_ sender: UIBarButtonItem) {
-        print("settings tapped")
         guard let settings = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Settings") as? SettingsTableTableViewController else {
-            print()
+            print("Unable to instantiate SettingsTableViewController")
             return
         }
-        if navigationController != nil {
-            print()
-        } else {
-            print()
-        }
-        navigationController?.present(settings, animated: true, completion: nil)
+        present(settings, animated: true, completion: nil)
     }
     
     func storeMyStatsToServer(completion: @escaping PPDataCompletion) {

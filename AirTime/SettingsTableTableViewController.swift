@@ -10,10 +10,6 @@ import UIKit
 
 class SettingsTableTableViewController: UITableViewController {
     
-    @IBOutlet weak var cell1: UITableViewCell!
-    @IBOutlet weak var cell2: UITableViewCell!
-    @IBOutlet weak var cell1Header: UITableViewCell!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,26 +21,9 @@ class SettingsTableTableViewController: UITableViewController {
         self.tableView.tableFooterView = UIView()
        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "Privacy"
-        case 1:
-            return "Account"
-        default :
-            return "No Header"
-        }
-    }
     
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         switch (indexPath.section, indexPath.row) {
         case (0,0) :
             self.performSegue(withIdentifier: "privacyPolicy", sender: self)

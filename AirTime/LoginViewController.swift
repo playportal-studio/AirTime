@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var continueAsGuestButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
