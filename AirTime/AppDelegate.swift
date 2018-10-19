@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             userDefaults.synchronize() // Forces the app to update UserDefaults
         }
         
-        
+        PPManager.sharedInstance.configure(env: env, clientId: cid, secret: cse, andRedirectURI: redirectURI)
         PPManager.sharedInstance.addUserListener { user, authenticated in
             print("userListener invoked authd: \( authenticated )  user: \(String(describing:  user ))" )
             

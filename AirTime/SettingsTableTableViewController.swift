@@ -8,109 +8,123 @@
 
 import UIKit
 
-class SettingsTableTableViewController: UITableViewController {
+class SettingsTableTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var user: PPUserObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-/*
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-         cell1.textLabel!.text = "Privacy Policy"
-         cell2.textLabel!.text = "Manage playPORTAL Account"
-*/
-        self.tableView.tableFooterView = UIView()
-       
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch (indexPath.section, indexPath.row) {
-        case (0,0) :
-            self.performSegue(withIdentifier: "privacyPolicy", sender: self)
-            self.tableView.deselectRow(at: IndexPath(row: 0, section: 0), animated: true)
-            print("Privacy Policy")
-        case (1,0) :
-            self.tableView.deselectRow(at: IndexPath(row: 0, section: 1), animated: true)
-            print("Manage Account")
-            Utils.openOrDownloadPlayPortal()
+    @IBAction func backTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            guard let accountType = user.get(key: "accountType") else { return 0 }
+            if accountType == "Kid" {
+                return 2
+            } else {
+                return 4
+            }
+        case 1:
+            return 1
+        case 2:
+            return 1
         default:
-            print("Default")
-     
+            return 0
         }
     }
     
-        
-        
-        
-    
-    
-    
-    
-    // MARK: - Table view data source
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-//
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 0
-//    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsTableViewCell", for: indexPath)
+        let accountType = user.get(key: "accountType")!
+        var text: String?
+        switch (indexPath.section, indexPath.row) {
+        case (0, 0):
+            text = "Contact Us"
+        case (0, 1):
+            text = accountType == "Parent" ? "Terms of Service" : "Short Form Privacy Policy"
+        case (0, 2):
+            text = "Privacy Policy"
+        case (0, 3):
+            text = "Short Form Privacy Policy"
+        case (1, 0):
+            text = "Manage playPORTAL Account"
+        case (2, 0):
+            text = "Logout"
+        default:
+            break
+        }
+        cell.textLabel?.text = text
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch (indexPath.section, indexPath.row) {
+        case (0, 0):
+            //  Open mail app to allow user feedback
+            let email = "your-email@email.com"
+            guard let url = URL(string: "mailto:\(email)") else { return }
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        case (0, 1):
+            //  This will open a link to your terms of service
+            //  However, this is disabled for kids as it's an outside link and will be the short form privacy policy
+            //  from the kid's perspective
+            guard let accountType = user.get(key: "accountType") else { return }
+            if accountType == "Kid" {
+                guard let shortFormPrivacyPolicy = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "shortFormPrivacyPolicy") as? ShortFormPrivacyPolicyTableViewController else { return }
+                present(shortFormPrivacyPolicy, animated: true, completion: nil)
+            } else {
+                guard let url = URL(string: "http://www.dynepic.com/pages/terms-of-service") else { return }
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        case (0, 2):
+            guard user.get(key: "accountType") == "Parent" else { return }
+            guard let url = URL(string: "http://www.dynepic.com/pages/privacy-policy") else { return }
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        case (0, 3):
+            guard let shortFormPrivacyPolicy = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "shortFormPrivacyPolicy") as? ShortFormPrivacyPolicyTableViewController else { return }
+            present(shortFormPrivacyPolicy, animated: true, completion: nil)
+        case (1, 0):
+            Utils.openOrDownloadPlayPortal()
+        case (2, 0):
+            PPManager.sharedInstance.logout()
+            let sb:UIStoryboard = UIStoryboard.init(name:"Main", bundle:nil)
+            guard let rvc:UIViewController = UIApplication.shared.keyWindow?.rootViewController else {
+                return
+            }
+            let vc:LoginViewController = sb.instantiateViewController(withIdentifier:"LoginViewController") as! LoginViewController
+            vc.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal;
+            if let cvc = getCurrentViewController(rvc) {
+                print("userListener NOT authd current VC: \(cvc )" );
+                cvc.present(vc, animated:true, completion:nil)
+            }
+        default:
+            break
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "PRIVACY"
+        } else {
+            return nil
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
