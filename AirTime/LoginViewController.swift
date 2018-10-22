@@ -9,65 +9,31 @@
 import UIKit
 
 
-  @objc class LoginViewController: UIViewController{
-
+class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var continueAsGuestButton: UIButton!
+    @IBOutlet weak var loginView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-//        PPManager.sharedInstance().PPusersvc.addUserListener((userListener: user, error) -> () {
-/*
-        PPManager.sharedInstance().PPusersvc.addUserListener { user, error
-//            self.submitTokenToBackend {token, error in
-            if (error != nil) {
-                print("error: \(error!)")
-            } else {
-                print("username: \(user.handle)")
-                let sb:UIStoryboard = UIStoryboard.init(name:"Main", bundle:nil);
-                let vc:UIViewController = sb.instantiateViewController(withIdentifier:"userViewController");
-                vc.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal;
-                self.present(vc, animated:true, completion:nil)
-            }
-        });
-*/
-        
+        titleLabel.sizeToFit()
+        titleLabel.transform = titleLabel.transform.rotated(by: CGFloat(-(M_PI / 6)))
+        continueAsGuestButton.backgroundColor = .clear
+        continueAsGuestButton.layer.cornerRadius = continueAsGuestButton.frame.height / 2
+        continueAsGuestButton.layer.borderWidth = 1
+        continueAsGuestButton.layer.borderColor = UIColor.airtimeColors.yellow.cgColor
         //PPLoginButton handles all auth flow
-        let loginButton:PPLoginButton = PPLoginButton.init()
-        loginButton.center = self.view.center
-        self.view.addSubview(loginButton)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let loginButton = PPLoginButton.init()
+        loginButton.center = CGPoint(x: loginView.bounds.size.width  / 2,
+                                     y: loginView.bounds.size.height / 2)
+        loginView.addSubview(loginButton)
     }
     
-/*
-    func didTouchAnonymous() -> (IBAction) {
-        let now: NSDate = NSDate.init();
-        let age12:NSDate = self.logicalOneYearAgo(now)
-        PPManager.sharedInstance().PPusersvc.loginAnonymously(age12);
+    @IBAction func continueAsGuestTapped(_ sender: UIButton) {
+        let alert = UIAlertController(title: nil, message: "Coming Soon!", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
     }
-    
-    func logicalOneYearAgo(from: NSDate) -> NSDate {
-        let gregorian:NSCalendar = NSCalendar.initWithCalendarIdentifier(NSCalendarIdentifierGregorian);
-        let offsetComponents:NSDateComponents = NSDateComponents.init();
-        offsetComponents.setYear(-1);
-        return gregorian.dateByAddingComponents(offsetComponents, toDate(from options:0));
-*/
-    
-    
-    
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
+}

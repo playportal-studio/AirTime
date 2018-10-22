@@ -8,6 +8,8 @@
 
 import UIKit
 import WatchConnectivity
+import StoreKit
+
 /*
 class RawJumpData : Codable {
     var jumpEvents:[ String: Any]!
@@ -34,7 +36,7 @@ class Stats : Codable {
     }
 }
 
-class HomeViewController: UIViewController, WCSessionDelegate {
+class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductViewControllerDelegate {
     
     @IBOutlet weak var profilePicGradient: GradientBkgndView!
     @IBOutlet weak var profilePicBlack: UIView!
@@ -42,6 +44,7 @@ class HomeViewController: UIViewController, WCSessionDelegate {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var upperScoreLabel: UILabel!
     @IBOutlet weak var lowerScoreLabel: UILabel!
+    @IBOutlet weak var leaderboardImageView: UIImageView!
     
     var session: WCSession?
     
@@ -56,51 +59,17 @@ class HomeViewController: UIViewController, WCSessionDelegate {
                 "maxSingleJumpCount":  0 as Int,
             "maxSingleHangTime": 0.1 ] )
     
-
-    func userListener(_ user:PPUserObject?, _ authd:Bool) -> Void {
-        print("userListener invoked authd: \( authd )  user: \(String(describing:  user ))" )
-        
-        let sb:UIStoryboard = UIStoryboard.init(name:"Main", bundle:nil)
-        guard let rvc:UIViewController = UIApplication.shared.keyWindow?.rootViewController else {
-            return
-        }
-        
-        if(!authd) {
-            let vc:LoginViewController = sb.instantiateViewController(withIdentifier:"LoginViewController") as! LoginViewController
-            vc.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal;
-            if let cvc = getCurrentViewController(rvc) {
-                print("userListener NOT authd current VC: \(cvc )" );
-                cvc.present(vc, animated:true, completion:nil)
-            }
-        } else {
-            let hvc:HomeViewController = sb.instantiateViewController(withIdentifier: "Air Time Scene") as! HomeViewController
-            if let u = user {
-                hvc.user = u
-            }
-            hvc.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal;
-            if let cvc = getCurrentViewController(rvc) {
-                print("userListener authd current VC: \(cvc )" );
-                cvc.present(hvc, animated:true, completion:nil)
-            }
-        }
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         profilePicGradient.layer.cornerRadius = profilePicGradient.frame.height / 2.0
         profilePicGradient.clipsToBounds = true
         profilePicBlack.layer.cornerRadius = profilePicBlack.frame.height / 2.0
         profilePicImageView.layer.cornerRadius = profilePicImageView.frame.height / 2.0
-
         
-        // Do any additional setup after loading the view.
-        /*
-//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image:#imageLiteral(resourceName: "logo_small"), style: .plain, target: self, action: #selector(HomeViewController.leftButton))
-        self.navigationItem.setLeftBarButton( UIBarButtonItem(image:#imageLiteral(resourceName: "logo_small"), style: .plain, target: self, action: #selector(HomeViewController.leftButton)), animated: true)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "settings"), style: .plain, target: self, action: #selector(HomeViewController.rightButton))
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-  */
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(leaderboardTapped(tapGestureRecognizer:)))
+        leaderboardImageView.isUserInteractionEnabled = true
+        leaderboardImageView.addGestureRecognizer(tapGestureRecognizer)
+        
         if (WCSession.isSupported()) {
             self.session = WCSession.default()
             self.session?.delegate = self
@@ -124,20 +93,25 @@ class HomeViewController: UIViewController, WCSessionDelegate {
         }
     }
     
-    
-    func rightButton() {
-    
-     self.performSegue(withIdentifier:"showSettings", sender: self)
+    @IBAction func settingsTapped(_ sender: UIBarButtonItem) {
+        guard let settings = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Settings") as? SettingsTableTableViewController else {
+            print()
+            return
+        }
+        settings.user = user
+        present(settings, animated: true, completion: nil)
     }
     
-    func leftButton() {
-       Utils.openOrDownloadPlayPortal()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    @IBAction func playPORTALTapped(_ sender: UIBarButtonItem) {
+        Utils.openOrDownloadPlayPortal(delegate: self)
     }
     
+    @objc func leaderboardTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        guard let leaderboard = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "leaderboardTableViewController") as? LeaderboardTableViewController else {
+            return
+        }
+        present(leaderboard, animated: true, completion: nil)
+    }
     
     func storeMyStatsToServer(completion: @escaping PPDataCompletion) {
         let s:String = PPManager.sharedInstance.PPusersvc.user.get(key: "handle")!
@@ -151,7 +125,10 @@ class HomeViewController: UIViewController, WCSessionDelegate {
             PPManager.sharedInstance.PPdatasvc.writeBucket( bucketName:PPManager.sharedInstance.PPusersvc.getMyAppGlobalDataStorageName(), key:s, value:innerd) { succeeded, response, responseObject in
                 if(!succeeded) { print("write JSON error:") }
             }
-        }
+        let service = PPLeaderboardService()
+        service.updateLeaderboard(score: myStats.totalJumps as NSNumber, categories: ["totalJumps"]) { _, _, _ in }
+        service.updateLeaderboard(score: myStats.maxSingleHangTime as NSNumber, categories: ["maxAirTime"]) { _, _, _ in }
+    }
     
     func storeRawDataToServer(jumpCount:Int, longestJump: Double, completion: @escaping PPDataCompletion) {
         let s:String = PPManager.sharedInstance.PPusersvc.user.get(key: "handle")!
@@ -195,7 +172,10 @@ class HomeViewController: UIViewController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print("WHATEVS")
+        print("activationDidCompleteWith")
     }
 
+    func productViewControllerDidFinish(_ viewController: SKStoreProductViewController) {
+        viewController.dismiss(animated: true, completion: nil)
+    }
 }

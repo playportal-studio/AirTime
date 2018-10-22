@@ -1,5 +1,4 @@
 //
-//  File.swift
 //  AirTime
 //
 //  Created by Joshua Paulsen on 9/7/18.

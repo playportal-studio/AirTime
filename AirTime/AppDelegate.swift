@@ -31,11 +31,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             userDefaults.synchronize() // Forces the app to update UserDefaults
         }
         
-        
-        let hvc: HomeViewController = HomeViewController()
-        
-        PPManager.sharedInstance.addUserListener(handler:hvc.userListener(_:_:))
-        PPManager.sharedInstance.configure(env:env, clientId:cid, secret:cse, andRedirectURI:redirectURI)
+        PPManager.sharedInstance.configure(env: env, clientId: cid, secret: cse, andRedirectURI: redirectURI)
+        PPManager.sharedInstance.addUserListener { user, authenticated in
+            print("userListener invoked authd: \( authenticated )  user: \(String(describing:  user ))" )
+            
+            let sb:UIStoryboard = UIStoryboard.init(name:"Main", bundle:nil)
+            guard let rvc:UIViewController = UIApplication.shared.keyWindow?.rootViewController else {
+                return
+            }
+            
+            if (!authenticated) {
+                let vc:LoginViewController = sb.instantiateViewController(withIdentifier:"LoginViewController") as! LoginViewController
+                vc.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal;
+                if let cvc = getCurrentViewController(rvc) {
+                    print("userListener NOT authd current VC: \(cvc )" );
+                    cvc.present(vc, animated:true, completion:nil)
+                }
+            } else {
+                let hvc:HomeViewController = sb.instantiateViewController(withIdentifier: "Air Time Scene") as! HomeViewController
+                if let u = user {
+                    hvc.user = u
+                }
+                hvc.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal;
+                if let cvc = getCurrentViewController(rvc) {
+                    print("userListener authd current VC: \(cvc )" );
+                    cvc.present(hvc, animated:true, completion:nil)
+                }
+            }
+        }
         
         return true
     }

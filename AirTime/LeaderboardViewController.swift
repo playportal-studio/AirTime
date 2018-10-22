@@ -8,6 +8,7 @@
 
 import UIKit
 import WatchConnectivity
+
 /*
 class RawJumpData : Codable {
     var jumpEvents:[ String: Any]!
@@ -60,11 +61,6 @@ class LeaderboardViewController: UIViewController {
     
      self.performSegue(withIdentifier:"showSettings", sender: self)
     }
-    
-    func leftButton() {
-       Utils.openOrDownloadPlayPortal()
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
