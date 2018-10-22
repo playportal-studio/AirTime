@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import StoreKit
 
-class SettingsTableTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SettingsTableTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SKStoreProductViewControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,6 +19,7 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
     }
     
     @IBAction func backTapped(_ sender: UIBarButtonItem) {
@@ -97,7 +99,7 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
             guard let shortFormPrivacyPolicy = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "shortFormPrivacyPolicy") as? ShortFormPrivacyPolicyTableViewController else { return }
             present(shortFormPrivacyPolicy, animated: true, completion: nil)
         case (1, 0):
-            Utils.openOrDownloadPlayPortal()
+            Utils.openOrDownloadPlayPortal(delegate: self)
         case (2, 0):
             PPManager.sharedInstance.logout()
             let sb:UIStoryboard = UIStoryboard.init(name:"Main", bundle:nil)
@@ -126,5 +128,9 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 44
+    }
+    
+    func productViewControllerDidFinish(_ viewController: SKStoreProductViewController) {
+        viewController.dismiss(animated: true, completion: nil)
     }
 }

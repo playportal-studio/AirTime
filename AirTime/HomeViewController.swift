@@ -8,6 +8,8 @@
 
 import UIKit
 import WatchConnectivity
+import StoreKit
+
 /*
 class RawJumpData : Codable {
     var jumpEvents:[ String: Any]!
@@ -34,7 +36,7 @@ class Stats : Codable {
     }
 }
 
-class HomeViewController: UIViewController, WCSessionDelegate {
+class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductViewControllerDelegate {
     
     @IBOutlet weak var profilePicGradient: GradientBkgndView!
     @IBOutlet weak var profilePicBlack: UIView!
@@ -101,7 +103,7 @@ class HomeViewController: UIViewController, WCSessionDelegate {
     }
     
     @IBAction func playPORTALTapped(_ sender: UIBarButtonItem) {
-        Utils.openOrDownloadPlayPortal()
+        Utils.openOrDownloadPlayPortal(delegate: self)
     }
     
     @objc func leaderboardTapped(tapGestureRecognizer: UITapGestureRecognizer) {
@@ -173,4 +175,7 @@ class HomeViewController: UIViewController, WCSessionDelegate {
         print("activationDidCompleteWith")
     }
 
+    func productViewControllerDidFinish(_ viewController: SKStoreProductViewController) {
+        viewController.dismiss(animated: true, completion: nil)
+    }
 }

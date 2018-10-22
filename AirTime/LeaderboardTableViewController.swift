@@ -13,21 +13,20 @@ class LeaderboardTableViewController: UIViewController, UITableViewDelegate, UIT
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var leaderboardEntries: [Int] = []
+    private var leaderboardEntries: [Any] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         let service = PPLeaderboardService()
         service.getLeaderboard(page: 1, limit: 10, categories: "totalJumps") { [weak self] succeeded, response, responseObject in
             guard succeeded, let strongSelf = self else {
-                print()
                 return }
-            if let leaderboardEntries = responseObject as? [Any] {
-                print(leaderboardEntries)
-            } else {
-                print()
+            if let json = responseObject as? [String: Any], let leaderboardEntries = json["docs"] as? [Any] {
+                strongSelf.leaderboardEntries = leaderboardEntries
+                strongSelf.tableView.reloadData()
             }
         }
     }
@@ -47,6 +46,16 @@ class LeaderboardTableViewController: UIViewController, UITableViewDelegate, UIT
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "leaderboardTableViewCell", for: indexPath) as? LeadboardTableViewCell else {
             return UITableViewCell()
+        }
+        if let entry = leaderboardEntries[indexPath.row] as? [String: Any],let user = entry["user"] as? [String: Any]
+            , let rank = entry["rank"] as? Int
+            , let score = entry["score"] as? Double, let handle = user["handle"] as? String
+        {
+            cell.handleLabel.text = handle
+            cell.numberLabel.text = String(rank)
+            cell.scoreLabel.text = String(score)
+            
+            print()
         }
         return cell
     }
