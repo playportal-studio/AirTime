@@ -44,7 +44,7 @@
     feature/Step4-addData
     ```
     
-    * Feature branches where created so you could see step by step progression of AirTime to further clarify how to integrate playPORTAL.
+    * Feature branches were created so you could see step by step progression of AirTime to further clarify how to integrate playPORTAL.
     
     * To checkout feature branch follow this format
     
