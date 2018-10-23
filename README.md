@@ -3,8 +3,6 @@
 
 
 # <b> [playPORTAL](https://www.playportal.io) 
-<hr/>
-<i>This is the log kept while building the app in a 8+ hour period.</i>
 </div>
 
 ## Getting Started (playPORTAL setup)
