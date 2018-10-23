@@ -49,14 +49,11 @@
 ```
 pod install
 ```
-    
-  
 * ### <b>Step 7:</b> Launch Xcode 
     * Open up the .xcworkspace file
     * Select a simulator that runs an iPhone and Apple Watch together 
     * Press the play button and run AirTime
 
-	
 * ### <b>Step 8:</b> Hide your keys.
 	* The Client ID, & Secrets tied to your application <b>NEED</b> to be hidden
 	* This can be done by creating a .gitignore file 
