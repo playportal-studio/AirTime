@@ -50,7 +50,6 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
     
     var user:PPUserObject?
     
-
 //    var myRawJumpData:RawJumpData!
 
     var myStats:Stats = Stats(
@@ -75,9 +74,10 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
             self.session?.delegate = self
             self.session?.activate()
         }
-        let h = self.user?.get(key: "handle")
-        let fu = self.user?.get(key:"firstName")
-        let lu = self.user?.get(key:"lastName")
+        
+        let h = self.user?.uo.handle
+        let fu = self.user?.uo.firstName
+        let lu = self.user?.uo.lastName
         if h != nil && fu != nil && lu != nil {
             self.label.text = h! + " | " + fu! + " " + lu!
             
@@ -114,7 +114,7 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
     }
     
     func storeMyStatsToServer(completion: @escaping PPDataCompletion) {
-        let s:String = PPManager.sharedInstance.PPusersvc.user.get(key: "handle")!
+        if let s:String = PPManager.sharedInstance.PPusersvc.user.uo.handle {
         let tnow = PPManager.sharedInstance.stringFromDate(date: Date())
         let innerd = ["user": s,
                       "Total jump count": myStats.totalJumps as Int,
@@ -128,10 +128,11 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
         let service = PPLeaderboardService()
         service.updateLeaderboard(score: myStats.totalJumps as NSNumber, categories: ["totalJumps"]) { _, _, _ in }
         service.updateLeaderboard(score: myStats.maxSingleHangTime as NSNumber, categories: ["maxAirTime"]) { _, _, _ in }
+        }
     }
     
     func storeRawDataToServer(jumpCount:Int, longestJump: Double, completion: @escaping PPDataCompletion) {
-        let s:String = PPManager.sharedInstance.PPusersvc.user.get(key: "handle")!
+        let s:String = PPManager.sharedInstance.PPusersvc.user.uo.handle!
         let jc:NSNumber = jumpCount as NSNumber
         let lj: NSNumber = longestJump as NSNumber
         let tnow = PPManager.sharedInstance.stringFromDate(date: Date())

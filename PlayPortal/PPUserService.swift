@@ -20,19 +20,51 @@ typealias PPImageCompletion = (_ succeeded: Bool, _ response: Any?, _ responseOb
 //typealias PPFriendsCompletion = (_ succeeded: Bool, _ response: Any?, _ responseObject: [PPUserObject]?) -> Void
 typealias PPFriendsCompletion = (_ succeeded: Bool, _ response: Any?, _ responseObject: [Friend]?) -> Void
 
-class PPUserObject {
-    // This class maintains 2 dictionaries for the user. One dictionary, "u" has strings the other "uPics" has the user's profile and cover images
+class UserCodable: Codable {
+    var accountType: String!
+    var anonymous:Bool!
+    var country: String!
+    var coverPhoto: String!
+    var handle: String!
+    var firstName: String!
+    var lastName: String!
+    var profilePic: String!
+    var userId: String!
+    var userType: String!
+    var parentFlags: [String:Bool]!
+
     
-    // "u" Contains one or more of (as Strings)
-    // { userId, handle, firstName, lastName, country, accountType, userType, parentFlags, profilePicId, coverPhotoId, myAge }
-    var u: [String : String]
+    init(json: Any) {
+        print("in UserCodable: json= \( json )" )
+        if let json2 = json as? [String: Any] {
+            if let at = json2["accountType"] as! String? { accountType = at }
+            anonymous = false
+            if let cnt = json2["country"] as! String? { country = cnt }
+            if let c = json2["coverPhoto"] as? String { coverPhoto = c }
+            if let h = json2["handle"] as! String? { handle = h }
+            if let f = json2["firstName"] as! String? { firstName = f }
+            if let l = json2["lastName"] as! String? { lastName = l }
+            if let p = json2["profilePic"] as? String? { profilePic = p }
+            if let uid = json2["userId"] as! String? { userId = uid }
+            if let ut = json2["userType"] as! String?  { userType = ut }
+            if let pf:[String:Bool] = json2["parentFlags"] as? [String: Bool] { parentFlags = pf } else {
+                parentFlags = ["cameraDisabled": false, "proximityFriends": true]
+            }
+        }
+    }
+}
+
+class PPUserObject {
+    // This class maintains 2 main objects for the user. One is the userObject uo and the other is a dictionary, "uPics" containing the user's profile and cover images
+    var uo: UserCodable
     
     // Contains one or more of (as UIImage)  where key is in { "profilePic", "coverPic" }
     var uPics: [String: UIImage]
     
     init() {
-        u = [:]
+        let u:[String:String] = [:]
         uPics = [:]
+        uo = UserCodable(json:u)
     }
     
     func setImage(value:UIImage, key:String) -> Void {
@@ -41,16 +73,6 @@ class PPUserObject {
     func getImage(key:String) -> UIImage? {
         if let img = uPics[key] {
             return img
-        }
-        return nil
-    }
-    
-    func set(value:String, key:String) -> Void {
-        u.updateValue(value, forKey: key)
-    }
-    func get(key:String) -> String? {
-        if let v = u[key] {
-            return v
         }
         return nil
     }
@@ -97,32 +119,26 @@ class Friend : PPUserObject, Codable {
 }
 
 class PPUserService {
-    // This class provides all user & friend SDK i/f.  It maintains 2 dictionaries for the user. One dictionary, "u" has strings
-    // for the basic user profile, the other is UIImages "uPics" has the user's profile and cover images
-
     var user: PPUserObject // contains all user fields and images (if downloaded)
     var userProfileIsValid: Bool
     var isAnonymousUser: Bool?
 
-//    var myFriends: [PPUserObject] // Array of PPUserObjects
         var myFriends: [Friend] // Array of Friends
 
-//    init(keychain:KeychainWrapper) {
     init(keychain:KeychainSwift) {
         userProfileIsValid = false
         user = PPUserObject()  // user data is contained in the userObject
         
-        if let v = keychain.get("handle") { user.set(value:v, key:"handle") }
-        if let v = keychain.get("userId") { user.set(value:v, key:"userId") }
-        if let v = keychain.get("userType") { user.set(value:v, key:"userType") }
-        if let v = keychain.get("firstName") { user.set(value:v, key:"firstName") }
-        if let v = keychain.get("lastName") { user.set(value:v, key:"lastName") }
-        if let v = keychain.get("county") { user.set(value:v, key:"country") }
-        if let v = keychain.get("accountType") { user.set(value:v, key:"accountType") }
-        if let v = keychain.get("userType") { user.set(value:v, key:"userType") }
-        if let v = keychain.get("profilePicId") { user.set(value:v, key:"profilePicId") }
-        if let v = keychain.get("coverPhotoId") { user.set(value:v, key:"coverPhotoId") }
-        if let v = keychain.get("myAge") { user.set(value:v, key:"myAge") }
+        if let v = keychain.get("handle") { user.uo.handle = v }
+        if let v = keychain.get("userId") { user.uo.userId = v }
+        if let v = keychain.get("userType") { user.uo.userType = v }
+        if let v = keychain.get("firstName") { user.uo.firstName = v }
+        if let v = keychain.get("lastName") { user.uo.lastName = v }
+        if let v = keychain.get("county") { user.uo.country = v }
+        if let v = keychain.get("accountType") { user.uo.accountType = v }
+        if let v = keychain.get("userType") { user.uo.userType = v }
+        if let v = keychain.get("profilePicId") { user.uo.profilePic = v }
+        if let v = keychain.get("coverPhotoId") { user.uo.coverPhoto = v }
 
         isAnonymousUser = false
         myFriends = []
@@ -210,7 +226,8 @@ class PPUserService {
             PPManager.sharedInstance.PPwebapi.getUserProfile{ succeeded, response, responseObject in
                 print("userprofile read from server:")
                 if(succeeded) {
-                    self.user.u = responseObject as! [String:String]
+//                    self.user.u = responseObject as! [String:String]
+                    self.user.uo = UserCodable(json:responseObject!)
                     self.userProfileIsValid = true
                     completion(true, response, self.user)
                 } else {
@@ -227,7 +244,7 @@ class PPUserService {
     }
     
     func getMyDataStorageName() -> String {
-        if let h:String = user.get(key: "handle") {
+        if let h:String = user.uo.handle {
             return h + "@" + getAppNameFromBundle()
         } else {
             return nil!
@@ -308,7 +325,7 @@ class PPUserService {
     
     func getFriendsProfilePic(_ friendId: String) -> UIImage? {
         if let f = getFriendById(friendId) {
-            if let img:UIImage = f.getImage(key:f.get(key: "profilePicId")!) {
+            if let img:UIImage = f.getImage(key:f.uo.profilePic!) {
                 return img
             }
         }

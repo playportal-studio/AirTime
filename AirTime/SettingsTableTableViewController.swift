@@ -33,7 +33,7 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            guard let accountType = user.get(key: "accountType") else { return 0 }
+            guard let accountType = user.uo.accountType else { return 0 }
             if accountType == "Kid" {
                 return 2
             } else {
@@ -50,7 +50,7 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsTableViewCell", for: indexPath)
-        let accountType = user.get(key: "accountType")!
+        let accountType = user.uo.accountType
         var text: String?
         switch (indexPath.section, indexPath.row) {
         case (0, 0):
@@ -83,7 +83,7 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
             //  This will open a link to your terms of service
             //  However, this is disabled for kids as it's an outside link and will be the short form privacy policy
             //  from the kid's perspective
-            guard let accountType = user.get(key: "accountType") else { return }
+            guard let accountType = user.uo.accountType else { return }
             if accountType == "Kid" {
                 guard let shortFormPrivacyPolicy = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "shortFormPrivacyPolicy") as? ShortFormPrivacyPolicyTableViewController else { return }
                 present(shortFormPrivacyPolicy, animated: true, completion: nil)
@@ -92,7 +92,7 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         case (0, 2):
-            guard user.get(key: "accountType") == "Parent" else { return }
+            guard user.uo.accountType == "Parent" else { return }
             guard let url = URL(string: "http://www.dynepic.com/pages/privacy-policy") else { return }
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         case (0, 3):
