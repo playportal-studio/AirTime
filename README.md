@@ -38,12 +38,25 @@
 
 
 * ### <b>Step 4:</b> Setup GitHub Repo
-    * Create master branch
-    * Clone master branch to your local machine
-    * enable gitflow
-    * Add develop branch to github HeroDetailComponent
-    * Add feature branch "feature/Step1"
-
+    * Fork this repo
+    * After forking, download or clone it to your local machine
+ 
+* ### <b>Step 5:</b> Checkout all feature branches.
+    * Feature branches available are listed below
+    ```
+    feature/Step1
+    feature/Step2
+    feature/Step3-integratePlayPORTAL
+    feature/Step4-addData
+    ```
+    
+    * Feature branches where created so you could see step by step progression of AirTime to further clarify how to integrate playPORTAL.
+    
+    * To checkout feature branch follow this format
+    
+    ```
+    git checkout -b "feaure branch name"
+    ```
 * ### <b>Step 5:</b> Fetch repo to all machines
 ```
  git clone https://github.com/playportal-studio/AirTime.git
@@ -61,6 +74,11 @@ pod install
 * ### <b>Step 7:</b> Launch the Xcode Workspace file.
     * Make sure xcode simulator runs
     * Make sure iOS device runs
+    
+    
+* ### <b>Need Help?</b> If you get stuck on any of the steps listed here are some links to help!
+    * Here is another cocoapods installation directions [link](https://iosdevcenters.blogspot.com/2015/12/how-to-install-cocoapods-in-xcode.html)
+    * Read [this](https://github.com/joshnh/Git-Commands) to get a refresher on Git commands 
 
 
 
