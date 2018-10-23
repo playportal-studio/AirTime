@@ -12,7 +12,7 @@
 	* Navigate to [playPORTAL Studio](https://studio.playportal.io)
 	* Click on <b>Sign Up For FREE Account</b>
 	* After creating your account, email us at [info@playportal.io](mailto:info@playportal.io?subject=Developer%20Sandbox%20Access%20Request) to verify your account.
-  </br>
+ 
 
 * ### <b>Step 2:</b> Register your App with playPORTAL
 
@@ -22,18 +22,25 @@
 	* Add an icon, <b>name</b> & description for your app.
 	* For "Environment" leave "Sandbox" selected.
 	* Click "Add App"
-  </br>
+ 
 
 * ### <b>Step 3:</b> Generate your Client ID and Client Secret
 
 	* Tap "Client IDs & Secrets"
 	* Tap "Generate Client ID"
 	* The values generated will be used later.
-  </br>
+	
+* ### <b>Step 3.1:</b> Hide your keys.
+	* The Client ID, & Secrets tied to your application <b>NEED</b> to be hidden
+	* This can be done by creating a .gitignore file 
+```
+cd AirTime
+touch .gitignore
+```
 
-
-
-
+* ### <b>Step 3.2:</b> Open up the project in a different IDE
+	* To edit your .gitignore open the project in either [Atom](https://atom.io/) or [VSCode](https://code.visualstudio.com/)
+	* After the project is open , add the file you stored keys in to the .gitignore
 
 * ### <b>Step 4:</b> Setup GitHub Repo
     * Fork this repo
