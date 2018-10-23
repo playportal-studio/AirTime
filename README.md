@@ -5,6 +5,9 @@
 # <b> [playPORTAL](https://www.playportal.io) 
 </div>
 
+### App Overview
+	* 
+
 ## Getting Started (playPORTAL setup)
 
 * ### <b>Step 1:</b> Create playPORTAL Studio Account
@@ -40,7 +43,7 @@
  git clone https://github.com/Clemson-Hack-a-Thon-2018/AirTime-Demo.git
  cd AirTime
 ```
-* ### <b>Step 6:</b> Launch Terminal and install install Cocopods version 1.6 [Here](https://cocoapods.org/)
+* ### <b>Step 6:</b> Launch Terminal and install Cocopods version 1.6 [Here](https://cocoapods.org/)
 	* ### <b> Step 6.1: </b>After Cocopods is installed 
 	 * Open up a terminal, and move into your project folder and do a pod install.
 ```
@@ -48,9 +51,10 @@ pod install
 ```
     
   
-* ### <b>Step 7:</b> Launch the Xcode Workspace file.
-    * Make sure xcode simulator runs
-    * Make sure iOS device runs
+* ### <b>Step 7:</b> Launch Xcode 
+    * Open up the .xcworkspace file
+    * Select a simulator that runs an iPhone and Apple Watch together 
+    * Press the play button and run AirTime
 
 	
 * ### <b>Step 8:</b> Hide your keys.
@@ -63,7 +67,7 @@ touch .gitignore
 
 * ### <b>Step 8.1:</b> Open up the project in a different IDE
 	* To edit your .gitignore open the project in either [Atom](https://atom.io/) or [VSCode](https://code.visualstudio.com/)
-	* After the project is open , add the file you stored keys in to the .gitignore
+	* After the project is open, add the file you stored keys in to the .gitignore
 	
 * ### <b>Step 9:</b> Develop! 
 	* If you made it this far, great you are ready!!!
