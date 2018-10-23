@@ -29,6 +29,7 @@
 	* Tap "Client IDs & Secrets"
 	* Tap "Generate Client ID"
 	* The values generated will be used later.
+	* Do <b>not</b> commit your credentials!
 	
 * ### <b>Step 3.1:</b> Hide your keys.
 	* The Client ID, & Secrets tied to your application <b>NEED</b> to be hidden
