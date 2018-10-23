@@ -59,7 +59,6 @@
 ```
  git clone https://github.com/playportal-studio/AirTime.git
  cd AirTime
- git checkout feature/Step1 branch
 ```
 * ### <b>Step 6:</b> Launch Terminal and install install Cocopods version 1.6 [Here](https://cocoapods.org/)
 	* ### <b> Step 6.1: </b>After Cocopods is installed 
@@ -74,7 +73,7 @@ pod install
     * Make sure iOS device runs
     
     
-* ### <b>Need Help?</b> If you get stuck on any of the steps listed here are some links to help!
+* ### <b>Got Stuck?</b> If you did on any of the steps listed here are some links to help!
     * Here is another cocoapods installation directions [link](https://iosdevcenters.blogspot.com/2015/12/how-to-install-cocoapods-in-xcode.html)
     * Read [this](https://github.com/joshnh/Git-Commands) to get a refresher on Git commands 
 
