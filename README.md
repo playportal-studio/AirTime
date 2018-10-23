@@ -29,7 +29,7 @@
 	* Tap "Client IDs & Secrets"
 	* Tap "Generate Client ID"
 	* The values generated will be used later.
-	* Do <b>not</b> commit your credentials!
+	* CAUTION: Keep your Client ID & Secret private! Do not commit your credentials!
  
 * ### <b>Step 4:</b> Setup GitHub Repo
     * Fork this repo
