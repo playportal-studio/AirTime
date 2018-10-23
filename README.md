@@ -4,8 +4,9 @@
 
 # <b> [playPORTAL](https://www.playportal.io) 
 </div>
-
+<center>
 ### App Overview
+</center>
 <p>AirTime is an app that , brings the playPORTAL SDK and the Apple Watch together! Go outside and get on your pogo stick and track your jumps using our app.</p>
 
 ## Getting Started (playPORTAL setup)
