@@ -34,9 +34,9 @@ class PPManager {
     
     var userListener:(_ user: PPUserObject?, _ isAuthd: Bool) -> Void
     
-    var PPusersvc: PPUserService!
+    var PPusersvc: PPUserService
     var PPwebapi: PPWebApi!
-    var PPdatasvc: PPDataService!
+    var PPdatasvc: PPDataService
     
     //    var keychain: KeychainWrapper = KeychainWrapper()
     let keychain = KeychainSwift()
@@ -168,7 +168,7 @@ class PPManager {
                 handler(response.debugDescription);
             } else {
                 // attempt to create / open this user's private data storage
-                if let id = PPManager.sharedInstance.PPusersvc.user.u["userId"] {
+                if let id = PPManager.sharedInstance.PPusersvc.user.uo.userId {
                     PPManager.sharedInstance.PPdatasvc.openBucket(bucketName:PPManager.sharedInstance.PPusersvc.getMyDataStorageName(), users:[id], isPublic:false) { succeeded, response, img in
                             print("getProfileAndBucket openBucket (my appData) succeeded: \( succeeded)" )
                         }
