@@ -2,7 +2,7 @@
 <img src="https://gyazo.com/e0313d1ea8c7b5a2b6fdf2a6b200f9df.png = 1000x1000" width="200">
 
 
-# <b> [Airtime = playPORTAL + Apple Watch](https://www.playportal.io) 
+### [Airtime = playPORTAL + Apple Watch](https://www.playportal.io) 
 </div>
 
 ### App Overview
