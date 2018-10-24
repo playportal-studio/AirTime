@@ -63,7 +63,7 @@ cd AirTime
 touch .gitignore
 ```
 
-* ### <b>Step 8.1:</b> Open up the project in a different IDE
+* ### <b>Step 8.1:</b>Open up the project in a different IDE
 	* To edit your .gitignore open the project in either [Atom](https://atom.io/) or [VSCode](https://code.visualstudio.com/)
 	* After the project is open, add the file you stored keys in to the .gitignore
 	
