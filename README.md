@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://gyazo.com/e0313d1ea8c7b5a2b6fdf2a6b200f9df.png = 50x50" width="200">
+<img src="https://gyazo.com/e0313d1ea8c7b5a2b6fdf2a6b200f9df.png = 1000x1000" width="200">
 
 
 # <b> [playPORTAL](https://www.playportal.io) 
