@@ -41,7 +41,7 @@
  
 * ### <b>Step 5:</b> Fetch repo to all machines
 ```
- git clone https://github.com/Clemson-Hack-a-Thon-2018/AirTime-Demo.git
+ git clone https://github.com/playportal-studio/AirTime.git
  cd AirTime
 ```
 * ### <b>Step 6:</b> Launch Terminal and install Cocopods version 1.6 [Here](https://cocoapods.org/)
