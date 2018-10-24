@@ -7,10 +7,14 @@
 
 ### App Overview
 <br/>
-<p>AirTime is an app that brings the playPORTAL SDK and the Apple Watch together. It uses the on-board Apple Watch <a src ="https://developer.apple.com/design/human-interface-guidelines/watchos/user-interaction/accelerometer-and-gyroscope/">accelerometer</a> to complete simple gesture recognition to count pogo stick jumps and airtime. Go outside, get your pogo stick and start jumping. Feel free to modify this code, and create your own playPORTAL Apple Watch app.</p>
+<p>AirTime is an app that brings the playPORTAL SDK and the Apple Watch together. It uses the on-board Apple Watch accelerometer to complete simple gesture recognition to count pogo stick jumps and airtime. Go outside, get your pogo stick and start jumping. Feel free to modify this code, and create your own playPORTAL Apple Watch app.</p>
+
+[Acceleromter Info](https://developer.apple.com/design/human-interface-guidelines/watchos/user-interaction/accelerometer-and-gyroscope/)
 
 ### SDK Features Used
-<img src="https://gyazo.com/b7aff7b146472034e36b817cdd95f4c6.png = 1500x1500" width="33%">
+<img src="https://gyazo.com/b7aff7b146472034e36b817cdd95f4c6.png = 1500x1500" width="55%">
+
+
 
 ## Getting Started (playPORTAL setup)
 
@@ -29,8 +33,10 @@
 	* Add an icon, <b>name</b> & description for your app.
 	* For "Environment" leave "Sandbox" selected.
 	* Click "Add App"
-	
-	
+* ###<b>Step 3:</b> Setup your permission scopes.
+	<img src="https://gyazo.com/b7aff7b146472034e36b817cdd95f4c6.png = 1500x1500" width="55%">
+	* This is how AirTime was setup, look at the picture for refrence!
+	* This step is important!
 * ### <b>Step 3:</b> Generate your Client ID and Client Secret
 
 	* Tap "Client IDs & Secrets"
