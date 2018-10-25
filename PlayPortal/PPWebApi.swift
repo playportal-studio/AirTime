@@ -60,7 +60,12 @@ class OAuth2Handler: RequestAdapter, RequestRetrier {
         self.accessToken = accessToken
         self.refreshToken = refreshToken
     }
-
+    
+    // TEST FUNCTION 
+    func invalidateAccessToken() -> Void {
+        self.accessToken = "invalid"
+    }
+    
     func updateTokens(accessToken: String, refreshToken: String) -> Void {
         self.accessToken = accessToken
         self.refreshToken = refreshToken
@@ -81,11 +86,18 @@ class OAuth2Handler: RequestAdapter, RequestRetrier {
     // MARK: - RequestRetrier
     func should(_ manager: SessionManager, retry request: Request, with error: Error, completion: @escaping RequestRetryCompletion) {
         lock.lock() ; defer { lock.unlock() }
-        
+        var shouldRefresh = false
         if let response = request.task?.response as? HTTPURLResponse, response.statusCode == 401 {
+
+            if let response = request.task?.response as? HTTPURLResponse, let errorCode = response.allHeaderFields["errorcode"] as? String {
+                if errorCode == "4010" { shouldRefresh = true }
+                print("errorCode: \(String(describing: errorCode))")   // detailed error
+            }
+            
+            
             requestsToRetry.append(completion)
             
-            if !isRefreshing {
+            if !isRefreshing && shouldRefresh {
                 refreshAccessTokens { [weak self] succeeded, accessToken, refreshToken in
                     guard let strongSelf = self else { return }
                     
