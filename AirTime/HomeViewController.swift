@@ -10,14 +10,6 @@ import UIKit
 import WatchConnectivity
 import StoreKit
 
-/*
-class RawJumpData : Codable {
-    var jumpEvents:[ String: Any]!
-    
-    init(json: Any) { }
-}
-*/
-
 
 class Stats : Codable {
     var totalJumps: Int!
@@ -137,7 +129,6 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
         let lj: NSNumber = longestJump as NSNumber
         let tnow = PPManager.sharedInstance.stringFromDate(date: Date())
         let innerd = ["user": s, "jump count": jc, "longest jump":lj, "epoch": tnow] as [String: Any]
-//       self.myRawJumpData.append(json: innerd)
         PPManager.sharedInstance.PPdatasvc.writeBucket( bucketName:PPManager.sharedInstance.PPusersvc.getMyAppGlobalDataStorageName(), key:s, value:innerd) { succeeded, response, responseObject in
             if(!succeeded) { print("write JSON error:") }
         }
