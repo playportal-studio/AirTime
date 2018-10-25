@@ -34,8 +34,7 @@
 	* For "Environment" leave "Sandbox" selected.
 	* Click "Add App"
 * ### <b>Step 3:</b> Setup your permission scopes.
-	* This is how AirTime was setup, look at the picture for refrence!
-	* This step is important!
+	* This is how AirTime was setup, look at the picture for reference!
 <img src="https://gyazo.com/b7aff7b146472034e36b817cdd95f4c6.png = 1500x1500" width="55%">
 
 * ### <b>Step 4:</b> Generate your Client ID and Client Secret
