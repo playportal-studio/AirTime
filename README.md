@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://gyazo.com/e0313d1ea8c7b5a2b6fdf2a6b200f9df.png = 1000x1000" width="200">
+<img src="https://gyazo.com/ddb0fef2c7821b73782deb0054d706a3.png = 1000x1000" width="200">
 
 
 ### [Airtime = playPORTAL + Apple Watch](https://www.playportal.io) 
