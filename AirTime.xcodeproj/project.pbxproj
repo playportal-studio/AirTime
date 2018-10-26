@@ -490,7 +490,6 @@
 		6EAE5D7A21838065005E070A /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				46AE4EAB216BE9C5007F8478 /* README.md */,
 				46AE4EAE216BE9C5007F8478 /* .gitignore */,
 				46AE4EAA216BE9C5007F8478 /* .gitmodules */,
 			);
@@ -514,6 +513,7 @@
 			isa = PBXGroup;
 			children = (
 				46AE4F68216BEDC4007F8478 /* AirTime.xcodeproj */,
+				46AE4EAB216BE9C5007F8478 /* README.md */,
 				6EAE5D7A21838065005E070A /* Other */,
 				46AE4EA0216BE9C5007F8478 /* PlayPortal */,
 				508C66812142C36D0059C591 /* Resources */,
