@@ -487,6 +487,16 @@
 			path = "AirTime WatchKit App Extension";
 			sourceTree = "<group>";
 		};
+		6EAE5D7A21838065005E070A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				46AE4EAB216BE9C5007F8478 /* README.md */,
+				46AE4EAE216BE9C5007F8478 /* .gitignore */,
+				46AE4EAA216BE9C5007F8478 /* .gitmodules */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		7177BFBC4DEEB05880F49E20 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -504,9 +514,7 @@
 			isa = PBXGroup;
 			children = (
 				46AE4F68216BEDC4007F8478 /* AirTime.xcodeproj */,
-				46AE4EAB216BE9C5007F8478 /* README.md */,
-				46AE4EAE216BE9C5007F8478 /* .gitignore */,
-				46AE4EAA216BE9C5007F8478 /* .gitmodules */,
+				6EAE5D7A21838065005E070A /* Other */,
 				46AE4EA0216BE9C5007F8478 /* PlayPortal */,
 				508C66812142C36D0059C591 /* Resources */,
 				A322BB961DFEA7C400C847AF /* AirTime */,
