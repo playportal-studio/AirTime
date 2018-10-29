@@ -53,9 +53,8 @@
  git clone https://github.com/playportal-studio/AirTime.git
  cd AirTime
 ```
-* ### <b>Step 6:</b> Launch Terminal and install Cocopods version 1.6 [Here](https://cocoapods.org/)
-	* ### <b> Step 6.1: </b>After Cocopods is installed 
-	 * Open up a terminal, and move into your project folder and do a pod install.
+* ### <b>Step 6:</b> Install Cocopods version 1.6 [Here](https://cocoapods.org/)
+	 * After cocoapods is intalled,move into your project folder and do a pod install.
 ```
 pod install
 ```
