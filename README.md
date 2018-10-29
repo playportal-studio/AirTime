@@ -48,7 +48,7 @@
 	* The values generated will be used later.
 	* CAUTION: Keep your Client ID & Secret private! Do not commit your credentials!
  
-* ### <b>Step 5:</b> Fetch repo to all machines
+* ### <b>Step 5:</b> Using your teminal,clone the repository 
 ```
  git clone https://github.com/playportal-studio/AirTime.git
  cd AirTime
