@@ -26,15 +26,16 @@
  
 
 * ### <b>Step 2:</b> Register your App with playPORTAL
+
 <img src="https://gyazo.com/123d7d09cea8bb8cfc3d763709ddc8ba.png = 1500x1500" width="55%">
-
-   * After confirmation, log in to the [playPORTAL Studio](https://studio.playportal.io)
-   * In the left navigation bar click on the <b>Apps</b> tab.
-   * In the <b>Apps</b> panel, click on the "+ Add App" button.
-   * Add an icon, <b>name</b> & description for your app.
-   * For "Environment" leave "Sandbox" selected.
-   * Click "Add App"
-
+<div>
+   	 * After confirmation, log in to the [playPORTAL Studio](https://studio.playportal.io)
+  	 * In the left navigation bar click on the <b>Apps</b> tab.
+   	 * In the <b>Apps</b> panel, click on the "+ Add App" button.
+  	 * Add an icon, <b>name</b> & description for your app.
+  	 * For "Environment" leave "Sandbox" selected.
+ 	 * Click "Add App"
+</div>
 * ### <b>Step 3:</b> Setup your permission scopes.
 	* This is how AirTime was setup, look at the picture for reference!
 <img src="https://gyazo.com/93c92748a1f507be765aa8c8c2d41fae.png = 1500x1500" width="55%">
