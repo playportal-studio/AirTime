@@ -26,7 +26,7 @@
  
 
 * ### <b>Step 2:</b> Register your App with playPORTAL
-<img src="https://github.com/playportal-studio/AirTime/blob/master/Assets/README%20/AirTime%20App%20Creation%20on%20playPORTAL%20Studio.png = 1500x1500" width="55%">
+<img src="https://gyazo.com/123d7d09cea8bb8cfc3d763709ddc8ba.png = 1500x1500" width="55%">
 
    * After confirmation, log in to the [playPORTAL Studio](https://studio.playportal.io)
    * In the left navigation bar click on the <b>Apps</b> tab.
