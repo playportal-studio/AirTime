@@ -76,10 +76,40 @@
 cd AirTime
 touch .gitignore
 ```
-
-* ### <b>Step 8.1:</b>Open up the project in a different IDE
+* ### <b>Step 8.1:</b>Handling keys
+	* The keys you generated earlier need to go somewhere in order for the SSO to work.. follow the steps below.
+		* Step 1: Create a Keys.swift file inside your project directory.
+		* Step 2: Grab your <b>Client ID</b> and your <b>Client Secret</b> from playPORTAL studio.
+		* Step 3: Define your keys like this.
+		```
+		 let cid = "CLIENT ID GOES HERE"
+    		 let cse = "CLIENT SECRET GOES HERE"
+		 let redirectURI = "REDIRECT URL GOES HERE"
+                 let env = "SANDBOX"
+		```
+		* Step 4: Now that your keys are in a file return to playPORTAL studio.
+		* Step 5: Create a Redirect URL following the format below
+		```
+		appname://redirect
+		```
+* ### <b>Step 8.2:</b>Open up the project in a different IDE
 	* To edit your .gitignore open the project in either [Atom](https://atom.io/) or [VSCode](https://code.visualstudio.com/)
 	* After the project is open, add the file you stored keys in to the .gitignore
+
+* ### <b>Step 8.3:</b>Open XCode
+	* Now that you have all of your keys in the right place, there is one last step related to tying up the SSO.
+		* Step 1: Navigate to your app level settings and click on the info tab.
+		* Step 2: Add a new URL under the URL types section.
+		* Step 3: Input your app name into the <b>Identifier</b> and <b>URL Schemes</b> see the picture below for refrence.
+	
+	<img src="https://gyazo.com/bd73716f685418251fd814a1662b5cb8.png = 1500x1500" width="55%">
+* ### <b>Step 8.4:</b> Sandbox user information.
+	* You are going to need some sandbox users to test with! 
+		* Step 1: Go back to [playPORTAL studio](https://studio.playportal.io)
+		* Step 2: Click on Sandbox
+		* Step 3: Generate your users, use the picture below for reference.
+		
+	<img src="https://gyazo.com/76ec65dadd301ae7512304e80979323f.png = 1500x1500" width="55%">
 	
 * ### <b>Step 9:</b> Develop! 
 	* If you made it this far, great you are ready!!!
