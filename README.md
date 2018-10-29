@@ -50,10 +50,10 @@
  
 * ### <b>Step 5:</b> Clone the repository 
 	* Open teminal and clone repository to Desktop
-```
- cd Desktop
- git clone https://github.com/playportal-studio/AirTime.git
-```
+    ```
+    cd Desktop
+    git clone https://github.com/playportal-studio/AirTime.git
+    ```
 * ### <b>Step 6:</b> Install [Cocopods version 1.6](https://cocoapods.org/) 
     * To install 
     ```
