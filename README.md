@@ -54,7 +54,11 @@
  cd AirTime
 ```
 * ### <b>Step 6:</b> Install Cocopods version 1.6 [Here](https://cocoapods.org/)
-	 * After cocoapods is intalled,move into your project folder and do a pod install.
+	* You can install cocoapods 
+```
+sudo gem install cocoapods
+```
+	* After cocoapods is intalled, move into your project folder and do a pod install.
 ```
 pod install
 ```
