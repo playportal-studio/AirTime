@@ -54,14 +54,16 @@
  cd AirTime
 ```
 * ### <b>Step 6:</b> Install Cocopods version 1.6 [Here](https://cocoapods.org/)
-	* You can install cocoapods 
-```
-sudo gem install cocoapods
-```
-	* After cocoapods is intalled, move into your project folder and do a pod install.
-```
-pod install
-```
+    * To install 
+    ```
+    cd Desktop
+    sudo gem install cocoapods
+    ```
+    * After cocoapods is installed follow these steps
+    ```
+    cd AirTime
+    pod install
+    ```
 * ### <b>Step 7:</b> Launch Xcode 
     * Open up the .xcworkspace file
     * Select a simulator that runs an iPhone and Apple Watch together 
