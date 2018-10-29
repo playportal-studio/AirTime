@@ -36,7 +36,7 @@
 <img src="https://gyazo.com/123d7d09cea8bb8cfc3d763709ddc8ba.png = 1500x1500" width="65%">
 
 * ### <b>Step 3:</b> Setup your permission scopes.
-	* This is how AirTime was setup, look at the picture for reference!
+	* Add permission scopes for each of the sdk features used in the app. Reference the image below.
 <img src="https://gyazo.com/93c92748a1f507be765aa8c8c2d41fae.png = 1500x1500" width="55%">
 
 * ### <b>Step 4:</b> Generate your Client ID and Client Secret
