@@ -54,7 +54,7 @@
     cd Desktop
     git clone https://github.com/playportal-studio/AirTime.git
     ```
-* ### <b>Step 6:</b> Install [Cocopods version 1.6](https://cocoapods.org/) 
+* ### <b>Step 6:</b> Install [Cocopods](https://cocoapods.org/) 
     * To install 
     ```
     sudo gem install cocoapods
