@@ -50,6 +50,7 @@
  
 * ### <b>Step 5:</b> Using your teminal,clone the repository 
 ```
+ cd Desktop
  git clone https://github.com/playportal-studio/AirTime.git
  cd AirTime
 ```
