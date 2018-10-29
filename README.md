@@ -57,7 +57,7 @@
 * ### <b>Step 6:</b> Install [Cocopods](https://cocoapods.org/) 
     * To install 
     ```
-    sudo gem install cocoapods
+    sudo gem install cocoapods -v 1.6.0
     ```
     * After cocoapods is installed, follow these steps
     ```
