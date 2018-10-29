@@ -48,7 +48,8 @@
 	* The values generated will be used later.
 	* CAUTION: Keep your Client ID & Secret private! Do not commit your credentials!
  
-* ### <b>Step 5:</b> Using your teminal,clone the repository 
+* ### <b>Step 5:</b> Clone the repository 
+	* Open teminal and clone repository to Desktop
 ```
  cd Desktop
  git clone https://github.com/playportal-studio/AirTime.git
