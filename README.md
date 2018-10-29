@@ -52,12 +52,10 @@
 ```
  cd Desktop
  git clone https://github.com/playportal-studio/AirTime.git
- cd AirTime
 ```
 * ### <b>Step 6:</b> Install [Cocopods version 1.6](https://cocoapods.org/) 
     * To install 
     ```
-    cd Desktop
     sudo gem install cocoapods
     ```
     * After cocoapods is installed, follow these steps.
