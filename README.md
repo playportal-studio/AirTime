@@ -30,6 +30,7 @@
   	* In the left navigation bar click on the <b>Apps</b> tab.
    	* In the <b>Apps</b> panel, click on the "+ Add App" button.
   	* Add an icon (example image [here](https://github.com/playportal-studio/AirTime/blob/master/AirTime/Assets.xcassets/AppIcon.appiconset/ItunesArtwork%402x.png)), <b>name</b> & description for your app.
+	* Your <b>name</b> inputted has to be unique! 
   	* For "Environment" leave "Sandbox" selected.
  	* Click "Add App"
 	
