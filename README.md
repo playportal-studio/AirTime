@@ -48,27 +48,23 @@
 	* The values generated will be used later.
 	* CAUTION: Keep your Client ID & Secret private! Do not commit your credentials!
  
-* ### <b>Step 5:</b> Setup GitHub Repo
-    * Fork this repo
-    * After forking, download or clone it to your local machine
- 
-* ### <b>Step 6:</b> Fetch repo to all machines
+* ### <b>Step 5:</b> Fetch repo to all machines
 ```
  git clone https://github.com/playportal-studio/AirTime.git
  cd AirTime
 ```
-* ### <b>Step 7:</b> Launch Terminal and install Cocopods version 1.6 [Here](https://cocoapods.org/)
+* ### <b>Step 6:</b> Launch Terminal and install Cocopods version 1.6 [Here](https://cocoapods.org/)
 	* ### <b> Step 6.1: </b>After Cocopods is installed 
 	 * Open up a terminal, and move into your project folder and do a pod install.
 ```
 pod install
 ```
-* ### <b>Step 8:</b> Launch Xcode 
+* ### <b>Step 7:</b> Launch Xcode 
     * Open up the .xcworkspace file
     * Select a simulator that runs an iPhone and Apple Watch together 
     * Press the play button and run AirTime
 
-* ### <b>Step 9:</b> Hide your keys.
+* ### <b>Step 8:</b> Hide your keys.
 	* The Client ID, & Secrets tied to your application <b>NEED</b> to be hidden
 	* This can be done by creating a .gitignore file 
 ```
@@ -76,11 +72,11 @@ cd AirTime
 touch .gitignore
 ```
 
-* ### <b>Step 9.1:</b>Open up the project in a different IDE
+* ### <b>Step 8.1:</b>Open up the project in a different IDE
 	* To edit your .gitignore open the project in either [Atom](https://atom.io/) or [VSCode](https://code.visualstudio.com/)
 	* After the project is open, add the file you stored keys in to the .gitignore
 	
-* ### <b>Step 10:</b> Develop! 
+* ### <b>Step 9:</b> Develop! 
 	* If you made it this far, great you are ready!!!
 	* Good luck and have fun developing. 
     
