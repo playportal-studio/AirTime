@@ -59,14 +59,14 @@
     ```
     sudo gem install cocoapods
     ```
-    * After cocoapods is installed, follow these steps.
+    * After cocoapods is installed, follow these steps
     ```
     cd AirTime
     pod install
     ```
 * ### <b>Step 7:</b> Launch Xcode 
     * Open up the .xcworkspace file
-    * Select a simulator that runs an iPhone and Apple Watch together 
+    * Select a simulator or device that runs an iPhone and Apple Watch together 
     * Press the play button and run AirTime
 
 * ### <b>Step 8:</b> Hide your keys.
