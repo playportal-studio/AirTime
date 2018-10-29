@@ -146,16 +146,20 @@ class PPManager {
             PPManager.sharedInstance.redir = andRedirectURI;
             
             PPManager.sharedInstance.isAuthenticated() { isAuthd in
-                PPManager.sharedInstance.getProfileAndBucket { error in
-                    if(!error.isEmpty) { print("ERROR: configure \(error)") }
-                    PPManager.sharedInstance.PPusersvc.getProfile {  succeeded, response, user in
-                        if(!succeeded) {
-                            print("Error:", response.debugDescription)
-                            PPManager.sharedInstance.userListener(nil, isAuthd)
-                        } else {
-                            PPManager.sharedInstance.userListener(user, isAuthd)
+                if isAuthd {
+                    PPManager.sharedInstance.getProfileAndBucket { error in
+                        if(!error.isEmpty) { print("ERROR: configure \(error)") }
+                        PPManager.sharedInstance.PPusersvc.getProfile {  succeeded, response, user in
+                            if(!succeeded) {
+                                print("Error:", response.debugDescription)
+                                PPManager.sharedInstance.userListener(nil, isAuthd)
+                            } else {
+                                PPManager.sharedInstance.userListener(user, isAuthd)
+                            }
                         }
                     }
+                } else {
+                    PPManager.sharedInstance.userListener(nil, false)
                 }
             }
         }
@@ -266,6 +270,8 @@ class PPManager {
     
     func isAuthenticated(handler: @escaping (_ isAuthd:Bool) -> Void) {
         if(allTokensExist()) { // force a refresh
+            let oh = PPManager.sharedInstance.PPwebapi.oauthHandler
+            print()
             PPManager.sharedInstance.PPwebapi.oauthHandler.refreshAccessTokens { succeeded, accessToken, refreshToken in
                 if let accessToken = accessToken, let refreshToken = refreshToken {
                     PPManager.sharedInstance.keychain.set(accessToken, forKey: "access_token")
