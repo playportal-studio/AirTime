@@ -1,1 +1,6 @@
-/Users/lincolnfraley/Developer/dynepic/AirTime/Pods/Target Support Files/KeychainSwift/KeychainSwift.modulemap
+module KeychainSwift {
+  umbrella header "KeychainSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
