@@ -64,56 +64,61 @@
     cd AirTime
     pod install
     ```
-* ### <b>Step 7:</b> Launch Xcode 
-    * Open up the .xcworkspace file
+* ### <b>Step 7:</b> Ensure AirTime Compiles
+    * Open up the AirTime.xcworkspace file
     * Select a simulator or device that runs an iPhone and Apple Watch together 
-    * Press the play button and run AirTime
+    * Press the play button to run AirTime
 
-* ### <b>Step 8:</b> Hide your keys.
+* ### <b>Step 8:</b> Link playPORTAL Studio with AirTime
+	
+* ### <b>Step 8.1:</b> Insert Keys In An App File To Enable User Login
 	* The Client ID, & Secrets tied to your application <b>NEED</b> to be hidden
-	* This can be done by creating a .gitignore file 
-```
-cd AirTime
-touch .gitignore
-```
-* ### <b>Step 8.1:</b>Handling keys
-	* The keys you generated earlier need to go somewhere in order for the SSO to work.. follow the steps below.
-		* Step 1: Create a Keys.swift file inside your project directory.
-		* Step 2: Grab your <b>Client ID</b> and your <b>Client Secret</b> from playPORTAL studio.
-		* Step 3: Define your keys like this.
+	* Create a .gitignore file 
+	
+	```
+	cd AirTime
+	touch .gitignore
+	```
+	
+	* Create a Keys.swift file inside your project directory
+	* Copy your <b>Client ID</b> and your <b>Client Secret</b> from playPORTAL Studio
+	* Define your keys inside the Keys.swift using the format below
 		```
 		 let cid = "CLIENT ID GOES HERE"
     		 let cse = "CLIENT SECRET GOES HERE"
 		 let redirectURI = "REDIRECT URL GOES HERE"
                  let env = "SANDBOX"
 		```
-		* Step 4: Now that your keys are in a file return to playPORTAL studio.
-		* Step 5: Create a Redirect URL following the format below
+* ### <b>Step 8.2:</b>Open up the project in a different IDE
+	* To edit your .gitignore open the project in either [Atom](https://atom.io/) or [VSCode](https://code.visualstudio.com/)
+	* Add the filename Keys.swift to the .gitignore
+	* Now that your keys are in a file, return to playPORTAL Studio
+	* Create a Redirect URL using the name of your Studio app 
 		```
 		appname://redirect
 		```
-* ### <b>Step 8.2:</b>Open up the project in a different IDE
-	* To edit your .gitignore open the project in either [Atom](https://atom.io/) or [VSCode](https://code.visualstudio.com/)
-	* After the project is open, add the file you stored keys in to the .gitignore
 
-* ### <b>Step 8.3:</b>Open XCode
-	* Now that you have all of your keys in the right place, there is one last step related to tying up the SSO.
-		* Step 1: Navigate to your app level settings and click on the info tab.
-		* Step 2: Add a new URL under the URL types section.
-		* Step 3: Input your app name into the <b>Identifier</b> and <b>URL Schemes</b> see the picture below for refrence.
+* ### <b>Step 8.3:</b>SSO Integration in XCode
+	* Open XCode
+	* Navigate to your app level settings and click on the info tab.
+	* Add a new URL under the URL types section.
+	* Input your app name into the <b>Identifier</b> and <b>URL Schemes</b>. See the picture below for refrence
 	
-	<img src="https://gyazo.com/bd73716f685418251fd814a1662b5cb8.png = 1500x1500" width="55%">
-* ### <b>Step 8.4:</b> Sandbox user information.
-	* You are going to need some sandbox users to test with! 
-		* Step 1: Go back to [playPORTAL studio](https://studio.playportal.io)
-		* Step 2: Click on Sandbox
-		* Step 3: Generate your users, use the picture below for reference.
+	<img src="https://gyazo.com/bd73716f685418251fd814a1662b5cb8.png = 1500x1500" width="65%">
+	
+* ### <b>Step 8.4:</b> Create Sandbox Users For App
+	* Go back to [playPORTAL Studio](https://studio.playportal.io)
+	* Click on Sandbox
+	* Generate a few users
+	Tip: You can create kids by creating a Parent and adding a Kid
 		
 	<img src="https://gyazo.com/76ec65dadd301ae7512304e80979323f.png = 1500x1500" width="55%">
 	
 * ### <b>Step 9:</b> Develop! 
 	* If you made it this far, great you are ready!!!
-	* Good luck and have fun developing. 
+	* Within XCode, build the App
+	* Use username and PW from playPORTAL Studio Step 8.4 to login
+	* Good luck and have fun developing 
     
     
 * ### <b>Got Stuck?</b> If you did on any of the steps listed here are some links to help!
