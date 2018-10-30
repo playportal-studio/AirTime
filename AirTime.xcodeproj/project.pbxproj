@@ -62,7 +62,6 @@
 		46AE4F2E216BE9C6007F8478 /* Icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E93216BE9C5007F8478 /* Icon-29@3x.png */; };
 		46AE4F2F216BE9C6007F8478 /* Icon-27.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E94216BE9C5007F8478 /* Icon-27.5@2x.png */; };
 		46AE4F30216BE9C6007F8478 /* Icon-86@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E95216BE9C5007F8478 /* Icon-86@2x.png */; };
-		46AE4F31216BE9C6007F8478 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E96216BE9C5007F8478 /* Contents.json */; };
 		46AE4F32216BE9C6007F8478 /* Icon-98@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E97216BE9C5007F8478 /* Icon-98@2x.png */; };
 		46AE4F33216BE9C6007F8478 /* Icon-24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E98216BE9C5007F8478 /* Icon-24@2x.png */; };
 		46AE4F3A216BE9C6007F8478 /* PPLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA1216BE9C5007F8478 /* PPLoginButton.swift */; };
@@ -75,7 +74,6 @@
 		46AE4F41216BE9C6007F8478 /* RemoteNotificationsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA8216BE9C5007F8478 /* RemoteNotificationsHandler.swift */; };
 		46AE4F42216BE9C6007F8478 /* PPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA9216BE9C5007F8478 /* PPUtils.swift */; };
 		46AE4F43216BE9C6007F8478 /* .gitmodules in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4EAA216BE9C5007F8478 /* .gitmodules */; };
-		46AE4F44216BE9C6007F8478 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4EAB216BE9C5007F8478 /* README.md */; };
 		46AE4F45216BE9C6007F8478 /* ColoredGlyph.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4EAD216BE9C5007F8478 /* ColoredGlyph.png */; };
 		46AE4F46216BE9C6007F8478 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4EAE216BE9C5007F8478 /* .gitignore */; };
 		5077E1252146F8AE00B0E0FA /* TimeInterval+Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5077E1242146F8AE00B0E0FA /* TimeInterval+Time.swift */; };
@@ -231,7 +229,6 @@
 		46AE4EA8216BE9C5007F8478 /* RemoteNotificationsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteNotificationsHandler.swift; sourceTree = "<group>"; };
 		46AE4EA9216BE9C5007F8478 /* PPUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPUtils.swift; sourceTree = "<group>"; };
 		46AE4EAA216BE9C5007F8478 /* .gitmodules */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
-		46AE4EAB216BE9C5007F8478 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		46AE4EAD216BE9C5007F8478 /* ColoredGlyph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColoredGlyph.png; sourceTree = "<group>"; };
 		46AE4EAE216BE9C5007F8478 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		46AE4F68216BEDC4007F8478 /* AirTime.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AirTime.xcodeproj; sourceTree = "<group>"; };
@@ -507,7 +504,6 @@
 			isa = PBXGroup;
 			children = (
 				46AE4F68216BEDC4007F8478 /* AirTime.xcodeproj */,
-				46AE4EAB216BE9C5007F8478 /* README.md */,
 				6EAE5D7A21838065005E070A /* Other */,
 				46AE4EA0216BE9C5007F8478 /* PlayPortal */,
 				508C66812142C36D0059C591 /* Resources */,
@@ -723,7 +719,6 @@
 				46AE4F32216BE9C6007F8478 /* Icon-98@2x.png in Resources */,
 				508C669E214305500059C591 /* OstrichSans-Heavy.otf in Resources */,
 				46AE4F05216BE9C6007F8478 /* Icon-App-20x20@1x.png in Resources */,
-				46AE4F31216BE9C6007F8478 /* Contents.json in Resources */,
 				46AE4EFF216BE9C6007F8478 /* Icon-App-29x29@1x.png in Resources */,
 				46AE4F02216BE9C6007F8478 /* Icon-App-40x40@1x.png in Resources */,
 				508C66982143051F0059C591 /* WorkSans-Medium.ttf in Resources */,
@@ -761,7 +756,6 @@
 				46AE4F2E216BE9C6007F8478 /* Icon-29@3x.png in Resources */,
 				46AE4F11216BE9C6007F8478 /* Icon-App-57x57@2x.png in Resources */,
 				508C66952143051F0059C591 /* WorkSans-Regular.ttf in Resources */,
-				46AE4F44216BE9C6007F8478 /* README.md in Resources */,
 				46AE4F46216BE9C6007F8478 /* .gitignore in Resources */,
 				46AE4F27216BE9C6007F8478 /* icon-messages-app-27x20@3x.png in Resources */,
 				46AE4F2B216BE9C6007F8478 /* Icon-40@2x.png in Resources */,
