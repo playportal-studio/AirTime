@@ -72,7 +72,8 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
         let lu = self.user?.uo.lastName
         if h != nil && fu != nil && lu != nil {
             self.label.text = h! + " | " + fu! + " " + lu!
-            
+
+            DispatchQueue.main.async {
             PPManager.sharedInstance.PPusersvc.getProfilePic { succeeded, response, img in
                 if succeeded {
                     if let i = img {
@@ -81,6 +82,7 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
 
                     }
                 }
+            }
             }
         }
     }
