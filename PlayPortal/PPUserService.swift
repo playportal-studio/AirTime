@@ -3,7 +3,7 @@
 //  Helloworld-Swift-SDK
 //
 //  Created by Gary J. Baldwin on 9/15/18.
-//  Copyright © 2018 Gary J. Baldwin. All rights reserved.
+//  Copyright © 2018 Dynepic, Inc. All rights reserved.
 //
 
 import Foundation
@@ -214,9 +214,13 @@ class PPUserService {
  }
     
     
-   func logout() -> Void {
+    func markUserInvalid() -> Void {
+        userProfileIsValid = false
+    }
+    func logout() -> Void {
+        markUserInvalid()
         PPManager.sharedInstance.logout()
-   }
+    }
     
     func getProfile(completion: @escaping PPUserCompletion ) {
         if(userProfileIsValid) {
@@ -257,19 +261,22 @@ class PPUserService {
     
 
     func getProfilePic(completion: @escaping PPImageCompletion ) {
-        if let img:UIImage = user.getImage(key:"profilePic") {
-            completion(true, nil, img)
-        } else {
+//        if let img:UIImage = user.getImage(key:"profilePic") {
+//            print("getProfilePic (from cache) for user: \( user.uo.handle )" )
+//            completion(true, nil, img)
+//        } else {
             PPManager.sharedInstance.PPwebapi.getProfileOrCoverImage(isProfile: true) { succeeded, response, responseObject in
                 print("getProfilePic from server:")
                     if(succeeded) {
                         self.user.uPics["profilePic"] = responseObject as? UIImage
                         completion(true, nil, self.user.uPics["profilePic"])
-                    }
+                    } else {
+                        completion(true, nil, UIImage(named: "anonUser"))
                 }
-            }
-        completion(true, nil, UIImage(named: "anonUser"))
-    }
+                }
+//            }
+//        completion(true, nil, UIImage(named: "anonUser"))
+    }   
         
     func getCoverPic(completion: @escaping PPImageCompletion ) {
         if let img:UIImage = user.getImage(key:"coverPic") {
