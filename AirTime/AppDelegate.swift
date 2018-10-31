@@ -12,16 +12,11 @@ import UserNotifications
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-    let cid = "iok-cid-e06a623f77de43627290b8a796cee6dc36f94f4cf1a82734"
-    let redirectURI = "airtime://redirect"
-    let env = "SANDBOX"
-    
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        PPManager.sharedInstance.configure(env: env, clientId: cid, secret: clientSecret, andRedirectURI: redirectURI)
+        PPManager.sharedInstance.configure(env: env, clientId: cid, secret: cse, andRedirectURI: redirectURI)
         PPManager.sharedInstance.addUserListener { user, authenticated in
             print("userListener invoked authd: \( authenticated )  user: \(String(describing:  user ))" )
             
