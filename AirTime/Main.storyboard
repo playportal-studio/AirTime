@@ -35,7 +35,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Air Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTY-Fl-mWg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Air Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTY-Fl-mWg">
                                 <rect key="frame" x="38" y="180" width="300" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="CwV-eo-Hzp"/>
@@ -182,7 +182,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Settings" id="w7l-u4-VVk">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="5Rb-Tg-EEB">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="5Rb-Tg-EEB">
                                             <connections>
                                                 <action selector="backTapped:" destination="okQ-vW-uAX" id="aHL-nV-p6K"/>
                                             </connections>

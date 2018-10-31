@@ -12,17 +12,15 @@
 		258E71ECF3D900477A267306555F9A8E /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874A01FB4E49049B96287A8F4EB5E6FA /* TaskDelegate.swift */; };
 		3CE316FB1EA8B67619B8F1F69C2D7DEF /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED69CE59A2657C48467C1E807B7B601 /* DispatchQueue+Alamofire.swift */; };
 		4BA43AF9B1B730C50761FC87A3CF4284 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708EF78DF58A6DBB75745442C1F73291 /* KeychainSwift.swift */; };
-		52EAD20258EA0083DE94826111DAE38A /* Pods-AirTime WatchKit App Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F0E3A80A963661F397F9D737AB4E9 /* Pods-AirTime WatchKit App Extension-dummy.m */; };
 		59A379D2EB8028CB07331F2E18B6FC40 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED014D2276EFE1D14998C2977D299EC1 /* Request.swift */; };
 		5BC1C61CB83F16DFD89AC9A78CDFADC3 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16685FCEDC787A7CB573B61D86CB1E57 /* Validation.swift */; };
-		6050B315B3F8442CE7F4FFEDF19D9477 /* Pods-AirTime-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF14899EA4D95E25F6AF1A252ED870B0 /* Pods-AirTime-dummy.m */; };
+		6050B315B3F8442CE7F4FFEDF19D9477 /* Pods-AirTime-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346812BD9EEF0C355100A3C537E9DCD /* Pods-AirTime-dummy.m */; };
 		668DA2358C17E58C237B811862AE4A47 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B91040DF911C9D0F3A062C6A1FEC6 /* SessionManager.swift */; };
 		66DAA427DFCF69455F88D50EBDCEC978 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63F3F77924FB3466C811F12759978FC /* AFError.swift */; };
-		6CABA117718BC512006E9AF48796F025 /* Pods-AirTime-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 118C5F8280807ECE0D695EC8566A6DA3 /* Pods-AirTime-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6CABA117718BC512006E9AF48796F025 /* Pods-AirTime-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 677504DA70B74238D8F93DB9106DF41B /* Pods-AirTime-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6EB4987366B9F2ACFE6FAFDE37353A39 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA592704D1329BB4A8AD260AF1F3B9F /* ParameterEncoding.swift */; };
 		8BB170EF376EB2F719D596A71E651FDF /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225981C8EDD8AAEDC366A5BD98F5300 /* NetworkReachabilityManager.swift */; };
 		9300759A44B20837F38A6BEBB8A3A435 /* KeychainSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E5C3C286B1179E7E98354F200FB88ED /* KeychainSwift-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		ACCEC7C74FD7A7E47E0CCA2DBCEEA970 /* Pods-AirTime WatchKit App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EB862B7FA167F33C2E0A6AAEB4A6A5 /* Pods-AirTime WatchKit App-dummy.m */; };
 		B15AE25F2284AC71F87FAC7AAE5EA393 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC24428C0DF27936DDC0E106986BD5F9 /* Response.swift */; };
 		B4520B794FD084605D6686E1CFD41FDA /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E99D449E7DE04379C8039920A98DA41 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B6E153E514E37B85F25975A0E2B34FEC /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BA706AF62D670456834DFF9A5D4B64 /* ResponseSerialization.swift */; };
@@ -55,76 +53,50 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0346812BD9EEF0C355100A3C537E9DCD /* Pods-AirTime-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AirTime-dummy.m"; sourceTree = "<group>"; };
 		085F657C074B2FD6125C7321AB9246F8 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		0FF67F36C873AA287E7D0B807DD89E15 /* Pods-AirTime WatchKit App Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirTime WatchKit App Extension-acknowledgements.plist"; sourceTree = "<group>"; };
 		116AC298F759A88A5F57EC500AAA1C31 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		118C5F8280807ECE0D695EC8566A6DA3 /* Pods-AirTime-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AirTime-umbrella.h"; sourceTree = "<group>"; };
 		16685FCEDC787A7CB573B61D86CB1E57 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		17428938779F589CFF456DADDFB1373C /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		1AD854C7AB8B01EDC9A28E2F8143810C /* KeychainSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainSwift.xcconfig; sourceTree = "<group>"; };
 		1E5C3C286B1179E7E98354F200FB88ED /* KeychainSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-umbrella.h"; sourceTree = "<group>"; };
-		212D4398E769BE625611E43ACA335994 /* Pods-AirTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirTime.release.xcconfig"; sourceTree = "<group>"; };
 		2267768CD3FADD6E4ADBF05FF50A1F18 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		276E48CD3D03449BD4903D2B86F7B325 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		2B42BB43E31366A2AD1FEED91B5A134E /* TegKeychainConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TegKeychainConstants.swift; path = Sources/TegKeychainConstants.swift; sourceTree = "<group>"; };
-		2C8F6C303B1FEC1B9A9FDE43A935681F /* Pods-AirTime WatchKit App Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirTime WatchKit App Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		347F75A30070697A2F1344B4D9C32E7F /* libKeychainSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKeychainSwift.a; path = libKeychainSwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		35F5DD1E5C158B9CA9C10E81BAB5DC71 /* Pods-AirTime WatchKit App Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AirTime WatchKit App Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3CFECE887EF0E79416257C947BE5C39C /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		431BDFB8F1DF5A3E112B4E1671F7272F /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		460FFA8F981EE04EAE0FAA483677919A /* Pods-AirTime WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirTime WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		4C290A698D01CA82719589A3ECA94FEB /* Pods-AirTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirTime.release.xcconfig"; sourceTree = "<group>"; };
 		5991351F183B2AB6039C744F704A3373 /* KeychainSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainSwift-dummy.m"; sourceTree = "<group>"; };
-		5A08444A31D375F9B5E0743793023340 /* libAlamofire.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAlamofire.a; path = libAlamofire.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		677504DA70B74238D8F93DB9106DF41B /* Pods-AirTime-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AirTime-umbrella.h"; sourceTree = "<group>"; };
 		6ED69CE59A2657C48467C1E807B7B601 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		708EF78DF58A6DBB75745442C1F73291 /* KeychainSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwift.swift; path = Sources/KeychainSwift.swift; sourceTree = "<group>"; };
-		73B2C7B97F4A8E437551EACA5A46AE13 /* Pods-AirTime WatchKit App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AirTime WatchKit App-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7692C31361A4BCEEFDBA787DC64A2ECA /* libKeychainSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKeychainSwift.a; path = libKeychainSwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BA706AF62D670456834DFF9A5D4B64 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		793A7B9148AACB768BC699EEE7C36C34 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		7CC55DFD34AB303635B81CC18DD906F5 /* Pods-AirTime-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AirTime-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7E99D449E7DE04379C8039920A98DA41 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		821D3C99450197D49CAD251F4A29E8A0 /* libAlamofire.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAlamofire.a; path = libAlamofire.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		874A01FB4E49049B96287A8F4EB5E6FA /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		8917FEAB5A12C8811EAEC2641227D4B9 /* libPods-AirTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AirTime.a"; path = "libPods-AirTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA592704D1329BB4A8AD260AF1F3B9F /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		8B3B91040DF911C9D0F3A062C6A1FEC6 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		8E21FB03183BF246E062122DEAF04D71 /* Pods-AirTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirTime.debug.xcconfig"; sourceTree = "<group>"; };
 		8E429A7DA7526645F136D35002B6BAF5 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FCCACA160244382696EA2D34FA89FFF /* Pods-AirTime.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AirTime.modulemap"; sourceTree = "<group>"; };
-		A0A72515204D8D3EE6EC5EDD917DFB46 /* Pods-AirTime WatchKit App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirTime WatchKit App-acknowledgements.plist"; sourceTree = "<group>"; };
-		A496801B8CDC40D80FD65C8D3E3D0D7A /* libPods-AirTime WatchKit App Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AirTime WatchKit App Extension.a"; path = "libPods-AirTime WatchKit App Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		951C0F40D7BC2B5F1F9788D59CD7E59C /* Pods-AirTime-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AirTime-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A63F3F77924FB3466C811F12759978FC /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		A831B7B0B9242C34862BCA5755174CC5 /* Pods-AirTime WatchKit App Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirTime WatchKit App Extension.release.xcconfig"; sourceTree = "<group>"; };
 		B225981C8EDD8AAEDC366A5BD98F5300 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		B7EB862B7FA167F33C2E0A6AAEB4A6A5 /* Pods-AirTime WatchKit App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AirTime WatchKit App-dummy.m"; sourceTree = "<group>"; };
 		B90C8E1EF5F8F8D88AF6FF227CF946AE /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		BCD6946A3F2E34AABBC9FED605474115 /* libPods-AirTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AirTime.a"; path = "libPods-AirTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7B925F00F1338ED93F1190167A06908 /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwiftAccessOptions.swift; path = Sources/KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
+		C7C02839F59EEDA6441DD74CCDA3FFBD /* Pods-AirTime-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirTime-acknowledgements.plist"; sourceTree = "<group>"; };
 		CAFBF191F07899CA67368CE341786E0E /* KeychainSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-prefix.pch"; sourceTree = "<group>"; };
 		CC24428C0DF27936DDC0E106986BD5F9 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		D33AB7C213032BA38759C0B17F614714 /* Pods-AirTime-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirTime-acknowledgements.plist"; sourceTree = "<group>"; };
-		DA0F0E3A80A963661F397F9D737AB4E9 /* Pods-AirTime WatchKit App Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AirTime WatchKit App Extension-dummy.m"; sourceTree = "<group>"; };
+		D06DF4C72D151F463876C919D9DDE90B /* Pods-AirTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirTime.debug.xcconfig"; sourceTree = "<group>"; };
 		DA8F231336C3E5053027616A93F16FDD /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		E38B1D087E126BA70C817274A53EDB65 /* Pods-AirTime WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirTime WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		ED014D2276EFE1D14998C2977D299EC1 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		EF14899EA4D95E25F6AF1A252ED870B0 /* Pods-AirTime-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AirTime-dummy.m"; sourceTree = "<group>"; };
 		F1A81DCA9BAFC95E0F5F55B7059DA862 /* KeychainSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeychainSwift.modulemap; sourceTree = "<group>"; };
-		FF844400E494305E5BF0D2CC38C3E034 /* libPods-AirTime WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AirTime WatchKit App.a"; path = "libPods-AirTime WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F87BD2607DD32C5CBCFC88925A9C7B6D /* Pods-AirTime.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AirTime.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0461FF58DF801EC92F553C09DE777E7C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		239003F225890D0A8F5406F4C2B77D1A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4F3B7B8D9C991CB084295797C045670C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -169,42 +141,19 @@
 			path = "../Target Support Files/KeychainSwift";
 			sourceTree = "<group>";
 		};
-		14880C735C666F27FFD74B1C6C2E60B0 /* Products */ = {
+		13B46C753C5B8B69A4BADAECDB5D893E /* Pods-AirTime */ = {
 			isa = PBXGroup;
 			children = (
-				5A08444A31D375F9B5E0743793023340 /* libAlamofire.a */,
-				347F75A30070697A2F1344B4D9C32E7F /* libKeychainSwift.a */,
-				8917FEAB5A12C8811EAEC2641227D4B9 /* libPods-AirTime.a */,
-				FF844400E494305E5BF0D2CC38C3E034 /* libPods-AirTime WatchKit App.a */,
-				A496801B8CDC40D80FD65C8D3E3D0D7A /* libPods-AirTime WatchKit App Extension.a */,
+				F87BD2607DD32C5CBCFC88925A9C7B6D /* Pods-AirTime.modulemap */,
+				951C0F40D7BC2B5F1F9788D59CD7E59C /* Pods-AirTime-acknowledgements.markdown */,
+				C7C02839F59EEDA6441DD74CCDA3FFBD /* Pods-AirTime-acknowledgements.plist */,
+				0346812BD9EEF0C355100A3C537E9DCD /* Pods-AirTime-dummy.m */,
+				677504DA70B74238D8F93DB9106DF41B /* Pods-AirTime-umbrella.h */,
+				D06DF4C72D151F463876C919D9DDE90B /* Pods-AirTime.debug.xcconfig */,
+				4C290A698D01CA82719589A3ECA94FEB /* Pods-AirTime.release.xcconfig */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1876E2CFD2AEEC59507729B415D70E58 /* Pods-AirTime WatchKit App Extension */ = {
-			isa = PBXGroup;
-			children = (
-				35F5DD1E5C158B9CA9C10E81BAB5DC71 /* Pods-AirTime WatchKit App Extension-acknowledgements.markdown */,
-				0FF67F36C873AA287E7D0B807DD89E15 /* Pods-AirTime WatchKit App Extension-acknowledgements.plist */,
-				DA0F0E3A80A963661F397F9D737AB4E9 /* Pods-AirTime WatchKit App Extension-dummy.m */,
-				2C8F6C303B1FEC1B9A9FDE43A935681F /* Pods-AirTime WatchKit App Extension.debug.xcconfig */,
-				A831B7B0B9242C34862BCA5755174CC5 /* Pods-AirTime WatchKit App Extension.release.xcconfig */,
-			);
-			name = "Pods-AirTime WatchKit App Extension";
-			path = "Target Support Files/Pods-AirTime WatchKit App Extension";
-			sourceTree = "<group>";
-		};
-		411B2E508CC62093469FE9D5BEFA4A31 /* Pods-AirTime WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				73B2C7B97F4A8E437551EACA5A46AE13 /* Pods-AirTime WatchKit App-acknowledgements.markdown */,
-				A0A72515204D8D3EE6EC5EDD917DFB46 /* Pods-AirTime WatchKit App-acknowledgements.plist */,
-				B7EB862B7FA167F33C2E0A6AAEB4A6A5 /* Pods-AirTime WatchKit App-dummy.m */,
-				E38B1D087E126BA70C817274A53EDB65 /* Pods-AirTime WatchKit App.debug.xcconfig */,
-				460FFA8F981EE04EAE0FAA483677919A /* Pods-AirTime WatchKit App.release.xcconfig */,
-			);
-			name = "Pods-AirTime WatchKit App";
-			path = "Target Support Files/Pods-AirTime WatchKit App";
+			name = "Pods-AirTime";
+			path = "Target Support Files/Pods-AirTime";
 			sourceTree = "<group>";
 		};
 		6E6405DAA9AB8303895E4B92EDB8DD4B /* Alamofire */ = {
@@ -239,19 +188,9 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
 				D0CB4B58A75473E23203DFE6CACFF6D3 /* Pods */,
-				14880C735C666F27FFD74B1C6C2E60B0 /* Products */,
-				89AFE27328A65906743ED2AC3B8223BE /* Targets Support Files */,
+				F12812C5F6F2AD0E15FADC94F0613192 /* Products */,
+				E9402487312A46ACF340E0A370B04DF0 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		89AFE27328A65906743ED2AC3B8223BE /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C145D72977778D4807ACFC532EE55916 /* Pods-AirTime */,
-				411B2E508CC62093469FE9D5BEFA4A31 /* Pods-AirTime WatchKit App */,
-				1876E2CFD2AEEC59507729B415D70E58 /* Pods-AirTime WatchKit App Extension */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		942354AF1665793BCBF6D25F3368DD2B /* KeychainSwift */ = {
@@ -279,21 +218,6 @@
 			path = "../Target Support Files/Alamofire";
 			sourceTree = "<group>";
 		};
-		C145D72977778D4807ACFC532EE55916 /* Pods-AirTime */ = {
-			isa = PBXGroup;
-			children = (
-				9FCCACA160244382696EA2D34FA89FFF /* Pods-AirTime.modulemap */,
-				7CC55DFD34AB303635B81CC18DD906F5 /* Pods-AirTime-acknowledgements.markdown */,
-				D33AB7C213032BA38759C0B17F614714 /* Pods-AirTime-acknowledgements.plist */,
-				EF14899EA4D95E25F6AF1A252ED870B0 /* Pods-AirTime-dummy.m */,
-				118C5F8280807ECE0D695EC8566A6DA3 /* Pods-AirTime-umbrella.h */,
-				8E21FB03183BF246E062122DEAF04D71 /* Pods-AirTime.debug.xcconfig */,
-				212D4398E769BE625611E43ACA335994 /* Pods-AirTime.release.xcconfig */,
-			);
-			name = "Pods-AirTime";
-			path = "Target Support Files/Pods-AirTime";
-			sourceTree = "<group>";
-		};
 		D0CB4B58A75473E23203DFE6CACFF6D3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,16 +227,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E9402487312A46ACF340E0A370B04DF0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				13B46C753C5B8B69A4BADAECDB5D893E /* Pods-AirTime */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F12812C5F6F2AD0E15FADC94F0613192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				821D3C99450197D49CAD251F4A29E8A0 /* libAlamofire.a */,
+				7692C31361A4BCEEFDBA787DC64A2ECA /* libKeychainSwift.a */,
+				BCD6946A3F2E34AABBC9FED605474115 /* libPods-AirTime.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0746F8915FF71DF9ABF0BD06C1FFCB2C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		190207E4BEC581335AE2EB917852F3B6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -326,13 +261,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CABA117718BC512006E9AF48796F025 /* Pods-AirTime-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		97003F411552F895F83014EDFB5AF365 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +290,7 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 5A08444A31D375F9B5E0743793023340 /* libAlamofire.a */;
+			productReference = 821D3C99450197D49CAD251F4A29E8A0 /* libAlamofire.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		624C7E37ED1C194FDD7DC9D66525F872 /* Pods-AirTime */ = {
@@ -381,7 +309,7 @@
 			);
 			name = "Pods-AirTime";
 			productName = "Pods-AirTime";
-			productReference = 8917FEAB5A12C8811EAEC2641227D4B9 /* libPods-AirTime.a */;
+			productReference = BCD6946A3F2E34AABBC9FED605474115 /* libPods-AirTime.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		892705E46D024EF4B57A4FC4724BFB39 /* KeychainSwift */ = {
@@ -399,41 +327,7 @@
 			);
 			name = KeychainSwift;
 			productName = KeychainSwift;
-			productReference = 347F75A30070697A2F1344B4D9C32E7F /* libKeychainSwift.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		B9268F75F26DEB53DFE9F8D05699C0F4 /* Pods-AirTime WatchKit App Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 09A2188AAE8A2D5D79E32B8C466C69A2 /* Build configuration list for PBXNativeTarget "Pods-AirTime WatchKit App Extension" */;
-			buildPhases = (
-				97003F411552F895F83014EDFB5AF365 /* Headers */,
-				8DA51FF94DAE1BC776D0197CFB548194 /* Sources */,
-				239003F225890D0A8F5406F4C2B77D1A /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-AirTime WatchKit App Extension";
-			productName = "Pods-AirTime WatchKit App Extension";
-			productReference = A496801B8CDC40D80FD65C8D3E3D0D7A /* libPods-AirTime WatchKit App Extension.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		E019D076E6FABF95C2EE7F0F005BED0C /* Pods-AirTime WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 77D8FF2A43BE0C9AFECE87C9C389BD3D /* Build configuration list for PBXNativeTarget "Pods-AirTime WatchKit App" */;
-			buildPhases = (
-				0746F8915FF71DF9ABF0BD06C1FFCB2C /* Headers */,
-				2E92EAE08F26C3CFB38001D9684E9E6B /* Sources */,
-				0461FF58DF801EC92F553C09DE777E7C /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-AirTime WatchKit App";
-			productName = "Pods-AirTime WatchKit App";
-			productReference = FF844400E494305E5BF0D2CC38C3E034 /* libPods-AirTime WatchKit App.a */;
+			productReference = 7692C31361A4BCEEFDBA787DC64A2ECA /* libKeychainSwift.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -453,15 +347,13 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 14880C735C666F27FFD74B1C6C2E60B0 /* Products */;
+			productRefGroup = F12812C5F6F2AD0E15FADC94F0613192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				08A16B7582F00884501F5E7A9B8E6FB4 /* Alamofire */,
 				892705E46D024EF4B57A4FC4724BFB39 /* KeychainSwift */,
 				624C7E37ED1C194FDD7DC9D66525F872 /* Pods-AirTime */,
-				E019D076E6FABF95C2EE7F0F005BED0C /* Pods-AirTime WatchKit App */,
-				B9268F75F26DEB53DFE9F8D05699C0F4 /* Pods-AirTime WatchKit App Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -520,14 +412,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2E92EAE08F26C3CFB38001D9684E9E6B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ACCEC7C74FD7A7E47E0CCA2DBCEEA970 /* Pods-AirTime WatchKit App-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		32AD760B54579FD98DEB66176FB66EFE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -564,14 +448,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8DA51FF94DAE1BC776D0197CFB548194 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				52EAD20258EA0083DE94826111DAE38A /* Pods-AirTime WatchKit App Extension-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EC4EF93B465845889493B7C000C74D6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -598,7 +474,115 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0FC7F06D7BAD4D414015498CF9AC75AA /* Debug */ = {
+		680D0FBE5CED574799793139CCB467C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 793A7B9148AACB768BC699EEE7C36C34 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/Alamofire/Alamofire.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		819843FB1AFF670B989701AB199D3D23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C290A698D01CA82719589A3ECA94FEB /* Pods-AirTime.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AirTime/Pods-AirTime.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF696CBE2D9976E833F1FB986AE23597 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 793A7B9148AACB768BC699EEE7C36C34 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/Alamofire/Alamofire.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C048FAC26DFC29AB7816E8CD9FFE54E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AD854C7AB8B01EDC9A28E2F8143810C /* KeychainSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/KeychainSwift/KeychainSwift-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/KeychainSwift/KeychainSwift.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KeychainSwift;
+				PRODUCT_NAME = KeychainSwift;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C92782E717C52E3633C9A5F211E7987A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -659,32 +643,36 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Debug;
 		};
-		2E239191FE4D930CCF6EA24705B4AB71 /* Debug */ = {
+		D0B1EFD1F5F1085431F53136BF16A4C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C8F6C303B1FEC1B9A9FDE43A935681F /* Pods-AirTime WatchKit App Extension.debug.xcconfig */;
+			baseConfigurationReference = 1AD854C7AB8B01EDC9A28E2F8143810C /* KeychainSwift.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				MACH_O_TYPE = staticlib;
+				GCC_PREFIX_HEADER = "Target Support Files/KeychainSwift/KeychainSwift-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = Headers/Public/KeychainSwift/KeychainSwift.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = watchos;
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KeychainSwift;
+				PRODUCT_NAME = KeychainSwift;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		37145AAEBEF0079A696C1EC30BDD343C /* Release */ = {
+		EA8C7AF90938697605468604B2A17B9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -740,210 +728,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Release;
-		};
-		3D2D62E96E8D55ED5F0AD71DC4366789 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 460FFA8F981EE04EAE0FAA483677919A /* Pods-AirTime WatchKit App.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
-			};
-			name = Release;
-		};
-		680D0FBE5CED574799793139CCB467C3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 793A7B9148AACB768BC699EEE7C36C34 /* Alamofire.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/Alamofire/Alamofire.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Alamofire;
-				PRODUCT_NAME = Alamofire;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		819843FB1AFF670B989701AB199D3D23 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 212D4398E769BE625611E43ACA335994 /* Pods-AirTime.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AirTime/Pods-AirTime.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		8A722ABE0D3C6AEFFF358E65BB59EEBD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E38B1D087E126BA70C817274A53EDB65 /* Pods-AirTime WatchKit App.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
-			};
-			name = Debug;
-		};
-		9213182F1816A5254819478F1CB5A536 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A831B7B0B9242C34862BCA5755174CC5 /* Pods-AirTime WatchKit App Extension.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
-			};
-			name = Release;
-		};
-		BF696CBE2D9976E833F1FB986AE23597 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 793A7B9148AACB768BC699EEE7C36C34 /* Alamofire.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/Alamofire/Alamofire.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Alamofire;
-				PRODUCT_NAME = Alamofire;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C048FAC26DFC29AB7816E8CD9FFE54E2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AD854C7AB8B01EDC9A28E2F8143810C /* KeychainSwift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/KeychainSwift/KeychainSwift-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/KeychainSwift/KeychainSwift.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = KeychainSwift;
-				PRODUCT_NAME = KeychainSwift;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D0B1EFD1F5F1085431F53136BF16A4C7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AD854C7AB8B01EDC9A28E2F8143810C /* KeychainSwift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/KeychainSwift/KeychainSwift-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/KeychainSwift/KeychainSwift.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = KeychainSwift;
-				PRODUCT_NAME = KeychainSwift;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 		EDEAA63B66F01D831E9658DAB5DBE059 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E21FB03183BF246E062122DEAF04D71 /* Pods-AirTime.debug.xcconfig */;
+			baseConfigurationReference = D06DF4C72D151F463876C919D9DDE90B /* Pods-AirTime.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -969,29 +759,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		09A2188AAE8A2D5D79E32B8C466C69A2 /* Build configuration list for PBXNativeTarget "Pods-AirTime WatchKit App Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2E239191FE4D930CCF6EA24705B4AB71 /* Debug */,
-				9213182F1816A5254819478F1CB5A536 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0FC7F06D7BAD4D414015498CF9AC75AA /* Debug */,
-				37145AAEBEF0079A696C1EC30BDD343C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		77D8FF2A43BE0C9AFECE87C9C389BD3D /* Build configuration list for PBXNativeTarget "Pods-AirTime WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8A722ABE0D3C6AEFFF358E65BB59EEBD /* Debug */,
-				3D2D62E96E8D55ED5F0AD71DC4366789 /* Release */,
+				C92782E717C52E3633C9A5F211E7987A /* Debug */,
+				EA8C7AF90938697605468604B2A17B9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

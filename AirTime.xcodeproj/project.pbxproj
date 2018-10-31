@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C80AE5B88ACF80C7B328628 /* libPods-AirTime WatchKit App Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AFD5E51D7FFD01E8072F19 /* libPods-AirTime WatchKit App Extension.a */; };
 		1B42BE0FAC4E3E9EDC0F186A /* libPods-AirTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAFF547673389EFA79D3625 /* libPods-AirTime.a */; };
 		1C3211302178FA3D00785D38 /* ShortFormPrivacyPolicyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C32112F2178FA3D00785D38 /* ShortFormPrivacyPolicyTableViewController.swift */; };
 		1C3211322179120D00785D38 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3211312179120D00785D38 /* LeaderboardTableViewController.swift */; };
@@ -63,7 +62,6 @@
 		46AE4F2E216BE9C6007F8478 /* Icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E93216BE9C5007F8478 /* Icon-29@3x.png */; };
 		46AE4F2F216BE9C6007F8478 /* Icon-27.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E94216BE9C5007F8478 /* Icon-27.5@2x.png */; };
 		46AE4F30216BE9C6007F8478 /* Icon-86@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E95216BE9C5007F8478 /* Icon-86@2x.png */; };
-		46AE4F31216BE9C6007F8478 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E96216BE9C5007F8478 /* Contents.json */; };
 		46AE4F32216BE9C6007F8478 /* Icon-98@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E97216BE9C5007F8478 /* Icon-98@2x.png */; };
 		46AE4F33216BE9C6007F8478 /* Icon-24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E98216BE9C5007F8478 /* Icon-24@2x.png */; };
 		46AE4F3A216BE9C6007F8478 /* PPLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA1216BE9C5007F8478 /* PPLoginButton.swift */; };
@@ -76,7 +74,6 @@
 		46AE4F41216BE9C6007F8478 /* RemoteNotificationsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA8216BE9C5007F8478 /* RemoteNotificationsHandler.swift */; };
 		46AE4F42216BE9C6007F8478 /* PPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA9216BE9C5007F8478 /* PPUtils.swift */; };
 		46AE4F43216BE9C6007F8478 /* .gitmodules in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4EAA216BE9C5007F8478 /* .gitmodules */; };
-		46AE4F44216BE9C6007F8478 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4EAB216BE9C5007F8478 /* README.md */; };
 		46AE4F45216BE9C6007F8478 /* ColoredGlyph.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4EAD216BE9C5007F8478 /* ColoredGlyph.png */; };
 		46AE4F46216BE9C6007F8478 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4EAE216BE9C5007F8478 /* .gitignore */; };
 		5077E1252146F8AE00B0E0FA /* TimeInterval+Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5077E1242146F8AE00B0E0FA /* TimeInterval+Time.swift */; };
@@ -101,7 +98,6 @@
 		50FE60CC2146D8BD00481700 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FE60CB2146D8BD00481700 /* HealthKit.framework */; };
 		6E1B37C62146AFA000F01300 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B37C52146AFA000F01300 /* Utils.swift */; };
 		6E5439A92142C4E30052B060 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5439A82142C4E30052B060 /* Colors.swift */; };
-		8345D8FB2D0574F883F5E12A /* libPods-AirTime WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 481CB751E696C48A140D26E0 /* libPods-AirTime WatchKit App.a */; };
 		A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322BB971DFEA7C400C847AF /* AppDelegate.swift */; };
 		A322BB9F1DFEA7C400C847AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A322BB9E1DFEA7C400C847AF /* Assets.xcassets */; };
 		A322BBA21DFEA7C400C847AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */; };
@@ -165,9 +161,10 @@
 		1C32112F2178FA3D00785D38 /* ShortFormPrivacyPolicyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortFormPrivacyPolicyTableViewController.swift; sourceTree = "<group>"; };
 		1C3211312179120D00785D38 /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
 		1C47FE732179FEB300CD2B27 /* LeadboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadboardTableViewCell.swift; sourceTree = "<group>"; };
+		1CBE9FAB218777C400A2D29C /* libPods-AirTime WatchKit App Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-AirTime WatchKit App Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AFD5E51D7FFD01E8072F19 /* libPods-AirTime WatchKit App Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTime WatchKit App Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8AC7C841FC30F8C8A1D072 /* Pods-AirTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.release.xcconfig"; path = "Target Support Files/Pods-AirTime/Pods-AirTime.release.xcconfig"; sourceTree = "<group>"; };
-		32D5E5387B47A583F4BB2883 /* Pods-AirTime WatchKit App Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime WatchKit App Extension.debug.xcconfig"; path = "Target Support Files/Pods-AirTime WatchKit App Extension/Pods-AirTime WatchKit App Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		30001E68FE75DAEE44A869D2 /* Pods-AirTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirTime/Pods-AirTime.debug.xcconfig"; sourceTree = "<group>"; };
 		466604AA2177B89D007D189A /* PPLeaderboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPLeaderboardService.swift; sourceTree = "<group>"; };
 		4669F1F32146BFB000769F88 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4669F1F52146BFE700769F88 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -232,12 +229,10 @@
 		46AE4EA8216BE9C5007F8478 /* RemoteNotificationsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteNotificationsHandler.swift; sourceTree = "<group>"; };
 		46AE4EA9216BE9C5007F8478 /* PPUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPUtils.swift; sourceTree = "<group>"; };
 		46AE4EAA216BE9C5007F8478 /* .gitmodules */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
-		46AE4EAB216BE9C5007F8478 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		46AE4EAD216BE9C5007F8478 /* ColoredGlyph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColoredGlyph.png; sourceTree = "<group>"; };
 		46AE4EAE216BE9C5007F8478 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		46AE4F68216BEDC4007F8478 /* AirTime.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AirTime.xcodeproj; sourceTree = "<group>"; };
 		481CB751E696C48A140D26E0 /* libPods-AirTime WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTime WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D3603830198999E172CFC34 /* Pods-AirTime WatchKit App Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime WatchKit App Extension.release.xcconfig"; path = "Target Support Files/Pods-AirTime WatchKit App Extension/Pods-AirTime WatchKit App Extension.release.xcconfig"; sourceTree = "<group>"; };
 		5077E1242146F8AE00B0E0FA /* TimeInterval+Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Time.swift"; sourceTree = "<group>"; };
 		508C667F2142C1AA0059C591 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		508C66822142C37E0059C591 /* still time.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "still time.ttf"; sourceTree = "<group>"; };
@@ -261,9 +256,9 @@
 		50FE60C62146D78B00481700 /* InitialInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialInterfaceController.swift; sourceTree = "<group>"; };
 		50FE60CA2146D8BD00481700 /* AirTime WatchKit App Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AirTime WatchKit App Extension.entitlements"; sourceTree = "<group>"; };
 		50FE60CB2146D8BD00481700 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		6D0A9213EB6E78A634987A7D /* Pods-AirTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirTime/Pods-AirTime.release.xcconfig"; sourceTree = "<group>"; };
 		6E1B37C52146AFA000F01300 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		6E5439A82142C4E30052B060 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		960DCCBA4B6F7646748B7BC1 /* Pods-AirTime WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-AirTime WatchKit App/Pods-AirTime WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		A119555CFE8250B5A419ABA8 /* Pods-AirTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.debug.xcconfig"; path = "Target Support Files/Pods-AirTime/Pods-AirTime.debug.xcconfig"; sourceTree = "<group>"; };
 		A322BB941DFEA7C400C847AF /* AirTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A322BB971DFEA7C400C847AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -271,7 +266,6 @@
 		A322BBA11DFEA7C400C847AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A322BBA31DFEA7C400C847AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A35DA1E21E37884600929021 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		B5F3886D9E68CA3B1ABCA99B /* Pods-AirTime WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-AirTime WatchKit App/Pods-AirTime WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		EAAFF547673389EFA79D3625 /* libPods-AirTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -280,7 +274,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8345D8FB2D0574F883F5E12A /* libPods-AirTime WatchKit App.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +282,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				50FE60CC2146D8BD00481700 /* HealthKit.framework in Frameworks */,
-				0C80AE5B88ACF80C7B328628 /* libPods-AirTime WatchKit App Extension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +303,7 @@
 		1FC20239CADD742496626DDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1CBE9FAB218777C400A2D29C /* libPods-AirTime WatchKit App Extension.a */,
 				50FE60CB2146D8BD00481700 /* HealthKit.framework */,
 				4669F1FB2146C06F00769F88 /* MobileCoreServices.framework */,
 				4669F1F92146BFFC00769F88 /* SafariServices.framework */,
@@ -501,10 +494,8 @@
 			children = (
 				A119555CFE8250B5A419ABA8 /* Pods-AirTime.debug.xcconfig */,
 				2A8AC7C841FC30F8C8A1D072 /* Pods-AirTime.release.xcconfig */,
-				960DCCBA4B6F7646748B7BC1 /* Pods-AirTime WatchKit App.debug.xcconfig */,
-				B5F3886D9E68CA3B1ABCA99B /* Pods-AirTime WatchKit App.release.xcconfig */,
-				32D5E5387B47A583F4BB2883 /* Pods-AirTime WatchKit App Extension.debug.xcconfig */,
-				4D3603830198999E172CFC34 /* Pods-AirTime WatchKit App Extension.release.xcconfig */,
+				30001E68FE75DAEE44A869D2 /* Pods-AirTime.debug.xcconfig */,
+				6D0A9213EB6E78A634987A7D /* Pods-AirTime.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -513,7 +504,6 @@
 			isa = PBXGroup;
 			children = (
 				46AE4F68216BEDC4007F8478 /* AirTime.xcodeproj */,
-				46AE4EAB216BE9C5007F8478 /* README.md */,
 				6EAE5D7A21838065005E070A /* Other */,
 				46AE4EA0216BE9C5007F8478 /* PlayPortal */,
 				508C66812142C36D0059C591 /* Resources */,
@@ -568,7 +558,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50FE60C02146D70A00481700 /* Build configuration list for PBXNativeTarget "AirTime WatchKit App" */;
 			buildPhases = (
-				75270ABCB436B2975C10F335 /* [CP] Check Pods Manifest.lock */,
 				50FE609F2146D70800481700 /* Resources */,
 				50FE60BF2146D70A00481700 /* Embed App Extensions */,
 				0DAC082163337CE2EDA36D7F /* Frameworks */,
@@ -587,7 +576,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50FE60BC2146D70A00481700 /* Build configuration list for PBXNativeTarget "AirTime WatchKit App Extension" */;
 			buildPhases = (
-				72EBAC62D68092907ED130F1 /* [CP] Check Pods Manifest.lock */,
 				50FE60A92146D70900481700 /* Sources */,
 				50FE60AA2146D70900481700 /* Frameworks */,
 				50FE60AB2146D70900481700 /* Resources */,
@@ -629,7 +617,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = kontakt.io;
 				TargetAttributes = {
 					50FE60A02146D70800481700 = {
@@ -731,7 +719,6 @@
 				46AE4F32216BE9C6007F8478 /* Icon-98@2x.png in Resources */,
 				508C669E214305500059C591 /* OstrichSans-Heavy.otf in Resources */,
 				46AE4F05216BE9C6007F8478 /* Icon-App-20x20@1x.png in Resources */,
-				46AE4F31216BE9C6007F8478 /* Contents.json in Resources */,
 				46AE4EFF216BE9C6007F8478 /* Icon-App-29x29@1x.png in Resources */,
 				46AE4F02216BE9C6007F8478 /* Icon-App-40x40@1x.png in Resources */,
 				508C66982143051F0059C591 /* WorkSans-Medium.ttf in Resources */,
@@ -769,7 +756,6 @@
 				46AE4F2E216BE9C6007F8478 /* Icon-29@3x.png in Resources */,
 				46AE4F11216BE9C6007F8478 /* Icon-App-57x57@2x.png in Resources */,
 				508C66952143051F0059C591 /* WorkSans-Regular.ttf in Resources */,
-				46AE4F44216BE9C6007F8478 /* README.md in Resources */,
 				46AE4F46216BE9C6007F8478 /* .gitignore in Resources */,
 				46AE4F27216BE9C6007F8478 /* icon-messages-app-27x20@3x.png in Resources */,
 				46AE4F2B216BE9C6007F8478 /* Icon-40@2x.png in Resources */,
@@ -793,42 +779,6 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-AirTime-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		72EBAC62D68092907ED130F1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AirTime WatchKit App Extension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		75270ABCB436B2975C10F335 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AirTime WatchKit App-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -913,7 +863,6 @@
 /* Begin XCBuildConfiguration section */
 		50FE60BD2146D70A00481700 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32D5E5387B47A583F4BB2883 /* Pods-AirTime WatchKit App Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -942,7 +891,6 @@
 		};
 		50FE60BE2146D70A00481700 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D3603830198999E172CFC34 /* Pods-AirTime WatchKit App Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -971,7 +919,6 @@
 		};
 		50FE60C12146D70A00481700 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 960DCCBA4B6F7646748B7BC1 /* Pods-AirTime WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1001,7 +948,6 @@
 		};
 		50FE60C22146D70A00481700 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5F3886D9E68CA3B1ABCA99B /* Pods-AirTime WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1041,6 +987,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1048,6 +995,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1100,6 +1048,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1107,6 +1056,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

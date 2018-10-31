@@ -13,7 +13,7 @@ import StoreKit
 public class Utils {
     static func openOrDownloadPlayPortal<T>(delegate: T) where T: SKStoreProductViewControllerDelegate, T: UIViewController {
         
-        let storeProductVC = SKStoreProductViewController()
+        _ = SKStoreProductViewController()
         let playPortalURL = URL(string: "playportal://")!
         
         
@@ -26,7 +26,7 @@ public class Utils {
                 SKStoreProductParameterITunesItemIdentifier: "com.dynepic.iOKids"
             ]
             vc.loadProduct(withParameters: params) { success, err in
-                if let err = err {
+                if err != nil {
                     
                 }
             }

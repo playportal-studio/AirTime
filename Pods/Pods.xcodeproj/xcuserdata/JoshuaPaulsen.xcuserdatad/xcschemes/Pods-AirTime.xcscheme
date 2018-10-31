@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B9268F75F26DEB53DFE9F8D05699C0F4"
-               BlueprintName = "Pods-AirTime WatchKit App Extension"
+               BlueprintIdentifier = "624C7E37ED1C194FDD7DC9D66525F872"
+               BlueprintName = "Pods-AirTime"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-AirTime WatchKit App Extension.a">
+               BuildableName = "libPods-AirTime.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

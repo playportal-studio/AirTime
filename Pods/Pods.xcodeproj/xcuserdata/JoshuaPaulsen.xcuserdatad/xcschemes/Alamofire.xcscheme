@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D09C40E774BCBB07D55C1BBCF06F4330"
-               BlueprintName = "PPSDK-Swift"
+               BlueprintIdentifier = "08A16B7582F00884501F5E7A9B8E6FB4"
+               BlueprintName = "Alamofire"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPPSDK-Swift.a">
+               BuildableName = "libAlamofire.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
