@@ -68,7 +68,6 @@ class PPManager {
         return instance
     }()
     
-    func newInstall() -> Void { PPManager.sharedInstance.isNewBoot = true }
     func getApiUrlBase() -> String { return PPManager.sharedInstance.apiUrlBase }
     func getClientId() -> String { return PPManager.sharedInstance.cid }
     func getRedirectURI() -> String { return PPManager.sharedInstance.redir }
@@ -86,6 +85,14 @@ class PPManager {
     }
     
     func configure(env:String, clientId:String, secret:String, andRedirectURI:String) -> Void  {
+        let userDefaults = UserDefaults.standard
+        if userDefaults.bool(forKey: "hasRunBefore") == false {
+            // Flag that keychain items should be cleared
+            isNewBoot = true;
+            userDefaults.set(true, forKey: "hasRunBefore")
+            userDefaults.synchronize() // Forces the app to update UserDefaults
+        }        
+        
         if(clientId.isEmpty || secret.isEmpty || andRedirectURI.isEmpty) {
             print("ERROR: configure invalid parms: clientId: \(clientId)  secret: \(secret)  andRedirectURI: \(andRedirectURI) ")
         } else {
@@ -316,6 +323,8 @@ class PPManager {
         PPManager.sharedInstance.keychain.set("", forKey:"refresh_token")
         PPManager.sharedInstance.expirationTime = Date()
         PPManager.sharedInstance.keychain.set("", forKey:"expiration_time")
+
+        PPManager.sharedInstance.PPusersvc.markUserInvalid()
         
         // Call userListener with auth status = false
         PPManager.sharedInstance.userListener(nil, false);
