@@ -3,7 +3,7 @@
 //  Helloworld-Swift-SDK
 //
 //  Created by Gary J. Baldwin on 9/15/18.
-//  Copyright © 2018 Gary J. Baldwin. All rights reserved.
+//  Copyright © 2018 Dynepic, Inc. All rights reserved.
 //
 
 import Foundation

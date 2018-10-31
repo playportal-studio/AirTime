@@ -3,7 +3,7 @@
 //  SwingWatch WatchKit Extension
 //
 //  Created by Lincoln Fraley on 9/7/18.
-//  Copyright © 2018 Apple Inc. All rights reserved.
+//  Copyright © 2018 Dynepic, Inc. All rights reserved.
 //
 
 import Foundation

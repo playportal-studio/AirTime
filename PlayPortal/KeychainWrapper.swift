@@ -3,7 +3,7 @@
 //  Helloworld-Swift-SDK
 //
 //  Created by Gary J. Baldwin on 9/13/18.
-//  Copyright © 2018 Gary J. Baldwin. All rights reserved.
+//  Copyright © 2018 Dynepic, Inc. All rights reserved.
 //
 // Trivial keychain getter/setter for reading/writing strings from/to iOS keychain.
 // -- all access to this group of data in PlayPortalSDK "account" is via the singleton

@@ -3,7 +3,7 @@
 //  AirTime
 //
 //  Created by Lincoln Fraley on 10/18/18.
-//  Copyright © 2018 kontakt.io. All rights reserved.
+//  Copyright © 2018 Dynepic, Inc. All rights reserved.
 //
 
 import Foundation

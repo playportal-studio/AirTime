@@ -2,8 +2,8 @@
 //  GradientBkgndView.swift
 //  iOKidsShared
 //
-//  Created by blackCloud on 2/15/17.
-//  Copyright © 2017 blackCloud. All rights reserved.
+//  Created by Jett Black on 2/15/17.
+//  Copyright © 2017 Dynepic, Inc. All rights reserved.
 //
 
 import UIKit
