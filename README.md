@@ -102,7 +102,7 @@
 	* Open XCode
 	* Navigate to your app level settings and click on the info tab.
 	* Add a new URL under the URL types section.
-	* Input your app name into the <b>Identifier</b> and <b>URL Schemes</b>. See the picture below for refrence
+	* Input your app name from Step 2 into the <b>Identifier</b> and <b>URL Schemes</b>. 
 	
 	<img src="https://gyazo.com/bd73716f685418251fd814a1662b5cb8.png = 1500x1500" width="65%">
 	
