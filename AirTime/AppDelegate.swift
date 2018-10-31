@@ -12,26 +12,16 @@ import UserNotifications
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    let cid = "iok-cid-016bdbdafeaec0d094546e5c989c1e28c34810ea4e6b5922"
-    let cse = "iok-cse-bfe928f92578946eae8d7011d4023ca339aa4acc3eaf2fd6"
+
+    let cid = "iok-cid-e06a623f77de43627290b8a796cee6dc36f94f4cf1a82734"
     let redirectURI = "airtime://redirect"
     let env = "SANDBOX"
     
     var window: UIWindow?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let userDefaults = UserDefaults.standard
-        if userDefaults.bool(forKey: "hasRunBefore") == false {
-            // Remove Keychain items here
-            PPManager.sharedInstance.newInstall()
-            
-            // Update the flag indicator
-            userDefaults.set(true, forKey: "hasRunBefore")
-            userDefaults.synchronize() // Forces the app to update UserDefaults
-        }
-        
-        PPManager.sharedInstance.configure(env: env, clientId: cid, secret: cse, andRedirectURI: redirectURI)
+        PPManager.sharedInstance.configure(env: env, clientId: cid, secret: clientSecret, andRedirectURI: redirectURI)
         PPManager.sharedInstance.addUserListener { user, authenticated in
             print("userListener invoked authd: \( authenticated )  user: \(String(describing:  user ))" )
             
