@@ -16,13 +16,13 @@ class KeychainWrapper  {
     
     open func set(_ value: String, forKey key: String) -> Void {
 
-        if let dvalue = value.data(using: String.Encoding.utf8) {
+        if value.data(using: String.Encoding.utf8) != nil {
 let anothervalue = "somestring"
         let query: [String : Any] = [
             kSecClass as String : kSecClassGenericPassword,
 //            kSecAttrAccount as String : "PlayPortalSDK",
 //            kSecValueRef as String   : dvalue
-            kSecValueRef as String   : anothervalue.data(using: String.Encoding.utf8)
+            kSecValueRef as String   : anothervalue.data(using: String.Encoding.utf8)!
             ]
 
 //        _ = SecItemAdd(query as CFDictionary, nil)
