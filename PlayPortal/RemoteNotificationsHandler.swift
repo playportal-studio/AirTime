@@ -3,7 +3,7 @@
 //  iOKidsShared
 //
 //  Created by blackCloud on 12/20/16.
-//  Copyright © 2018 Dynepic. All rights reserved.
+//  Copyright © 2018 Dynepic, Inc. All rights reserved.
 //
 import Foundation
 import UserNotifications
