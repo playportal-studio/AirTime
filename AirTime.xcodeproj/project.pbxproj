@@ -97,6 +97,7 @@
 		50FE60C92146D78B00481700 /* InitialInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE60C62146D78B00481700 /* InitialInterfaceController.swift */; };
 		50FE60CC2146D8BD00481700 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FE60CB2146D8BD00481700 /* HealthKit.framework */; };
 		6E1B37C62146AFA000F01300 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B37C52146AFA000F01300 /* Utils.swift */; };
+		6E2FD1D2218A24C500F85FA8 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2FD1D1218A24C500F85FA8 /* Keys.swift */; };
 		6E5439A92142C4E30052B060 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5439A82142C4E30052B060 /* Colors.swift */; };
 		A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322BB971DFEA7C400C847AF /* AppDelegate.swift */; };
 		A322BB9F1DFEA7C400C847AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A322BB9E1DFEA7C400C847AF /* Assets.xcassets */; };
@@ -258,6 +259,7 @@
 		50FE60CB2146D8BD00481700 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		6D0A9213EB6E78A634987A7D /* Pods-AirTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirTime/Pods-AirTime.release.xcconfig"; sourceTree = "<group>"; };
 		6E1B37C52146AFA000F01300 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		6E2FD1D1218A24C500F85FA8 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		6E5439A82142C4E30052B060 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A119555CFE8250B5A419ABA8 /* Pods-AirTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.debug.xcconfig"; path = "Target Support Files/Pods-AirTime/Pods-AirTime.debug.xcconfig"; sourceTree = "<group>"; };
 		A322BB941DFEA7C400C847AF /* AirTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -322,6 +324,7 @@
 				46AE4E55216BE9C5007F8478 /* ios */,
 				46AE4E81216BE9C5007F8478 /* imessenger */,
 				46AE4E8E216BE9C5007F8478 /* watchkit */,
+				6E2FD1D1218A24C500F85FA8 /* Keys.swift */,
 			);
 			path = "AirTime Splash@1x";
 			sourceTree = "<group>";
@@ -618,7 +621,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = kontakt.io;
+				ORGANIZATIONNAME = "Dynepic, Inc.";
 				TargetAttributes = {
 					50FE60A02146D70800481700 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -807,6 +810,7 @@
 				508C66862142F06B0059C591 /* GradientBkgndView.swift in Sources */,
 				1C3211322179120D00785D38 /* LeaderboardTableViewController.swift in Sources */,
 				46AE4F3F216BE9C6007F8478 /* PPUserService.swift in Sources */,
+				6E2FD1D2218A24C500F85FA8 /* Keys.swift in Sources */,
 				466604AB2177B89D007D189A /* PPLeaderboardService.swift in Sources */,
 				6E5439A92142C4E30052B060 /* Colors.swift in Sources */,
 				46AE4F3B216BE9C6007F8478 /* PPWebApi.swift in Sources */,
