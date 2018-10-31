@@ -73,7 +73,7 @@
 	
 * ### <b>Step 8.1:</b> Insert Keys In An App File To Enable User Login
 	* The Client ID, & Secrets tied to your application <b>NEED</b> to be hidden
-	* Create a .gitignore file 
+	* Create a .gitignore file (if there isn't an existing one): 
 	
 	```
 	cd AirTime
@@ -89,7 +89,7 @@
 		 let redirectURI = "REDIRECT URL GOES HERE"
                  let env = "SANDBOX"
 		```
-* ### <b>Step 8.2:</b>Open up the project in a different IDE
+* ### <b>Step 8.2:</b>Open up the project in a different IDE or text editor
 	* To edit your .gitignore open the project in either [Atom](https://atom.io/) or [VSCode](https://code.visualstudio.com/)
 	* Add the filename Keys.swift to the .gitignore
 	* Now that your keys are in a file, return to playPORTAL Studio
