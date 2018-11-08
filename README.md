@@ -9,7 +9,8 @@
 <br/>
 <p>AirTime is an app that brings the playPORTAL SDK and the Apple Watch together. It uses the on-board Apple Watch accelerometer to complete simple gesture recognition to count pogo stick jumps and airtime. Go outside, get your pogo stick and start jumping. Feel free to modify this code, and create your own playPORTAL Apple Watch app.</p>
 
-[More Info: Apple Watch Core Motion (Accelerometer)](https://developer.apple.com/documentation/coremotion/cmmotionmanager)
+[Read the full blog about this demo app posted here.](https://www.dynepic.com/blogs/news/build-a-apple-watch-app-with-playportal)
+
 
 ### SDK Features Used
 <img src="https://gyazo.com/93c92748a1f507be765aa8c8c2d41fae.png = 1500x1500" width="55%">
