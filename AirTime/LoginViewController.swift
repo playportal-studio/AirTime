@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PPSDK_Swift
 
 
 class LoginViewController: UIViewController {
@@ -23,8 +24,10 @@ class LoginViewController: UIViewController {
         continueAsGuestButton.layer.cornerRadius = continueAsGuestButton.frame.height / 2
         continueAsGuestButton.layer.borderWidth = 1
         continueAsGuestButton.layer.borderColor = UIColor.airtimeColors.yellow.cgColor
+        
+        
         //PPLoginButton handles all auth flow
-        let loginButton = PPLoginButton.init()
+        let loginButton = PlayPortalLoginButton(from: self)
         loginButton.center = CGPoint(x: loginView.bounds.size.width  / 2,
                                      y: loginView.bounds.size.height / 2)
         loginView.addSubview(loginButton)

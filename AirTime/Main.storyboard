@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UDd-EL-KGr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UDd-EL-KGr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -36,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Air Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTY-Fl-mWg">
-                                <rect key="frame" x="38" y="180" width="300" height="80"/>
+                                <rect key="frame" x="37.5" y="180" width="300" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="CwV-eo-Hzp"/>
                                     <constraint firstAttribute="width" constant="300" id="dOD-Qx-D8y"/>
@@ -46,7 +43,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZtO-r3-ecO">
-                                <rect key="frame" x="67" y="425" width="240" height="128"/>
+                                <rect key="frame" x="67.5" y="425" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="1Kp-Mu-FHP"/>
@@ -351,7 +348,7 @@
         <!--Air Time-->
         <scene sceneID="qSn-6d-UE9">
             <objects>
-                <viewController storyboardIdentifier="Air Time Scene" id="UDd-EL-KGr" customClass="HomeViewController" customModule="AirTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UDd-EL-KGr" customClass="HomeViewController" customModule="AirTime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s3k-lA-6km"/>
                         <viewControllerLayoutGuide type="bottom" id="AqH-T7-KNR"/>
@@ -419,7 +416,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rb-7y-huP">
-                                        <rect key="frame" x="109.5" y="47" width="27" height="75"/>
+                                        <rect key="frame" x="109" y="46.5" width="27" height="75"/>
                                         <fontDescription key="fontDescription" name="Oswald-Medium" family="Oswald" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -440,7 +437,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92h-KW-LIa">
-                                        <rect key="frame" x="172" y="182" width="65" height="75"/>
+                                        <rect key="frame" x="172" y="181.5" width="65" height="75"/>
                                         <fontDescription key="fontDescription" name="Oswald-Medium" family="Oswald" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

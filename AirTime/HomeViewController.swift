@@ -68,23 +68,23 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
             self.session?.activate()
         }
         
-        let h = user.handle
-        let fu = user.firstName
-        let lu = user.lastName
-        
-        self.label.text = h + " | " + fu! + " " + lu!
-
+        let h = self.user?.handle
+        let fu = self.user?.firstName
+        let lu = self.user?.lastName
+        if h != nil && fu != nil && lu != nil {
+            self.label.text = h! + " | " + fu! + " " + lu!
+            
             DispatchQueue.main.async {
-            PPManager.sharedInstance.PPusersvc.getProfilePic { succeeded, response, img in
-                if succeeded {
-                    if let i = img {
-                        self.profilePicImageView.image = i
-                        self.profilePicImageView.layer.masksToBounds = true
-
+                self.profilePicImageView.layer.masksToBounds = true
+                
+                self.profilePicImageView.playPortalProfilePic(forImageId: self.user.profilePic, { error in
+                    if let error = error {
+                        print("Error requesting profile pic: \(String(describing: error))")
                     }
                 }
+              )
             }
-            }
+        }
     }
     
     @IBAction func settingsTapped(_ sender: UIBarButtonItem) {
