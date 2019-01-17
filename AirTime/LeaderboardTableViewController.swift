@@ -30,7 +30,7 @@ class LeaderboardTableViewController: UIViewController, UITableViewDelegate, UIT
             } else {
                 print ("updated")
             }
-                self.leaderboardEntries = entry!
+            self.leaderboardEntries = entry!
                 self.tableView.reloadData()
         }
     }
@@ -51,13 +51,11 @@ class LeaderboardTableViewController: UIViewController, UITableViewDelegate, UIT
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "leaderboardTableViewCell", for: indexPath) as? LeadboardTableViewCell else {
             return UITableViewCell()
         }
-        if let entry = leaderboardEntries[indexPath.row] as? [String: Any],let user = entry["user"] as? [String: Any]
-            , let rank = entry["rank"] as? Int
-            , let score = entry["score"] as? Double, let handle = user["handle"] 
-        {
-            cell.handleLabel.text = self.user.handle
-            cell.numberLabel.text = String(rank)
-            cell.scoreLabel.text = String(score)
+         let entry = leaderboardEntries[indexPath.row]
+        do {
+            cell.handleLabel.text = entry.user.handle
+            cell.numberLabel.text = String(entry.rank)
+            cell.scoreLabel.text = String(entry.score)
             
             print()
         }
