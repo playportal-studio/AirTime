@@ -144,7 +144,7 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
         }
     }
 
-    func updateStats(jumpCount:Int, longestJump: Double, completion: @escaping PPDataCompletion) {
+    func updateStats(jumpCount:Int, longestJump: Double) {
         myStats.totalJumps = myStats.totalJumps + jumpCount
         myStats.totalJumpAttempts =  myStats.totalJumpAttempts + 1
         if jumpCount > myStats.maxSingleJumpCount { myStats.maxSingleJumpCount = jumpCount }
@@ -159,8 +159,7 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
         DispatchQueue.main.async {
             self.upperScoreLabel.text = String(describing: total)
             self.lowerScoreLabel.text = String(describing: longest)
-            self.updateStats(jumpCount:total, longestJump: longest) {  succeeded, response, responseObject in
-            }
+            self.updateStats(jumpCount:total, longestJump: longest) 
         }
     }
     
