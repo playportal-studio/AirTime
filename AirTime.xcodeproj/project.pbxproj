@@ -861,7 +861,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "AirTime WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimepod.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -889,7 +889,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "AirTime WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimepod.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -917,7 +917,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = AirTime_WatchKit_App_Extension;
 				INFOPLIST_FILE = "AirTime WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimepod.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -946,7 +946,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = AirTime_WatchKit_App_Extension;
 				INFOPLIST_FILE = "AirTime WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimepod.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -1088,7 +1088,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AirTime/pwed",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimepod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1113,7 +1113,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AirTime/pwed",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.AirTime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimepod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = AirTime/BridgingHeader.h;

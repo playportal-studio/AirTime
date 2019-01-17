@@ -105,8 +105,8 @@
                                     <color key="textColor" red="0.91748299870000005" green="0.80840149400000005" blue="0.1035363495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Leaderboard" id="9Io-lc-1jF">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="6DJ-N1-ViV">
+                                    <navigationItem title="Lifetime Jumps" id="9Io-lc-1jF">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" image="back_icon (2)" id="6DJ-N1-ViV">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="backTapped:" destination="6eN-hy-N1A" id="Wog-61-Dbd"/>
@@ -199,7 +199,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Settings" id="w7l-u4-VVk">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="5Rb-Tg-EEB">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" image="back_icon (2)" id="5Rb-Tg-EEB">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="backTapped:" destination="okQ-vW-uAX" id="aHL-nV-p6K"/>
@@ -566,6 +566,7 @@
         <image name="SplashLogo" width="1536" height="1536"/>
         <image name="Trapezoid" width="250" height="111"/>
         <image name="Unknown" width="100" height="100"/>
+        <image name="back_icon (2)" width="14" height="24"/>
         <image name="logo_small" width="31" height="32"/>
         <image name="settings" width="30" height="30"/>
     </resources>
