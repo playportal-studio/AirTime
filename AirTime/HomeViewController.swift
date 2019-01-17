@@ -92,7 +92,7 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
             print()
             return
         }
-      //  settings.user = user
+        //settings.user = user
         present(settings, animated: true, completion: nil)
     }
     
@@ -119,11 +119,17 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
             PPManager.sharedInstance.PPdatasvc.writeBucket( bucketName:PPManager.sharedInstance.PPusersvc.getMyAppGlobalDataStorageName(), key:s, value:innerd) { succeeded, response, responseObject in
                 if(!succeeded) { print("write JSON error:") }
             }
-        let service = PPLeaderboardService()
-        service.updateLeaderboard(score: myStats.totalJumps as NSNumber, categories: ["totalJumps"]) { _, _, _ in }
-        service.updateLeaderboard(score: myStats.maxSingleHangTime as NSNumber, categories: ["maxAirTime"]) { _, _, _ in }
-        }
+            
+            PlayPortalLeaderboard.shared.updateLeaderboard(Double(myStats.totalJumps), forCategories: ["totalJumps"]) { (Error, PlayPortalLeaderboardEntry) in
+                print("problems updating leaderboard for key totalJumps:", Error as Any)
+            }
+            
+            PlayPortalLeaderboard.shared.updateLeaderboard(Double(myStats.maxSingleHangTime), forCategories: ["maxAirTime"],  { (Error, PlayPortalLeaderboardEntry) in
+                print("problems updating leaderboard for key maxAirTime:", Error as Any)
+            }
+        )
     }
+}
     
     func storeRawDataToServer(jumpCount:Int, longestJump: Double, completion: @escaping PPDataCompletion) {
         let s:String = PPManager.sharedInstance.PPusersvc.user.uo.handle!
