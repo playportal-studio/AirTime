@@ -133,14 +133,14 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
         )
 }
     
-    func storeRawDataToServer(jumpCount:Int, longestJump: Double, completion: @escaping PPDataCompletion) {
-        let s:String = PPManager.sharedInstance.PPusersvc.user.uo.handle!
-        let jc:NSNumber = jumpCount as NSNumber
-        let lj: NSNumber = longestJump as NSNumber
-        let tnow = PPManager.sharedInstance.stringFromDate(date: Date())
-        let innerd = ["user": s, "jump count": jc, "longest jump":lj, "epoch": tnow] as [String: Any]
-        PPManager.sharedInstance.PPdatasvc.writeBucket( bucketName:PPManager.sharedInstance.PPusersvc.getMyAppGlobalDataStorageName(), key:s, value:innerd) { succeeded, response, responseObject in
-            if(!succeeded) { print("write JSON error:") }
+    func storeRawDataToServer(jumpCount:Int, longestJump: Double) {
+        
+        PlayPortalData.shared.write(toBucket: "updatedAirTime", atKey: "jumpCount", withValue: myStats.totalJumps) { (Error, Any) in
+            print("error writing to bucket for key: jumpCount")
+        }
+        
+        PlayPortalData.shared.write(toBucket: "updatedAirTime", atKey: "longestJump", withValue: myStats.maxSingleHangTime) { (Error, Any) in
+            print("error writing to bucket for key: longestJump")
         }
     }
 
