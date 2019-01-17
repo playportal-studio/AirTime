@@ -34,7 +34,7 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            let accountType = user.accountType 
+            let accountType = user.accountType
             if accountType == .kid {
                 return 2
             } else {
@@ -70,6 +70,7 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
             break
         }
         cell.textLabel?.text = text
+        cell.textLabel?.textColor = UIColor.white
         return cell
     }
     
