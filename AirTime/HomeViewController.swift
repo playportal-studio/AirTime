@@ -107,28 +107,30 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
         present(leaderboard, animated: true, completion: nil)
     }
     
-    func storeMyStatsToServer(completion: @escaping PPDataCompletion) {
-        if let s:String = PPManager.sharedInstance.PPusersvc.user.uo.handle {
-        let tnow = PPManager.sharedInstance.stringFromDate(date: Date())
-        let innerd = ["user": s,
-                      "Total jump count": myStats.totalJumps as Int,
-                      "Max single jump count":myStats.maxSingleJumpCount as Int,
-                      "Total jump attempts": myStats.totalJumpAttempts as Int,
-                      "Max hang time": myStats.maxSingleHangTime,
-                      "epoch": tnow] as [String: Any]
-            PPManager.sharedInstance.PPdatasvc.writeBucket( bucketName:PPManager.sharedInstance.PPusersvc.getMyAppGlobalDataStorageName(), key:s, value:innerd) { succeeded, response, responseObject in
-                if(!succeeded) { print("write JSON error:") }
+    func storeMyStatsToServer() {
+            PlayPortalData.shared.write(toBucket: "updatedAirTime", atKey: "totalJumpCount", withValue: myStats.totalJumps) { (Error, Any) in
+                print("error writing to bucket for key: totalJumpCount")
             }
             
-            PlayPortalLeaderboard.shared.updateLeaderboard(Double(myStats.totalJumps), forCategories: ["totalJumps"]) { (Error, PlayPortalLeaderboardEntry) in
-                print("problems updating leaderboard for key totalJumps:", Error as Any)
+            PlayPortalData.shared.write(toBucket: "updatedAirTime", atKey: "maxSingleJumpCount", withValue: myStats.maxSingleJumpCount) { (Error, Any) in
+                print("error writing to bucket for key: maxSingleJumpCount")
             }
             
-            PlayPortalLeaderboard.shared.updateLeaderboard(Double(myStats.maxSingleHangTime), forCategories: ["maxAirTime"],  { (Error, PlayPortalLeaderboardEntry) in
-                print("problems updating leaderboard for key maxAirTime:", Error as Any)
+            PlayPortalData.shared.write(toBucket: "updatedAirTime", atKey: "totalJumpAttempts", withValue: myStats.totalJumpAttempts) { (Error, Any) in
+                print("error writing to bucket for key: totalJumpAttempts")
             }
+            
+            PlayPortalData.shared.write(toBucket: "updatedAirTime", atKey: "maxSingleHangTime", withValue: myStats.maxSingleHangTime) { (Error, Any) in
+                print("error writing to bucket for key: maxSingleHangTime")
+            }
+                PlayPortalLeaderboard.shared.updateLeaderboard(Double(myStats.totalJumps), forCategories: ["totalJumps"]) { (Error, PlayPortalLeaderboardEntry) in
+                    print("problems updating leaderboard for key totalJumps:", Error as Any)
+                }
+            
+                PlayPortalLeaderboard.shared.updateLeaderboard(Double(myStats.maxSingleHangTime), forCategories: ["maxAirTime"],  { (Error, PlayPortalLeaderboardEntry) in
+                    print("problems updating leaderboard for key maxAirTime:", Error as Any)
+                }
         )
-    }
 }
     
     func storeRawDataToServer(jumpCount:Int, longestJump: Double, completion: @escaping PPDataCompletion) {
@@ -147,8 +149,7 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
         myStats.totalJumpAttempts =  myStats.totalJumpAttempts + 1
         if jumpCount > myStats.maxSingleJumpCount { myStats.maxSingleJumpCount = jumpCount }
         if longestJump > myStats.maxSingleHangTime { myStats.maxSingleHangTime = longestJump }
-        return storeMyStatsToServer() { succeeded, response, responseObject in
-        }
+        return storeMyStatsToServer()
     }
         
         
