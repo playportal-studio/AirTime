@@ -8,26 +8,30 @@
 
 import Foundation
 import UIKit
+import PPSDK_Swift
 
 class LeaderboardTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var leaderboardEntries: [Any] = []
+    private var leaderboardEntries: [PlayPortalLeaderboardEntry] = []
+    
+    var user: PlayPortalProfile!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-        let service = PPLeaderboardService()
-        service.getLeaderboard(page: 1, limit: 10, categories: "totalJumps") { [weak self] succeeded, response, responseObject in
-            guard succeeded, let strongSelf = self else {
-                return }
-            if let json = responseObject as? [String: Any], let leaderboardEntries = json["docs"] as? [Any] {
-                strongSelf.leaderboardEntries = leaderboardEntries
-                strongSelf.tableView.reloadData()
+        
+        PlayPortalLeaderboard.shared.getLeaderboard(forCategories: ["totalJumps"]) { (error, entry) in
+            if let error = error {
+                print("Error getting leaderboard \(error)")
+            } else {
+                print ("updated")
             }
+                self.leaderboardEntries = entry!
+                self.tableView.reloadData()
         }
     }
     
@@ -49,9 +53,9 @@ class LeaderboardTableViewController: UIViewController, UITableViewDelegate, UIT
         }
         if let entry = leaderboardEntries[indexPath.row] as? [String: Any],let user = entry["user"] as? [String: Any]
             , let rank = entry["rank"] as? Int
-            , let score = entry["score"] as? Double, let handle = user["handle"] as? String
+            , let score = entry["score"] as? Double, let handle = user["handle"] 
         {
-            cell.handleLabel.text = handle
+            cell.handleLabel.text = self.user.handle
             cell.numberLabel.text = String(rank)
             cell.scoreLabel.text = String(score)
             
