@@ -100,19 +100,19 @@ class Friend : PPUserObject, Codable {
             // access individual value in dictionary
             
             print("converting json to friend")
-            accountType = json2["accountType"] as! String
+            accountType = json2["accountType"] as? String
             anonymous = false
-            country = json2["country"] as! String
+            country = json2["country"] as? String
             if let c = json2["coverPhoto"] as? String {
                 coverPhoto = c
             }
-            handle = json2["handle"] as! String
-            firstName = json2["firstName"] as! String
-            lastName = json2["firstName"] as! String
+            handle = json2["handle"] as? String
+            firstName = json2["firstName"] as? String
+            lastName = json2["firstName"] as? String
             if let p = json2["profilePic"] as? String {
                 profilePic = p
             }
-            userId = json2["userId"] as! String
+            userId = json2["userId"] as? String
             userType = json2["userType"] as! String
         }
     }

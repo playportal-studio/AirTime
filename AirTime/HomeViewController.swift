@@ -9,6 +9,7 @@
 import UIKit
 import WatchConnectivity
 import StoreKit
+import PPSDK_Swift
 
 
 class Stats : Codable {
@@ -20,10 +21,10 @@ class Stats : Codable {
     init(json: Any) {
         print("in Stats: json= \( json )" )
         if let json2 = json as? [String: Any] {
-            totalJumps = json2["totalJumps"] as! Int
-            totalJumpAttempts = json2["totalJumpAttempts"] as! Int
-            maxSingleJumpCount = json2["maxSingleJumpCount"] as! Int
-            maxSingleHangTime = json2["maxSingleHangTime"] as! Double
+            totalJumps = json2["totalJumps"] as? Int
+            totalJumpAttempts = json2["totalJumpAttempts"] as? Int
+            maxSingleJumpCount = json2["maxSingleJumpCount"] as? Int
+            maxSingleHangTime = json2["maxSingleHangTime"] as? Double
         }
     }
 }
@@ -40,9 +41,9 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
     
     var session: WCSession?
     
-    var user:PPUserObject?
+    var user: PlayPortalProfile!
     
-//    var myRawJumpData:RawJumpData!
+
 
     var myStats:Stats = Stats(
         json: [ "totalJumps": 0 as Int,
@@ -67,11 +68,11 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
             self.session?.activate()
         }
         
-        let h = self.user?.uo.handle
-        let fu = self.user?.uo.firstName
-        let lu = self.user?.uo.lastName
-        if h != nil && fu != nil && lu != nil {
-            self.label.text = h! + " | " + fu! + " " + lu!
+        let h = user.handle
+        let fu = user.firstName
+        let lu = user.lastName
+        
+        self.label.text = h + " | " + fu! + " " + lu!
 
             DispatchQueue.main.async {
             PPManager.sharedInstance.PPusersvc.getProfilePic { succeeded, response, img in
@@ -84,7 +85,6 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
                 }
             }
             }
-        }
     }
     
     @IBAction func settingsTapped(_ sender: UIBarButtonItem) {
@@ -92,7 +92,7 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
             print()
             return
         }
-        settings.user = user
+      //  settings.user = user
         present(settings, animated: true, completion: nil)
     }
     
