@@ -11,7 +11,6 @@
 		1C3211302178FA3D00785D38 /* ShortFormPrivacyPolicyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C32112F2178FA3D00785D38 /* ShortFormPrivacyPolicyTableViewController.swift */; };
 		1C3211322179120D00785D38 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3211312179120D00785D38 /* LeaderboardTableViewController.swift */; };
 		1C47FE742179FEB300CD2B27 /* LeadboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C47FE732179FEB300CD2B27 /* LeadboardTableViewCell.swift */; };
-		466604AB2177B89D007D189A /* PPLeaderboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466604AA2177B89D007D189A /* PPLeaderboardService.swift */; };
 		4669F1F42146BFB000769F88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669F1F32146BFB000769F88 /* LoginViewController.swift */; };
 		4669F1F62146BFE700769F88 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F52146BFE700769F88 /* Security.framework */; };
 		4669F1F82146BFF300769F88 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F72146BFF300769F88 /* WebKit.framework */; };
@@ -64,15 +63,6 @@
 		46AE4F30216BE9C6007F8478 /* Icon-86@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E95216BE9C5007F8478 /* Icon-86@2x.png */; };
 		46AE4F32216BE9C6007F8478 /* Icon-98@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E97216BE9C5007F8478 /* Icon-98@2x.png */; };
 		46AE4F33216BE9C6007F8478 /* Icon-24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E98216BE9C5007F8478 /* Icon-24@2x.png */; };
-		46AE4F3A216BE9C6007F8478 /* PPLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA1216BE9C5007F8478 /* PPLoginButton.swift */; };
-		46AE4F3B216BE9C6007F8478 /* PPWebApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA2216BE9C5007F8478 /* PPWebApi.swift */; };
-		46AE4F3C216BE9C6007F8478 /* PPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA3216BE9C5007F8478 /* PPManager.swift */; };
-		46AE4F3D216BE9C6007F8478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4EA4216BE9C5007F8478 /* Assets.xcassets */; };
-		46AE4F3E216BE9C6007F8478 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA5216BE9C5007F8478 /* KeychainWrapper.swift */; };
-		46AE4F3F216BE9C6007F8478 /* PPUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA6216BE9C5007F8478 /* PPUserService.swift */; };
-		46AE4F40216BE9C6007F8478 /* PPDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA7216BE9C5007F8478 /* PPDataService.swift */; };
-		46AE4F41216BE9C6007F8478 /* RemoteNotificationsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA8216BE9C5007F8478 /* RemoteNotificationsHandler.swift */; };
-		46AE4F42216BE9C6007F8478 /* PPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AE4EA9216BE9C5007F8478 /* PPUtils.swift */; };
 		46AE4F43216BE9C6007F8478 /* .gitmodules in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4EAA216BE9C5007F8478 /* .gitmodules */; };
 		46AE4F45216BE9C6007F8478 /* ColoredGlyph.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4EAD216BE9C5007F8478 /* ColoredGlyph.png */; };
 		46AE4F46216BE9C6007F8478 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4EAE216BE9C5007F8478 /* .gitignore */; };
@@ -98,6 +88,7 @@
 		50FE60CC2146D8BD00481700 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FE60CB2146D8BD00481700 /* HealthKit.framework */; };
 		6E1B37C62146AFA000F01300 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B37C52146AFA000F01300 /* Utils.swift */; };
 		6E2FD1D2218A24C500F85FA8 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2FD1D1218A24C500F85FA8 /* Keys.swift */; };
+		6E30CCD221F10502005A03E0 /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E30CCD121F10502005A03E0 /* CustomFunctions.swift */; };
 		6E5439A92142C4E30052B060 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5439A82142C4E30052B060 /* Colors.swift */; };
 		A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322BB971DFEA7C400C847AF /* AppDelegate.swift */; };
 		A322BB9F1DFEA7C400C847AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A322BB9E1DFEA7C400C847AF /* Assets.xcassets */; };
@@ -166,7 +157,6 @@
 		24AFD5E51D7FFD01E8072F19 /* libPods-AirTime WatchKit App Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTime WatchKit App Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8AC7C841FC30F8C8A1D072 /* Pods-AirTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.release.xcconfig"; path = "Target Support Files/Pods-AirTime/Pods-AirTime.release.xcconfig"; sourceTree = "<group>"; };
 		30001E68FE75DAEE44A869D2 /* Pods-AirTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirTime/Pods-AirTime.debug.xcconfig"; sourceTree = "<group>"; };
-		466604AA2177B89D007D189A /* PPLeaderboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPLeaderboardService.swift; sourceTree = "<group>"; };
 		4669F1F32146BFB000769F88 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4669F1F52146BFE700769F88 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4669F1F72146BFF300769F88 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -220,15 +210,6 @@
 		46AE4E96216BE9C5007F8478 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		46AE4E97216BE9C5007F8478 /* Icon-98@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-98@2x.png"; sourceTree = "<group>"; };
 		46AE4E98216BE9C5007F8478 /* Icon-24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-24@2x.png"; sourceTree = "<group>"; };
-		46AE4EA1216BE9C5007F8478 /* PPLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPLoginButton.swift; sourceTree = "<group>"; };
-		46AE4EA2216BE9C5007F8478 /* PPWebApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPWebApi.swift; sourceTree = "<group>"; };
-		46AE4EA3216BE9C5007F8478 /* PPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPManager.swift; sourceTree = "<group>"; };
-		46AE4EA4216BE9C5007F8478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		46AE4EA5216BE9C5007F8478 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
-		46AE4EA6216BE9C5007F8478 /* PPUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPUserService.swift; sourceTree = "<group>"; };
-		46AE4EA7216BE9C5007F8478 /* PPDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPDataService.swift; sourceTree = "<group>"; };
-		46AE4EA8216BE9C5007F8478 /* RemoteNotificationsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteNotificationsHandler.swift; sourceTree = "<group>"; };
-		46AE4EA9216BE9C5007F8478 /* PPUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPUtils.swift; sourceTree = "<group>"; };
 		46AE4EAA216BE9C5007F8478 /* .gitmodules */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
 		46AE4EAD216BE9C5007F8478 /* ColoredGlyph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColoredGlyph.png; sourceTree = "<group>"; };
 		46AE4EAE216BE9C5007F8478 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -260,6 +241,7 @@
 		6D0A9213EB6E78A634987A7D /* Pods-AirTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirTime/Pods-AirTime.release.xcconfig"; sourceTree = "<group>"; };
 		6E1B37C52146AFA000F01300 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		6E2FD1D1218A24C500F85FA8 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		6E30CCD121F10502005A03E0 /* CustomFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFunctions.swift; sourceTree = "<group>"; };
 		6E5439A82142C4E30052B060 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A119555CFE8250B5A419ABA8 /* Pods-AirTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.debug.xcconfig"; path = "Target Support Files/Pods-AirTime/Pods-AirTime.debug.xcconfig"; sourceTree = "<group>"; };
 		A322BB941DFEA7C400C847AF /* AirTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -414,23 +396,6 @@
 			path = AppIcon.appiconset;
 			sourceTree = "<group>";
 		};
-		46AE4EA0216BE9C5007F8478 /* PlayPortal */ = {
-			isa = PBXGroup;
-			children = (
-				466604AA2177B89D007D189A /* PPLeaderboardService.swift */,
-				46AE4EA1216BE9C5007F8478 /* PPLoginButton.swift */,
-				46AE4EA2216BE9C5007F8478 /* PPWebApi.swift */,
-				46AE4EA3216BE9C5007F8478 /* PPManager.swift */,
-				46AE4EA4216BE9C5007F8478 /* Assets.xcassets */,
-				46AE4EA5216BE9C5007F8478 /* KeychainWrapper.swift */,
-				46AE4EA6216BE9C5007F8478 /* PPUserService.swift */,
-				46AE4EA7216BE9C5007F8478 /* PPDataService.swift */,
-				46AE4EA8216BE9C5007F8478 /* RemoteNotificationsHandler.swift */,
-				46AE4EA9216BE9C5007F8478 /* PPUtils.swift */,
-			);
-			path = PlayPortal;
-			sourceTree = "<group>";
-		};
 		46AE4EAC216BE9C5007F8478 /* markdownImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,7 +473,6 @@
 			children = (
 				46AE4F68216BEDC4007F8478 /* AirTime.xcodeproj */,
 				6EAE5D7A21838065005E070A /* Other */,
-				46AE4EA0216BE9C5007F8478 /* PlayPortal */,
 				508C66812142C36D0059C591 /* Resources */,
 				A322BB961DFEA7C400C847AF /* AirTime */,
 				50FE60A22146D70800481700 /* AirTime WatchKit App */,
@@ -550,6 +514,7 @@
 				1C32112F2178FA3D00785D38 /* ShortFormPrivacyPolicyTableViewController.swift */,
 				1C3211312179120D00785D38 /* LeaderboardTableViewController.swift */,
 				1C47FE732179FEB300CD2B27 /* LeadboardTableViewCell.swift */,
+				6E30CCD121F10502005A03E0 /* CustomFunctions.swift */,
 			);
 			path = AirTime;
 			sourceTree = "<group>";
@@ -763,7 +728,6 @@
 				46AE4F46216BE9C6007F8478 /* .gitignore in Resources */,
 				46AE4F27216BE9C6007F8478 /* icon-messages-app-27x20@3x.png in Resources */,
 				46AE4F2B216BE9C6007F8478 /* Icon-40@2x.png in Resources */,
-				46AE4F3D216BE9C6007F8478 /* Assets.xcassets in Resources */,
 				46AE4F23216BE9C6007F8478 /* icon-messages-app-27x20@1x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -832,22 +796,14 @@
 				A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */,
 				508C66862142F06B0059C591 /* GradientBkgndView.swift in Sources */,
 				1C3211322179120D00785D38 /* LeaderboardTableViewController.swift in Sources */,
-				46AE4F3F216BE9C6007F8478 /* PPUserService.swift in Sources */,
 				6E2FD1D2218A24C500F85FA8 /* Keys.swift in Sources */,
-				466604AB2177B89D007D189A /* PPLeaderboardService.swift in Sources */,
 				6E5439A92142C4E30052B060 /* Colors.swift in Sources */,
-				46AE4F3B216BE9C6007F8478 /* PPWebApi.swift in Sources */,
-				46AE4F3A216BE9C6007F8478 /* PPLoginButton.swift in Sources */,
-				46AE4F40216BE9C6007F8478 /* PPDataService.swift in Sources */,
-				46AE4F3C216BE9C6007F8478 /* PPManager.swift in Sources */,
 				508C66882142FBF60059C591 /* SettingsTableTableViewController.swift in Sources */,
-				46AE4F42216BE9C6007F8478 /* PPUtils.swift in Sources */,
 				4669F1F42146BFB000769F88 /* LoginViewController.swift in Sources */,
+				6E30CCD221F10502005A03E0 /* CustomFunctions.swift in Sources */,
 				508C66802142C1AA0059C591 /* HomeViewController.swift in Sources */,
 				5077E1252146F8AE00B0E0FA /* TimeInterval+Time.swift in Sources */,
-				46AE4F3E216BE9C6007F8478 /* KeychainWrapper.swift in Sources */,
 				1C47FE742179FEB300CD2B27 /* LeadboardTableViewCell.swift in Sources */,
-				46AE4F41216BE9C6007F8478 /* RemoteNotificationsHandler.swift in Sources */,
 				6E1B37C62146AFA000F01300 /* Utils.swift in Sources */,
 				1C3211302178FA3D00785D38 /* ShortFormPrivacyPolicyTableViewController.swift in Sources */,
 			);

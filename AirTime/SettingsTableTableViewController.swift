@@ -8,12 +8,13 @@
 
 import UIKit
 import StoreKit
+import PPSDK_Swift
 
 class SettingsTableTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SKStoreProductViewControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var user: PPUserObject!
+    var user: PlayPortalProfile!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +34,8 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            guard let accountType = user.uo.accountType else { return 0 }
-            if accountType == "Kid" {
+            let accountType = user.accountType 
+            if accountType == .kid {
                 return 2
             } else {
                 return 4
@@ -50,13 +51,13 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsTableViewCell", for: indexPath)
-        let accountType = user.uo.accountType
+        let accountType = user.accountType
         var text: String?
         switch (indexPath.section, indexPath.row) {
         case (0, 0):
             text = "Contact Us"
         case (0, 1):
-            text = accountType == "Parent" ? "Terms of Service" : "Short Form Privacy Policy"
+            text = accountType == .parent ? "Terms of Service" : "Short Form Privacy Policy"
         case (0, 2):
             text = "Privacy Policy"
         case (0, 3):
@@ -83,8 +84,8 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
             //  This will open a link to your terms of service
             //  However, this is disabled for kids as it's an outside link and will be the short form privacy policy
             //  from the kid's perspective
-            guard let accountType = user.uo.accountType else { return }
-            if accountType == "Kid" {
+            let accountType = user.accountType
+            if accountType == .kid {
                 guard let shortFormPrivacyPolicy = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "shortFormPrivacyPolicy") as? ShortFormPrivacyPolicyTableViewController else { return }
                 present(shortFormPrivacyPolicy, animated: true, completion: nil)
             } else {
@@ -92,7 +93,7 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         case (0, 2):
-            guard user.uo.accountType == "Parent" else { return }
+            guard user.accountType == .parent else { return }
             guard let url = URL(string: "http://www.dynepic.com/pages/privacy-policy") else { return }
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         case (0, 3):
@@ -101,7 +102,7 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
         case (1, 0):
             Utils.openOrDownloadPlayPortal(delegate: self)
         case (2, 0):
-            PPManager.sharedInstance.logout()
+            PlayPortalAuth.shared.logout()
             let sb:UIStoryboard = UIStoryboard.init(name:"Main", bundle:nil)
             guard let rvc:UIViewController = UIApplication.shared.keyWindow?.rootViewController else {
                 return

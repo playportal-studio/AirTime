@@ -92,7 +92,7 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
             print()
             return
         }
-        //settings.user = user
+        settings.user = user
         present(settings, animated: true, completion: nil)
     }
     
