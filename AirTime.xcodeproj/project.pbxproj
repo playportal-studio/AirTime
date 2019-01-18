@@ -89,6 +89,7 @@
 		6E1B37C62146AFA000F01300 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B37C52146AFA000F01300 /* Utils.swift */; };
 		6E2FD1D2218A24C500F85FA8 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2FD1D1218A24C500F85FA8 /* Keys.swift */; };
 		6E30CCD221F10502005A03E0 /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E30CCD121F10502005A03E0 /* CustomFunctions.swift */; };
+		6E30CCD521F12C46005A03E0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E30CCD421F12C46005A03E0 /* HealthKit.framework */; };
 		6E5439A92142C4E30052B060 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5439A82142C4E30052B060 /* Colors.swift */; };
 		A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A322BB971DFEA7C400C847AF /* AppDelegate.swift */; };
 		A322BB9F1DFEA7C400C847AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A322BB9E1DFEA7C400C847AF /* Assets.xcassets */; };
@@ -242,6 +243,8 @@
 		6E1B37C52146AFA000F01300 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		6E2FD1D1218A24C500F85FA8 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		6E30CCD121F10502005A03E0 /* CustomFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFunctions.swift; sourceTree = "<group>"; };
+		6E30CCD321F12C37005A03E0 /* AirTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AirTime.entitlements; sourceTree = "<group>"; };
+		6E30CCD421F12C46005A03E0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		6E5439A82142C4E30052B060 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A119555CFE8250B5A419ABA8 /* Pods-AirTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.debug.xcconfig"; path = "Target Support Files/Pods-AirTime/Pods-AirTime.debug.xcconfig"; sourceTree = "<group>"; };
 		A322BB941DFEA7C400C847AF /* AirTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -276,6 +279,7 @@
 				4669F1FC2146C07000769F88 /* MobileCoreServices.framework in Frameworks */,
 				4669F1FA2146BFFC00769F88 /* SafariServices.framework in Frameworks */,
 				4669F1F82146BFF300769F88 /* WebKit.framework in Frameworks */,
+				6E30CCD521F12C46005A03E0 /* HealthKit.framework in Frameworks */,
 				4669F1F62146BFE700769F88 /* Security.framework in Frameworks */,
 				1B42BE0FAC4E3E9EDC0F186A /* libPods-AirTime.a in Frameworks */,
 			);
@@ -287,6 +291,7 @@
 		1FC20239CADD742496626DDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6E30CCD421F12C46005A03E0 /* HealthKit.framework */,
 				1CBE9FAB218777C400A2D29C /* libPods-AirTime WatchKit App Extension.a */,
 				50FE60CB2146D8BD00481700 /* HealthKit.framework */,
 				4669F1FB2146C06F00769F88 /* MobileCoreServices.framework */,
@@ -496,6 +501,7 @@
 		A322BB961DFEA7C400C847AF /* AirTime */ = {
 			isa = PBXGroup;
 			children = (
+				6E30CCD321F12C37005A03E0 /* AirTime.entitlements */,
 				46AE4EAC216BE9C5007F8478 /* markdownImages */,
 				46AE4E54216BE9C5007F8478 /* AirTime Splash@1x */,
 				4669F1F32146BFB000769F88 /* LoginViewController.swift */,
@@ -617,6 +623,12 @@
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
+							};
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
 							};
 						};
 					};
@@ -861,7 +873,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "AirTime WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimepod.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimetwo.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -889,7 +901,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "AirTime WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimepod.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimetwo.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -917,7 +929,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = AirTime_WatchKit_App_Extension;
 				INFOPLIST_FILE = "AirTime WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimepod.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimetwo.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -946,7 +958,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = AirTime_WatchKit_App_Extension;
 				INFOPLIST_FILE = "AirTime WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimepod.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimetwo.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -1077,6 +1089,7 @@
 			baseConfigurationReference = A119555CFE8250B5A419ABA8 /* Pods-AirTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AirTime/AirTime.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NAX528DUM6;
@@ -1088,12 +1101,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AirTime/pwed",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimepod;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = AirTime/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1102,6 +1116,7 @@
 			baseConfigurationReference = 2A8AC7C841FC30F8C8A1D072 /* Pods-AirTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AirTime/AirTime.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NAX528DUM6;
@@ -1113,11 +1128,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AirTime/pwed",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimepod;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = AirTime/BridgingHeader.h;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
