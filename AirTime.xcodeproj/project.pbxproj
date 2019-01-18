@@ -1101,7 +1101,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AirTime/pwed",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimetwo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1128,7 +1128,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AirTime/pwed",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimetwo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = AirTime/BridgingHeader.h;
