@@ -9,6 +9,7 @@
 import UIKit
 import WatchConnectivity
 import StoreKit
+import PPSDK_Swift
 
 
 class Stats : Codable {
@@ -20,10 +21,10 @@ class Stats : Codable {
     init(json: Any) {
         print("in Stats: json= \( json )" )
         if let json2 = json as? [String: Any] {
-            totalJumps = json2["totalJumps"] as! Int
-            totalJumpAttempts = json2["totalJumpAttempts"] as! Int
-            maxSingleJumpCount = json2["maxSingleJumpCount"] as! Int
-            maxSingleHangTime = json2["maxSingleHangTime"] as! Double
+            totalJumps = json2["totalJumps"] as? Int
+            totalJumpAttempts = json2["totalJumpAttempts"] as? Int
+            maxSingleJumpCount = json2["maxSingleJumpCount"] as? Int
+            maxSingleHangTime = json2["maxSingleHangTime"] as? Double
         }
     }
 }
@@ -40,9 +41,9 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
     
     var session: WCSession?
     
-    var user:PPUserObject?
+    var user: PlayPortalProfile!
     
-//    var myRawJumpData:RawJumpData!
+
 
     var myStats:Stats = Stats(
         json: [ "totalJumps": 0 as Int,
@@ -67,22 +68,21 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
             self.session?.activate()
         }
         
-        let h = self.user?.uo.handle
-        let fu = self.user?.uo.firstName
-        let lu = self.user?.uo.lastName
+        let h = self.user?.handle
+        let fu = self.user?.firstName
+        let lu = self.user?.lastName
         if h != nil && fu != nil && lu != nil {
             self.label.text = h! + " | " + fu! + " " + lu!
-
+            
             DispatchQueue.main.async {
-            PPManager.sharedInstance.PPusersvc.getProfilePic { succeeded, response, img in
-                if succeeded {
-                    if let i = img {
-                        self.profilePicImageView.image = i
-                        self.profilePicImageView.layer.masksToBounds = true
-
+                self.profilePicImageView.layer.masksToBounds = true
+                
+                self.profilePicImageView.playPortalProfilePic(forImageId: self.user.profilePic, { error in
+                    if let error = error {
+                        print("Error requesting profile pic: \(String(describing: error))")
                     }
                 }
-            }
+              )
             }
         }
     }
@@ -107,42 +107,49 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
         present(leaderboard, animated: true, completion: nil)
     }
     
-    func storeMyStatsToServer(completion: @escaping PPDataCompletion) {
-        if let s:String = PPManager.sharedInstance.PPusersvc.user.uo.handle {
-        let tnow = PPManager.sharedInstance.stringFromDate(date: Date())
-        let innerd = ["user": s,
-                      "Total jump count": myStats.totalJumps as Int,
-                      "Max single jump count":myStats.maxSingleJumpCount as Int,
-                      "Total jump attempts": myStats.totalJumpAttempts as Int,
-                      "Max hang time": myStats.maxSingleHangTime,
-                      "epoch": tnow] as [String: Any]
-            PPManager.sharedInstance.PPdatasvc.writeBucket( bucketName:PPManager.sharedInstance.PPusersvc.getMyAppGlobalDataStorageName(), key:s, value:innerd) { succeeded, response, responseObject in
-                if(!succeeded) { print("write JSON error:") }
+    func storeMyStatsToServer() {
+            PlayPortalData.shared.write(toBucket: "updatedAirTime", atKey: "totalJumpCount", withValue: myStats.totalJumps) { (Error, Any) in
+                print("error writing to bucket for key: totalJumpCount")
             }
-        let service = PPLeaderboardService()
-        service.updateLeaderboard(score: myStats.totalJumps as NSNumber, categories: ["totalJumps"]) { _, _, _ in }
-        service.updateLeaderboard(score: myStats.maxSingleHangTime as NSNumber, categories: ["maxAirTime"]) { _, _, _ in }
-        }
-    }
+            
+            PlayPortalData.shared.write(toBucket: "updatedAirTime", atKey: "maxSingleJumpCount", withValue: myStats.maxSingleJumpCount) { (Error, Any) in
+                print("error writing to bucket for key: maxSingleJumpCount")
+            }
+            
+            PlayPortalData.shared.write(toBucket: "updatedAirTime", atKey: "totalJumpAttempts", withValue: myStats.totalJumpAttempts) { (Error, Any) in
+                print("error writing to bucket for key: totalJumpAttempts")
+            }
+            
+            PlayPortalData.shared.write(toBucket: "updatedAirTime", atKey: "maxSingleHangTime", withValue: myStats.maxSingleHangTime) { (Error, Any) in
+                print("error writing to bucket for key: maxSingleHangTime")
+            }
+                PlayPortalLeaderboard.shared.updateLeaderboard(Double(myStats.totalJumps), forCategories: ["totalJumps"]) { (Error, PlayPortalLeaderboardEntry) in
+                    print("problems updating leaderboard for key totalJumps:", Error as Any)
+                }
+            
+                PlayPortalLeaderboard.shared.updateLeaderboard(Double(myStats.maxSingleHangTime), forCategories: ["maxAirTime"],  { (Error, PlayPortalLeaderboardEntry) in
+                    print("problems updating leaderboard for key maxAirTime:", Error as Any)
+                }
+        )
+}
     
-    func storeRawDataToServer(jumpCount:Int, longestJump: Double, completion: @escaping PPDataCompletion) {
-        let s:String = PPManager.sharedInstance.PPusersvc.user.uo.handle!
-        let jc:NSNumber = jumpCount as NSNumber
-        let lj: NSNumber = longestJump as NSNumber
-        let tnow = PPManager.sharedInstance.stringFromDate(date: Date())
-        let innerd = ["user": s, "jump count": jc, "longest jump":lj, "epoch": tnow] as [String: Any]
-        PPManager.sharedInstance.PPdatasvc.writeBucket( bucketName:PPManager.sharedInstance.PPusersvc.getMyAppGlobalDataStorageName(), key:s, value:innerd) { succeeded, response, responseObject in
-            if(!succeeded) { print("write JSON error:") }
+    func storeRawDataToServer(jumpCount:Int, longestJump: Double) {
+        
+        PlayPortalData.shared.write(toBucket: "updatedAirTime", atKey: "jumpCount", withValue: myStats.totalJumps) { (Error, Any) in
+            print("error writing to bucket for key: jumpCount")
+        }
+        
+        PlayPortalData.shared.write(toBucket: "updatedAirTime", atKey: "longestJump", withValue: myStats.maxSingleHangTime) { (Error, Any) in
+            print("error writing to bucket for key: longestJump")
         }
     }
 
-    func updateStats(jumpCount:Int, longestJump: Double, completion: @escaping PPDataCompletion) {
+    func updateStats(jumpCount:Int, longestJump: Double) {
         myStats.totalJumps = myStats.totalJumps + jumpCount
         myStats.totalJumpAttempts =  myStats.totalJumpAttempts + 1
         if jumpCount > myStats.maxSingleJumpCount { myStats.maxSingleJumpCount = jumpCount }
         if longestJump > myStats.maxSingleHangTime { myStats.maxSingleHangTime = longestJump }
-        return storeMyStatsToServer() { succeeded, response, responseObject in
-        }
+        return storeMyStatsToServer()
     }
         
         
@@ -152,8 +159,7 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
         DispatchQueue.main.async {
             self.upperScoreLabel.text = String(describing: total)
             self.lowerScoreLabel.text = String(describing: longest)
-            self.updateStats(jumpCount:total, longestJump: longest) {  succeeded, response, responseObject in
-            }
+            self.updateStats(jumpCount:total, longestJump: longest) 
         }
     }
     

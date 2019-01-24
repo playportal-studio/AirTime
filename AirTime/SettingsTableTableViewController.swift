@@ -5,15 +5,16 @@
 //  Created by Jett Black on 9/7/18.
 //  Copyright © 2018 Dynepic, Inc. All rights reserved.
 //
-
 import UIKit
 import StoreKit
+import PPSDK_Swift
 
 class SettingsTableTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SKStoreProductViewControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var user: PPUserObject!
+    var user: PlayPortalProfile?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +34,9 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            guard let accountType = user.uo.accountType else { return 0 }
-            if accountType == "Kid" {
-                return 2
+            let accountType = user?.accountType
+            if accountType == .kid {
+                return 1
             } else {
                 return 4
             }
@@ -50,13 +51,13 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsTableViewCell", for: indexPath)
-        let accountType = user.uo.accountType
+        let accountType = user?.accountType
         var text: String?
         switch (indexPath.section, indexPath.row) {
         case (0, 0):
-            text = "Contact Us"
+            text = (accountType == .parent || accountType == .adult) ? "Contact Us" : "Short Form Privacy Policy"
         case (0, 1):
-            text = accountType == "Parent" ? "Terms of Service" : "Short Form Privacy Policy"
+            text = (accountType == .parent || accountType == .adult) ? "Terms of Service" : "Short Form Privacy Policy"
         case (0, 2):
             text = "Privacy Policy"
         case (0, 3):
@@ -69,22 +70,26 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
             break
         }
         cell.textLabel?.text = text
+        cell.textLabel?.textColor = UIColor.white
+        cell.textLabel?.backgroundColor = UIColor.clear
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch (indexPath.section, indexPath.row) {
         case (0, 0):
-            //  Open mail app to allow user feedback
-            let email = "your-email@email.com"
-            guard let url = URL(string: "mailto:\(email)") else { return }
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            let accountType = user?.accountType
+            if accountType == .kid {
+                guard let shortFormPrivacyPolicy = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "shortFormPrivacyPolicy") as? ShortFormPrivacyPolicyTableViewController else { return }
+                present(shortFormPrivacyPolicy, animated: true, completion: nil)
+            } else {
+                let email = "support@playportal.io"
+                guard let url = URL(string: "mailto:\(email)") else { return }
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
         case (0, 1):
-            //  This will open a link to your terms of service
-            //  However, this is disabled for kids as it's an outside link and will be the short form privacy policy
-            //  from the kid's perspective
-            guard let accountType = user.uo.accountType else { return }
-            if accountType == "Kid" {
+            let accountType = user?.accountType
+            if accountType == .kid {
                 guard let shortFormPrivacyPolicy = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "shortFormPrivacyPolicy") as? ShortFormPrivacyPolicyTableViewController else { return }
                 present(shortFormPrivacyPolicy, animated: true, completion: nil)
             } else {
@@ -92,7 +97,7 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         case (0, 2):
-            guard user.uo.accountType == "Parent" else { return }
+            guard user?.accountType == .parent else { return }
             guard let url = URL(string: "http://www.dynepic.com/pages/privacy-policy") else { return }
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         case (0, 3):
@@ -101,7 +106,7 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
         case (1, 0):
             Utils.openOrDownloadPlayPortal(delegate: self)
         case (2, 0):
-            PPManager.sharedInstance.logout()
+            PlayPortalAuth.shared.logout()
             let sb:UIStoryboard = UIStoryboard.init(name:"Main", bundle:nil)
             guard let rvc:UIViewController = UIApplication.shared.keyWindow?.rootViewController else {
                 return
@@ -118,9 +123,27 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let label = UILabel()
+        
+        if section == 0 {
+            label.backgroundColor! = UIColor.gray.withAlphaComponent(0.15)
+            label.textColor = UIColor.white
+            label.text = ""
+        } else if section == 1 {
+            label.backgroundColor! = UIColor.gray.withAlphaComponent(0.15)
+        } else if section == 2 {
+            label.backgroundColor! = UIColor.gray.withAlphaComponent(0.15)
+        } else {
+            return nil
+        }
+        return label
+    }
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return "PRIVACY"
+            return ""
         } else {
             return nil
         }
@@ -133,4 +156,5 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
     func productViewControllerDidFinish(_ viewController: SKStoreProductViewController) {
         viewController.dismiss(animated: true, completion: nil)
     }
+    
 }

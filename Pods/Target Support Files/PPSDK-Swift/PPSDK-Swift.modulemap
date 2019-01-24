@@ -1,0 +1,6 @@
+module PPSDK_Swift {
+  umbrella header "PPSDK-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

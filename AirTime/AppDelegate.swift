@@ -1,56 +1,59 @@
 //
-//  AppDelegate.swift
-//  Developer Samples
-//
-//  Created by Gary Baldwin on Oct 1, 2018.
-//  Copyright © 2018 Dynepic, Inc. All rights reserved.
-//
-
+//cocoapod refactor - AirTime - Joshua Paulsen
 import UIKit
-import UserNotifications
+import PPSDK_Swift
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, PlayPortalLoginDelegate{
+    
     var window: UIWindow?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        PPManager.sharedInstance.configure(env: env, clientId: cid, secret: cse, andRedirectURI: redirectURI)
-        PPManager.sharedInstance.addUserListener { user, authenticated in
-            print("userListener invoked authd: \( authenticated )  user: \(String(describing:  user ))" )
-            
-            let sb:UIStoryboard = UIStoryboard.init(name:"Main", bundle:nil)
-            guard let rvc:UIViewController = UIApplication.shared.keyWindow?.rootViewController else {
-                return
-            }
-            
-            if (!authenticated) {
-                let vc:LoginViewController = sb.instantiateViewController(withIdentifier:"LoginViewController") as! LoginViewController
-                vc.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal;
-                if let cvc = getCurrentViewController(rvc) {
-                    print("userListener NOT authd current VC: \(cvc )" );
-                    cvc.present(vc, animated:true, completion:nil)
-                }
-            } else {
-                let hvc:HomeViewController = sb.instantiateViewController(withIdentifier: "Air Time Scene") as! HomeViewController
-                if let u = user {
-                    hvc.user = u
-                }
-                hvc.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal;
-                if let cvc = getCurrentViewController(rvc) {
-                    print("userListener authd current VC: \(cvc )" );
-                    cvc.present(hvc, animated:true, completion:nil)
-                }
-            }
-        }
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        PlayPortalAuth.shared.configure(forEnvironment: env, withClientId: clientId, andClientSecret: clientSecret, andRedirectURI: redirect)
+        authenticate()
         
         return true
     }
     
-    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
-        PPManager.sharedInstance.handleOpenURL(url:url)
+    //  Start SSO flow by checking if user is authenticated; if not, open login
+    func authenticate() {
+        PlayPortalAuth.shared.isAuthenticated(loginDelegate: self) { [weak self] error, userProfile in
+            guard let self = self else { return }
+            if let userProfile = userProfile {
+                //  User is authenticated, go to initial
+                guard let home = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "home" ) as? HomeViewController else { return }
+                home.user = userProfile
+                self.window?.rootViewController = home
+            } else if let error = error {
+                print("Error during authentication: \(error)")
+            } else {
+                //  Not authenticated, open login view controller
+                print("User not authenticated, go to login")
+                guard let login = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
+                    return
+                }
+                self.window?.rootViewController = login
+            }
+        }
+    }
+    
+    //  This method must be implemented so the sdk can handle redirects from playPORTAL SSO
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        PlayPortalAuth.shared.open(url: url)
         return true
     }
+    
+    func didFailToLogin(with error: Error) {
+        print("Login failed during SSO flow: \(error)")
+    }
+    
+    func didLogout(with error: Error) {
+        print("Error occurred during logout: \(error)")
+    }
+    
+    func didLogoutSuccessfully() {
+        print("Logged out successfully!")
+        authenticate()
+    }
 }
-
