@@ -1,6 +1,6 @@
 {
   "name": "PPSDK-Swift",
-  "version": "0.2.1",
+  "version": "0.2.10",
   "summary": "playPORTAL SDK in Swift.",
   "description": "Swift SDK providing access to playPORTAL services.",
   "homepage": "https://github.com/playportal-studio/PPSDK-Swift.git",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/playportal-studio/PPSDK-Swift.git",
-    "tag": "0.2.1"
+    "tag": "0.2.10"
   },
   "source_files": "Source/*.swift",
   "swift_version": "4.2",

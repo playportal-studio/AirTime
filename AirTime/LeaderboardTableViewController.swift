@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import PPSDK_Swift
+import SwiftOverlays
 
 class LeaderboardTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -20,22 +21,27 @@ class LeaderboardTableViewController: UIViewController, UITableViewDelegate, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
         tableView.separatorStyle = .none
-        
-        PlayPortalLeaderboard.shared.getLeaderboard(forCategories: ["totalJumps"]) { (error, entry) in
-            if let error = error {
-                print("Error getting leaderboard \(error)")
-            } else {
-                print ("updated")
+        if user.anonymous {
+            showTextOverlay("Login to access this feature!")
+        } else {
+            tableView.delegate = self
+            tableView.dataSource = self
+            
+            PlayPortalLeaderboard.shared.getLeaderboard(forCategories: ["totalJumps"]) { [weak self] error, leaderboardEntries in
+                guard let self = self else { return }
+                if let error = error {
+                    print("Error getting leaderboard entries: \(error)")
+                } else if let leaderboardEntries = leaderboardEntries {
+                    self.leaderboardEntries = leaderboardEntries
+                    self.tableView.reloadData()
+                }
             }
-            self.leaderboardEntries = entry!
-                self.tableView.reloadData()
         }
     }
     
     @IBAction func backTapped(_ sender: UIBarButtonItem) {
+        removeAllOverlays()
         dismiss(animated: true, completion: nil)
     }
     
@@ -51,14 +57,10 @@ class LeaderboardTableViewController: UIViewController, UITableViewDelegate, UIT
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "leaderboardTableViewCell", for: indexPath) as? LeadboardTableViewCell else {
             return UITableViewCell()
         }
-         let entry = leaderboardEntries[indexPath.row]
-        do {
-            cell.handleLabel.text = entry.user.handle
-            cell.numberLabel.text = String(entry.rank)
-            cell.scoreLabel.text = String(entry.score)
-            
-            print()
-        }
+        let entry = leaderboardEntries[indexPath.row]
+        cell.handleLabel.text = entry.user.handle
+        cell.numberLabel.text = String(entry.rank)
+        cell.scoreLabel.text = String(entry.score)
         return cell
     }
     

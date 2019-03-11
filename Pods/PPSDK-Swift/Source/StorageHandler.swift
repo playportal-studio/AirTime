@@ -1,5 +1,5 @@
 //
-//  StorageManager.swift
+//  StorageHandler.swift
 //
 //  Created by Lincoln Fraley on 10/26/18.
 //
@@ -7,10 +7,10 @@
 import Foundation
 import KeychainSwift
 
-let globalStorageManager: StorageManager = KeychainSwift()
+let globalStorageHandler: StorageHandler = KeychainSwift()
 
 //  Protocol to be implemented by class responsible for secure storage
-protocol StorageManager {
+protocol StorageHandler {
     
     //  MARK: - Methods
     
@@ -51,4 +51,12 @@ protocol StorageManager {
     */
     @discardableResult
     func clear() -> Bool
+}
+
+//  Add conformance for `KeychainSwift` to `StorageHandler`
+extension KeychainSwift: StorageHandler {
+    
+    func set(_ value: String, atKey key: String) -> Bool {
+        return set(value, forKey: key)
+    }
 }

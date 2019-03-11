@@ -47,6 +47,7 @@ public enum PlayPortalError {
             case requestedScopeNotRegistered
             case notificationsNotEnabledForDevice
             
+        
             //  403 - Forbidden
             case userAttemptedUnathorizedAction = 4032
             case authorizationRequestMissingParameter

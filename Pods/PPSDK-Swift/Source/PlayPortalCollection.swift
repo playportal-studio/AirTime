@@ -13,42 +13,24 @@ public typealias CollectionType = Codable & Equatable
 public final class PlayPortalCollection {
     
     public static let shared = PlayPortalCollection()
-    private var requestHandler: RequestHandler = globalRequestHandler
-    private var responseHandler: ResponseHandler = globalResponseHandler
-    private var collections = CollectionContainer()
+    private var collections = Synchronized<[String: [Any]]>(value: [:])
     
-    private init() {}
+    private init() { }
     
-    private func encode<C: CollectionType>(_ collection: [C]) -> [[String: Any]] {
-        return collection.compactMap { $0.asDictionary }
+    deinit {
+        EventHandler.shared.unsubscribe(self)
     }
     
-    private class CollectionContainer {
-        
-        private var collections = [String: [Any]]()
-        private let queue = DispatchQueue(label: "com.dynepic.playPORTAL.collectionQueue", attributes: .concurrent)
-        
-        subscript(collectionName: String) -> [Any]? {
-            get {
-                var copy: [Any]?
-                queue.sync {
-                    copy = collections[collectionName]
-                }
-                return copy
-            }
-            set(newValue) {
-                queue.async(flags: .barrier) { [unowned self] in
-                    self.collections[collectionName] = newValue
-                }
-            }
-        }
+    //  TODO: create an extension for this
+    private func encode<C: CollectionType>(_ collection: [C]) -> [[String: Any]] {
+        return collection.compactMap { $0.asDictionary }
     }
     
     /**
      Create a collection.
      - Parameter collectionNamed: Name of the collection.
      - Parameter includingUsers: List of users that are able to view the collection; defaults to none.
-     - Parameter public: Is the collection global; defaults to false.
+     - Parameter isPublic: Whether or not this collection is public within your app space.
      - Parameter completion: The closure invoked when the request finishes.
      - Parameter error: The error returned for an unsuccessful request.
      - Returns: Void
@@ -60,11 +42,29 @@ public final class PlayPortalCollection {
         _ completion: ((_ error: Error?) -> Void)?)
         -> Void
     {
-        requestHandler.request(DataRouter.create(bucketName: collectionName, users: users, isPublic: isPublic)) {
-            self.responseHandler.handleResponse($0, $1, $2) { (error, _: Data?) in
-                if error == nil {
-                    self.collections[collectionName] = []
+        let request = DataRouter.create(bucketName: collectionName, users: users, isPublic: isPublic)
+        RequestHandler.shared.request(request) { error in
+            let alreadyExistsError: Bool = {
+                if let error = error as? PlayPortalError.API
+                    , case PlayPortalError.API.requestFailed(.alreadyExists, _) = error {
+                    return true
+                } else {
+                    return false
                 }
+            }()
+            if error == nil || alreadyExistsError {
+                
+                //  The purpose of this is to populate the bucket with an empty array after creation
+                //  Otherwise, reading immediately after creating a collection will return an error, as the bucket would have no
+                //  collection in it
+                let request = DataRouter.write(bucketName: collectionName, key: collectionName, value: Array<Int>())
+                RequestHandler.shared.request(request, at: "data.\(collectionName)") { (error, collection: [Int]?) in
+                    if error == nil {
+                        self.collections.value[collectionName] = []
+                    }
+                    completion?(error)
+                }
+            } else {
                 completion?(error)
             }
         }
@@ -83,13 +83,12 @@ public final class PlayPortalCollection {
         _ completion: @escaping (_ error: Error?, _ collection: [C]?) -> Void)
         -> Void
     {
-        requestHandler.request(DataRouter.read(bucketName: collectionName, key: collectionName)) {
-            self.responseHandler.handleResponse($0, $1, $2, atKey: "data.\(collectionName)") { (error, collection: [C]?) in
-                if error == nil {
-                    self.collections[collectionName] = collection
-                }
-                completion(error, collection)
+        let request = DataRouter.read(bucketName: collectionName, key: collectionName)
+        RequestHandler.shared.request(request, at: "data.\(collectionName)") { (error, collection: [C]?) in
+            if error == nil {
+                self.collections.value[collectionName] = collection
             }
+            completion(error, collection)
         }
     }
     
@@ -108,16 +107,24 @@ public final class PlayPortalCollection {
         _ completion: @escaping (_ error: Error?, _ collection: [C]?) -> Void)
         -> Void
     {
-        assert(collections[collectionName] != nil, "Cannot perform operations on a collection that hasn't been created.")
-        assert(collections[collectionName] as? [C] != nil, "Elements in collection `\(collectionName)` do not match type \(type(of: C.self)).")
-        
-        let updatedCollection: [C] = collections[collectionName]! + [element] as! [C]
-        requestHandler.request(DataRouter.write(bucketName: collectionName, key: collectionName, value: encode(updatedCollection))) {
-            self.responseHandler.handleResponse($0, $1, $2, atKey: "data.\(collectionName)") { (error, collection: [C]?) in
+        if let collection = collections.value[collectionName] {
+            precondition(collection.matches(type: C.self), "Elements in collection `\(collectionName)` do not match type \(type(of: C.self)).")
+            
+            let updatedCollection: [C] = collection + [element] as! [C]
+            let request = DataRouter.write(bucketName: collectionName, key: collectionName, value: encode(updatedCollection))
+            RequestHandler.shared.request(request, at: "data.\(collectionName)") { (error, collection: [C]?) in
                 if error == nil {
-                    self.collections[collectionName] = updatedCollection
+                    self.collections.value[collectionName] = collection
                 }
                 completion(error, collection)
+            }
+        } else {
+            read(fromCollection: collectionName) { (error, collection: [C]?) in
+                if let error = error {
+                    completion(error, nil)
+                } else {
+                    self.add(toCollection: collectionName, element: element, completion)
+                }
             }
         }
     }
@@ -137,22 +144,30 @@ public final class PlayPortalCollection {
         _ completion: @escaping (_ error: Error?, _ collection: [C]?) -> Void)
         -> Void
     {
-        assert(collections[collectionName] != nil, "Cannot perform operations on a collection that hasn't been created.")
-        assert(collections[collectionName] as? [C] != nil, "Elements in collection `\(collectionName)` do not match type \(type(of: C.self)).")
-        
-        let updatedCollection = (collections[collectionName]! as! [C]).filter { $0 != value }
-        requestHandler.request(DataRouter.write(bucketName: collectionName, key: collectionName, value: encode(updatedCollection))) {
-            self.responseHandler.handleResponse($0, $1, $2, atKey: "data.\(collectionName)") { (error, collection: [C]?) in
+        if let collection = collections.value[collectionName] {
+            precondition(collection.matches(type: C.self), "Elements in collection `\(collectionName)` do not match type \(type(of: C.self)).")
+            
+            let updatedCollection: [C] = (collection as! [C]).filter { $0 != value }
+            let request = DataRouter.write(bucketName: collectionName, key: collectionName, value: encode(updatedCollection))
+            RequestHandler.shared.request(request, at: "data.\(collectionName)") { (error, collection: [C]?) in
                 if error == nil {
-                    self.collections[collectionName] = updatedCollection
+                    self.collections.value[collectionName] = collection
                 }
                 completion(error, collection)
+            }
+        } else {
+            read(fromCollection: collectionName) { (error, collection: [C]?) in
+                if let error = error {
+                    completion(error, nil)
+                } else {
+                    self.remove(fromCollection: collectionName, value: value, completion)
+                }
             }
         }
     }
     
     /**
-     Update element in a collection.
+     Update first element in a collection that matches `oldValue` with `newValue`.
      - Parameter inCollection: The collection being updated.
      - Parameter oldValue: The element being replaced.
      - Parameter newValue: The element being added.
@@ -168,16 +183,30 @@ public final class PlayPortalCollection {
         _ completion: @escaping (_ error: Error?, _ collection: [C]?) -> Void)
         -> Void
     {
-        assert(collections[collectionName] != nil, "Cannot perform operations on a collection that hasn't been created.")
-        assert(collections[collectionName] as? [C] != nil, "Elements in collection `\(collectionName)` do not match type \(type(of: C.self)).")
-        
-        let updatedCollection = (collections[collectionName]! as! [C]).map { $0 == oldValue ? newValue: $0 }
-        requestHandler.request(DataRouter.write(bucketName: collectionName, key: collectionName, value: encode(updatedCollection))) {
-            self.responseHandler.handleResponse($0, $1, $2, atKey: "data.\(collectionName)") { (error, collection: [C]?) in
+        if let collection = collections.value[collectionName] {
+            precondition(collection.matches(type: C.self), "Elements in collection `\(collectionName)` do not match type \(type(of: C.self)).")
+            
+            var updatedCollection: [C] = collection as! [C]
+            guard let index = updatedCollection.firstIndex(of: oldValue) else {
+                completion(nil, updatedCollection)
+                return
+            }
+            
+            updatedCollection[index] = newValue
+            let request = DataRouter.write(bucketName: collectionName, key: collectionName, value: encode(updatedCollection))
+            RequestHandler.shared.request(request, at: "data.\(collectionName)") { (error, collection: [C]?) in
                 if error == nil {
-                    self.collections[collectionName] = updatedCollection
+                    self.collections.value[collectionName] = collection
                 }
                 completion(error, collection)
+            }
+        } else {
+            read(fromCollection: collectionName) { (error, collection: [C]?) in
+                if let error = error {
+                    completion(error, nil)
+                } else {
+                    self.update(inCollection: collectionName, oldValue: oldValue, newValue: newValue, completion)
+                }
             }
         }
     }
@@ -194,14 +223,23 @@ public final class PlayPortalCollection {
         _ completion: ((_ error: Error?) -> Void)?)
         -> Void
     {
-        assert(collections[collectionName] != nil, "Cannot perform operations on a collection that hasn't been created.")
-        requestHandler.request(DataRouter.delete(bucketName: collectionName)) {
-            self.responseHandler.handleResponse($0, $1, $2) { (error, _ data: Data?) in
-                if error == nil {
-                    self.collections[collectionName] = nil
-                }
-                completion?(error)
+        RequestHandler.shared.request(DataRouter.delete(bucketName: collectionName)) { error in
+            if error == nil {
+                self.collections.value[collectionName] = nil
             }
+            completion?(error)
+        }
+    }
+}
+
+extension PlayPortalCollection: EventSubscriber {
+    
+    func on(event: Event) {
+        switch event {
+        case .loggedOut:
+            collections = Synchronized<[String: [Any]]>(value: [:])
+        default:
+            break
         }
     }
 }

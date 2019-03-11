@@ -11,7 +11,7 @@ fileprivate enum ImageRouter: URLRequestConvertible {
     
     case get(imageId:String)
     
-    func asURLRequest() -> URLRequest? {
+    func asURLRequest() -> URLRequest {
         switch self {
         case let .get(imageId):
             return Router.get(url: URLs.Image.staticImage + "/" + imageId, params: nil).asURLRequest()
@@ -24,13 +24,8 @@ fileprivate enum ImageRouter: URLRequestConvertible {
 public final class PlayPortalImage {
     
     public static let shared = PlayPortalImage()
-    private let requestHandler: RequestHandler = globalRequestHandler
-    private let responseHandler: ResponseHandler = globalResponseHandler
     
     private init() {}
-    
-    
-    //  MARK: - Methods
     
     /**
      Make request for playPORTAL image by its id
@@ -42,9 +37,11 @@ public final class PlayPortalImage {
      
      - Returns: Void
      */
-    public func getImage(forImageId imageId: String, _ completion: @escaping (_ error: Error?, _ data: Data?) -> Void) -> Void {
-        requestHandler.request(ImageRouter.get(imageId: imageId)) {
-            self.responseHandler.handleResponse($0, $1, $2, completion)
-        }
+    public func getImage(
+        forImageId imageId: String,
+        _ completion: @escaping (_ error: Error?, _ data: Data?) -> Void)
+        -> Void
+    {
+        RequestHandler.shared.request(ImageRouter.get(imageId: imageId), completion)
     }
 }

@@ -6,10 +6,8 @@
 
 import Foundation
 
-//  Class representing a playPORTAL user's profile.
+//  Struct representing a playPORTAL user's profile.
 public struct PlayPortalProfile: Codable {
-    
-    //  MARK: - Properties
     
     public let userId: String
     public let userType: UserType
@@ -20,9 +18,27 @@ public struct PlayPortalProfile: Codable {
     public var profilePic: String?
     public var coverPhoto: String?
     public let country: String
+    private var _anonymous: Bool?
+    public var anonymous: Bool {
+        return _anonymous ?? false
+    }
     
+    private enum CodingKeys: String, CodingKey {
+        case userId
+        case userType
+        case accountType
+        case handle
+        case firstName
+        case lastName
+        case profilePic
+        case coverPhoto
+        case country
+        case _anonymous = "anonymous"
+    }
     
-    //  MARK: - Internal types
+    private init() {
+        fatalError("`PlayPortalProfile` instances should only be initialized by decoding.")
+    }
     
     //  Represents possible playPORTAL user types
     public enum UserType: String, Codable {

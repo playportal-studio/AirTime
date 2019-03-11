@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B42BE0FAC4E3E9EDC0F186A /* libPods-AirTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAFF547673389EFA79D3625 /* libPods-AirTime.a */; };
+		19A3CFAA9A92F1414AF8AF9A /* libPods-AirTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E20B4D27FCC3AC8A52136FA4 /* libPods-AirTime.a */; };
 		1C3211302178FA3D00785D38 /* ShortFormPrivacyPolicyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C32112F2178FA3D00785D38 /* ShortFormPrivacyPolicyTableViewController.swift */; };
 		1C3211322179120D00785D38 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3211312179120D00785D38 /* LeaderboardTableViewController.swift */; };
+		1C40E4852232F5110040C37E /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C40E4842232F5110040C37E /* Keys.swift */; };
 		1C47FE742179FEB300CD2B27 /* LeadboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C47FE732179FEB300CD2B27 /* LeadboardTableViewCell.swift */; };
 		4669F1F42146BFB000769F88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669F1F32146BFB000769F88 /* LoginViewController.swift */; };
 		4669F1F62146BFE700769F88 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F52146BFE700769F88 /* Security.framework */; };
@@ -87,7 +88,6 @@
 		50FE60C92146D78B00481700 /* InitialInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE60C62146D78B00481700 /* InitialInterfaceController.swift */; };
 		50FE60CC2146D8BD00481700 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FE60CB2146D8BD00481700 /* HealthKit.framework */; };
 		6E1B37C62146AFA000F01300 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1B37C52146AFA000F01300 /* Utils.swift */; };
-		6E2FD1D2218A24C500F85FA8 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2FD1D1218A24C500F85FA8 /* Keys.swift */; };
 		6E30CCD221F10502005A03E0 /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E30CCD121F10502005A03E0 /* CustomFunctions.swift */; };
 		6E30CCD521F12C46005A03E0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E30CCD421F12C46005A03E0 /* HealthKit.framework */; };
 		6E5439A92142C4E30052B060 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5439A82142C4E30052B060 /* Colors.swift */; };
@@ -153,6 +153,7 @@
 		0D6557AF1E65C97E00A21FCE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		1C32112F2178FA3D00785D38 /* ShortFormPrivacyPolicyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortFormPrivacyPolicyTableViewController.swift; sourceTree = "<group>"; };
 		1C3211312179120D00785D38 /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
+		1C40E4842232F5110040C37E /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		1C47FE732179FEB300CD2B27 /* LeadboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadboardTableViewCell.swift; sourceTree = "<group>"; };
 		1CBE9FAB218777C400A2D29C /* libPods-AirTime WatchKit App Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-AirTime WatchKit App Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AFD5E51D7FFD01E8072F19 /* libPods-AirTime WatchKit App Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTime WatchKit App Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,7 +242,6 @@
 		50FE60CB2146D8BD00481700 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		6D0A9213EB6E78A634987A7D /* Pods-AirTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirTime/Pods-AirTime.release.xcconfig"; sourceTree = "<group>"; };
 		6E1B37C52146AFA000F01300 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		6E2FD1D1218A24C500F85FA8 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		6E30CCD121F10502005A03E0 /* CustomFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFunctions.swift; sourceTree = "<group>"; };
 		6E30CCD321F12C37005A03E0 /* AirTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AirTime.entitlements; sourceTree = "<group>"; };
 		6E30CCD421F12C46005A03E0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -253,7 +253,7 @@
 		A322BBA11DFEA7C400C847AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A322BBA31DFEA7C400C847AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A35DA1E21E37884600929021 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		EAAFF547673389EFA79D3625 /* libPods-AirTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E20B4D27FCC3AC8A52136FA4 /* libPods-AirTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,7 +281,7 @@
 				4669F1F82146BFF300769F88 /* WebKit.framework in Frameworks */,
 				6E30CCD521F12C46005A03E0 /* HealthKit.framework in Frameworks */,
 				4669F1F62146BFE700769F88 /* Security.framework in Frameworks */,
-				1B42BE0FAC4E3E9EDC0F186A /* libPods-AirTime.a in Frameworks */,
+				19A3CFAA9A92F1414AF8AF9A /* libPods-AirTime.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,9 +298,9 @@
 				4669F1F92146BFFC00769F88 /* SafariServices.framework */,
 				4669F1F72146BFF300769F88 /* WebKit.framework */,
 				4669F1F52146BFE700769F88 /* Security.framework */,
-				EAAFF547673389EFA79D3625 /* libPods-AirTime.a */,
 				481CB751E696C48A140D26E0 /* libPods-AirTime WatchKit App.a */,
 				24AFD5E51D7FFD01E8072F19 /* libPods-AirTime WatchKit App Extension.a */,
+				E20B4D27FCC3AC8A52136FA4 /* libPods-AirTime.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -311,7 +311,6 @@
 				46AE4E55216BE9C5007F8478 /* ios */,
 				46AE4E81216BE9C5007F8478 /* imessenger */,
 				46AE4E8E216BE9C5007F8478 /* watchkit */,
-				6E2FD1D1218A24C500F85FA8 /* Keys.swift */,
 			);
 			path = "AirTime Splash@1x";
 			sourceTree = "<group>";
@@ -501,6 +500,7 @@
 		A322BB961DFEA7C400C847AF /* AirTime */ = {
 			isa = PBXGroup;
 			children = (
+				1C40E4842232F5110040C37E /* Keys.swift */,
 				6E30CCD321F12C37005A03E0 /* AirTime.entitlements */,
 				46AE4EAC216BE9C5007F8478 /* markdownImages */,
 				46AE4E54216BE9C5007F8478 /* AirTime Splash@1x */,
@@ -573,7 +573,7 @@
 				A322BB921DFEA7C400C847AF /* Resources */,
 				508C667D2141B7F80059C591 /* Embed Frameworks */,
 				50FE60C32146D70A00481700 /* Embed Watch Content */,
-				717101A132001312C02846EF /* [CP] Copy Pods Resources */,
+				158A51072BD7CA9C1808834D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -747,25 +747,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5DD627F5304D1EC7DAC60B9C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AirTime-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		717101A132001312C02846EF /* [CP] Copy Pods Resources */ = {
+		158A51072BD7CA9C1808834D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -785,6 +767,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AirTime/Pods-AirTime-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DD627F5304D1EC7DAC60B9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirTime-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -808,7 +808,6 @@
 				A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */,
 				508C66862142F06B0059C591 /* GradientBkgndView.swift in Sources */,
 				1C3211322179120D00785D38 /* LeaderboardTableViewController.swift in Sources */,
-				6E2FD1D2218A24C500F85FA8 /* Keys.swift in Sources */,
 				6E5439A92142C4E30052B060 /* Colors.swift in Sources */,
 				508C66882142FBF60059C591 /* SettingsTableTableViewController.swift in Sources */,
 				4669F1F42146BFB000769F88 /* LoginViewController.swift in Sources */,
@@ -816,6 +815,7 @@
 				508C66802142C1AA0059C591 /* HomeViewController.swift in Sources */,
 				5077E1252146F8AE00B0E0FA /* TimeInterval+Time.swift in Sources */,
 				1C47FE742179FEB300CD2B27 /* LeadboardTableViewCell.swift in Sources */,
+				1C40E4852232F5110040C37E /* Keys.swift in Sources */,
 				6E1B37C62146AFA000F01300 /* Utils.swift in Sources */,
 				1C3211302178FA3D00785D38 /* ShortFormPrivacyPolicyTableViewController.swift in Sources */,
 			);

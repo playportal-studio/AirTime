@@ -27,3 +27,40 @@ class Utils {
         return UIImage(named: name, in: resourceBundle, compatibleWith: nil)
     }
 }
+
+class Synchronized<T> {
+    
+    private let queue = DispatchQueue(label: "com.dynepic.PPSDK-Swift.SynchronizedQueue-\(Int.random(in: 0..<Int.max))", attributes: .concurrent)
+    private var _value: T
+    public var value: T {
+        get {
+            var copy: T?
+            queue.sync {
+                copy = _value
+            }
+            return copy!
+        }
+        set(value) {
+            queue.async(flags: .barrier) {
+                self._value = value
+            }
+        }
+    }
+    
+    init(value: T) {
+        self._value = value
+    }
+}
+
+extension Synchronized where T == Dictionary<AnyHashable, Any> {
+//
+//    subscript(index: T.Key) -> T.Value {
+//        get {
+//            return value[index]
+//        }
+//        set(newValue) {
+//
+//        }
+//    }
+    
+}

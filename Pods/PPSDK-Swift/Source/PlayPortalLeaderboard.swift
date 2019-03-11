@@ -12,13 +12,13 @@ fileprivate enum LeaderBoardRouter: URLRequestConvertible {
     case get(categories: [String], page: Int?, limit: Int?)
     case update(score: Double, categories: [String])
     
-    func asURLRequest() -> URLRequest? {
+    func asURLRequest() -> URLRequest {
         switch self {
         case let .get(categories, page, limit):
-            let params: [String: String?] = [
+            let params: [String: Any?] = [
                 "categories": categories.joined(separator: ","),
-                "page": page.flatMap {String($0)},
-                "limit": limit.flatMap {String($0)}
+                "page": page,
+                "limit": limit
             ]
             return Router.get(url: URLs.Leaderboard.leaderboard, params: params).asURLRequest()
         case let .update(score, categories):
@@ -36,8 +36,6 @@ fileprivate enum LeaderBoardRouter: URLRequestConvertible {
 public final class PlayPortalLeaderboard {
     
     public static let shared = PlayPortalLeaderboard()
-    private let requestHandler: RequestHandler = globalRequestHandler
-    private let responseHandler: ResponseHandler = globalResponseHandler
     
     private init() {}
     
@@ -58,9 +56,8 @@ public final class PlayPortalLeaderboard {
         _ completion: @escaping (_ error: Error?, _ leaderboardEntries: [PlayPortalLeaderboardEntry]?) -> Void)
         -> Void
     {
-        requestHandler.request(LeaderBoardRouter.get(categories: categories, page: page, limit: limit)) {
-            self.responseHandler.handleResponse($0, $1, $2, atKey: "docs", completion)
-        }
+        let request = LeaderBoardRouter.get(categories: categories, page: page, limit: limit)
+        RequestHandler.shared.request(request, at: "docs", completion)
     }
     
     /**
@@ -78,8 +75,7 @@ public final class PlayPortalLeaderboard {
         _ completion: ((_ error: Error?, _ leaderboardEntry: PlayPortalLeaderboardEntry?) -> Void)?)
         -> Void
     {
-        requestHandler.request(LeaderBoardRouter.update(score: score, categories: categories)) {
-            self.responseHandler.handleResponse($0, $1, $2, completion)
-        }
+        let request = LeaderBoardRouter.update(score: score, categories: categories)
+        RequestHandler.shared.request(request, completion)
     }
 }

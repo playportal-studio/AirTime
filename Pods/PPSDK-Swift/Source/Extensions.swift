@@ -9,11 +9,6 @@ import Foundation
 //  MARK: - Data
 extension Data {
     
-    /**
-     Convert data to JSON.
-     
-     - Returns: JSON if able to successfully serialize
-     */
     var asJSON: [String: Any]? {
         get {
             guard let json = try? JSONSerialization.jsonObject(with: self, options: []) else { return nil }
@@ -21,61 +16,24 @@ extension Data {
         }
     }
     
-    /**
-     Convert data to JSON array.
-     
-     - Returns: JSON array if able to successfully serialize
-     */
-    var asJSONArray: [[String: Any]]? {
-        get {
-            guard let json = try? JSONSerialization.jsonObject(with: self, options: [])
-                , let array = json as? [Any]
-                else {
-                    return nil
-            }
-            return array.compactMap { $0 as? [String: Any] }
-        }
-    }
-    
-    /**
-     Convert data to type of `Decodable`.
-     
-     - Parameter type: The type of Decodable that is being decoded to.
-     
-     - Returns: The instance of Decodable if decoded successfully, nil otherwise.
-     */
-    func asDecodable<D: Decodable>(type: D.Type) -> D? {
-        return try? JSONDecoder().decode(type, from: self)
+    var toHex: String {
+        get { return map { String(format: "%02.2hhx", $0) }.joined() }
     }
 }
 
-
-//  MARK: - Dictionary
-extension Dictionary where Key == String, Value == Any {
+extension Dictionary {
     
-    /**
-     Decode JSON to a `Decodable` type
-     
-     - Parameter type: The type that's being decoded to.
-     
-     - Returns: The decoded type if successful, nil otherwise.
-    */
-    func asDecodable<D: Decodable>(type: D.Type) -> D? {
-        guard let data = try? JSONSerialization.data(withJSONObject: self, options: []) else { return nil }
-        return try? JSONDecoder().decode(type, from: data)
-    }
-    
-    func valueAtNestedKey(_ key: String) -> Any? {
-        let keys = key.split(separator: ".")
-            .map { String($0) }
-        var json: [String: Any]? = self
-        for key in keys.dropLast() {
-            json = json?[key] as? [String: Any]
+    func valueAtNestedKey(_ keyPath: [Key]) -> Any? {
+        guard !keyPath.isEmpty else { return nil }
+        var result: Any? = self
+        for key in keyPath {
+            if let element = (result as? [Key: Any])?[key] {
+                result = element
+            } else {
+                return nil
+            }
         }
-        print()
-        return json?[keys.last!]
-//        return keys.dropLast()
-//            .reduce(self) { current, next in current?[next] as? [String: Any] }?[keys.last ?? ""]
+        return result
     }
 }
 
@@ -89,17 +47,18 @@ extension Encodable {
     }
 }
 
+//  MARK: - Sequence
+extension Sequence {
+    
+    func matches<T>(type: T.Type) -> Bool {
+        return allSatisfy { $0 is T }
+    }
+}
+
 
 //  MARK: - URL
 extension URL {
     
-    /**
-     Get a query parameter by name.
-     
-     - Parameter for: Name of parameter to return.
-     
-     - Returns: Parameter if successful, nil otherwise.
-     */
     func getParameter(for name: String) -> String? {
         guard let components = URLComponents(url: self, resolvingAgainstBaseURL: true) else {
             return nil
@@ -143,10 +102,13 @@ public extension UIImageView {
      */
     func playPortalImage(forImageId imageId: String?, _ completion: ((_ error: Error?) -> Void)?) -> Void {
         guard let imageId = imageId else {
+            completion?(nil)
             return
         }
-        PlayPortalImage.shared.getImage(forImageId: imageId) { [weak self] error, data in
-            self?.image = data.map { UIImage(data: $0) } ?? nil
+        PlayPortalImage.shared.getImage(forImageId: imageId) { error, data in
+            DispatchQueue.main.async { [weak self] in
+                self?.image = data.map { UIImage(data: $0) } ?? nil
+            }
             completion?(error)
         }
     }
@@ -162,12 +124,19 @@ public extension UIImageView {
      - Returns: Void
      */
     func playPortalProfilePic(forImageId imageId: String?, _ completion: ((_ error: Error?) -> Void)?) -> Void {
+        DispatchQueue.main.async { [weak self] in
+            self?.image = Utils.getImageAsset(byName: "anonUser")
+        }
         guard let imageId = imageId else {
-            image = Utils.getImageAsset(byName: "anonUser")
+            completion?(nil)
             return
         }
-        PlayPortalImage.shared.getImage(forImageId: imageId) { [weak self] error, data in
-            self?.image = data.map { UIImage(data: $0) } ?? Utils.getImageAsset(byName: "anonUser")
+        PlayPortalImage.shared.getImage(forImageId: imageId) { error, data in
+            if let image = data.map({ UIImage(data: $0) }) {
+                DispatchQueue.main.async { [weak self] in
+                    self?.image = image
+                }
+            }
             completion?(error)
         }
     }
@@ -183,12 +152,19 @@ public extension UIImageView {
      - Returns: Void
      */
     func playPortalCoverPhoto(forImageId imageId: String?, _ completion: ((_ error: Error?) -> Void)?) -> Void {
+        DispatchQueue.main.async { [weak self] in
+            self?.image = Utils.getImageAsset(byName: "anonUserCover")
+        }
         guard let imageId = imageId else {
-            image = Utils.getImageAsset(byName: "anonUserCover")
+            completion?(nil)
             return
         }
-        PlayPortalImage.shared.getImage(forImageId: imageId) { [weak self] error, data in
-            self?.image = data.map { UIImage(data: $0) } ?? Utils.getImageAsset(byName: "anonUserCover")
+        PlayPortalImage.shared.getImage(forImageId: imageId) { error, data in
+            if let image = data.map({ UIImage(data: $0) }) {
+                DispatchQueue.main.async { [weak self] in
+                    self?.image = image
+                }
+            }
             completion?(error)
         }
     }

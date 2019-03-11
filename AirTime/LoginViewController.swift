@@ -8,7 +8,7 @@
 
 import UIKit
 import PPSDK_Swift
-
+import SwiftOverlays
 
 class LoginViewController: UIViewController {
     
@@ -34,9 +34,18 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func continueAsGuestTapped(_ sender: UIButton) {
-        let alert = UIAlertController(title: nil, message: "Coming Soon!", preferredStyle: .alert)
-        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(ok)
-        present(alert, animated: true, completion: nil)
+        showWaitOverlay()
+        PlayPortalUser.shared.createAnonymousUser(clientId: clientId, dateOfBirth: "02/01/1993") { [weak self] error, userProfile in
+            defer { self?.removeAllOverlays() }
+            if let error = error {
+                print("error signing in as guest: \(error)")
+            } else if let userProfile = userProfile {
+                guard let home = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "home" ) as? HomeViewController else { return }
+                home.user = userProfile
+                self?.present(home, animated: true, completion: nil)
+            } else {
+                print("unknown error")
+            }
+        }
     }
 }

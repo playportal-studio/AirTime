@@ -67,24 +67,30 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
             self.session?.delegate = self
             self.session?.activate()
         }
-        
-        let h = self.user?.handle
-        let fu = self.user?.firstName
-        let lu = self.user?.lastName
-        if h != nil && fu != nil && lu != nil {
-            self.label.text = h! + " | " + fu! + " " + lu!
-            
-            DispatchQueue.main.async {
-                self.profilePicImageView.layer.masksToBounds = true
+        if user != nil {
+            let h = self.user?.handle
+            let fu = self.user?.firstName
+            let lu = self.user?.lastName
+            if h != nil && fu != nil && lu != nil {
+                self.label.text = h! + " | " + fu! + " " + lu!
                 
-                self.profilePicImageView.playPortalProfilePic(forImageId: self.user.profilePic, { error in
-                    if let error = error {
-                        print("Error requesting profile pic: \(String(describing: error))")
-                    }
-                }
-              )
+                
             }
+            self.profilePicImageView.playPortalProfilePic(forImageId: self.user.profilePic, { [weak self] error in
+                guard let self = self else { return }
+                if let error = error {
+                    print("Error requesting profile pic: \(String(describing: error))")
+                } else {
+                    self.profilePicImageView.layer.borderWidth = 1.0
+                    self.profilePicImageView.layer.masksToBounds = false
+                    self.profilePicImageView.layer.borderColor = UIColor.white.cgColor
+                    self.profilePicImageView.layer.cornerRadius = self.profilePicImageView.frame.height / 2
+                    self.profilePicImageView.clipsToBounds = true
+                }
+            })
         }
+        
+        
     }
     
     @IBAction func settingsTapped(_ sender: UIBarButtonItem) {
@@ -104,6 +110,7 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
         guard let leaderboard = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "leaderboardTableViewController") as? LeaderboardTableViewController else {
             return
         }
+        leaderboard.user = user
         present(leaderboard, animated: true, completion: nil)
     }
     
