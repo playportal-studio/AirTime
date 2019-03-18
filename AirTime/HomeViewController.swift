@@ -68,13 +68,16 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
             self.session?.activate()
         }
         if user != nil {
-            let h = self.user?.handle
-            let fu = self.user?.firstName
-            let lu = self.user?.lastName
-            if h != nil && fu != nil && lu != nil {
-                self.label.text = h! + " | " + fu! + " " + lu!
-                
-                
+            if user.anonymous {
+                self.label.text = "@guest | Guest User"
+                self.profilePicImageView.image = UIImage(named: "Unknown")
+            } else {
+                let h = self.user?.handle
+                let fu = self.user?.firstName
+                let lu = self.user?.lastName
+                if h != nil && fu != nil && lu != nil {
+                    self.label.text = h! + " | " + fu! + " " + lu!
+                }
             }
             self.profilePicImageView.playPortalProfilePic(forImageId: self.user.profilePic, { [weak self] error in
                 guard let self = self else { return }
