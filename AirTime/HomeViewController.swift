@@ -63,7 +63,7 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
         leaderboardImageView.addGestureRecognizer(tapGestureRecognizer)
         
         if (WCSession.isSupported()) {
-            self.session = WCSession.default()
+            self.session = WCSession.default
             self.session?.delegate = self
             self.session?.activate()
         }

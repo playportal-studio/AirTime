@@ -3,15 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		19A3CFAA9A92F1414AF8AF9A /* libPods-AirTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E20B4D27FCC3AC8A52136FA4 /* libPods-AirTime.a */; };
 		1C3211302178FA3D00785D38 /* ShortFormPrivacyPolicyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C32112F2178FA3D00785D38 /* ShortFormPrivacyPolicyTableViewController.swift */; };
 		1C3211322179120D00785D38 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3211312179120D00785D38 /* LeaderboardTableViewController.swift */; };
-		1C40E4852232F5110040C37E /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C40E4842232F5110040C37E /* Keys.swift */; };
 		1C47FE742179FEB300CD2B27 /* LeadboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C47FE732179FEB300CD2B27 /* LeadboardTableViewCell.swift */; };
+		420077612285B16E00CFFA07 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420077602285B16E00CFFA07 /* Keys.swift */; };
 		4669F1F42146BFB000769F88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669F1F32146BFB000769F88 /* LoginViewController.swift */; };
 		4669F1F62146BFE700769F88 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F52146BFE700769F88 /* Security.framework */; };
 		4669F1F82146BFF300769F88 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F72146BFF300769F88 /* WebKit.framework */; };
@@ -153,12 +153,12 @@
 		0D6557AF1E65C97E00A21FCE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		1C32112F2178FA3D00785D38 /* ShortFormPrivacyPolicyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortFormPrivacyPolicyTableViewController.swift; sourceTree = "<group>"; };
 		1C3211312179120D00785D38 /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
-		1C40E4842232F5110040C37E /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		1C47FE732179FEB300CD2B27 /* LeadboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadboardTableViewCell.swift; sourceTree = "<group>"; };
 		1CBE9FAB218777C400A2D29C /* libPods-AirTime WatchKit App Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-AirTime WatchKit App Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AFD5E51D7FFD01E8072F19 /* libPods-AirTime WatchKit App Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTime WatchKit App Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8AC7C841FC30F8C8A1D072 /* Pods-AirTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.release.xcconfig"; path = "Target Support Files/Pods-AirTime/Pods-AirTime.release.xcconfig"; sourceTree = "<group>"; };
 		30001E68FE75DAEE44A869D2 /* Pods-AirTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirTime/Pods-AirTime.debug.xcconfig"; sourceTree = "<group>"; };
+		420077602285B16E00CFFA07 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		4669F1F32146BFB000769F88 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4669F1F52146BFE700769F88 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4669F1F72146BFF300769F88 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -500,7 +500,7 @@
 		A322BB961DFEA7C400C847AF /* AirTime */ = {
 			isa = PBXGroup;
 			children = (
-				1C40E4842232F5110040C37E /* Keys.swift */,
+				420077602285B16E00CFFA07 /* Keys.swift */,
 				6E30CCD321F12C37005A03E0 /* AirTime.entitlements */,
 				46AE4EAC216BE9C5007F8478 /* markdownImages */,
 				46AE4E54216BE9C5007F8478 /* AirTime Splash@1x */,
@@ -592,7 +592,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Dynepic, Inc.";
 				TargetAttributes = {
 					50FE60A02146D70800481700 = {
@@ -635,8 +635,8 @@
 				};
 			};
 			buildConfigurationList = A322BB8F1DFEA7C400C847AF /* Build configuration list for PBXProject "AirTime" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -809,13 +809,13 @@
 				508C66862142F06B0059C591 /* GradientBkgndView.swift in Sources */,
 				1C3211322179120D00785D38 /* LeaderboardTableViewController.swift in Sources */,
 				6E5439A92142C4E30052B060 /* Colors.swift in Sources */,
+				420077612285B16E00CFFA07 /* Keys.swift in Sources */,
 				508C66882142FBF60059C591 /* SettingsTableTableViewController.swift in Sources */,
 				4669F1F42146BFB000769F88 /* LoginViewController.swift in Sources */,
 				6E30CCD221F10502005A03E0 /* CustomFunctions.swift in Sources */,
 				508C66802142C1AA0059C591 /* HomeViewController.swift in Sources */,
 				5077E1252146F8AE00B0E0FA /* TimeInterval+Time.swift in Sources */,
 				1C47FE742179FEB300CD2B27 /* LeadboardTableViewCell.swift in Sources */,
-				1C40E4852232F5110040C37E /* Keys.swift in Sources */,
 				6E1B37C62146AFA000F01300 /* Utils.swift in Sources */,
 				1C3211302178FA3D00785D38 /* ShortFormPrivacyPolicyTableViewController.swift in Sources */,
 			);
@@ -872,7 +872,11 @@
 				DEVELOPMENT_TEAM = NAX528DUM6;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "AirTime WatchKit App Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimetwo.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -900,7 +904,11 @@
 				DEVELOPMENT_TEAM = NAX528DUM6;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "AirTime WatchKit App Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimetwo.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -973,6 +981,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1034,6 +1043,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1077,8 +1087,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1095,8 +1106,11 @@
 				DEVELOPMENT_TEAM = NAX528DUM6;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/AirTime";
 				INFOPLIST_FILE = "$(SRCROOT)/AirTime/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AirTime/pwed",
@@ -1106,7 +1120,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = AirTime/BridgingHeader.h;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1122,8 +1136,11 @@
 				DEVELOPMENT_TEAM = NAX528DUM6;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/AirTime";
 				INFOPLIST_FILE = "$(SRCROOT)/AirTime/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AirTime/pwed",
@@ -1132,7 +1149,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = AirTime/BridgingHeader.h;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

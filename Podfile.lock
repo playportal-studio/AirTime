@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.8.1)
+  - Alamofire (4.8.2)
   - KeychainSwift (12.0.0)
   - PPSDK-Swift (0.2.10):
     - Alamofire (~> 4.7)
@@ -7,7 +7,7 @@ PODS:
   - SwiftOverlays (3.0.0)
 
 DEPENDENCIES:
-  - PPSDK-Swift (from `../PPSDK-Swift`)
+  - PPSDK-Swift (from `https://github.com/playportal-studio/PPSDK-Swift.git`, tag `0.2.11`)
   - SwiftOverlays (~> 3.0.0)
 
 SPEC REPOS:
@@ -18,14 +18,20 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   PPSDK-Swift:
-    :path: "../PPSDK-Swift"
+    :git: https://github.com/playportal-studio/PPSDK-Swift.git
+    :tag: 0.2.11
+
+CHECKOUT OPTIONS:
+  PPSDK-Swift:
+    :git: https://github.com/playportal-studio/PPSDK-Swift.git
+    :tag: 0.2.11
 
 SPEC CHECKSUMS:
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   KeychainSwift: d5e776578587ee5958ce36601df22f168f65138a
-  PPSDK-Swift: a2531a77b2e6bfc90c5a6a160687f9d037648df3
+  PPSDK-Swift: eb727d1a3cba23f79f47e5b4040d0764c08f6311
   SwiftOverlays: 4cdd9e4f5c7817fb6348882059eb697e11685fad
 
-PODFILE CHECKSUM: 9058ec26646d874729a0e5d892e687c2f9834c7a
+PODFILE CHECKSUM: 00890a8bf343a5db231391fa05c352c54b531700
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.6.1

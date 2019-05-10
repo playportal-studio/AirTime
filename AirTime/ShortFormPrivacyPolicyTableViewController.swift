@@ -47,19 +47,20 @@ class ShortFormPrivacyPolicyTableViewController: UIViewController, UITableViewDe
         case (2, 0):
             text = "N/A"
         case (3, 0):
-            text = "your-email@email.com"
+            text = "info@dynepic.com"
         case (3, 1):
-            text = "Your Company"
+            text = "Dynepic, Inc"
         case (3, 2):
             text = "Your address"
         case (3, 3):
-            text = "Your city"
+            text = "Charleston, SC"
         case (3, 4):
-            text = "Your zipcode"
+            text = "29412"
         default:
             break
         }
         cell.textLabel?.text = text
+        cell.textLabel?.textColor = UIColor.white
         return cell
     }
     
@@ -72,7 +73,7 @@ class ShortFormPrivacyPolicyTableViewController: UIViewController, UITableViewDe
         case 2:
             return "WITH WHOM IT IS SHARED"
         case 3:
-            return "Contact Us"
+            return "CONTACT US"
         default:
             return nil
         }

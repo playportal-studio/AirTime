@@ -89,7 +89,7 @@ public extension UIViewController {
         - parameter duration: Amount of time until notification disappears
         - parameter animated: Should appearing be animated
     */
-    @discardableResult
+    
     class func showNotificationOnTopOfStatusBar(_ notificationView: UIView, duration: TimeInterval, animated: Bool = true) {
         SwiftOverlays.showAnnoyingNotificationOnTopOfStatusBar(notificationView, duration: duration, animated: animated)
     }
@@ -453,7 +453,7 @@ open class SwiftOverlays: NSObject {
         }
     }
     
-    open class func closeAnnoyingNotificationOnTopOfStatusBar(_ sender: AnyObject) {
+    @objc open class func closeAnnoyingNotificationOnTopOfStatusBar(_ sender: AnyObject) {
         NSObject.cancelPreviousPerformRequests(withTarget: self)
     
         var notificationView: UIView?
@@ -481,7 +481,7 @@ open class SwiftOverlays: NSObject {
     // MARK: - Private class methods -
     
     fileprivate class func labelForText(_ text: String) -> UILabel {
-        let textSize = text.size(attributes: [NSFontAttributeName: font])
+        let textSize = text.size(withAttributes: [NSAttributedStringKey.font: font])
         
         let labelRect = CGRect(x: 0,
             y: 0,

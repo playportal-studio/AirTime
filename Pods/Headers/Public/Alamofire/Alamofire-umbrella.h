@@ -1,1 +1,1 @@
-/Users/lincolnfraley/Developer/dynepic/AirTime/Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+../../../Target Support Files/Alamofire/Alamofire-umbrella.h
