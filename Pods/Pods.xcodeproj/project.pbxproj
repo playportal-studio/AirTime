@@ -122,8 +122,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		052EA3F692D006836EB8721F508DF6B7 /* libPods-AirTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AirTime.a"; path = "libPods-AirTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		09769D90A7F9487829AA6A0A88F641DA /* PPSDK-Swift-Assets.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "PPSDK-Swift-Assets.bundle"; path = "PPSDK-Swift-PPSDK-Swift-Assets.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		052EA3F692D006836EB8721F508DF6B7 /* libPods-AirTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09769D90A7F9487829AA6A0A88F641DA /* PPSDK-Swift-Assets.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PPSDK-Swift-Assets.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F3028B8DAEFB6E014B9359E053AD2EB /* PPSDK-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PPSDK-Swift-umbrella.h"; sourceTree = "<group>"; };
 		1147A235F96CD4541E6455E0ADBC0FC5 /* PlayPortalProfile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayPortalProfile.swift; path = Source/PlayPortalProfile.swift; sourceTree = "<group>"; };
 		172291C0D656A9B88DF082F07C7AEBC0 /* anonUserCover.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = anonUserCover.png; path = Resources/anonUserCover.png; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 		21FB730B07F7876D52BE0F2A56C119A8 /* PlayPortalError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayPortalError.swift; path = Source/PlayPortalError.swift; sourceTree = "<group>"; };
 		25B347CE9FCF28CE02A2481C66282B6E /* Pods-AirTime-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirTime-acknowledgements.plist"; sourceTree = "<group>"; };
 		28C169BB8E004CD68C1435EEEF71C941 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Source/Utils.swift; sourceTree = "<group>"; };
-		2AC2375A212456367BF71B271D0743D7 /* libKeychainSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKeychainSwift.a; path = libKeychainSwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AC2375A212456367BF71B271D0743D7 /* libKeychainSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKeychainSwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B896C14069D87DD95EF10D0E84BBE91 /* KeychainSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-umbrella.h"; sourceTree = "<group>"; };
 		2E35211CAEA4FAA783598311B33DC212 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		2FB36DC20DEEA88BB31DA3FBFA112E6A /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 		580B29AEDCF90968527DAA3A412F13DC /* RequestHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestHandler.swift; path = Source/RequestHandler.swift; sourceTree = "<group>"; };
 		5A28FB3FE117078BBD106DFC9E6DB684 /* SwiftOverlays-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftOverlays-umbrella.h"; sourceTree = "<group>"; };
 		5A644106B3A7DAAC4F8D0C225027B479 /* Events.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Events.swift; path = Source/Events.swift; sourceTree = "<group>"; };
-		5FC33D8E672DF5E52846F98F58300E25 /* libSwiftOverlays.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSwiftOverlays.a; path = libSwiftOverlays.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FC33D8E672DF5E52846F98F58300E25 /* libSwiftOverlays.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwiftOverlays.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		613B784922DFF1977F70605C40A90700 /* PlayPortalUser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayPortalUser.swift; path = Source/PlayPortalUser.swift; sourceTree = "<group>"; };
 		663440DE1E0B30AC27C387CFB13E8158 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		6E42A709C948BAA6AE46E2F0E2820A8E /* ResourceBundle-PPSDK-Swift-Assets-PPSDK-Swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PPSDK-Swift-Assets-PPSDK-Swift-Info.plist"; sourceTree = "<group>"; };
@@ -164,15 +164,15 @@
 		710EC10A616A9C56BEC053D4340AD67A /* PlayPortalImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayPortalImage.swift; path = Source/PlayPortalImage.swift; sourceTree = "<group>"; };
 		747C3F5A83E0079479F4CD15E457B8F7 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		77EA68D2AC483B5B9A2D59FDC079B799 /* URLs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLs.swift; path = Source/URLs.swift; sourceTree = "<group>"; };
-		7D70188563158E761F19EB60AA8FAAB6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		7D70188563158E761F19EB60AA8FAAB6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		802D6E7BC9C1FA0B67D80F06CBF6EFAC /* PlayPortalLeaderboardEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayPortalLeaderboardEntry.swift; path = Source/PlayPortalLeaderboardEntry.swift; sourceTree = "<group>"; };
-		82C384059E45A9FF317007120175AB9F /* libAlamofire.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAlamofire.a; path = libAlamofire.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		82C384059E45A9FF317007120175AB9F /* libAlamofire.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAlamofire.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CDF432181E287913BB6FD04B145100 /* PPSDK-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PPSDK-Swift-prefix.pch"; sourceTree = "<group>"; };
 		88ED75404663CC950A14AE95763653EA /* Router.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Source/Router.swift; sourceTree = "<group>"; };
 		8D2C4D3028C49C0D28881DD3FCCCFD7F /* PlayPortalData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayPortalData.swift; path = Source/PlayPortalData.swift; sourceTree = "<group>"; };
 		8FD67DBB5EC58E1F6FBD0C8A0A0D9638 /* PlayPortalCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayPortalCollection.swift; path = Source/PlayPortalCollection.swift; sourceTree = "<group>"; };
 		90EDBC68B9D21451574BCBE8630D4031 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		948D04360338AAD5DCE43ADE0D57A7C0 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		9C56E9CE7C831B0C6D30E1CA84EB7407 /* StorageHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StorageHandler.swift; path = Source/StorageHandler.swift; sourceTree = "<group>"; };
 		9C721772DB2DBCD7A4F5FEE3700EEA43 /* SwiftOverlays-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftOverlays-dummy.m"; sourceTree = "<group>"; };
@@ -181,14 +181,14 @@
 		AC09051753CAF38C75D8B2A8355B6312 /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwiftAccessOptions.swift; path = Sources/KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
 		AEFB0C2BB7AA2E834E4A0AFCAA4DC9A7 /* SSOButtonFlatTransparent.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = SSOButtonFlatTransparent.png; path = Resources/SSOButtonFlatTransparent.png; sourceTree = "<group>"; };
 		AF3305E9F9EEA102F1071CC5477BDFCE /* KeychainSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainSwift-prefix.pch"; sourceTree = "<group>"; };
-		AF93267E123EB94423B97F1DA8155B85 /* libPPSDK-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPPSDK-Swift.a"; path = "libPPSDK-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B03A56D183A322A3F2B8BFAF9AE01685 /* PPSDK-Swift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = "PPSDK-Swift.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AF93267E123EB94423B97F1DA8155B85 /* libPPSDK-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPPSDK-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B03A56D183A322A3F2B8BFAF9AE01685 /* PPSDK-Swift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = "PPSDK-Swift.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B24239F1E5EC91C62A0171E39DB74181 /* SSOButtonFlatColor.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = SSOButtonFlatColor.png; path = Resources/SSOButtonFlatColor.png; sourceTree = "<group>"; };
-		B2C4C411FAF044909358E2F7673157BA /* questionmark.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = questionmark.jpg; path = Resources/questionmark.jpg; sourceTree = "<group>"; };
+		B2C4C411FAF044909358E2F7673157BA /* questionmark.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = questionmark.jpg; path = Resources/questionmark.jpg; sourceTree = "<group>"; };
 		B30FE10B3C3EA2DC7AD8B9B669001035 /* Pods-AirTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirTime.release.xcconfig"; sourceTree = "<group>"; };
 		B51AC78BAF72E2F876442DFA80162EDC /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		B52911506DA738D2BCA224A53E0602E8 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		B65C0064E27EA7AFCB12BA062749D624 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		B65C0064E27EA7AFCB12BA062749D624 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		BF08C70676534C6A6067CCF2CBD63260 /* PPSDK-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PPSDK-Swift.xcconfig"; sourceTree = "<group>"; };
 		C05A775C7209A06899E959CDA77155B1 /* KeychainSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainSwift.swift; path = Sources/KeychainSwift.swift; sourceTree = "<group>"; };
 		C3088D0435BBC2CF8DC60CF7BEAE78C6 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
@@ -309,7 +309,6 @@
 				747C3F5A83E0079479F4CD15E457B8F7 /* Validation.swift */,
 				3C6194DAEED7D120287606720FF218C5 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -440,7 +439,6 @@
 				EF1AC661AD023C197C1EE7DC322DAC86 /* SwiftOverlays.swift */,
 				E79098DD6323472154489B9641F27BAB /* Support Files */,
 			);
-			name = SwiftOverlays;
 			path = SwiftOverlays;
 			sourceTree = "<group>";
 		};
@@ -452,7 +450,6 @@
 				392966EF758399AA84E21D75F2B137DD /* TegKeychainConstants.swift */,
 				147D73F6649784544C4DF3C12139DD53 /* Support Files */,
 			);
-			name = KeychainSwift;
 			path = KeychainSwift;
 			sourceTree = "<group>";
 		};
@@ -658,6 +655,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					08A16B7582F00884501F5E7A9B8E6FB4 = {
+						LastSwiftMigration = 1000;
+					};
+					3D8FB9E63474E0763F82869DF7410DC3 = {
+						LastSwiftMigration = 1000;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -724,7 +729,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/PPSDK_Swift/PPSDK-Swift.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/PPSDK_Swift/PPSDK-Swift-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-			showEnvVarsInLog = 1;
 		};
 		8EEC70D9ABDDF2EB40E824539B7BDDE3 /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -749,7 +753,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KeychainSwift/KeychainSwift.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/KeychainSwift/KeychainSwift-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-			showEnvVarsInLog = 1;
 		};
 		B9768BFFE11AE475DE8C63D2E0A70043 /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -774,7 +777,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SwiftOverlays/SwiftOverlays.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/SwiftOverlays/SwiftOverlays-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-			showEnvVarsInLog = 1;
 		};
 		BB2B2D8276577B5631EBD2527E99FE58 /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -799,7 +801,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-			showEnvVarsInLog = 1;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -977,7 +978,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1003,7 +1005,8 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1054,8 +1057,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1097,9 +1099,9 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 3.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1125,8 +1127,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1269,8 +1270,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1297,9 +1297,9 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 3.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

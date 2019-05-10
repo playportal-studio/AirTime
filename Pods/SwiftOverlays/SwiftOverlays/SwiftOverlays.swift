@@ -154,31 +154,31 @@ open class SwiftOverlays: NSObject {
             view.translatesAutoresizingMaskIntoConstraints = false
             
             let constraintH = NSLayoutConstraint(item: view,
-                attribute: NSLayoutAttribute.centerX,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.centerX,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: view.superview,
-                attribute: NSLayoutAttribute.centerX,
+                attribute: NSLayoutConstraint.Attribute.centerX,
                 multiplier: 1,
                 constant: 0)
             let constraintV = NSLayoutConstraint(item: view,
-                attribute: NSLayoutAttribute.centerY,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.centerY,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: view.superview,
-                attribute: NSLayoutAttribute.centerY,
+                attribute: NSLayoutConstraint.Attribute.centerY,
                 multiplier: 1,
                 constant: 0)
             let constraintWidth = NSLayoutConstraint(item: view,
-                attribute: NSLayoutAttribute.width,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.width,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: nil,
-                attribute: NSLayoutAttribute.notAnAttribute,
+                attribute: NSLayoutConstraint.Attribute.notAnAttribute,
                 multiplier: 1,
                 constant: view.frame.size.width)
             let constraintHeight = NSLayoutConstraint(item: view,
-                attribute: NSLayoutAttribute.height,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.height,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: nil,
-                attribute: NSLayoutAttribute.notAnAttribute,
+                attribute: NSLayoutConstraint.Attribute.notAnAttribute,
                 multiplier: 1,
                 constant: view.frame.size.height)
             view.superview!.addConstraints([constraintV, constraintH, constraintWidth, constraintHeight])
@@ -257,7 +257,7 @@ open class SwiftOverlays: NSObject {
     // MARK: Non-blocking
     @discardableResult
     open class func showCenteredWaitOverlay(_ parentView: UIView) -> UIView {
-        let ai = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+        let ai = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.whiteLarge)
         ai.startAnimating()
         
         let containerViewRect = CGRect(x: 0,
@@ -287,7 +287,7 @@ open class SwiftOverlays: NSObject {
     
     @discardableResult
     open class func showCenteredWaitOverlayWithText(_ parentView: UIView, text: String) -> UIView  {
-        let ai = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.white)
+        let ai = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.white)
         ai.startAnimating()
         
         return showGenericOverlay(parentView, text: text, accessoryView: ai)
@@ -422,7 +422,7 @@ open class SwiftOverlays: NSObject {
     open class func showAnnoyingNotificationOnTopOfStatusBar(_ notificationView: UIView, duration: TimeInterval, animated: Bool = true) {
         if bannerWindow == nil {
             bannerWindow = UIWindow()
-            bannerWindow!.windowLevel = UIWindowLevelStatusBar + 1
+            bannerWindow!.windowLevel = UIWindow.Level.statusBar + 1
             bannerWindow!.backgroundColor = UIColor.clear
         }
         
@@ -453,7 +453,7 @@ open class SwiftOverlays: NSObject {
         }
     }
     
-    open class func closeAnnoyingNotificationOnTopOfStatusBar(_ sender: AnyObject) {
+    @objc open class func closeAnnoyingNotificationOnTopOfStatusBar(_ sender: AnyObject) {
         NSObject.cancelPreviousPerformRequests(withTarget: self)
     
         var notificationView: UIView?
@@ -481,7 +481,7 @@ open class SwiftOverlays: NSObject {
     // MARK: - Private class methods -
     
     fileprivate class func labelForText(_ text: String) -> UILabel {
-        let textSize = text.size(attributes: [NSFontAttributeName: font])
+        let textSize = text.size(withAttributes: convertToOptionalNSAttributedStringKeyDictionary([convertFromNSAttributedStringKey(NSAttributedString.Key.font): font]))
         
         let labelRect = CGRect(x: 0,
             y: 0,
@@ -512,12 +512,12 @@ open class SwiftOverlays: NSObject {
         
         // Add constraints to handle orientation change
         let constraintsV = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[blocker]-0-|",
-            options: NSLayoutFormatOptions(rawValue: 0),
+            options: NSLayoutConstraint.FormatOptions(rawValue: 0),
             metrics: nil,
             views: viewsDictionary)
         
         let constraintsH = NSLayoutConstraint.constraints(withVisualFormat: "|-0-[blocker]-0-|",
-            options: NSLayoutFormatOptions(rawValue: 0),
+            options: NSLayoutConstraint.FormatOptions(rawValue: 0),
             metrics: nil,
             views: viewsDictionary)
         
@@ -525,4 +525,15 @@ open class SwiftOverlays: NSObject {
         
         return blocker
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+	return input.rawValue
 }
