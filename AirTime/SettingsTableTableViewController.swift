@@ -57,7 +57,7 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
         case (0, 0):
             text = (accountType == .parent || accountType == .adult) ? "Contact Us" : "Short Form Privacy Policy"
         case (0, 1):
-            text = (accountType == .parent || accountType == .adult) ? "Terms of Service" : "Short Form Privacy Policy"
+            text = (accountType == .parent || accountType == .adult) ? "Terms of Use" : "Short Form Privacy Policy"
         case (0, 2):
             text = "Privacy Policy"
         case (0, 3):
@@ -97,7 +97,7 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         case (0, 2):
-            guard user?.accountType == .parent else { return }
+           // guard user?.accountType == .parent else { return }
             guard let url = URL(string: "http://www.dynepic.com/pages/privacy-policy") else { return }
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         case (0, 3):

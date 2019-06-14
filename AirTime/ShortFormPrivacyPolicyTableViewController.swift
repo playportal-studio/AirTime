@@ -51,7 +51,7 @@ class ShortFormPrivacyPolicyTableViewController: UIViewController, UITableViewDe
         case (3, 1):
             text = "Dynepic, Inc"
         case (3, 2):
-            text = "Your address"
+            text = "849 Hale St"
         case (3, 3):
             text = "Charleston, SC"
         case (3, 4):
