@@ -29,8 +29,13 @@ class ShortFormPrivacyPolicyTableViewController: UIViewController, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if section == 0 {
+            return 4
+        }
+        
         if section == 3 {
-            return 5
+            return 4
         } else {
             return 1
         }
@@ -41,33 +46,41 @@ class ShortFormPrivacyPolicyTableViewController: UIViewController, UITableViewDe
         var text: String?
         switch (indexPath.section, indexPath.row) {
         case (0, 0):
-            text = "None"
+            text = "None. App is powered by Dynepic's"
+        case (0, 1):
+            text = "playPORTAL platform. Please reference"
+        case (0, 2):
+            text = "the playPORTAL Privacy Policy and Terms"
+        case (0, 3):
+            text = "of Use for more information."
         case (1, 0):
             text = "N/A"
         case (2, 0):
             text = "N/A"
         case (3, 0):
-            text = "info@dynepic.com"
+            text = "Dynepic, Inc."
         case (3, 1):
-            text = "Dynepic, Inc"
+            text = "849 Hale St."
         case (3, 2):
-            text = "849 Hale St"
+            text = "Charleston, SC 29412"
         case (3, 3):
-            text = "Charleston, SC"
-        case (3, 4):
-            text = "29412"
+            text = "privacy@dynepic.com"
+//        case (3, 4):
+//            text = "29412"
         default:
             break
         }
         cell.textLabel?.text = text
         cell.textLabel?.textColor = UIColor.white
+//        cell.textLabel?.font = UIFont(name: (cell.textLabel?.font.familyName)!, size: 15)
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "WHAT INFORMATION IS COLLECTED"
+            return "WHAT PERSONAL INFO IS COLLECTED"
+          
         case 1:
             return "WHY IT IS COLLECTED"
         case 2:
