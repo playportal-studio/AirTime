@@ -1096,7 +1096,7 @@
 			};
 			name = Release;
 		};
-		5BFCF69DC07907C171FD913CCF49DCB3 /* Debug */ = {
+		6E2161CB4DFF0C194DFE4B95A9A5D2B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3E6288C6A8500BFED17EC48BD11A60A5 /* SwiftOverlays.xcconfig */;
 			buildSettings = {
@@ -1116,7 +1116,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1283,24 +1283,7 @@
 			};
 			name = Release;
 		};
-		DA25C0307543495213C8C3A3662CE4A5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97FC02F58231086A0E4464F8F76C958D /* PPSDK-Swift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PPSDK-Swift";
-				IBSC_MODULE = PPSDK_Swift;
-				INFOPLIST_FILE = "Target Support Files/PPSDK-Swift/ResourceBundle-PPSDK-Swift-Assets-PPSDK-Swift-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PRODUCT_NAME = "PPSDK-Swift-Assets";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		DBCC208FBF90074304CA9E02640E1946 /* Release */ = {
+		D2D561B66DD88002C3192BA0DBD90A89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3E6288C6A8500BFED17EC48BD11A60A5 /* SwiftOverlays.xcconfig */;
 			buildSettings = {
@@ -1320,11 +1303,28 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		DA25C0307543495213C8C3A3662CE4A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97FC02F58231086A0E4464F8F76C958D /* PPSDK-Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PPSDK-Swift";
+				IBSC_MODULE = PPSDK_Swift;
+				INFOPLIST_FILE = "Target Support Files/PPSDK-Swift/ResourceBundle-PPSDK-Swift-Assets-PPSDK-Swift-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = "PPSDK-Swift-Assets";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1377,8 +1377,8 @@
 		A349223DC49CD94EEF477C8433A3D264 /* Build configuration list for PBXNativeTarget "SwiftOverlays" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5BFCF69DC07907C171FD913CCF49DCB3 /* Debug */,
-				DBCC208FBF90074304CA9E02640E1946 /* Release */,
+				6E2161CB4DFF0C194DFE4B95A9A5D2B5 /* Debug */,
+				D2D561B66DD88002C3192BA0DBD90A89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

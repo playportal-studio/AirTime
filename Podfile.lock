@@ -11,11 +11,10 @@ DEPENDENCIES:
   - SwiftOverlays (~> 3.0.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - SwiftOverlays
   trunk:
     - Alamofire
     - KeychainSwift
+    - SwiftOverlays
 
 EXTERNAL SOURCES:
   PPSDK-Swift:
