@@ -1,1 +1,1 @@
-/Users/lincolnfraley/Developer/dynepic/AirTime/Pods/Target Support Files/PPSDK-Swift/PPSDK-Swift-umbrella.h
+../../../Target Support Files/PPSDK-Swift/PPSDK-Swift-umbrella.h

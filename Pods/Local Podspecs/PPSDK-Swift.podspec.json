@@ -13,7 +13,7 @@
     "tag": "0.2.10"
   },
   "source_files": "Source/*.swift",
-  "swift_version": "4.2",
+  "swift_versions": "4.2",
   "platforms": {
     "ios": "10.0"
   },
@@ -29,5 +29,6 @@
     "PPSDK-Swift-Assets": [
       "Resources/*"
     ]
-  }
+  },
+  "swift_version": "4.2"
 }
