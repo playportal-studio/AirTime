@@ -65,7 +65,7 @@ public final class PlayPortalDataClient: PlayPortalHTTPClient {
   {
     var val: Any? = value
     if let encoded = try? JSONEncoder().encode(["value": value]),
-      let json = try? JSONSerialization.jsonObject(with: encoded, options: .allowFragments) as? [String: Any] {
+      let json = ((try? JSONSerialization.jsonObject(with: encoded, options: .allowFragments) as? [String: Any]) as [String : Any]??) {
       val = json?["value"]
     }
     
@@ -142,7 +142,7 @@ public final class PlayPortalDataClient: PlayPortalHTTPClient {
     //  TODO: this code should probably be moved out of here
     var val: Any? = value
     if let encoded = try? JSONEncoder().encode(["value": value]),
-      let json = try? JSONSerialization.jsonObject(with: encoded, options: .allowFragments) as? [String: Any] {
+      let json = ((try? JSONSerialization.jsonObject(with: encoded, options: .allowFragments) as? [String: Any]) as [String : Any]??) {
       val = json?["value"]
     }
     
@@ -153,7 +153,7 @@ public final class PlayPortalDataClient: PlayPortalHTTPClient {
     ]
     
     let handleSuccess: HandleSuccess<Any> = { response, data in
-      guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+      guard let json = ((try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]) as [String : Any]??),
         let data = json?["data"]
         else {
           throw PlayPortalError.API.unableToDeserializeResult(message: "Couldn't retrieve 'data' from result.")
@@ -192,7 +192,7 @@ public final class PlayPortalDataClient: PlayPortalHTTPClient {
     ]
     
     let handleSuccess: HandleSuccess<Any> = { response, data in
-      guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+      guard let json = ((try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]) as [String : Any]??),
         let data = json?["data"]
         else {
           throw PlayPortalError.API.unableToDeserializeResult(message: "Couldn't retrieve 'data' from result.")
@@ -263,7 +263,7 @@ public final class PlayPortalDataClient: PlayPortalHTTPClient {
         ]
         
         let handleSuccess: HandleSuccess<Any> = { response, data in
-          guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+          guard let json = ((try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]) as [String : Any]??),
             let data = json?["data"]
             else {
               throw PlayPortalError.API.unableToDeserializeResult(message: "Couldn't retrieve 'data' from result.")

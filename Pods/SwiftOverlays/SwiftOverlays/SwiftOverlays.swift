@@ -98,7 +98,9 @@ public extension UIViewController {
         Removes all overlays from view controller's main view
     */
     func removeAllOverlays() {
-        SwiftOverlays.removeAllOverlaysFromView(self.view)
+        DispatchQueue.main.async {
+                SwiftOverlays.removeAllOverlaysFromView(self.view)
+        }
     }
     
     /**
@@ -386,12 +388,12 @@ open class SwiftOverlays: NSObject {
         var overlay: UIView?
 
         while true {
-            overlay = parentView.viewWithTag(containerViewTag)
-            if overlay == nil {
-                break
-            }
-            
-            overlay!.removeFromSuperview()
+                overlay = parentView.viewWithTag(containerViewTag)
+                if overlay == nil {
+                    break
+                }
+                
+                overlay!.removeFromSuperview()
         }
     }
     

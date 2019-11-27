@@ -42,7 +42,7 @@ class RefreshClient: PlayPortalHTTPClient {
       }
       
       guard let data = data,
-        let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+        let json = ((try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]) as [String : Any]??),
         let accessToken = json?["access_token"] as? String,
         let refreshToken = json?["refresh_token"] as? String
         else {

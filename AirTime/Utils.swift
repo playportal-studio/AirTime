@@ -18,7 +18,7 @@ public class Utils {
         
         
         if UIApplication.shared.canOpenURL(playPortalURL) {
-            UIApplication.shared.openURL(playPortalURL)
+            UIApplication.shared.open(playPortalURL)
         }
         else {
             let vc = SKStoreProductViewController()

@@ -15,7 +15,6 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
     
     var user: PlayPortalProfile?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
