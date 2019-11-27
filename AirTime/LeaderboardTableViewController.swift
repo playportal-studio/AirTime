@@ -28,7 +28,7 @@ class LeaderboardTableViewController: UIViewController, UITableViewDelegate, UIT
             tableView.delegate = self
             tableView.dataSource = self
             
-            PlayPortalLeaderboard.shared.getLeaderboard(forCategories: ["totalJumps"]) { [weak self] error, leaderboardEntries in
+            PlayPortalLeaderboardClient.shared.getLeaderboardEntries(forCategories: ["totalJumps"]) { [weak self] error, leaderboardEntries in
                 guard let self = self else { return }
                 if let error = error {
                     print("Error getting leaderboard entries: \(error)")

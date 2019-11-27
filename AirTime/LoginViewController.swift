@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func continueAsGuestTapped(_ sender: UIButton) {
         showWaitOverlay()
-        PlayPortalUser.shared.createAnonymousUser(clientId: clientId, dateOfBirth: "02/01/1993") { [weak self] error, userProfile in
+        PlayPortalUserClient.shared.createAnonymousUser(clientId: clientId, dateOfBirth: "02/01/1993") { [weak self] error, userProfile in
             defer { self?.removeAllOverlays() }
             if let error = error {
                 print("error signing in as guest: \(error)")

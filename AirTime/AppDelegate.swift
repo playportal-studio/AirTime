@@ -10,7 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlayPortalLoginDelegate{
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        PlayPortalAuth.shared.configure(forEnvironment: env, withClientId: clientId, andClientSecret: clientSecret, andRedirectURI: redirect)
+        PlayPortalAuthClient.shared.configure(forEnvironment: env, withClientId: clientId, andClientSecret: clientSecret, andRedirectURI: redirect)
         authenticate()
 
         return true
@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlayPortalLoginDelegate{
 
     //  Start SSO flow by checking if user is authenticated; if not, open login
     func authenticate() {
-        PlayPortalAuth.shared.isAuthenticated(loginDelegate: self) { [weak self] error, userProfile in
+        PlayPortalAuthClient.shared.isAuthenticated(loginDelegate: self) { [weak self] error, userProfile in
             guard let self = self else { return }
             if let userProfile = userProfile {
                 //  User is authenticated, go to initial
@@ -33,16 +33,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlayPortalLoginDelegate{
                 guard let login = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
                     return
                 }
-                self.window?.rootViewController = login
+                DispatchQueue.main.async {
+                    self.window?.rootViewController = login
+                }
             }
         }
     }
 
-    //  This method must be implemented so the sdk can handle redirects from playPORTAL SSO
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        PlayPortalAuth.shared.open(url: url)
-        return true
-    }
+    //Replaced with method in SceneDelegate for IOS 13
+//    //  This method must be implemented so the sdk can handle redirects from playPORTAL SSO
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+//        PlayPortalAuthClient.shared.open(url: url)
+//        return true
+//    }
 
     func didFailToLogin(with error: Error) {
         print("Login failed during SSO flow: \(error)")

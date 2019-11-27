@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, PlayPortalLoginDelegate
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         if let url = URLContexts.first?.url {
             DispatchQueue.main.async {
-                PlayPortalAuth.shared.open(url: url)
+                PlayPortalAuthClient.shared.open(url: url)
             }
         }
     }

@@ -1,12 +1,12 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire" "${PODS_CONFIGURATION_BUILD_DIR}/KeychainSwift" "${PODS_CONFIGURATION_BUILD_DIR}/PPSDK-Swift" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftOverlays"
-OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/KeychainSwift/KeychainSwift.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/PPSDK-Swift/PPSDK_Swift.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/SwiftOverlays/SwiftOverlays.modulemap"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"Alamofire" -l"KeychainSwift" -l"PPSDK-Swift" -l"SwiftOverlays"
-OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/KeychainSwift/KeychainSwift.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/PPSDK-Swift/PPSDK_Swift.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/SwiftOverlays/SwiftOverlays.modulemap"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/KeychainSwift" "${PODS_CONFIGURATION_BUILD_DIR}/PPSDK-Swift" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftOverlays"
+OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/KeychainSwift/KeychainSwift.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/PPSDK-Swift/PPSDK_Swift.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/SwiftOverlays/SwiftOverlays.modulemap"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"KeychainSwift" -l"PPSDK-Swift" -l"SwiftOverlays"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/KeychainSwift/KeychainSwift.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/PPSDK-Swift/PPSDK_Swift.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/SwiftOverlays/SwiftOverlays.modulemap"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
 PODS_ROOT = ${SRCROOT}/Pods
-SWIFT_INCLUDE_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire" "${PODS_CONFIGURATION_BUILD_DIR}/KeychainSwift" "${PODS_CONFIGURATION_BUILD_DIR}/PPSDK-Swift" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftOverlays"
+SWIFT_INCLUDE_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/KeychainSwift" "${PODS_CONFIGURATION_BUILD_DIR}/PPSDK-Swift" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftOverlays"
 USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

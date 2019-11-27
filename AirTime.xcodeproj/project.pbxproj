@@ -756,13 +756,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AirTime/Pods-AirTime-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/PPSDK-Swift/PPSDK-Swift-Assets.bundle",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AirTime/Pods-AirTime-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PPSDK-Swift-Assets.bundle",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AirTime/Pods-AirTime-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1108,6 +1107,7 @@
 				CODE_SIGN_ENTITLEMENTS = AirTime/AirTime.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NAX528DUM6;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/AirTime";
 				INFOPLIST_FILE = "$(SRCROOT)/AirTime/Info.plist";
@@ -1120,6 +1120,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AirTime/pwed",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimetwo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1138,6 +1139,7 @@
 				CODE_SIGN_ENTITLEMENTS = AirTime/AirTime.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NAX528DUM6;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/AirTime";
 				INFOPLIST_FILE = "$(SRCROOT)/AirTime/Info.plist";
@@ -1150,6 +1152,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AirTime/pwed",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimetwo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
