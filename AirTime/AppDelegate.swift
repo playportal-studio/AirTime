@@ -30,22 +30,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlayPortalLoginDelegate{
             } else {
                 //  Not authenticated, open login view controller
                 print("User not authenticated, go to login")
-                guard let login = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
-                    return
-                }
                 DispatchQueue.main.async {
-                    self.window?.rootViewController = login
+                       guard let login = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
+                                     return
+                                 }
+                                 
+                        self.window?.rootViewController = login
                 }
             }
         }
     }
 
-    //Replaced with method in SceneDelegate for IOS 13
-//    //  This method must be implemented so the sdk can handle redirects from playPORTAL SSO
-//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-//        PlayPortalAuthClient.shared.open(url: url)
-//        return true
-//    }
+    //  This method must be implemented so the sdk can handle redirects from playPORTAL SSO
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        PlayPortalAuthClient.shared.open(url: url)
+        return true
+    }
 
     func didFailToLogin(with error: Error) {
         print("Login failed during SSO flow: \(error)")
