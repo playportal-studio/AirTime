@@ -22,9 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlayPortalLoginDelegate{
             guard let self = self else { return }
             if let userProfile = userProfile {
                 //  User is authenticated, go to initial
-                guard let home = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "home" ) as? HomeViewController else { return }
-                home.user = userProfile
-                self.window?.rootViewController = home
+                DispatchQueue.main.async {
+                      guard let home = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "home" ) as? HomeViewController else { return }
+                                  home.user = userProfile
+                                  self.window?.rootViewController = home
+                }
             } else if let error = error {
                 print("Error during authentication: \(error)")
             } else {
