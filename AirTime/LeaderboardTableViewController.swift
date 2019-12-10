@@ -34,7 +34,9 @@ class LeaderboardTableViewController: UIViewController, UITableViewDelegate, UIT
                     print("Error getting leaderboard entries: \(error)")
                 } else if let leaderboardEntries = leaderboardEntries {
                     self.leaderboardEntries = leaderboardEntries
-                    self.tableView.reloadData()
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
                 }
             }
         }

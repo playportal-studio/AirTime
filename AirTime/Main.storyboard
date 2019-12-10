@@ -178,18 +178,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xYt-Ro-RLA">
-                                <rect key="frame" x="0.0" y="92" width="414" height="804"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xYt-Ro-RLA">
+                                <rect key="frame" x="0.0" y="80" width="414" height="816"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingsTableViewCell" id="Rbo-66-fDT">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rbo-66-fDT" id="CaR-TC-nYm">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -197,14 +196,12 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
-                            <view alpha="0.55000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jpj-pb-4Wn">
-                                <rect key="frame" x="-4" y="-18" width="418" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpj-pb-4Wn">
+                                <rect key="frame" x="0.0" y="-18" width="414" height="53"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             </view>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="F5v-xI-otX">
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="F5v-xI-otX">
                                 <rect key="frame" x="0.0" y="35" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="25"/>
@@ -223,6 +220,19 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F5v-xI-otX" firstAttribute="centerX" secondItem="cZJ-Xg-6Dk" secondAttribute="centerX" id="5mf-lj-rgy"/>
+                            <constraint firstItem="xYt-Ro-RLA" firstAttribute="top" secondItem="F5v-xI-otX" secondAttribute="bottom" constant="1" id="CKI-fp-YJj"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="xYt-Ro-RLA" secondAttribute="bottom" constant="-34" id="IFV-Ku-6Bk"/>
+                            <constraint firstItem="F5v-xI-otX" firstAttribute="top" secondItem="jpj-pb-4Wn" secondAttribute="bottom" id="Ilj-hm-nUI"/>
+                            <constraint firstItem="F5v-xI-otX" firstAttribute="trailing" secondItem="jpj-pb-4Wn" secondAttribute="trailing" id="Kfv-bz-Nhr"/>
+                            <constraint firstItem="jpj-pb-4Wn" firstAttribute="top" secondItem="cZJ-Xg-6Dk" secondAttribute="topMargin" constant="-62" id="PCB-Jm-P1M"/>
+                            <constraint firstItem="F5v-xI-otX" firstAttribute="leading" secondItem="ufJ-LS-Ukd" secondAttribute="leading" id="e3B-88-xKP"/>
+                            <constraint firstItem="F5v-xI-otX" firstAttribute="top" secondItem="cZJ-Xg-6Dk" secondAttribute="top" constant="35" id="eTQ-4N-tkf"/>
+                            <constraint firstItem="F5v-xI-otX" firstAttribute="trailing" secondItem="xYt-Ro-RLA" secondAttribute="trailing" id="kSf-aj-8Jl"/>
+                            <constraint firstItem="F5v-xI-otX" firstAttribute="leading" secondItem="xYt-Ro-RLA" secondAttribute="leading" id="xVT-Cl-hPg"/>
+                            <constraint firstItem="F5v-xI-otX" firstAttribute="leading" secondItem="jpj-pb-4Wn" secondAttribute="leading" id="yaI-UQ-GXQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ufJ-LS-Ukd"/>
                     </view>
                     <connections>
@@ -371,10 +381,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.65000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mTk-ho-1fO">
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mTk-ho-1fO">
                                 <rect key="frame" x="-3" y="0.0" width="426" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Leaderboard" translatesAutoresizingMaskIntoConstraints="NO" id="U71-LS-qpV">
                                 <rect key="frame" x="301" y="132" width="60" height="64"/>
@@ -485,7 +495,7 @@
                                     <constraint firstItem="DrA-3R-rcK" firstAttribute="bottom" secondItem="oop-01-moY" secondAttribute="bottom" constant="-8" id="yuI-7s-tlj"/>
                                 </constraints>
                             </view>
-                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="gMe-1F-QBx">
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMe-1F-QBx">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="25"/>

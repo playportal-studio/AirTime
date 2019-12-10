@@ -167,7 +167,7 @@ open class KeychainSwift {
     var query: [String: Any] = [
       KeychainSwiftConstants.klass       : kSecClassGenericPassword,
       KeychainSwiftConstants.attrAccount : prefixedKey,
-      KeychainSwiftConstants.returnData  : kCFBooleanTrue,
+      KeychainSwiftConstants.returnData  : kCFBooleanTrue!,
       KeychainSwiftConstants.matchLimit  : kSecMatchLimitOne
     ]
     

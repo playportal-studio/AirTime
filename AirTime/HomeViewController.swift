@@ -84,16 +84,16 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
                 if let error = error {
                     print("Error requesting profile pic: \(String(describing: error))")
                 } else {
-                    self.profilePicImageView.layer.borderWidth = 1.0
-                    self.profilePicImageView.layer.masksToBounds = false
-                    self.profilePicImageView.layer.borderColor = UIColor.white.cgColor
-                    self.profilePicImageView.layer.cornerRadius = self.profilePicImageView.frame.height / 2
-                    self.profilePicImageView.clipsToBounds = true
+                    DispatchQueue.main.async {
+                        self.profilePicImageView.layer.borderWidth = 1.0
+                        self.profilePicImageView.layer.masksToBounds = false
+                        self.profilePicImageView.layer.borderColor = UIColor.white.cgColor
+                        self.profilePicImageView.layer.cornerRadius = self.profilePicImageView.frame.height / 2
+                        self.profilePicImageView.clipsToBounds = true
+                    }
                 }
             })
         }
-        
-        
     }
     
     @IBAction func settingsTapped(_ sender: UIBarButtonItem) {
@@ -162,11 +162,11 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
         return storeMyStatsToServer()
     }
         
-        
+     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+       DispatchQueue.main.async {
         let total = applicationContext["totalJumps"] as! Int
         let longest = Double(round(100*(applicationContext["longestJump"] as! Double))/100)
-        DispatchQueue.main.async {
             self.upperScoreLabel.text = String(describing: total)
             self.lowerScoreLabel.text = String(describing: longest)
             self.updateStats(jumpCount:total, longestJump: longest) 

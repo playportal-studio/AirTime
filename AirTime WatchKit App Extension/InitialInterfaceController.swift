@@ -12,7 +12,8 @@ class InitialInterfaceController: WKInterfaceController {
     
     @IBAction func startTapped() {
         print("START JUMPING!")
-        WKInterfaceController.reloadRootControllers(withNames: ["ChallengeInterfaceController"], contexts: [])
+//        WKInterfaceController.reloadRootControllers(withNames: ["ChallengeInterfaceController"], contexts: [])
+        WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "ChallengeInterfaceController", context: [:] as AnyObject)])
     }
     
 }

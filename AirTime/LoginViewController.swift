@@ -40,9 +40,11 @@ class LoginViewController: UIViewController {
             if let error = error {
                 print("error signing in as guest: \(error)")
             } else if let userProfile = userProfile {
-                guard let home = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "home" ) as? HomeViewController else { return }
-                home.user = userProfile
-                self?.present(home, animated: true, completion: nil)
+                DispatchQueue.main.async {
+                     guard let home = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "home" ) as? HomeViewController else { return }
+                                   home.user = userProfile
+                                   self?.present(home, animated: true, completion: nil)
+                }
             } else {
                 print("unknown error")
             }
