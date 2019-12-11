@@ -96,7 +96,6 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         case (0, 2):
-            guard user?.accountType == .parent else { return }
             guard let url = URL(string: "http://www.dynepic.com/pages/privacy-policy") else { return }
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         case (0, 3):

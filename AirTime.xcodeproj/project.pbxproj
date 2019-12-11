@@ -869,7 +869,7 @@
 				CODE_SIGN_ENTITLEMENTS = "AirTime WatchKit App Extension/AirTime WatchKit App Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = NAX528DUM6;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "AirTime WatchKit App Extension/Info.plist";
@@ -904,7 +904,7 @@
 				CODE_SIGN_ENTITLEMENTS = "AirTime WatchKit App Extension/AirTime WatchKit App Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = NAX528DUM6;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "AirTime WatchKit App Extension/Info.plist";
@@ -939,7 +939,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = NAX528DUM6;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = AirTime_WatchKit_App_Extension;
@@ -970,7 +970,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = NAX528DUM6;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = AirTime_WatchKit_App_Extension;
@@ -1115,7 +1115,7 @@
 				CODE_SIGN_ENTITLEMENTS = AirTime/AirTime.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = NAX528DUM6;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/AirTime";
 				INFOPLIST_FILE = "$(SRCROOT)/AirTime/Info.plist";
@@ -1147,7 +1147,7 @@
 				CODE_SIGN_ENTITLEMENTS = AirTime/AirTime.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = NAX528DUM6;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/AirTime";
 				INFOPLIST_FILE = "$(SRCROOT)/AirTime/Info.plist";
