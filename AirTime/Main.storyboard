@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UDd-EL-KGr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UDd-EL-KGr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -96,10 +96,10 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="leaderboardTableViewCell" id="r59-vi-Edh" customClass="LeadboardTableViewCell" customModule="AirTime" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r59-vi-Edh" id="XMS-xn-IyA">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeE-TJ-L97">
@@ -257,10 +257,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="shortFormPrivacyPolicyTableViewCell" id="oyQ-1Q-3Eo">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oyQ-1Q-3Eo" id="Gag-A2-Tb9">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -387,14 +387,14 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Leaderboard" translatesAutoresizingMaskIntoConstraints="NO" id="U71-LS-qpV">
-                                <rect key="frame" x="301" y="132" width="60" height="64"/>
+                                <rect key="frame" x="301" y="134" width="60" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" priority="64" constant="64" id="XwI-Zv-lXU"/>
+                                    <constraint firstAttribute="width" priority="64" constant="60" id="XwI-Zv-lXU"/>
                                     <constraint firstAttribute="height" constant="64" id="rTf-vO-dfA"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iE0-su-vO5" customClass="GradientBkgndView" customModule="AirTime" customModuleProvider="target">
-                                <rect key="frame" x="137" y="94" width="140" height="140"/>
+                                <rect key="frame" x="137" y="106" width="140" height="140"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2h-vz-32p">
                                         <rect key="frame" x="10.5" y="10.5" width="119" height="119"/>
@@ -525,7 +525,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Cge-vB-m1D" firstAttribute="top" secondItem="iE0-su-vO5" secondAttribute="bottom" constant="20" id="272-Jf-gIm"/>
+                            <constraint firstItem="Cge-vB-m1D" firstAttribute="top" secondItem="iE0-su-vO5" secondAttribute="bottom" constant="8" id="272-Jf-gIm"/>
                             <constraint firstItem="Ioq-pH-2Ne" firstAttribute="trailing" secondItem="Jcn-m1-GbQ" secondAttribute="trailingMargin" id="BS8-gR-OE7"/>
                             <constraint firstItem="GdM-cz-Cl9" firstAttribute="bottom" secondItem="Ioq-pH-2Ne" secondAttribute="bottom" constant="20" id="IA1-fH-TrC"/>
                             <constraint firstItem="Cge-vB-m1D" firstAttribute="centerX" secondItem="GdM-cz-Cl9" secondAttribute="centerX" id="SID-bo-YxH"/>
@@ -535,8 +535,8 @@
                             <constraint firstItem="Ioq-pH-2Ne" firstAttribute="top" secondItem="Cge-vB-m1D" secondAttribute="bottom" constant="8" id="bnd-E7-W7e"/>
                             <constraint firstItem="GdM-cz-Cl9" firstAttribute="top" secondItem="gMe-1F-QBx" secondAttribute="top" id="e9y-Gl-b8r"/>
                             <constraint firstItem="iE0-su-vO5" firstAttribute="centerX" secondItem="GdM-cz-Cl9" secondAttribute="centerX" id="jtz-NS-E4Y"/>
-                            <constraint firstItem="iE0-su-vO5" firstAttribute="top" secondItem="GdM-cz-Cl9" secondAttribute="top" constant="50" id="kvI-hv-Ymt"/>
-                            <constraint firstItem="U71-LS-qpV" firstAttribute="centerY" secondItem="iE0-su-vO5" secondAttribute="centerY" id="spg-M1-T1I"/>
+                            <constraint firstItem="iE0-su-vO5" firstAttribute="top" secondItem="GdM-cz-Cl9" secondAttribute="top" constant="62" id="kvI-hv-Ymt"/>
+                            <constraint firstItem="U71-LS-qpV" firstAttribute="centerY" secondItem="iE0-su-vO5" secondAttribute="centerY" constant="-10" id="spg-M1-T1I"/>
                             <constraint firstItem="gMe-1F-QBx" firstAttribute="width" secondItem="Jcn-m1-GbQ" secondAttribute="width" id="vbD-5H-BL5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GdM-cz-Cl9"/>
