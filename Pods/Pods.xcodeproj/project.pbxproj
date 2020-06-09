@@ -640,6 +640,7 @@
 			knownRegions = (
 				English,
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 74404706BF36D0627DD17BCF9420A9E1 /* Products */;
