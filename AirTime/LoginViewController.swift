@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.sizeToFit()
-        titleLabel.transform = titleLabel.transform.rotated(by: CGFloat(-(M_PI / 6)))
+        titleLabel.transform = titleLabel.transform.rotated(by: CGFloat(-(Double.pi / 6)))
         continueAsGuestButton.backgroundColor = .clear
         continueAsGuestButton.layer.cornerRadius = continueAsGuestButton.frame.height / 2
         continueAsGuestButton.layer.borderWidth = 1

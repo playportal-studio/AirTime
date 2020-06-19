@@ -36,9 +36,11 @@
 			<key>CFBundleURLIconFile</key>
 			<string></string>
 			<key>CFBundleURLName</key>
-			<string></string>
+			<string>playportal</string>
 			<key>CFBundleURLSchemes</key>
-			<array/>
+			<array>
+				<string>playportal</string>
+			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>

@@ -149,7 +149,9 @@ class ChallengeInterfaceController: WKInterfaceController {
             print("ERROR")
         }
         
-        WKInterfaceController.reloadRootControllers(withNames: ["InitialInterfaceController"], contexts: [])
+        WKInterfaceController.reloadRootPageControllers(withNames: ["InitialInterfaceController"], contexts: [], orientation: WKPageOrientation.horizontal, pageIndex: 0)
+        
+//        WKInterfaceController.reloadRootControllers(withNames: ["InitialInterfaceController"], contexts: [])
     }
     
     //  MARK: Methods

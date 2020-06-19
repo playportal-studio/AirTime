@@ -41,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PlayPortalLoginDelegate{
     //  This method must be implemented so the sdk can handle redirects from playPORTAL SSO
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         PlayPortalAuth.shared.open(url: url)
+        print("SSO URL: \(url)")
         return true
     }
     

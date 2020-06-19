@@ -138,7 +138,7 @@ final class RequestHandler {
                 if let json = data?.asJSON {
                     var value: Any = json
                     if let keys = keyPath?.split(separator: ".").map(String.init) {
-                        value = json.valueAtNestedKey(keys)
+                        value = json.valueAtNestedKey(keys)!
                     }
                     if JSONSerialization.isValidJSONObject(value) {
                         result = (try? JSONSerialization.data(withJSONObject: ["result": value], options: .prettyPrinted))?.asJSON?["result"]

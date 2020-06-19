@@ -108,7 +108,7 @@ class SettingsTableTableViewController: UIViewController, UITableViewDelegate, U
         case (2, 0):
             PlayPortalAuth.shared.logout()
             let sb:UIStoryboard = UIStoryboard.init(name:"Main", bundle:nil)
-            guard let rvc:UIViewController = UIApplication.shared.keyWindow?.rootViewController else {
+            guard let rvc:UIViewController = UIApplication.shared.windows.first?.rootViewController else {
                 return
             }
             let vc:LoginViewController = sb.instantiateViewController(withIdentifier:"LoginViewController") as! LoginViewController

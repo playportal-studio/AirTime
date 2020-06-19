@@ -12,11 +12,11 @@
 		1C3211322179120D00785D38 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3211312179120D00785D38 /* LeaderboardTableViewController.swift */; };
 		1C47FE742179FEB300CD2B27 /* LeadboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C47FE732179FEB300CD2B27 /* LeadboardTableViewCell.swift */; };
 		420077612285B16E00CFFA07 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420077602285B16E00CFFA07 /* Keys.swift */; };
+		427E5393249D18EC00929F38 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427E5392249D18EC00929F38 /* CoreServices.framework */; };
 		4669F1F42146BFB000769F88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669F1F32146BFB000769F88 /* LoginViewController.swift */; };
 		4669F1F62146BFE700769F88 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F52146BFE700769F88 /* Security.framework */; };
 		4669F1F82146BFF300769F88 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F72146BFF300769F88 /* WebKit.framework */; };
 		4669F1FA2146BFFC00769F88 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F92146BFFC00769F88 /* SafariServices.framework */; };
-		4669F1FC2146C07000769F88 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1FB2146C06F00769F88 /* MobileCoreServices.framework */; };
 		46AE4EFC216BE9C6007F8478 /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E56216BE9C5007F8478 /* iTunesArtwork@1x.png */; };
 		46AE4EFD216BE9C6007F8478 /* Icon-App-57x57@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E58216BE9C5007F8478 /* Icon-App-57x57@1x.png */; };
 		46AE4EFE216BE9C6007F8478 /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46AE4E59216BE9C5007F8478 /* Icon-App-76x76@2x.png */; };
@@ -159,6 +159,7 @@
 		2A8AC7C841FC30F8C8A1D072 /* Pods-AirTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.release.xcconfig"; path = "Target Support Files/Pods-AirTime/Pods-AirTime.release.xcconfig"; sourceTree = "<group>"; };
 		30001E68FE75DAEE44A869D2 /* Pods-AirTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirTime/Pods-AirTime.debug.xcconfig"; sourceTree = "<group>"; };
 		420077602285B16E00CFFA07 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		427E5392249D18EC00929F38 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		4669F1F32146BFB000769F88 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4669F1F52146BFE700769F88 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4669F1F72146BFF300769F88 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -276,11 +277,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4669F1FC2146C07000769F88 /* MobileCoreServices.framework in Frameworks */,
 				4669F1FA2146BFFC00769F88 /* SafariServices.framework in Frameworks */,
 				4669F1F82146BFF300769F88 /* WebKit.framework in Frameworks */,
 				6E30CCD521F12C46005A03E0 /* HealthKit.framework in Frameworks */,
 				4669F1F62146BFE700769F88 /* Security.framework in Frameworks */,
+				427E5393249D18EC00929F38 /* CoreServices.framework in Frameworks */,
 				19A3CFAA9A92F1414AF8AF9A /* libPods-AirTime.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +292,7 @@
 		1FC20239CADD742496626DDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				427E5392249D18EC00929F38 /* CoreServices.framework */,
 				6E30CCD421F12C46005A03E0 /* HealthKit.framework */,
 				1CBE9FAB218777C400A2D29C /* libPods-AirTime WatchKit App Extension.a */,
 				50FE60CB2146D8BD00481700 /* HealthKit.framework */,
@@ -877,6 +879,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimetwo.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -909,6 +912,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimetwo.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -937,6 +941,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = AirTime_WatchKit_App_Extension;
 				INFOPLIST_FILE = "AirTime WatchKit App/Info.plist";
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimetwo.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -966,6 +971,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = AirTime_WatchKit_App_Extension;
 				INFOPLIST_FILE = "AirTime WatchKit App/Info.plist";
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dynepic.airtimetwo.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

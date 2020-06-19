@@ -285,7 +285,7 @@
         <!--Privacy Policy View Controller-->
         <scene sceneID="c7E-am-87d">
             <objects>
-                <tableViewController id="5Wd-tt-6Jf" customClass="PrivacyPolicyViewController" customModule="AirTime" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="privacyPolicy" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Wd-tt-6Jf" customClass="PrivacyPolicyViewController" customModule="AirTime" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dZc-C1-2El">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -148,7 +148,7 @@ open class SwiftOverlays: NSObject {
         
             - parameter innerView: View to set constraints on
         */
-        open static func centerViewInSuperview(_ view: UIView) {
+        public static func centerViewInSuperview(_ view: UIView) {
             assert(view.superview != nil, "`view` should have a superview")
             
             view.translatesAutoresizingMaskIntoConstraints = false
