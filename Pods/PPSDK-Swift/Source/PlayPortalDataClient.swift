@@ -202,7 +202,7 @@ public final class PlayPortalDataClient: PlayPortalHTTPClient {
         let json = data as? [String: Any]
       {
         let keyPath = key.components(separatedBy: ".")
-        return json.valueAtNestedKey(keyPath)
+        return json.valueAtNestedKey(keyPath)!
       } else {
         return data
       }

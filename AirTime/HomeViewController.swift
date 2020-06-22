@@ -84,11 +84,13 @@ class HomeViewController: UIViewController, WCSessionDelegate, SKStoreProductVie
                 if let error = error {
                     print("Error requesting profile pic: \(String(describing: error))")
                 } else {
-                    self.profilePicImageView.layer.borderWidth = 1.0
-                    self.profilePicImageView.layer.masksToBounds = false
-                    self.profilePicImageView.layer.borderColor = UIColor.white.cgColor
-                    self.profilePicImageView.layer.cornerRadius = self.profilePicImageView.frame.height / 2
-                    self.profilePicImageView.clipsToBounds = true
+                    DispatchQueue.main.async {
+                        self.profilePicImageView.layer.borderWidth = 1.0
+                        self.profilePicImageView.layer.masksToBounds = false
+                        self.profilePicImageView.layer.borderColor = UIColor.white.cgColor
+                        self.profilePicImageView.layer.cornerRadius = self.profilePicImageView.frame.height / 2
+                        self.profilePicImageView.clipsToBounds = true
+                    }
                 }
             })
         }

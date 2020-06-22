@@ -204,8 +204,7 @@ public final class PlayPortalAuthClient: PlayPortalHTTPClient {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
         
         
-    } else if let accessToken = url.getParameter(for: "access_token")
-        , let refreshToken = url.getParameter(for: "refresh_token")
+    } else if let accessToken = url.getParameter(for: "access_token"), let refreshToken = url.getParameter(for: "refresh_token")
     {
         EventHandler.shared.publish(Event.authenticated(accessToken: accessToken, refreshToken: refreshToken))
         

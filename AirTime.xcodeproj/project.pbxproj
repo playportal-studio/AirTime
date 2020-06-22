@@ -13,6 +13,7 @@
 		1C47FE742179FEB300CD2B27 /* LeadboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C47FE732179FEB300CD2B27 /* LeadboardTableViewCell.swift */; };
 		1C8348A524A0E68C00A5D4BB /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8348A424A0E68C00A5D4BB /* Keys.swift */; };
 		427E5393249D18EC00929F38 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427E5392249D18EC00929F38 /* CoreServices.framework */; };
+		427E539A24A118D800929F38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E539924A118D800929F38 /* SceneDelegate.swift */; };
 		4669F1F42146BFB000769F88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4669F1F32146BFB000769F88 /* LoginViewController.swift */; };
 		4669F1F62146BFE700769F88 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F52146BFE700769F88 /* Security.framework */; };
 		4669F1F82146BFF300769F88 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4669F1F72146BFF300769F88 /* WebKit.framework */; };
@@ -160,6 +161,7 @@
 		2A8AC7C841FC30F8C8A1D072 /* Pods-AirTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.release.xcconfig"; path = "Target Support Files/Pods-AirTime/Pods-AirTime.release.xcconfig"; sourceTree = "<group>"; };
 		30001E68FE75DAEE44A869D2 /* Pods-AirTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirTime/Pods-AirTime.debug.xcconfig"; sourceTree = "<group>"; };
 		427E5392249D18EC00929F38 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		427E539924A118D800929F38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4669F1F32146BFB000769F88 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4669F1F52146BFE700769F88 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4669F1F72146BFF300769F88 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -513,6 +515,7 @@
 				508C66872142FBF60059C591 /* SettingsTableTableViewController.swift */,
 				A35DA1E21E37884600929021 /* Main.storyboard */,
 				A322BB971DFEA7C400C847AF /* AppDelegate.swift */,
+				427E539924A118D800929F38 /* SceneDelegate.swift */,
 				A322BBA01DFEA7C400C847AF /* LaunchScreen.storyboard */,
 				A322BB9E1DFEA7C400C847AF /* Assets.xcassets */,
 				A322BBA31DFEA7C400C847AF /* Info.plist */,
@@ -803,6 +806,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A322BB981DFEA7C400C847AF /* AppDelegate.swift in Sources */,
+				427E539A24A118D800929F38 /* SceneDelegate.swift in Sources */,
 				508C66862142F06B0059C591 /* GradientBkgndView.swift in Sources */,
 				1C3211322179120D00785D38 /* LeaderboardTableViewController.swift in Sources */,
 				6E5439A92142C4E30052B060 /* Colors.swift in Sources */,
@@ -1029,7 +1033,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1085,7 +1089,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
