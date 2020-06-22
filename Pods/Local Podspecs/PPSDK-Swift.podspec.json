@@ -1,6 +1,6 @@
 {
   "name": "PPSDK-Swift",
-  "version": "0.2.10",
+  "version": "1.0.1",
   "summary": "playPORTAL SDK in Swift.",
   "description": "Swift SDK providing access to playPORTAL services.",
   "homepage": "https://github.com/playportal-studio/PPSDK-Swift.git",
@@ -10,17 +10,14 @@
   },
   "source": {
     "git": "https://github.com/playportal-studio/PPSDK-Swift.git",
-    "tag": "0.2.10"
+    "tag": "1.0.1"
   },
   "source_files": "Source/*.swift",
-  "swift_version": "4.2",
+  "swift_versions": "4.2",
   "platforms": {
     "ios": "10.0"
   },
   "dependencies": {
-    "Alamofire": [
-      "~> 4.7"
-    ],
     "KeychainSwift": [
       "~> 12.0"
     ]
@@ -29,5 +26,6 @@
     "PPSDK-Swift-Assets": [
       "Resources/*"
     ]
-  }
+  },
+  "swift_version": "4.2"
 }
